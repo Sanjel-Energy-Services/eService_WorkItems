@@ -1,0 +1,20 @@
+Bad Data
+
+1. #460874, Casing size bigger than Open Hole
+2. #453020, Open Hole data not correct, Surface casing type is missing.
+3. #453009, extra bad open hole. Casing types are missing.
+4. #460874, casing type missing
+
+
+MeasureDepthTo = 0
+#461496
+#461271, first casing record casing type is wrong
+#460765, open hole depth missing, production casing pipe depth missing
+#460958, extra intermediate casing record without depth
+#459989, open hole depth missing, production casing pipe depth missing
+460761
+459400
+461489
+458220
+460752
+

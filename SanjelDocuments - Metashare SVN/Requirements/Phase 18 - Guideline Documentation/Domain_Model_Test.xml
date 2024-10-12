@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2019-12-06T22:32:17.080Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/12.3.2 Chrome/78.0.3904.113 Electron/7.1.2 Safari/537.36" etag="VRXb14F2Jrnhsfl5KA2H" version="12.3.2" type="device" pages="1">
+  <diagram id="n4NnBuZG5nNo2g-FDMbr" name="Page-1">
+    <mxGraphModel dx="1086" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-1" value="SESI" style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=60;" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="960" height="650" as="geometry"/>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-2" value="SESI.BusineEntities" style="shape=umlFrame;whiteSpace=wrap;html=1;width=130;height=40;" parent="1" vertex="1">
+          <mxGeometry x="40" y="80" width="930" height="440" as="geometry"/>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-3" value="SESI.BusinessEnitites.Operation" style="shape=umlFrame;whiteSpace=wrap;html=1;width=200;height=30;" parent="1" vertex="1">
+          <mxGeometry x="60" y="120" width="890" height="370" as="geometry"/>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-4" value="SESI.BusinessEitities.Operation.Dispatch" style="shape=umlFrame;whiteSpace=wrap;html=1;width=260;height=30;" parent="1" vertex="1">
+          <mxGeometry x="80" y="150" width="850" height="320" as="geometry"/>
+        </mxCell>
+        <object label="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;br&gt;&lt;b&gt;RigJob&lt;/b&gt;&lt;/p&gt;" StereoType="Entity" id="l6sJ5ZlAJu5SbiRZDAYk-6">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
+            <mxGeometry x="100" y="210" width="140" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-9" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;br&gt;&lt;b&gt;CallSheet&lt;/b&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="320" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-10" value="" style="endArrow=openThin;html=1;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=0;" parent="1" source="l6sJ5ZlAJu5SbiRZDAYk-6" target="l6sJ5ZlAJu5SbiRZDAYk-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="299.5" as="sourcePoint"/>
+            <mxPoint x="330" y="299.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-11" value="1..1" style="resizable=0;html=1;align=left;verticalAlign=bottom;labelBackgroundColor=#ffffff;fontSize=10;" parent="l6sJ5ZlAJu5SbiRZDAYk-10" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-12" value="1..1" style="resizable=0;html=1;align=right;verticalAlign=bottom;labelBackgroundColor=#ffffff;fontSize=10;" parent="l6sJ5ZlAJu5SbiRZDAYk-10" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-18" value="JobLifeStatus" style="html=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="215" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="l6sJ5ZlAJu5SbiRZDAYk-19" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" target="l6sJ5ZlAJu5SbiRZDAYk-18">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="240" y="239" as="sourcePoint"/>
+            <mxPoint x="320" y="239" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;br&gt;&lt;b&gt;ContratorCompany&lt;/b&gt;&lt;/p&gt;" StereoType="Entity" id="cl6J29oaosNVxXdSQMQx-1">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+            <mxGeometry x="300" y="320" width="140" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        <mxCell id="cl6J29oaosNVxXdSQMQx-2" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=170;tabHeight=32;tabPosition=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="690" width="660" height="290" as="geometry"/>
+        </mxCell>
+        <mxCell id="cl6J29oaosNVxXdSQMQx-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Class&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;div style=&quot;height:2px;&quot;&gt;&lt;/div&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;div style=&quot;height:2px;&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="835" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="cl6J29oaosNVxXdSQMQx-7" value="Object" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1000" width="730" height="490" as="geometry"/>
+        </mxCell>
+        <mxCell id="cl6J29oaosNVxXdSQMQx-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Class&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;div style=&quot;height:2px;&quot;&gt;&lt;/div&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;div style=&quot;height:2px;&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1080" width="140" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

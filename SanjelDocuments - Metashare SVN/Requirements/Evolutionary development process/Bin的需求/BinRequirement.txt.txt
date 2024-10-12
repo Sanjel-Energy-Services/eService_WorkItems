@@ -1,0 +1,72 @@
+Requirement
+
+1 Requirement Background
+  Bin 是Sanjel分配给Rig的用来贮存干水泥的容器，目前只有P-Tank和Mego Silo两种类型。它在分配给Rig之后，就会一直跟着Rig走，直到有人把它解除分配。解除分配后就认为是In Yard状态。否则是Assigned状态，并且知道是分配给哪个Rig了。
+每个Bin有它的所属的ServicePoint，它可以在各地区间进行转借。
+
+2 Analyze
+根据目前的需求，采用5W2H的方式，对Bin的需求进行细化，让开发能更清楚的了解需求想要达到的目的。
+2.1 Who
+2.1.1 Bin的调度员：站在最高层管理所有Bin的人
+2.1.2 OSR：现场调度员，对于Bin的运行状态进行管理的人，可以申请使用Bin。
+2.1.3 使用者，特指使用Bin的工人，不直接管理Bin。
+2.2 What
+2.2.1 查看所有Bin的使用状态
+2.2.2 添加删除Bin
+2.2.3 转移Bin的所属区域
+2.2.4 分配Bin到Rig
+2.2.5 接收Bin的使用申请
+2.2.6 接收Bin的运行状态
+2.2.7 对Bin的异常情况进行反应
+2.2.8 对Bin的使用情况进行统计
+2.2.9 通过Rig Board为一个Rig申请使用Bin
+2.2.10 通过Rig Board修改正在使用的Bin的状态
+2.3 Why
+2.3.1 Bin作为独立性较差的设备，管理比较凌乱，但是Bin又有一定的价值。所以需要对Bin有一个管理，了解所有Bin的状态和所属Rig，在出现异常时可以及时回收，防止出现意外。
+2.3.2 Bin作为容器，需要定时进行检测，保持Bin无异常，不会影响到工作进度。
+2.3.3 Bin作为容器，并非为Rig标配，也就是说一个Rig不一定会有一个Bin，一个Bin可以同时给很多个Rig使用。那么通过管理系统，可以把一个Bin分配给多个Rig，在一个Rig使用完毕后转移给另一个Rig使用。通过对Bin使用的记录，可以获取到Bin是否足够目前使用，减少采购成本。
+2.4 Where
+2.4.1 调度员一般在办公室，拥有PC端和大屏投影，通过PC端进行工作。
+2.4.2 OSR在大多数时候都在项目现场，一般使用笔记本电脑和移动端进行工作。
+2.4.2 使用者一般为工人，基本上处于项目现场，一般只会少量使用移动端。
+2.5 when
+2.5.1 调度员一般全天都在，可能会存在多个调度员换班，需要考虑到白天和晚上两种情况。
+2.5.2 OSR和使用者都是灵活性工作时间，有工作就会进行，也需要考虑到白天和晚上两种情况。
+2.6 How To
+2.6.1 OSR在需要Rig时，会发起个一个Rig Job，调度员可以看到这个Rig Job。
+2.6.2 OSR通过Rig Job申请使用Bin
+2.6.3 调度员为Rig分配一个或多个Bin
+2.6.4 在Rig Job开始时，使用者将直接带着Rig和分配给Rig的Bin前往现场。
+2.6.5 Job完成，使用者将Rig和Bin送回库房或开始该Rig的下一个Job
+2.6.6 若有其他Rig需要Bin，则将当前的Bin转交给另一个Rig
+2.6.7 若Job处于其他区域，根据就近管理原则，Rig和Bin将被送往其他区域的仓库
+2.6.8 调度员根据Bin当前区域，修改Bin的归属地，方便下次调度。
+2.7 How Moch
+2.7.1 目前MDD能实现的只有Bin的增删改查，其他的功能都需要进行二次开发，开发成本还是比较大的，需要一定时间。
+
+3 BackLog
+根据需求，客户需要对所有的Bin进行管理，跟踪Bin的使用情况，至少应包括以下功能：
+3.1 增加Bin的模块展示所有Bin，Bin的管理强度较低，不必单独列出页面，在Resource下添加Bin Board模块即可，Bin Board可以查看所有Bin的当前状态，当前分配给了哪个Rig，可以根据Bin的所在区域筛选；
+3.2 调度员可以通过操作Bin Board可以为一个区域增加一个或多个Bin，因为Bin的独立性不是很强，通过类型和编号区分即可；
+3.3 调度员可以通过Bin Board将一个区域的Bin转移到另一个区域；
+3.4 调度员可以通过Bin Board将一个或多个Bin分配给Rig；
+3.5 调度员可以通过Bin Board将一个或多个Bin从Rig上收回；
+3.6 调度员可以通过Bin Board将一个或多个Bin从一个Rig上直接分配给另一个Rig；
+3.7 OSR可以通过Rig board为一个Rig申请使用一个或多个Bin
+3.8 调度员可以通过Bin Board看到Bin的使用申请，并可以直接为该Rig分配Bin。
+3.9 OSR可以通过Rig Board修改Rig正在使用的Bin的状态。
+3.10 调度员可以即时查看到被修改状态的Bin的信息，及时进行反应。
+
+4 Task
+4.1 新增BinBoard
+在Resource下添加Bin Board，所需属性有Bin Number、ServicePoint、Location、Notes
+4.2 批量添加Bin
+4.2 修改Bin的信息
+4.3 删除Bin
+4.5 分配Bin到Rig
+4.6 从Rig上收回Bin
+4.7 快捷修改Bin的ServicePoint
+4.8 查看Rig对Bin的使用申请
+4.9 通过使用申请直接分配Bin到Rig
+4.10 通过Rig Board发送对Bin的使用申请
+4.11 通过Rig Board修改Bin的Location

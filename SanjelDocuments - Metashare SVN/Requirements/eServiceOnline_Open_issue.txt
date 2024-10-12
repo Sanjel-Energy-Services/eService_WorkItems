@@ -1,0 +1,60 @@
+﻿Major Techincal Debt
+
+Add logged user id passed to database record.
+
+
+Open issue
+
+2. ProductHaul page loading performance issue.
+3. Job is done, disable the rig, and then remove the bin from rig, throw exception.
+4. Cannot deactivate rig after the last job was cancelled.
+5. From framework add mechanism to log username in data record.
+6. RigBoard confirmed time, call sheet should be in Ready status, but no integration today.
+8. A rigjob is cancelled, if its job date is in future, it will display on the board which hide the last finished job. When it is disabled, its islited flag should be disabled.
+9. When deactivating a rig, the bin assigned is invisible. So it cannot be released from the rig anymore. On Bin Borad it is missing, this is not correct. Here are two issues found 
+9.1 After activate a rig, if it has previous rig job, the last rig job should be shown on the board. Now it is not shown on the board.
+9.2 On Bin borad, the bin should be shown even if the rig is down or deactivated, Rig indicator should be added for its status, especiall for deativated. 
+9.3 The use case for bin haul should be added someway to assign a bin to a rig and release a bin from a rig regardless the rig status.
+10. Create a call sheet on a project rig, and change the rig to non-project, the rigjob not being updated. The  Callsheet has populated with the project flag, need to be fixed when callsheet is not exported. The root cause might be reference data is not refreshed, the old status being brought back again when updating.
+11. When dispatch deactivate a rig on one board, and mark down it after, there is no validation for the status. This violate the state transition rule.
+13. Reschedule product haul function, read all product hauls take very long time. For change blend amount, it is not nesscessary.
+14. District notes cannot handle some special characters, e.g. Single Quote.
+15. Sometimes there are two effective record for one rig job, that caused the notes are shown differently at different time. e.g. RigJob ID 54265, last recored before correction was 93961 and 93794, based on investigation, the root cause was from version 10, it genterated two next version version 11 and 12, automatically at same time, when status changed from Confirmed to Scheduled. There must be a double update happened.
+16. When a rig is released from a bin, the bin information record is still active with rigid as 0. The record should not be active.
+17.When creating hauls from the rig board, if one is created then cancelled and a new one put in its place, it doesn’t remove them from the call sheet.  Can we have this fixed as it now appears that we’ve sent double surface cement to this location. 
+25. When a bin is released from rig, Bin Status is 0, but when rig job load bins from BinInformaion if Rig Id is zero, the bin information will be loaded up to job alert without rig caused multiple lines.
+26. July 15, 2020. Predator 2 could not be deactivated somehow, the previous completed job record effective end time was not updated.
+
+Solution: When no rig, then don't load up bins. Fix is in feature/bulk-plant branch
+
+
+20. eServiceWebContext.CopyFromCallSheetHeader
+
+line 2221
+
+This should copy form rigjob be more consistent
+
+21. If an exported callsheet is exported again, the related rig job already completed, it will be kicked back to in progress.
+22. In product haul calculation, Yield, MixWater should be passed in with base blend chemical properties values. Current code might have issues, need to review and fix. Bulk Density could be fix at same time.
+23. Master data should be cached and refreshed in certain interval
+24. Bin capacity should be in M3, the product haul is in tonnage. We need conversion by bulk density. 
+TODO:
+
+1. On RigBoard, Bin's tooltip show Bin Notes
+2. Populate Bin Initial Tonnage to eService 
+3. Print Bin notes and initial tonnage on call sheet
+19. Reschedule a product haul from third part crew to sanjel crew, unit section is not populated.
+InProgress
+Coding_Complete 18. Schedul product haul for third party crew, eService not populated properly in third part section. Root cause: in eServiceWebContext line:471, crewId passed in no matter third party or not.
+
+            if ((productHaul != null) && (callSheetHeader != null))
+                RigBoardProcess.CreateUnitSectionOrThirdPartyUnitSection(productHaul, productHaulLoad,
+                    callSheetHeader.Id, productHaul.IsThirdParty?productHaulModel.ThirdPartyBulkerCrewId:productHaulModel.CrewId);
+
+
+In Production
+
+1. Release crew after job is completed, not working. In JobService, cannot find RigJobSanjelCrewService in Proxy factory. On Board completion not working either. Should add a Release Crew function to completed rigjob on RigBoard, and also on Resource board.
+15. District Notes while multiple district selected not understoodable.
+7. OSR on RigBoard operation seems not aligned with call sheet. Adding second OSR to Rig Job, seems not adding to call sheet properly. So if only first one in call sheet, two on Rig Board, try to remove the first one, throw an exception.
+12. Currently we are not able to synchronize the change from RigBoard to eService immediately for some reference data, e.g. OSR, rig, etc. After you change an OSR’s phone number on RigBoard, you have to close and re-open eService to let eService load up the changes.

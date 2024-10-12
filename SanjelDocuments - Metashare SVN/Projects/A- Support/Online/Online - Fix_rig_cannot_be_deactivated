@@ -1,0 +1,33 @@
+Use [SanjelData]
+-- Chris Chubey reported rig Coil 10 cannot be deactivated
+-- Rig cannot be deactivated
+
+select * from Rig where name like 'Coil 10' order by system_id desc;
+
+-- check most recent record if the rig is deactivated, Status should be 6.
+-- Rig Id is found, 791
+
+select * from RigJob where Rigid = 791 order by system_id desc;
+
+-- find all history of this rig
+
+select * from RigJob where Rigid = 791 and effective_end_datetime > GETDATE() and IsListed=1 order by system_id desc;
+
+
+-- check effective record and islisted value. There should be only 1 record satisfies these two condition. 
+-- And if a rig is deactivated, there should be no record satisfies this condition.
+-- In this case, the rig has been deactivated, but it still shows on rig board as a down rig. 
+-- This is a known bug for deactivate rig function.
+
+-- found 1 defective record, system_id is 118074
+
+select * from RigJob where Rigid = 791 order by system_id desc;
+
+-- found the record for deactivation which system_id is 118076, modified_datetime is 2020-06-17 08:17:42.9470000
+-- At that time, record 118074 is supposed to diabled.
+
+update RigJob set effective_end_datetime = N'2020-06-17 08:17:42.9470000' where system_id = 118074;
+
+-- the Rig Job should be removed from RigBoard
+
+

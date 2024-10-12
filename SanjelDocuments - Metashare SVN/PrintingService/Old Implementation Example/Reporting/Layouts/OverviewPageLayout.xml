@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<report id="overviewPage">
+
+  <Metadata>
+    <Description>A layout specification for Overview Page in cementing quotes.</Description>
+    <RevisionDate>Feb 9, 2015</RevisionDate>
+    <CreatedBy>Hai Yang</CreatedBy>
+  </Metadata>
+
+  <sections>
+
+    <SectionBase id="overviewSection">
+
+      <pageNumber prefix="" suffix="" startNumber="1" formatPattern="Arabic"></pageNumber>
+
+      <pageHeader>
+
+        <VerticalPanel id="header" class="jdtHeader">
+
+          <ImageControl id="sanjelLogo" source="Sanjel Logo.png"></ImageControl>
+          <ShapeControl id="horizontalLine" type="HorizontalLine" class="MediumHorizontalLine"></ShapeControl>
+
+          <HorizontalPanel>
+            <TextFieldControl id="textField" dataField="CustomerName" class="pageTitle"></TextFieldControl>
+            <TextFieldControl id="textField" dataField="JobDescription" class="pageTitle rightAlign"></TextFieldControl>
+          </HorizontalPanel>
+
+          <HorizontalPanel>
+            <TextFieldControl id="textField" dataField="WellNameAndLocation" class="pageTitle"></TextFieldControl>
+            <TextFieldControl id="textField" dataField="WellType" class="pageTitle rightAlign"></TextFieldControl>
+          </HorizontalPanel>
+
+          <ShapeControl id="horizontalLine" type="HorizontalLine" class="ThickHorizontalLine"></ShapeControl>
+          <TextFieldControl id="textField"  text="CEMENTING OVERVIEW" class="pageBanner"></TextFieldControl>
+
+        </VerticalPanel>
+
+      </pageHeader>
+
+      <pageContent>
+
+        <HorizontalPanel>
+
+          <VerticalPanel>
+
+            <ControlGroup id="highProfileWellGroup" condition="IsHighProfileWell">
+
+              <GroupHeader class="controlGroupHeader">
+                <TextFieldControl id="textField" text="High Profile Well" class="sectionTitle leftColumn"></TextFieldControl>
+                <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine leftColumn"></ShapeControl>
+              </GroupHeader>
+
+              <TextFieldControl id="textField" dataField="HighProfileWellLabel" class="ItemText leftColumn"></TextFieldControl>
+
+            </ControlGroup>
+
+            <ControlGroup id="operationsGroup" condition="HasOperations">
+
+              <GroupHeader class="controlGroupHeader">
+                <TextFieldControl id="textField" text="Operational Objectives" class="sectionTitle leftColumn"></TextFieldControl>
+                <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine leftColumn"></ShapeControl>
+              </GroupHeader>
+
+              <TextFieldControl id="textField" dataField="OperationsText" class="ItemText leftColumn"></TextFieldControl>
+
+            </ControlGroup>
+
+            <ControlGroup id="operationsGroup" condition="HasTubulars">
+
+              <GroupHeader class="controlGroupHeader">
+                <TextFieldControl id="textField" text="Tubular Connection &amp; Thread Type" class="sectionTitle leftColumn"></TextFieldControl>
+                <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine leftColumn"></ShapeControl>
+              </GroupHeader>
+
+              <TextFieldControl id="textField" dataField="TubularsList" class="ItemText leftColumn"></TextFieldControl>
+
+            </ControlGroup>
+
+          </VerticalPanel>
+
+          <ControlGroup id="implementationGroup">
+
+            <GroupHeader class="controlGroupHeader">
+              <TextFieldControl id="textField" text="Implementation Notes" class="sectionTitle rightColumn"></TextFieldControl>
+              <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine rightColumn"></ShapeControl>
+            </GroupHeader>
+
+            <TextFieldControl id="textField" dataField="ImplementationText" class="ItemText rightColumn"></TextFieldControl>
+
+          </ControlGroup>
+
+        </HorizontalPanel>
+
+        <ControlGroup id="formationGroup">
+
+          <GroupHeader class="controlGroupHeader">
+            <TextFieldControl id="textField" text="Formation Data" class="sectionTitle"></TextFieldControl>
+            <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine"></ShapeControl>
+          </GroupHeader>
+
+          <HorizontalPanel>
+
+            <GridControl id="gridControl" dataTable="FormationTableLeft" class="leftTable">
+
+              <!--Column definitions-->
+              <colGroup>
+                <col id="colName" class="colNameWidth" />
+                <col id="colValue" class="colValueWidth" />
+                <col id="colUnit" class="colUnitWidth" />
+              </colGroup>
+
+              <tr id="rowPriceItem" class="tableContent">
+                <td id="colName" startColumn="0" endColumn="0" dataField="Name" class="leftAlign"></td>
+                <td id="colValue" startColumn="1" endColumn="1" dataField="Value" class="rightAlign"></td>
+                <td id="colUnit" startColumn="2" endColumn="2" dataField="Unit" class="leftAlign"></td>
+              </tr>
+
+            </GridControl>
+
+            <GridControl id="gridControl" dataTable="FormationTableRight" class="rightTable">
+
+              <!--Column definitions-->
+              <colGroup>
+                <col id="colName" class="colNameWidth" />
+                <col id="colValue" class="colValueWidth" />
+                <col id="colUnit" class="colUnitWidth" />
+              </colGroup>
+
+              <tr id="rowPriceItem" class="tableContent">
+                <td id="colName" startColumn="0" endColumn="0" dataField="Name" class="leftAlign"></td>
+                <td id="colValue" startColumn="1" endColumn="1" dataField="Value" class="rightAlign"></td>
+                <td id="colUnit" startColumn="2" endColumn="2" dataField="Unit" class="leftAlign"></td>
+              </tr>
+
+            </GridControl>
+
+          </HorizontalPanel>
+
+        </ControlGroup>
+
+        <ControlGroup id="fluidsGroup">
+
+          <GroupHeader class="controlGroupHeader">
+            <TextFieldControl id="textField" text="Fluids Required for Operation" class="sectionTitle"></TextFieldControl>
+            <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine"></ShapeControl>
+          </GroupHeader>
+
+          <GridControl id="gridControl" dataTable="FluidsTable" class="leftTable">
+
+            <!--Column definitions-->
+            <colGroup>
+              <col id="colName" class="wideColWidth" />
+              <col id="colProduct" class="" />
+              <col id="colDensity" class="narrowColWidth" />
+              <col id="colMixWaterRequired" class="narrowColWidth" />
+              <col id="colYield" class="narrowColWidth" />
+              <col id="colTonnes" class="narrowColWidth" />
+              <col id="colVolume" class="narrowColWidth" />
+              <col id="colRate" class="narrowColWidth" />
+              <col id="colWaterRequired" class="narrowColWidth" />
+              <col id="colPumpTime" class="narrowColWidth" />
+            </colGroup>
+
+            <tr id="rowCaption" class="tableTitle">
+              <td id="rowName" startColumn="0" endColumn="0" class="leftAlign bottomAlign thinBottomBorder">Fluid&#13;Name</td>
+              <td id="rowProduct" startColumn="1" endColumn="1" class="leftAlign bottomAlign thinBottomBorder">Product</td>
+              <td id="rowDensity" startColumn="2" endColumn="2" class="rightAlign bottomAlign thinBottomBorder">Density&#13;(kg/m3)</td>
+              <td id="rowMixWaterRequired" startColumn="3" endColumn="3" class="rightAlign bottomAlign thinBottomBorder">Mix Water&#13;Required&#13;(m3/t)</td>
+              <td id="rowYield" startColumn="4" endColumn="4" class="rightAlign bottomAlign thinBottomBorder">Yield&#13;(m3/t)</td>
+              <td id="rowTonnes" startColumn="5" endColumn="5" class="rightAlign bottomAlign thinBottomBorder">Tonnes</td>
+              <td id="rowVolume" startColumn="6" endColumn="6" class="rightAlign bottomAlign thinBottomBorder">Volume&#13;(m3)</td>
+              <td id="rowRate" startColumn="7" endColumn="7" class="rightAlign bottomAlign thinBottomBorder">Rate&#13;(m3/min)</td>
+              <td id="rowWaterRequired" startColumn="8" endColumn="8" class="rightAlign bottomAlign thinBottomBorder">Water&#13;Required&#13;(m3)</td>
+              <td id="rowPumpTime" startColumn="9" endColumn="9" class="rightAlign bottomAlign thinBottomBorder">Pump&#13;Time&#13;(min)</td>
+            </tr>
+
+            <tr id="rowPriceItem" class="tableContent">
+              <td id="rowName" startColumn="0" endColumn="0" dataField="Name" class="tableCell leftAlign"></td>
+              <td id="rowProduct" startColumn="1" endColumn="1" dataField="Product" class="tableCell leftAlign"></td>
+              <td id="rowDensity" startColumn="2" endColumn="2" dataField="Density" class="tableCell rightAlign"></td>
+              <td id="rowMixWaterRequired" startColumn="3" endColumn="3" dataField="MixWaterRequired" class="tableCell rightAlign"></td>
+              <td id="rowYield" startColumn="4" endColumn="4" dataField="Yield" class="tableCell rightAlign"></td>
+              <td id="rowTonnes" startColumn="5" endColumn="5" dataField="Tonnes" class="tableCell rightAlign"></td>
+              <td id="rowVolume" startColumn="6" endColumn="6" dataField="Volume" class="tableCell rightAlign"></td>
+              <td id="rowRate" startColumn="7" endColumn="7" dataField="Rate" class="tableCell rightAlign"></td>
+              <td id="rowWaterRequired" startColumn="8" endColumn="8" dataField="WaterRequired" class="tableCell rightAlign"></td>
+              <td id="rowPumpTime" startColumn="9" endColumn="9" dataField="PumpTime" class="tableCell rightAlign"></td>
+            </tr>
+
+            <tr id="rowTotal" class="tableContent">
+              <td id="rowName" startColumn="0" endColumn="0" dataField="" class="totalCell leftAlign"></td>
+              <td id="rowProduct" startColumn="1" endColumn="1" dataField="" class="totalCell leftAlign"></td>
+              <td id="rowDensity" startColumn="2" endColumn="2" dataField="" class="totalCell rightAlign"></td>
+              <td id="rowMixWaterRequired" startColumn="3" endColumn="3" dataField="" class="totalCell rightAlign"></td>
+              <td id="rowYield" startColumn="4" endColumn="4" dataField="" class="totalCell rightAlign"></td>
+              <td id="rowTonnes" startColumn="5" endColumn="5" dataField="Tonnes" class="totalCell thickBottomBorder rightAlign"></td>
+              <td id="rowVolume" startColumn="6" endColumn="6" dataField="Volume" class="totalCell thickBottomBorder rightAlign"></td>
+              <td id="rowRate" startColumn="7" endColumn="7" dataField="" class="totalCell rightAlign"></td>
+              <td id="rowWaterRequired" startColumn="8" endColumn="8" dataField="WaterRequired" class="totalCell thickBottomBorder rightAlign"></td>
+              <td id="rowPumpTime" startColumn="9" endColumn="9" dataField="PumpTime" class="totalCell thickBottomBorder rightAlign"></td>
+            </tr>
+
+          </GridControl>
+
+        </ControlGroup>
+
+      </pageContent>
+
+    </SectionBase>
+
+  </sections>
+
+</report>

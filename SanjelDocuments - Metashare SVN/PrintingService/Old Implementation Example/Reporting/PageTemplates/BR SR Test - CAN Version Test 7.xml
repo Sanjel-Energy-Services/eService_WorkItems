@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Markups>
+
+  <Metadata>
+    <Description>A list of markup of page template in JDT.</Description>
+    <RevisionDate>Feb 9th, 2014</RevisionDate>
+    <RevisedBy>Hai Yang</RevisedBy>
+  </Metadata>
+
+  <Parameters>
+    <Parameter IsEditable="True" Markup="##CustomerName##" DataBinding="CustomerName"/>
+    <Parameter IsEditable="True" Markup="##JobDescription##" DataBinding="JobDescription"/>
+    <Parameter IsEditable="True" Markup="##WellNameAndLocation##" DataBinding="WellNameAndLocation"/>
+    <Parameter IsEditable="True" Markup="##WellType##" DataBinding="WellType"/>
+  </Parameters>
+
+  <Schedule>
+    <ColumnCount Count=4/>
+	<Row>
+	  <Cell ReadOnly="True" Column=0 Span=1 Text="Rate (L/min)">
+	  <Cell ReadOnly="True" Column=1 Span=1 Text="Volume (L)">
+	  <Cell ReadOnly="True" Column=2 Span=1 Text="Time (min)">
+	  <Cell ReadOnly="True" Column=3 Span=1 Text="Cumulative Time (min)">
+	</Row>
+	<Row>
+	  <Cell ReadOnly="True" Column=0 Span=4 Text="Batchmix cement (if required)">
+	</Row>
+	<Row>
+	  <Cell ReadOnly="False" Column=0 Span=1 Text="NA" Markup="" DataBinding="">
+	</Row>
+  </Schedule>
+   
+</Markups>

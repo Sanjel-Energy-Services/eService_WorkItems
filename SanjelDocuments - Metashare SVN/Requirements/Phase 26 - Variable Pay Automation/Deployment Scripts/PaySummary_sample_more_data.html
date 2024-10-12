@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{LastName}, {FirstName} ({Employee ADP ID})</title>
+<style tpe>
+@page {
+  size: letter landscape;
+}
+body {
+  font-size: 10pt;
+}
+.colDate {
+  width: 70px;
+}
+.colTicket {
+  width: 60px;
+  text-align: center;
+}
+.colOVPP {
+  width: 80px;
+  text-align: center;
+}
+.colCompany {
+  width: 175px;
+}
+.colPosition {
+  width: 75px;
+}
+.colVariablePay {
+  width: 75px;
+  text-align: right;
+}
+.colOVPPAmount {
+  width: 55px;
+  text-align: right;
+}
+.colStandbyHours {
+  width: 75px;
+  text-align: right;
+}
+.colStanbyAmount {
+  width: 75px;
+  text-align: right;
+}
+.colMeal {
+  width: 75px;
+  text-align: right;
+}
+.colTotal {
+  width: 75px;
+  text-align: right;
+}
+.colCrewEff {
+  width: 75px;
+  text-align: right;
+}
+th.colStandbyHours, th.colVariablePay, th.colOVPPAmount, th.colStanbyAmount, th.colMeal, th.colTotal, th.colCrewEff {
+  text-align: center;
+}
+table.table_details {
+border-top: 2px solid #3382C8;
+}
+tr.details_header th {
+font: bold;
+background: #5B9BD5;
+border-bottom: 1px solid #3382C8;
+}
+.header_title {
+font: bold;
+}
+.header_value {
+border-bottom: 1px solid black;
+}
+tr.total td {
+border-top: 1px solid #3382C8;
+border-bottom: 2px solid #3382C8;
+
+}
+</style></head>
+<body>
+    <div>
+        <div>
+			<table>
+				<tr>
+					<td rowspan="3" colspan="3" class="logo"><img src="data:image/png;base64,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" width="190" height="50"/></td>
+					<td class="header_title"><b>Varaiable Pay & OVPP Earned:</b></td>
+					<td class="header_value">Feb 7, 2021 to Feb 20, 2021</td>
+				</tr>
+				<tr>
+					<td class="header_title"><b>Payable:<b></td>
+					<td class="header_value">Mar 12, 2021</td>
+				</tr>
+				<tr>
+					<td class="header_title"><b>District:</b></td>
+					<td class="header_value">Lac La Biche</td>
+				</tr>
+				<tr>
+					<td><b>Employee Name: </b></td>
+					<td>Froude, Steve (N20S000031155)</td>
+					<td width="300"></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+        <div>
+		        <table class="table_details" cellspacing="0" cellpadding="0">
+                <tr class="details_header">
+                    <th class="colDate">Date</th>
+                    <th class="colTicket">Ticket #</th>
+                    <th class="colOVPP">OVPP #</th>
+                    <th class="colCompany">Customer</th>
+                    <th class="colPosition">Pay Position</th>
+                    <th class="colVariablePay">Variable Pay</th>
+                    <th class="colOVPPAmount">OVPP</th>
+                    <th class="colStandbyHours">Standby/Ext Hours</th>
+                    <th class="colStanbyAmount">Standby/Ext Amount</th>
+                    <th class="colMeal">Meal Allowance</th>
+                    <th class="colTotal">Total Amount</th>
+                    <th class="colCrewEff">Count of Crew Efficiency</th>
+                </tr>
+<!-- Begin: Repeat following as pay entry records -->				
+				<tr>
+                    <td class="colDate"></td>
+                    <td class="colTicket"></td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany"></td>
+                    <td class="colPosition"></td>
+                    <td class="colVariablePay"></td>
+                    <td class="colOVPPAmount"></td>
+                    <td class="colStandbyHours"></td>
+                    <td class="colStanbyAmount"></td>
+                    <td class="colMeal">467.00</td>
+                    <td class="colTotal">467.00</td>
+                    <td class="colCrewEff"></td>
+				</tr>
+				<tr>
+                    <td class="colDate">02/09/2021</td>
+                    <td class="colTicket">464381</td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany">Tourmaline Oil Corp.</td>
+                    <td class="colPosition">Operator 3</td>
+                    <td class="colVariablePay">311.96</td>
+                    <td class="colOVPPAmount"></td>
+                    <td class="colStandbyHours"></td>
+                    <td class="colStanbyAmount"></td>
+                    <td class="colMeal"></td>
+                    <td class="colTotal">311.96</td>
+                    <td class="colCrewEff"></td>
+				</tr>
+				<tr>
+                    <td class="colDate">02/09/2021</td>
+                    <td class="colTicket">463685</td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany">Inplay Oil Corp.</td>
+                    <td class="colPosition">Operator 3</td>
+                    <td class="colVariablePay">280.00</td>
+                    <td class="colOVPPAmount"></td>
+                    <td class="colStandbyHours"></td>
+                    <td class="colStanbyAmount"></td>
+                    <td class="colMeal"></td>
+                    <td class="colTotal">280.00</td>
+                    <td class="colCrewEff"></td>
+				</tr>
+				<tr>
+                    <td class="colDate">02/07/2021</td>
+                    <td class="colTicket">463684</td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany">Surge Energy Inc.</td>
+                    <td class="colPosition">Supervisor 3</td>
+                    <td class="colVariablePay">315.00</td>
+                    <td class="colOVPPAmount"></td>
+                    <td class="colStandbyHours">3.00</td>
+                    <td class="colStanbyAmount">48.00</td>
+                    <td class="colMeal"></td>
+                    <td class="colTotal">363.00</td>
+                    <td class="colCrewEff"></td>
+				</tr>
+				<tr>
+                    <td class="colDate">02/13/2021</td>
+                    <td class="colTicket">464417</td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany">Petronas Energy Canada Ltd.</td>
+                    <td class="colPosition">Support</td>
+                    <td class="colVariablePay">349.24</td>
+                    <td class="colOVPPAmount"></td>
+                    <td class="colStandbyHours">4.00</td>
+                    <td class="colStanbyAmount">56.00</td>
+                    <td class="colMeal"></td>
+                    <td class="colTotal">405.24</td>
+                    <td class="colCrewEff"></td>
+				</tr>
+				<tr>
+                    <td class="colDate">02/12/2021</td>
+                    <td class="colTicket">463686</td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany">Pipestone Energy Corp.</td>
+                    <td class="colPosition">Supervisor 3</td>
+                    <td class="colVariablePay">490.00</td>
+                    <td class="colOVPPAmount"></td>
+                    <td class="colStandbyHours"></td>
+                    <td class="colStanbyAmount"></td>
+                    <td class="colMeal"></td>
+                    <td class="colTotal">490.00</td>
+                    <td class="colCrewEff">1</td>
+				</tr>
+				<tr>
+                    <td class="colDate">02/14/2021</td>
+                    <td class="colTicket">463687</td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany">Bering Exploration Company</td>
+                    <td class="colPosition">Supervisor 3</td>
+                    <td class="colVariablePay">425.00</td>
+                    <td class="colOVPPAmount"></td>
+                    <td class="colStandbyHours"></td>
+                    <td class="colStanbyAmount"></td>
+                    <td class="colMeal"></td>
+                    <td class="colTotal">425.00</td>
+                    <td class="colCrewEff">1</td>
+				</tr>
+<!-- End: Repeat following as pay entry records -->				
+				<tr class="total">
+                    <td class="colDate" colspan="2"><b>Grand Total</b></td>
+                    <td class="colOVPP"></td>
+                    <td class="colCompany"></td>
+                    <td class="colPosition"></td>
+                    <td class="colVariablePay">2171.20</td>
+                    <td class="colOVPPAmount">0.00</td>
+                    <td class="colStandbyHours">7.00</td>
+                    <td class="colStanbyAmount">104.00</td>
+                    <td class="colMeal">467.00</td>
+                    <td class="colTotal">2275.20</td>
+                    <td class="colCrewEff">2</td>
+				</tr>
+            </table>
+		</div>
+	</div>
+</body>
+</html>

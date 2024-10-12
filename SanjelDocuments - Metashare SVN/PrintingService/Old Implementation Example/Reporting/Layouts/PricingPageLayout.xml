@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<report id="pricingPage">
+
+  <sections>
+
+    <!-- Pricing Information Table -->
+    <SectionBase id="pricingSection">
+
+      <pageNumber prefix="" suffix="" startNumber="1" formatPattern="Arabic"></pageNumber>
+
+      <pageHeader>
+        <VerticalPanel id="header" class="jdtHeader">
+          <ImageControl id="sanjelLogo" source="Sanjel Logo.png"></ImageControl>
+          <ShapeControl id="horizontalLine" type="HorizontalLine" class="MediumHorizontalLine"></ShapeControl>
+          <TextFieldControl id="textField" class="pageTitle"  dataField="CustomerName"></TextFieldControl>
+          <TextFieldControl id="textField" class="pageTitle"  dataField="WellNameAndLocation"></TextFieldControl>
+          <ShapeControl id="horizontalLine" type="HorizontalLine" class="ThickHorizontalLine"></ShapeControl>
+          <TextFieldControl id="textField" class="pageBanner"  text="Cost Estimate"></TextFieldControl>
+        </VerticalPanel>
+      </pageHeader>
+
+      <pageContent>
+
+        <VerticalPanel id="verticalPanel">
+
+          <ControlGroup id="saleQuoteSection" dataField="SectionReportModels">
+
+            <GroupHeader class="controlGroupHeader">
+              <TextFieldControl id="textField" class="sectionTitle" dataField="CurrentReportModel.SectionHeader"></TextFieldControl>
+              <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine"></ShapeControl>
+            </GroupHeader>
+
+            <GridControl id="gridControl" template="BookLessDiscountSingleUom" dataTable="CurrentReportModel.QuoteSectionTable">
+
+              <!--Column definitions-->
+              <colGroup>
+                <col id="colCode" class="narrowColWidth" />
+                <col id="colDescription" />
+                <col id="colQuantity" class="narrowColWidth" />
+                <col id="colUom" class="narrowColWidth" />
+                <col id="colBookPrice" class="mediumColWidth" />
+                <col id="colPercentage" class="narrowColWidth" />
+                <col id="colDiscounted" class="mediumColWidth" />
+                <col id="colTotalAmount" class="wideColWidth" />
+              </colGroup>
+
+              <!--Caption Row-->
+              <tr id="rowCaption" class="tableTitle">
+                <td id="rowCode" startColumn="0" endColumn="0" class="leftAlign">Code</td>
+                <td id="rowDescription" startColumn="1" endColumn="1" class="leftAlign">Description</td>
+                <td id="rowQuantity" startColumn="2" endColumn="2" class="rightAlign">Quantity</td>
+                <td id="rowUom" startColumn="3" endColumn="3" class="rightAlign">UOM</td>
+                <td id="rowBookPrice" startColumn="4" endColumn="4" class="rightAlign">$ Book Price</td>
+                <td id="rowPercentage" startColumn="5" endColumn="5" class="rightAlign">% Disc</td>
+                <td id="rowDiscounted" startColumn="6" endColumn="6" class="rightAlign">% Disc</td>
+                <td id="rowTotalAmount" startColumn="7" endColumn="7" class="rightAlign">$ Amount</td>
+              </tr>
+
+              <!--Price Items-->
+              <tr id="rowPriceItem" class="tableContent">
+                <td id="cellCode" startColumn="0" endColumn="0" dataField="Code" class="leftAlign"></td>
+                <td id="cellDescription" startColumn="1" endColumn="1" dataField="Description" class="leftAlign"></td>
+                <td id="cellQuantity" startColumn="2" endColumn="2" dataField="SalesQty" class="rightAlign"></td>
+                <td id="cellUom" startColumn="3" endColumn="3" dataField="UnitOfMeasure" class="rightAlign"></td>
+                <td id="cellBookPrice" startColumn="4" endColumn="4" dataField="SalesPrice" class="rightAlign"></td>
+                <td id="cellPercentage" startColumn="5" endColumn="5" dataField="LinePercent" class="rightAlign"></td>
+                <td id="cellDiscounted" startColumn="6" endColumn="6" dataField="LineDisc" class="rightAlign"></td>
+                <td id="cellTotalAmount" startColumn="7" endColumn="7" dataField="TotalAmount" class="rightAlign"></td>
+              </tr>
+
+            </GridControl>
+
+            <GridControl id="gridControl" template="BookLessDiscountMultipleUom" dataTable="CurrentReportModel.QuoteSectionTable">
+
+              <!--Column definitions-->
+              <colGroup>
+                <col id="colCode" class="narrowColWidth" />
+                <col id="colDescription" />
+                <col id="colQuantity" class="narrowColWidth" />
+                <col id="colUom" class="narrowColWidth" />
+                <col id="colPrimaryQty" class="narrowColWidth" />
+                <col id="colSecondaryQty" class="narrowColWidth" />
+                <col id="colBookPrice" class="mediumColWidth" />
+                <col id="colPercentage" class="narrowColWidth" />
+                <col id="colDiscounted" class="mediumColWidth" />
+                <col id="colTotalAmount" class="wideColWidth" />
+              </colGroup>
+
+              <!--Caption Row-->
+              <tr id="rowCaption" class="tableTitle">
+                <td id="rowCode" startColumn="0" endColumn="0" class="leftAlign">Code</td>
+                <td id="rowDescription" startColumn="1" endColumn="1" class="leftAlign">Description</td>
+                <td id="rowQuantity" startColumn="2" endColumn="2" class="rightAlign">Quantity</td>
+                <td id="rowUom" startColumn="3" endColumn="3" class="rightAlign">UOM</td>
+                <td id="rowPrimaryQty" startColumn="4" endColumn="4" class="rightAlign">Unit1</td>
+                <td id="rowSecondaryQty" startColumn="5" endColumn="5" class="rightAlign">Unit2</td>
+                <td id="rowBookPrice" startColumn="6" endColumn="6" class="rightAlign">$ Book Price</td>
+                <td id="rowPercentage" startColumn="7" endColumn="7" class="rightAlign">% Disc</td>
+                <td id="rowDiscounted" startColumn="8" endColumn="8" class="rightAlign">% Disc</td>
+                <td id="rowTotalAmount" startColumn="9" endColumn="9" class="rightAlign">$ Amount</td>
+              </tr>
+
+              <!--Price Items-->
+              <tr id="rowPriceItem" class="tableContent">
+                <td id="cellCode" startColumn="0" endColumn="0" dataField="Code" class="leftAlign"></td>
+                <td id="cellDescription" startColumn="1" endColumn="1" dataField="Description" class="leftAlign"></td>
+                <td id="cellQuantity" startColumn="2" endColumn="2" dataField="SalesQty" class="rightAlign"></td>
+                <td id="cellUom" startColumn="3" endColumn="3" dataField="UnitOfMeasure" class="rightAlign"></td>
+                <td id="cellPrimaryQty" startColumn="4" endColumn="4" dataField="PrimaryQty" class="rightAlign"></td>
+                <td id="cellSecondaryQty" startColumn="5" endColumn="5" dataField="SecondaryQty" class="rightAlign"></td>
+                <td id="cellBookPrice" startColumn="6" endColumn="6" dataField="SalesPrice" class="rightAlign"></td>
+                <td id="cellPercentage" startColumn="7" endColumn="7" dataField="LinePercent" class="rightAlign"></td>
+                <td id="cellDiscounted" startColumn="8" endColumn="8" dataField="LineDisc" class="rightAlign"></td>
+                <td id="cellTotalAmount" startColumn="9" endColumn="9" dataField="TotalAmount" class="rightAlign"></td>
+              </tr>
+
+            </GridControl>
+
+            <GridControl id="gridControl" template="AsPerBidDetail" dataTable="CurrentReportModel.QuoteSectionTable">
+
+              <!--Column definitions-->
+              <colGroup>
+                <col id="colCode" class="narrowColWidth" />
+                <col id="colDescription" />
+                <col id="colQuantity" class="narrowColWidth" />
+                <col id="colUom" class="narrowColWidth" />
+                <col id="colTotalAmount" class="wideColWidth2" />
+              </colGroup>
+
+              <!--Caption Row-->
+              <tr id="rowCaption" class="tableTitle">
+                <td id="rowCode" startColumn="0" endColumn="0" class="leftAlign">Code</td>
+                <td id="rowDescription" startColumn="1" endColumn="1" class="leftAlign">Description</td>
+                <td id="rowQuantity" startColumn="2" endColumn="2" class="rightAlign">Quantity</td>
+                <td id="rowUom" startColumn="3" endColumn="3" class="rightAlign">UOM</td>
+                <td id="rowTotalAmount" startColumn="4" endColumn="4" class="rightAlign">$ Amount</td>
+              </tr>
+
+              <!--Price Items-->
+              <tr id="rowPriceItem" class="tableContent">
+                <td id="cellCode" startColumn="0" endColumn="0" dataField="Code" class="leftAlign"></td>
+                <td id="cellDescription" startColumn="1" endColumn="1" dataField="Description" class="leftAlign"></td>
+                <td id="cellQuantity" startColumn="2" endColumn="2" dataField="SalesQty" class="rightAlign"></td>
+                <td id="cellUom" startColumn="3" endColumn="3" dataField="UnitOfMeasure" class="rightAlign"></td>
+                <td id="cellTotalAmount" startColumn="4" endColumn="4" dataField="ApbAmountText" class="rightAlign"></td>
+              </tr>
+
+            </GridControl>
+
+            <GridControl id="gridControl" template="AsPerBidSummary" dataTable="CurrentReportModel.QuoteSectionTable">
+
+              <!--Column definitions-->
+              <colGroup>
+                <col id="colCode" class="narrowColWidth" />
+                <col id="colDescription" />
+                <col id="colTotalAmount" class="wideColWidth" />
+              </colGroup>
+
+              <!--Caption Row-->
+              <tr id="rowCaption" class="tableTitle">
+                <td id="rowCode" startColumn="0" endColumn="0" class="leftAlign"></td>
+                <td id="rowDescription" startColumn="1" endColumn="1" class="leftAlign"></td>
+                <td id="rowTotalAmount" startColumn="2" endColumn="2" class="rightAlign">$ Amount</td>
+              </tr>
+
+              <!--Price Items-->
+              <tr id="rowPriceItem" class="tableContent">
+                <td id="cellCode" startColumn="0" endColumn="0" text="" class="leftAlign"></td>
+                <td id="cellDescription" startColumn="1" endColumn="1" dataField="LineItemDescription" class="leftAlign"></td>
+                <td id="cellTotalAmount" startColumn="2" endColumn="2" dataField="ApbAmountText" class="rightAlign"></td>
+              </tr>
+
+            </GridControl>
+
+            <HorizontalPanel>
+              <TextFieldControl id="textField" class="sectionTotalLabel" dataField="CurrentReportModel.SingleTotalsTitle"></TextFieldControl>
+              <TextFieldControl id="textField" class="sectionTotalValue" dataField="CurrentReportModel.SectionTotal"></TextFieldControl>
+            </HorizontalPanel>
+
+          </ControlGroup>
+
+          <HorizontalPanel>
+            <TextFieldControl id="textField" class="sectionTotalLabel" text="Total Estimated Cost"></TextFieldControl>
+            <TextFieldControl id="textField" class="grandTotalValue" dataField="GrandTotal"></TextFieldControl>
+          </HorizontalPanel>
+
+          <ControlGroup id="additionalSection" dataField="AdditionalItemsNotesModel">
+
+            <GroupHeader class="controlGroupHeader">
+              <TextFieldControl id="textField" class="sectionTitle" text="Additional Items / Notes"></TextFieldControl>
+              <ShapeControl id="horizontalLine" type="HorizontalLine" class="SectionTitleLine"></ShapeControl>
+            </GroupHeader>
+
+            <TextFieldControl id="textField" class="ItemText" dataField="AdditionalItemsNotes"></TextFieldControl>
+
+          </ControlGroup>
+
+          <TextBoxControl id="textBox" class="FooterText">
+            <content>
+              <paragraph>
+                <field text="Unless otherwise agreed to by Sanjel in writing, the pricing contained in this proposal is valid for a period of 30 days from the date of this proposal. Any estimated amounts or quantities in this proposal will be revised in the applicable invoice to reflect actual amounts or quantities."></field>
+              </paragraph>
+              <paragraph>
+                <field text="Please refer to the General Terms and Conditions contained on the last line of this proposal. The provision of goods and services to the Customer, whether described in this proposal or otherwise provided, is governed by those General Terms and Conditions unless a written master service agreement is in place between the Customer and Sanjel.  By accepting this proposal (either expressly or by allowing Sanjel to perform any service or provide goods) the Customer agrees to be bound by the General Terms and Conditions, or where applicable, the master service agreement in place.  Such acceptance shall constitute an acknowledgement by the Customer that it has reviewed and understands the General Terms and Conditions, and has had the opportunity to seek independent legal advice.  Such terms take precedence over any subsequent or supplemental terms provided by the Customer, including any terms found on a purchase order, which shall not apply regardless of whether or not they are signed by Sanjel."></field>
+              </paragraph>
+            </content>
+          </TextBoxControl>
+
+        </VerticalPanel>
+
+      </pageContent>
+
+    </SectionBase>
+
+  </sections>
+
+</report>

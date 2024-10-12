@@ -1,0 +1,93 @@
+﻿Raw Requirement
+
+1 Requirement Background
+
+1.1 Bin
+    Bin是Sanjel分配给井架的用来贮存干水泥的容器，目前只有P-Tank和Mego Silo两种类型。它在分配给井架之后，就会一直跟着井架走，直到有人把它解除分配。解除分配后就认为是In Yard状态。否则是Assigned状态，并且知道是分配给哪个Rig了。
+每个Bin有它的所属的ServicePoint，它可以在各地区间进行转借，基本业务逻辑与Crew相似。需要加上相关属性。
+1.1.1 Bin Assignment
+      Bin 是分配给Rig的，它随着Rig一起进入下一个Rig Job，所以无论Rig的状态是什么，Bin都可能会和它绑在一起。典型的场景是，一个rig上的job结束了，因为天气原因，它被标记为非活动状态，但是Bin还是和它在一起，Sanjel要采取一个主动动作去把这个Bin运回来。
+1.1.2 Bin Assigned to Rig
+      Sanjel的Bin在分配给一个Rig后，将随着Rig的转运一起走，也就是说，必须有明确的指令将Bin转走，否则Rig的每个活动创建时自动从上一个活动中将分配的Bin拷贝过来，包括停用井架。
+1.2 Blend（水泥混凝泥浆）
+    Blend在石油服务行业内特指水泥混凝泥浆。在加水混合前称为 Dry Blend，加水后称为Wet Blend。目前我们不用考虑Web Blend的部分。
+1.2.1 Recipe（配方）
+    Recipe是Sanjel公司通过对Job进行分析后形成的，通过Recipe可以对Blend进行调配，形成可用的Blend来进行作业，进行作业指的是将混合好的Blend通过Rig送入井中，进行固井作业。
+(Adam 190703) Recipe是Sanjel针对不同需求而设计的Blend产品配方。它通过不同比例的原材料的搭配，使水泥的密度、硬度、固化时间在不同的温度下、压力下达到最佳性能。Recipe的成分既可以是原始原材料，也可以是预先混合好的产品。在实际应用中，客户请求一个固井作业，会提供该油（气）井的地质数据和钻进数据，Sanjel工程师根据实际情况所需要的Blend的性能进行配方设计。（End Adam 190703)
+1.3 Rig（井架）
+井架是在钻井或修井过程中，用于安放天车，悬挂游车、大钩、吊环、吊卡等机具，以及起下、存放钻杆、油管及抽油杆的装置。
+ (Joe 190702)   不用理解Rig到底是什么东西，只需要知道用户的工作是无法脱离Rig的，Blend会装在Bin里，Bin会分给Rig使用，但空的Bin可以直接Assign给Rig。(End Joe 190703)
+	(Adam 190702) Rig到底是什么东西，百度一下，你就知道了。做业务分析，要做变色龙，客户是哪个行业的，你就需要了解哪个行业的基本知识，网上现在信息非常丰富，要学会多用搜索。
+	https://baike.baidu.com/item/%E4%BA%95%E6%9E%B6(End -Adam 190702)
+(Joe 190703)井架是在钻井或修井过程中，用于安放天车，悬挂游车、大钩、吊环、吊卡等机具，以及起下、存放钻杆、油管及抽油杆的装置。(End Joe 190703)
+1.4 Bin的应用场景（今天和Bella沟通后的结论）
+(Adam 190702) 你们所有的分析应当是基于我提供的需求信息，这个装载规范好像没有足够的信息来支撑这样一个概念。(End -Adam 190702)
+1.4.1 一个Bin同时只能装载一种Blend。
+(Adam 190702) Bin 不是用来装载运输的。昨天让你看图片，就是告诉你Bin是一个很大的东西，它是用来装载的，但不是用来运输的。(End -Adam 190702)
+(Joe 190703)当Sanjel将原料根据配料单提前进行搅拌后形成Blend，之后将这些Blend运送到Bin进行装载，之后通过Product Haul将装载着Blend的Bin运送到施工现场，这样在作业开始时便有Blend可用。(End Joe 190703)
+(Adam 190703)看来你昨天没有看图片。一个Bin同时只能装载一种Blend。当Sanjel将原料根据配料单提前进行搅拌后形成Blend，通过调度Product Haul来用水泥罐车(Bulker)将这些Blend运送到施工现场，并装载到Bin中，这样在作业开始时便有Blend可用。（End Adam 190703)
+
+1.4.2 当客户请求作业时，此作业需要一些Blend。 这些Blend必须在作业执行之前到达现场。 我们有两种方法将Blend运送到现场。 一种方法是，使用水泥罐车(Bulker)装载Blend与施工团队(Crew)一起使用。 另一种方法是，使当Sanjel将原料根据配料单提前进行搅拌后形成Blend，通过调度Product Haul来用水泥罐车(Bulker)提前将这些Blend运送到施工现场，并装载到Bin中，这样在作业开始时便有Blend可用。
+ (Joe 190702) 1.4.2 只有在Rig Job产生后，Blend才会产生，此时就需要Bin进行装载运输。此处不够严谨，是不是会存在提前给Bin装好Blend，等待随时使用的情况。 (End Joe 190702) 
+(Adam 190702) 这是用系统的语言去说话，不是业务场景的语气。应该的这么说.
+When a job is requested by a client, there will be some blends needed for this job. The blends must arrive on location before the job is executed. We have two ways to ship the blends to location. On way is to use bulkers to load up the blends and go with crew. Another way is to use bulkers to ship the blends and load the blends to the bins assinged to the rig in advance.
+
+当客户请求作业时，此作业需要一些水泥混合物。 这些水泥混合物必须在作业执行之前到达现场。 我们有两种方法将混合物运送到现场。 一种方法是，使用散货船装载混合物并与船员一起使用。 另一种方法是，使用散货船运输混合物并将混合物装入预先装配到钻井平台的垃圾箱。
+(End -Adam 190702)
+1.4.3 Rig的拥有着不是Sanjel，所以它的状态只应该是从Sanjel所关心的角度，这些状态在之前的实现中已经定义了，没有“闲置”这个状态。而它和Bin的状态不应该在一起描述。这里涉及到一个面向对象分析和设计原则，单一责任原则（The Single Responsibility Principle）。 Bin是Sanjel的资产，它的状态与Rig状态无关。
+(Adam 190702) Rig的拥有着不是Sanjel，所以它的状态只应该是从Sanjel所关心的角度，这些状态在之前的实现中已经定义了，没有“闲置”这个状态。而它和Bin的状态不应该在一起描述。这里涉及到一个面向对象分析和设计原则，单一责任原则（The Single Responsibility Principle）。 Bin是Sanjel的资产，它的状态与Rig状态无关。(End -Adam 190702)
+(Joe 190702) 1.4.4 Bin不参与Blend搅拌工作，Bin只负责运输Blend的材料到项目现场，搅拌需要从Bin中拿出材料在其他设备中搅拌。(End Joe 190702) 
+(Adam 190702)， Bing不负责运输Blend。
+搅拌这个词在不同场景下是不同的含义。
+一是干搅拌，在原料仓库（Bulk Plant），原料仓库操作工(Bulk Plant Operator)，会根据配料单（Blend Breakdown Sheet），从仓库提取原材料，然后将可以提前干搅拌的原料按比例混合成所需要的干混合物，这是要运送到Bin的混合物。 这部分在Product Haul中已经实现了一些，在今年稍后的项目里会进一步实现。
+另一个是湿搅拌，在施工现场（Field或Well Site)， 在施工时，泵机会将干混合物，及需要混合的原料，和水一起搅拌。 这一部分是我们目前不关心的。
+
+如果对这部分不理解，去学习一下怎么烤蛋糕。(End -Adam 190702)
+
+2 Raw Requirement
+2.1 跟踪Bin，了解Bin分配给了哪个Rig（井架）？或是它在哪个地区。 
+2.2 可以在Resource Board中了解Bin的实现情况，Bin可以按District分别查询。
+2.3 每个Bin都有自己的编号，可以加备注以描述其他信息。
+2.4 Bin可以转移到另一个地区工作，但在需要时可以将Bin拿回来，所以无论Bin在哪个地区，Bin的Ownership是不会变的。
+2.5 如果Bin没有Assign给一个Rig，则认为这个Bin在一个Service Point的厂区中。
+2.6 Bin的Type（类型）：目前只有Mega silos 和 P-tanks
+2.7 跟踪Bin的装载物，了解Bin当前装载了什么Blend，装了多少。
+
+3 Requirement Analysis
+3.1 和Bin有关的
+3.1.1 Bin
+3.1.2 Rig（Bin可以分配给Rig）
+3.1.3 地区（Bin当前所在的地区）
+3.1.4 Ownership（所有权，即Bin的所属区域）
+3.1.5 Bin Type（Bin的类型，现在只有两种，但是不确定之后会不会拓展，一个Type下会存在多个Bin） 
+3.1.6 Blend（Bin的存在就是为了储存Job所需要的Blend）
+3.1.6 Bin的容量
+
+3.2 User Story 
+3.2.1 作为一个Dispatch，我要根据需要把（一个或多个）可用的Bin分配给一个Rig，这样就可以把Blend提前运到Bin中备用。
+3.2.2 作为一个Dispatch，我想在Resource Board中实时了解所有Bin的状态，包括Bin的当前所在地区，Bin当前装了什么东西，装了多少。这样可以让我一个Job开始前，准确的了解所需的Blend的就绪情况。
+3.2.3 如3.2.1所述，作为一个Dispatch，在一个Rig不再需要Bin的时候，我需要能够把Bin从Rig上撤回，这样我就可以把这个Bin分配其他的Rig了。
+3.2.4 作为一个Dispatch，根据Job的需要，我要能够把一个地区的Bin转移到另一个地区，这样可能提高Bin的利用率。
+3.2.5 作为一个Dispatch，我需要能够给Bin添加备注，用来描述一些其他信息。
+(End Joe 190702) 3.2.6 这个不需要了，因为在3.2.1中原有的Job的前提是不存在的。 (End Joe 190702) 
+
+4 Backlog
+(Adam 190702)为什么又是Reqirement? 在3.2识别的过程中，业务流程和实体应该已经识别出来了，下面你所描述的都是实体的属性。这部分应当是UI设计，如果是初次分析，可以是UI Prototype，用来向用户进行需求核实了。在我们的过程中，你应该在纸上画出活动图、概念模型（实体关系图）和UI Prototype。拿着这些易于理解的描述方式与用户进行沟通，而不是纯文字的文档。(End -Adam 190702)
+(Joe 190703) （Hi Adam，这个部分是我对Requirement这个单词的理解有问题，因为在国内传统的分析流程中，Requirement特指系统需求） (End Joe 190703)
+（Adam 190703） 国内国外，需求都会分业务需求和系统需求，按你的解释，只能说明你分不清是什么需求。而在我们演进开发过程中，要分得清清楚楚。（End Adam 190703）
+4.1 Bin Board
+在OnLine下的Resource Board中增加Bin Board，需要展示如下属性：
+4.1.1 Bin Number
+4.1.2 Location（显示Bin当前分配给了Rig还是处于Yard里）
+4.1.3 District（显示Bin当前所在地区）
+4.1.3 Stowage（装载物，显示装载物名称和重量，无装载物时为空）
+4.1.4 capacity（容量，不知道有没有这个数据，如果同类型的Bin容量是同样的，那么不需要这个属性。）
+4.1.5 Note
+4.2 通过Rig Board Assign a Bin to Rig
+(Joe 190703)4.2 Assign a Bin to Rig（有两种操作方式，如下：
+ 4.2.1 通过Bin Board操作 
+4.2.2 通过Rig Board操作(End Joe 190703)
+（Adam 190703）  Assign a Bin to Rig 只能通过 RigBoard来操作。（End Adam 190703）
+4.3 Update Bin District
+4.4 Update Bin Note
+

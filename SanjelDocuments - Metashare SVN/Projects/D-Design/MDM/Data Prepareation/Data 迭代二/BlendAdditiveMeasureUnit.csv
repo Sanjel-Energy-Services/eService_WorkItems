@@ -1,0 +1,5 @@
+﻿"id","system_id","version","modified_user_id","modified_user_name","modified_datetime","operation_type","effective_start_datetime","effective_end_datetime","entity_status","owner_id","Name","Description","MeasureUnitSystemDescription","MeaureUnitTypeName","MeasureUnitSystemSystemId","MeasureUnitSystemName","MeasureUnitSystemId","Abbreviation","MeaureUnitTypeDescription","MeaureUnitTypeSystemId","MeaureUnitTypeId"
+1,81,1,"0",,2008-03-20 15:21:11,,2016-06-01 00:00:00,9999-12-31 00:00:00,0,0,Percent,,,BlendAdditive,1,Metric,1,%,,7,7
+2,82,1,"0",,2008-03-20 15:21:11,,2016-06-01 00:00:00,9999-12-31 00:00:00,0,0,Kg/m3,,,BlendAdditive,1,Metric,1,Kg/m3,,7,7
+3,83,1,"0",,2008-03-20 15:21:11,,2016-06-01 00:00:00,9999-12-31 00:00:00,0,0,l/m3,,,BlendAdditive,1,Metric,1,l/m3,,7,7
+4,84,1,"0",,2008-03-20 15:21:11,,2016-06-01 00:00:00,9999-12-31 00:00:00,0,0,% BWOW,,,BlendAdditive,1,Metric,1,% BWOW,,7,7

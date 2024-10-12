@@ -1,0 +1,469 @@
+"ID","NAME","ADDRESS_STREET","ADDRESS_STREET2","ADDRESS_STREET3","ADDRESS_STREET4","ADDRESS_CITY","ADDRESS_POSTAL_ZIP","ADDRESS_PROV_STATE_ID","BILLING_ADDRESS_STREET","BILLING_ADDRESS_STREET2","BILLING_ADDRESS_STREET3","BILLING_ADDRESS_STREET4","BILLING_ADDRESS_CITY","BILLING_ADDRESS_POSTAL_ZIP","BILLING_ADDRESS_PROV_STATE_ID","RIG_PREFIX","VERSION","LAST_MODIFIED_USER_ID","LAST_MODIFIED_USER_NAME","LAST_MODIFIED_DATE_TIME","LAST_OPERATION_TYPE","EFFECTIVE_START_DATE_TIME","EFFECTIVE_END_DATE_TIME","IS_COD_CUSTOMER","SANJEL_COMPANY_ID"
+1018,"Apache Canada Ltd.","Suite 2800, 421 - 7 Avenue SW","","","","Calgary","T2P 4K9",1,"Suite 2800, 421 - 7 Avenue SW","","","","Calgary","T2P 4K9",1,"",9,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1040,"Aldon Oils Ltd.","1150 Railway Avenue","","","","Weyburn","S4H 0B3",12,"1150 Railway Avenue","","","","Weyburn","S4H 0B3",12,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1043,"Arc Resources Ltd.","1200, 308 - 4 Avenue SW","","","","Calgary","T2P 0H7",1,"1200, 308 - 4 Avenue SW","","","","Calgary","T2P 0H7",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,29-JUN-15,31-DEC-99,0,1
+1053,"Centrica Canada Ltd.","1000, 111 - 5th Avenue SW","","","","Calgary","T2P 3Y6",1,"1000, 111 - 5th Avenue SW","","","","Calgary","T2P 3Y6",1,"",0,0,"",24-JUN-16 03.46.14.000000000 PM,0,01-JAN-01,31-DEC-99,0,1
+1054,"Athena Resources Ltd.","1410, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"1410, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1084,"Advantage Oil & Gas Ltd.","300, 440 - 2 Ave SW","","","","Calgary","T2P 5E9",1,"300, 440 - 2 Ave SW","","","","Calgary","T2P 5E9",1,"",8,0,"",18-NOV-16 10.38.02.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+1085,"Atco Energy Solutions Ltd.","Box 370
+","","","","Carbon","T2P 4H4",1,"Box 370
+","","","","Carbon","T2P 4H4",1,"1285",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1101,"Apache Canada Ltd. (Zama)","Box 25","","","","Zama City","T0H 4E0",1,"Box 25","","","","Zama City","T0H 4E0",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1109,"Anderson Energy Inc.","1000,555 4th Avenue S.W.","","","","Calgary","T2P 3E7",1,"1000,555 4th Avenue S.W.","","","","Calgary","T2P 3E7",1,"",10,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1116,"Arsenal Energy Inc.","1900, 639 - 5th Avenue SW","","","","Calgary","T2P 0M9",1,"1900, 639 - 5th Avenue SW","","","","Calgary","T2P 0M9",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1119,"Aspenleaf Energy Limited","Suite 2100, 240 – 4th Avenue SW","","","","Calgary","T2P 4H4",1,"Suite 2100, 240 – 4th Avenue SW","","","","Calgary","T2P 4H4",1,"",14,29747,"awang",27-JUL-16 03.47.04.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1151,"Athabasca Oil Corporation","1200, 215- 9th Avenue, S.W.","","","","Calgary","T2P 1K3",1,"1200, 215- 9th Avenue, S.W.","","","","Calgary","T2P 1K3",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1163,"AltaGas Ltd.","1700 355 - 4th Avenue SW","","","","Calgary","T2P 0J1",1,"1700 355 - 4th Avenue SW","","","","Calgary","T2P 0J1",1,"1285",8,0,"",27-OCT-16 10.49.01.000000000 AM,3,01-JAN-01,31-DEC-99,1,1
+1198,"Artisan Consulting Services Ltd.","505 7th Street E","","","","Carlyle","S0C 0R0",12,"505 7th Street E","","","","Carlyle","S0C 0R0",12,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1205,"Baytex Energy Ltd.","2800, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"2800, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1217,"Bounty Developments Ltd.","1250, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"1250, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1226,"Bonavista Energy Corporation","1500, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"1500, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"",9,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1227,"Brownstone Resources Ltd.","1150 Railway Avenue","","","","Weyburn","S4H 0B3",12,"1150 Railway Avenue","","","","Weyburn","S4H 0B3",12,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1246,"Bonterra Energy Corp.","901, 1015 - 4th St. S.W.","","","","Calgary","T2R 1J4",1,"901, 1015 - 4th St. S.W.","","","","Calgary","T2R 1J4",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1258,"Barnwell of Canada, Limited","c/o The Barlon Engineering Group Ltd.
+1110, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"c/o The Barlon Engineering Group Ltd.
+1110, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1322,"Birchcliff Energy Ltd.","500, 630 - 4th Avenue SW","","","","Calgary","T2P 0J9",1,"500, 630 - 4th Avenue SW","","","","Calgary","T2P 0J9",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1371,"Border Paving Ltd.","PO Box 2270","","","","Stony Plain","T7Z 1X7",1,"PO Box 2270","","","","Stony Plain","T7Z 1X7",1,"1285",4,0,"",14-NOV-16 11.46.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+1385,"Benchmark Engineering Inc.","810, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"810, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"",9,29747,"awang",27-JUL-16 02.01.36.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1389,"BlackPearl Resources Inc.","700, 444-7th Avenue S.W.","","","","Calgary","T2P 0X8",1,"700, 444-7th Avenue S.W.","","","","Calgary","T2P 0X8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1394,"Baccalieu Energy Inc.","635 8 Ave Sw Suite 500","","","","Calgary","T2P 3M3",1,"635 8 Ave Sw Suite 500","","","","Calgary","T2P 3M3",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1397,"BLZ Energy Ltd.","2200, 605 - 5th Avenue SW","","","","Calgary","T2P 3H5",1,"2200, 605 - 5th Avenue SW","","","","Calgary","T2P 3H5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1406,"Broadview Energy Ltd.","201, 1100 - 8th Avenue SW","","","","Calgary","T2P 3T8",1,"201, 1100 - 8th Avenue SW","","","","Calgary","T2P 3T8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1452,"Caltex Resources Ltd.","Suite 1500, 17 - 7th Avenue SW","","","","Calgary","T2P 0Z3",1,"Suite 1500, 17 - 7th Avenue SW","","","","Calgary","T2P 0Z3",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1461,"Coda Petroleum Inc.","ATT: Accounts Payable
+SunLife Plaza, North Tower
+Suite 1440, 140 - 4th Avenue SW","","","","Calgary","T2P 3N3",1,"ATT: Accounts Payable
+SunLife Plaza, North Tower
+Suite 1440, 140 - 4th Avenue SW","","","","Calgary","T2P 3N3",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1481,"Croverro Energy Ltd.","1600, 840 - 7th Avenue SW","","","","Calgary","T2P 3G2",1,"1600, 840 - 7th Avenue SW","","","","Calgary","T2P 3G2",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1493,"Chinook Energy Inc.","1000, 517 - 10 Ave SW","","","","Calgary","T2R 0A8",1,"1000, 517 - 10 Ave SW","","","","Calgary","T2R 0A8",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1494,"Conserve Oil Corporation","500, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"500, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"",9,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1499,"Cenovus Energy Inc.","500 Centre Street SE
+PO Box 766","","","","Calgary","T2P 0M5",1,"500 Centre Street SE
+PO Box 766","","","","Calgary","T2P 0M5",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1506,"Canadian Coastal Resources Ltd.","900, 202 - 6th Avenue SW","","","","Calgary","T2P 2R9",1,"900, 202 - 6th Avenue SW","","","","Calgary","T2P 2R9",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1508,"Prairie Provident Resources Canada Ltd.","1100, 640 - 5th Avenue SW","","","","Calgary","T2P 3G4",1,"1100, 640 - 5th Avenue SW","","","","Calgary","T2P 3G4",1,"",11,0,"",01-NOV-16 06.56.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+1513,"Canadian Natural Resources Ltd.","2500, 855 - 2nd Street SW","","","","Calgary","T2P 4J8",1,"2500, 855 - 2nd Street SW","","","","Calgary","T2P 4J8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1537,"ConocoPhillips Canada","Attn: Accounts Payable
+P.O. Box 2566, Stn M","","","","Calgary","T2P 2H7",1,"Attn: Accounts Payable
+P.O. Box 2566, Stn M","","","","Calgary","T2P 2H7",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1541,"Consumers Co-operative Refineries Ltd.","P.O. Box 260","","","","Regina","S4P 3A1",12,"P.O. Box 260","","","","Regina","S4P 3A1",12,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1583,"City of Medicine Hat","364 Kippling Street SE","Attn: Glenn Baumback","","","Medicine Hat","T1A 1Y4",1,"364 Kippling Street SE","Attn: Glenn Baumback","","","Medicine Hat","T1A 1Y4",1,"",0,0,"",24-JUN-16 03.46.14.000000000 PM,0,01-JAN-01,31-DEC-99,0,1
+1586,"Caprice Resources Inc.","P.O. Box 848","","","","Weyburn","S4H 2L1",12,"P.O. Box 848","","","","Weyburn","S4H 2L1",12,"1285",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1637,"Crescent Point Energy Corp.","2000, 585 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"2000, 585 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"",8,0,"",28-NOV-16 03.04.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1639,"Connaught Oil & Gas Ltd.","1300, 530 - 8th Avenue SW","","","","Calgary","T2P 3S8",1,"1300, 530 - 8th Avenue SW","","","","Calgary","T2P 3S8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1689,"Crew Energy Inc.","800, 250 - 5th Street SW","","","","Calgary","T2P 0R4",1,"800, 250 - 5th Street SW","","","","Calgary","T2P 0R4",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1696,"Cansearch Resources Ltd.","900, 736 - 6th Avenue SW","","","","Calgary","T2P 3T7",1,"900, 736 - 6th Avenue SW","","","","Calgary","T2P 3T7",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1758,"Coastal Resources Ltd.","1400, 520 - 5th Ave S.W.","","","","Calgary","T2P 3R7",1,"1400, 520 - 5th Ave S.W.","","","","Calgary","T2P 3R7",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1765,"Canada Capital Energy Corporation","Sunlife Plaza
+2600, 140 - 4th Avenue SW","","","","Calgary","T2P 3N3",1,"Sunlife Plaza
+2600, 140 - 4th Avenue SW","","","","Calgary","T2P 3N3",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1782,"Crocotta Energy Inc.","700, 639-5th Avenue SW","","","","Calgary","T2P 0M9",1,"700, 639-5th Avenue SW","","","","Calgary","T2P 0M9",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1793,"Vital Energy Inc.","Suite 500, 940 - 6th Avenue SW","","","","Calgary","T2P 3T1",1,"Suite 500, 940 - 6th Avenue SW","","","","Calgary","T2P 3T1",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1822,"Direct Energy Resources","1000, 111 - 5th Avenue SW","","","","Calgary","T2P 3Y6",1,"1000, 111 - 5th Avenue SW","","","","Calgary","T2P 3Y6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1840,"Devon Canada","2000, 400 - 3rd Avenue SW","","","","Calgary","T2P 4H2",1,"2000, 400 - 3rd Avenue SW","","","","Calgary","T2P 4H2",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1868,"Delphi Energy Corp.","300, 500 - 4th Ave SW","","","","Calgary","T2P 2V6",1,"300, 500 - 4th Ave SW","","","","Calgary","T2P 2V6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1875,"Sinopec Daylight Energy Ltd.","2700, 112-4th Ave SW","","","","Calgary","T2P 0H3",1,"2700, 112-4th Ave SW","","","","Calgary","T2P 0H3",1,"",9,0,"",27-OCT-16 10.55.30.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+1908,"EOG Resources Canada Inc.","1300, 700 - 9th Avenue SW","","","","Calgary","T2P 3V4",1,"1300, 700 - 9th Avenue SW","","","","Calgary","T2P 3V4",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+1946,"EnCana Corporation","","","","","","",,"","","","","","",,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1986,"ERCO Worldwide","440, 736 - 8th Ave SW","","","","Calgary","T2P 1H4",1,"440, 736 - 8th Ave SW","","","","Calgary","T2P 1H4",1,"",0,0,"",24-JUN-16 03.46.14.000000000 PM,0,01-JAN-01,31-DEC-99,0,1
+1988,"Ember Resources Inc.","2400, 300 - 5th Avenue SW","","","","Calgary","T2P 3C4",1,"2400, 300 - 5th Avenue SW","","","","Calgary","T2P 3C4",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+1998,"Striker Exploration Corp.","1250, 645 - 7 Ave SW","","","","Calgary","T2P 4G8",1,"1250, 645 - 7 Ave SW","","","","Calgary","T2P 4G8",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2054,"Cenovus FCCL Ltd. as Operator for FCCL Partnership","500 Centre Street SE  P.O. Box 766","","","","Calgary","T2P 0M5",1,"500 Centre Street SE  P.O. Box 766","","","","Calgary","T2P 0M5",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2090,"Fort Calgary Resources Ltd.","2820, 700-9th Ave SW","","","","Calgary","T2P 3V4",1,"2820, 700-9th Ave SW","","","","Calgary","T2P 3V4",1,"",7,29747,"awang",30-SEP-16 06.39.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2137,"Mosaic Energy Ltd.","Suite 900, 606 – 4th Street SW","","","","Calgary","T2P 1T1",1,"Suite 900, 606 – 4th Street SW","","","","Calgary","T2P 1T1",1,"1285",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2161,"Grizzly Resources Ltd.","1000, 324 - 8th Avenue SW","","","","Calgary","T2P 2Z2",1,"1000, 324 - 8th Avenue SW","","","","Calgary","T2P 2Z2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2173,"Gryphon Petroleum Corp.","Suite 1210,707 - 7th Avenue SW","","","","Calgary","T2P 3H6",1,"Suite 1210,707 - 7th Avenue SW","","","","Calgary","T2P 3H6",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2184,"Galaxy Energy Ltd.","1202, 1100 8th Ave SW","","","","Calgary ","T2P 3T9",1,"1202, 1100 8th Ave SW","","","","Calgary ","T2P 3T9",1,"",0,0,"",24-JUN-16 03.46.14.000000000 PM,0,01-JAN-01,31-DEC-99,0,1
+2189,"Grizzly Oil Sands ULC","2700, 605 - 5th Avenue SW","","","","Calgary","T2P 3H5",1,"2700, 605 - 5th Avenue SW","","","","Calgary","T2P 3H5",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2207,"Hanna Oil & Gas Company - Canada ULC","Suite 200, 615 - 3rd Avenue SW","","","","Calgary","T2P 0G6",1,"Suite 200, 615 - 3rd Avenue SW","","","","Calgary","T2P 0G6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2242,"Harvest Operations Corp.","Suite 1500 700 – 2nd Street SW","","","","Calgary","T2P 2W1",1,"Suite 1500 700 – 2nd Street SW","","","","Calgary","T2P 2W1",1,"",8,0,"",11-OCT-16 04.52.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2300,"Cameco Corporation","2121 - 11th Street West","","","","Saskatoon","S7M 1J3",12,"2121 - 11th Street West","","","","Saskatoon","S7M 1J3",12,"",1,148354,"kbozkir",24-JUN-16 03.46.14.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+2307,"Endurance Energy Ltd.","Suite 800, 215 - 9th Avenue SW","","","","Calgary","T2P 1K3",1,"Suite 800, 215 - 9th Avenue SW","","","","Calgary","T2P 1K3",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2336,"Edge Resources Inc.","1400, 717-7 Ave SW","","","","Calgary","T2P 0Z3",1,"1400, 717-7 Ave SW","","","","Calgary","T2P 0Z3",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2338,"Enerplus Corporation","The Dome Tower
+3000, 333 - 7th Avenue SW","","","","Calgary","T2P 2Z1",1,"The Dome Tower
+3000, 333 - 7th Avenue SW","","","","Calgary","T2P 2Z1",1,"",4,0,"",19-DEC-16 12.39.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2347,"Gear Energy Ltd.","Suite 2600, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"Suite 2600, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2365,"Hyak Energy ULC","Suite 110-101 6th St SW
+Calgary AB","","","","Calgary","T2P 5K7",1,"Suite 110-101 6th St SW
+Calgary AB","","","","Calgary","T2P 5K7",1,"",9,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2378,"GroundForce geoDrilling Solutions","650, 910 - 7th Avenue SW","","","","Calgary","T2P 3N8",1,"650, 910 - 7th Avenue SW","","","","Calgary","T2P 3N8",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2382,"Direct Energy Marketing Ltd.","1200, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"1200, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2385,"Grandview Exploration Inc.","Suite 300, 2509 Dieppe Ave SW","","","","Calgary","T3E 7J9",1,"Suite 300, 2509 Dieppe Ave SW","","","","Calgary","T3E 7J9",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2387,"Brion Energy Corporation","ATTN: Accounts Payable Department
+Suite 1000, 150 - 9th Avenue SW","","","","Calgary","T2P 3H9",1,"ATTN: Accounts Payable Department
+Suite 1000, 150 - 9th Avenue SW","","","","Calgary","T2P 3H9",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2391,"Dark Warrior Resources Ltd.","1100, 630 - 6 Ave SW","","","","Calgary","T2P 0S8",1,"1100, 630 - 6 Ave SW","","","","Calgary","T2P 0S8",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2392,"Edmonton Exchanger & Manufacturing Ltd.","5545 – 89 Street
+","","","","Edmonton","T6E 5W9",1,"5545 – 89 Street
+","","","","Edmonton","T6E 5W9",1,"",8,29747,"awang",27-JUL-16 03.48.20.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2395,"Inception Exploration Ltd.","Suite 300, 808 - 4th Avenue SW","","","","Calgary","T2P 3E8",1,"Suite 300, 808 - 4th Avenue SW","","","","Calgary","T2P 3E8",1,"",6,0,"",02-DEC-16 08.28.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+2401,"Imperial Oil Resources","Drilling & Completion Services
+237 - 4th Avenue SW","","","","Calgary","T2P 0H6",1,"Drilling & Completion Services
+237 - 4th Avenue SW","","","","Calgary","T2P 0H6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2406,"ISH Energy Ltd.","900 McFarlane Tower
+700 -4th Avenue SW","","","","Calgary","T2P 3J4",1,"900 McFarlane Tower
+700 -4th Avenue SW","","","","Calgary","T2P 3J4",1,"1285",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2444,"Insignia Energy Ltd.","2300, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"2300, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2450,"Inter Pipeline Ltd.","2600, 237 - 4th Avenue SW","","","","Calgary","T2P 4K3",1,"2600, 237 - 4th Avenue SW","","","","Calgary","T2P 4K3",1,"1285",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2462,"Corex Resources Ltd.","3200, 700 - 2 St SW","","","","Calgary","T2P 2W2",1,"3200, 700 - 2 St SW","","","","Calgary","T2P 2W2",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2487,"Beaumont Energy Inc.","100-1601 Westmount Road NW","","","","Calgary","T2N 3M2",1,"100-1601 Westmount Road NW","","","","Calgary","T2N 3M2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2489,"Birchill Exploration Limited Partnership","820, 815 – 8th Avenue SW","","","","Calgary","T2P 3P2",1,"820, 815 – 8th Avenue SW","","","","Calgary","T2P 3P2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2495,"CaiTerra International Energy Corp.","200, 1414 – 8th Street SW","","","","Calgary","T2R 1J6",1,"200, 1414 – 8th Street SW","","","","Calgary","T2R 1J6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2496,"Bering Exploration Company","140, 630 – 4th Avenue SW","","","","Calgary","T2P 0J9",1,"140, 630 – 4th Avenue SW","","","","Calgary","T2P 0J9",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2501,"JDM Petroleums Inc.","629-5th Street","","","","Estevan","S4A OP8",12,"629-5th Street","","","","Estevan","S4A OP8",12,"1285",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2505,"Japan Canada Oil Sands Ltd.","2300, 639 - 5th Avenue SW","","","","Calgary","T2P 0M9",1,"2300, 639 - 5th Avenue SW","","","","Calgary","T2P 0M9",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2507,"Jarrod Oils Ltd.","PO Box 58","","","","Gull Lake","S0N 1A0",12,"PO Box 58","","","","Gull Lake","S0N 1A0",12,"",4,0,"",26-OCT-16 02.11.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2559,"Gibson Energy Inc.","1700, 440 – 2nd Avenue SW","","","","Calgary","T2P 5E9",1,"1700, 440 – 2nd Avenue SW","","","","Calgary","T2P 5E9",1,"",10,29747,"awang",27-JUL-16 03.48.52.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2605,"Kaiser Exploration Ltd.","1200, 700 - 4th Avenue SW","","","","Calgary","T2P 2J4",1,"1200, 700 - 4th Avenue SW","","","","Calgary","T2P 2J4",1,"1285",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2644,"Keyera Partnership","Sun Life Plaza West Tower
+Suite 600 144 - 4th Avenue SW
+Attention:  Accounts Payable","","","","Calgary","T2P 3N4",1,"Sun Life Plaza West Tower
+Suite 600 144 - 4th Avenue SW
+Attention:  Accounts Payable","","","","Calgary","T2P 3N4",1,"",6,0,"",27-OCT-16 10.52.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+2656,"Kinwest 2008 Energy Inc.","300, 615 - 3rd Avenue Sw","","","","Calgary","T2P 0G6",1,"300, 615 - 3rd Avenue Sw","","","","Calgary","T2P 0G6",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2657,"Keystone Royalty Corp.","1200, 1881 Scarth Street","","","","Regina","S4P 4K9",12,"1200, 1881 Scarth Street","","","","Regina","SaP 4K9",12,"",3,1000370,"FWare",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2658,"Kasten Energy Inc.","200, 407 - 3rd St SW","","","","Calgary","T2P 4Z2",1,"200, 407 - 3rd St SW","","","","Calgary","T2P 4Z2",1,"",16,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2661,"Kripa Energy Inc.","28 Du Boise","","","","Kirkland","H9J 4B3",11,"28 Du Boise","","","","Kirkland","H9J 4B3",11,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2689,"Lakeview Energy Inc.","Box 20027","","","","Calgary","T2P 4J2",1,"Box 20027","","","","Calgary","T2P 4J2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2763,"Legacy Oil & Gas Inc.","4400, 525 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"4400, 525 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2777,"Longview Oil Corp.","Canterra Tower
+Suite 700, 400 - 3rd Avenue SW","","","","Calgary","T2P 4H2",1,"Canterra Tower
+Suite 700, 400 - 3rd Avenue SW","","","","Calgary","T2P 4H2",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+2779,"Long Run Exploration Ltd.","400, 250 – 2nd Street SW","","","","Calgary","T2P 0C1",1,"400, 250 – 2nd Street SW","","","","Calgary","T2P 0C1",1,"",10,0,"",08-DEC-16 04.46.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+2998,"Marquee Energy Ltd.","1700, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"1700, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3013,"Murphy Oil Company Ltd.","Attn: Accounts Payable
+P.O. Box 2721, Stn M","","","","Calgary","T2P 3Y3",1,"Attn: Accounts Payable
+P.O. Box 2721, Stn M","","","","Calgary","T2P 3Y3",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3017,"Midale Petroleums Ltd.","P.O. Box 419","","","","Midale","S0C 1S0",12,"P.O. Box 419","","","","Midale","S0C 1S0",12,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,16-MAY-16,31-DEC-99,0,1
+3037,"Mancal Energy Inc.","P.O. Box 2526, Station M","","","","Calgary","T2P 5G2",1,"P.O. Box 2526, Station M","","","","Calgary","T2P 5G2",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3061,"MEG Energy Corp.","1100, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"1100, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"",7,0,"",31-OCT-16 03.57.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3099,"NEP Canada ULC","1700 250 6 Ave SW","","","","Calgary","T2P 3H7",1,"1700 250 6 Ave SW","","","","Calgary","T2P 3H7",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3109,"Fortis Corporation","802, 57th Street East","","","","Saskatoon","S7K 5Z1",12,"802, 57th Street East","","","","Saskatoon","S7K 5Z1",12,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3116,"Manitok Energy Inc.","Suite 2600, 585 8th Ave SW","","","","Calgary","T2P 1G1",1,"Suite 2600, 585 8th Ave SW","","","","Calgary","T2P 1G1",1,"",10,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3200,"NAL Resources Limited","600, 550-6th Ave SW","","","","Calgary","T2P 0S2",1,"600, 550-6th Ave SW","","","","Calgary","T2P 0S2",1,"",8,0,"",30-NOV-16 11.44.30.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+3202,"Newalta Corp.","211-11th Ave SW","","","","Calgary","T2R 0C6",1,"211-11th Ave SW","","","","Calgary","T2R 0C6",1,"",6,0,"",13-DEC-16 10.02.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+3245,"NuVista Energy Ltd.","3500, 700 - 2nd Street SW","","","","Calgary","T2P 2W2",1,"3500, 700 - 2nd Street SW","","","","Calgary","T2P 2W2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3254,"Northpoint Resources Ltd.","700, 505 - 3 St SW","","","","Calgary","T2P 3E6",1,"700, 505 - 3 St SW","","","","Calgary","T2P 3E6",1,"",9,29747,"awang",28-JUL-16 10.09.58.000000000 AM,3,01-JAN-01,31-DEC-99,1,1
+3266,"Nexen Energy ULC","2900, 801 - 7th Avenue SW","","","","Calgary","T2P 3P7",1,"2900, 801 - 7th Avenue SW","","","","Calgary","T2P 3P7",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3303,"Nordegg Resources Inc.","#1700, 444-5th Avenue S.W.","","","","Calgary","T2P 2T8",1,"#1700, 444-5th Avenue S.W.","","","","Calgary","T2P 2T8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3304,"Northern Blizzard Resources Inc.","1900, 421 - 7th Ave SW","","","","Calgary","T2P 4K9",1,"1900, 421 - 7th Ave SW","","","","Calgary","T2P 4K9",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3513,"OMERS Energy Inc.","Centennial Place - East Tower
+30th Floor, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"Centennial Place - East Tower
+30th Floor, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3546,"OSUM Oil Sands Corp.","Suite 1900, 255-5th Avenue SW","","","","Calgary","T2P 3G6",1,"Suite 1900, 255-5th Avenue SW","","","","Calgary","T2P 3G6",1,"",8,0,"",31-OCT-16 03.24.38.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3688,"Potts Petroleum Inc.","500, 540 - 5th Avenue SW","","","","Calgary","T2P 0M2",1,"500, 540 - 5th Avenue SW","","","","Calgary","T2P 0M2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3708,"Paramount Resources Ltd.","4700, 888 - 3rd Street SW","","","","Calgary","T2P 5C5",1,"4700, 888 - 3rd Street SW","","","","Calgary","T2P 5C5",1,"",11,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3712,"Penn West Petroleum Ltd.","200, 207 - 9th Avenue SW","","","","Calgary","T2P 1K3",1,"200, 207 - 9th Avenue SW","","","","Calgary","T2P 1K3",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3722,"Postell Energy Co. Ltd.","Suite 720, 903 8th Ave SW","","","","Calgary","T2P 0P7",1,"Suite 720, 903 8th Ave SW","","","","Calgary","T2P 0P7",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3739,"Petrex Energy Ltd.","#300, 1601 Westmount Road NW","","","","Calgary","T2N 3M2",1,"#300, 1601 Westmount Road NW","","","","Calgary","T2N 3M2",1,"1285",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3756,"Pengrowth Corporation","2100, 222 - 3rd Avenue SW","","","","Calgary","T2P 0B6",1,"2100, 222 - 3rd Avenue SW","","","","Calgary","T2P 0B6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3758,"Peyto Exploration & Development Corp.","300, 600 - 3rd Ave SW","","","","Calgary","T2P 0G5",1,"300, 600 - 3rd Ave SW","","","","Calgary","T2P 0G5",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3768,"Progress Energy Canada Ltd.","1200, 205 - 5th Avenue SW","","","","Calgary","T2P 2V7",1,"1200, 205 - 5th Avenue SW","","","","Calgary","T2P 2V7",1,"",12,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3779,"Pembina Pipeline Corp.","8111 – 110 Street","","","","Grande Prairie","T8W 6T2",1,"8111 – 110 Street","","","","Grande Prairie","T8W 6T2",1,"1285",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3814,"Perpetual Energy Inc.","3200, 605 - 5th Avenue SW","","","","Calgary","T2P 3H5",1,"3200, 605 - 5th Avenue SW","","","","Calgary","T2P 3H5",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3834,"Alberta Oilsands Inc.","800, 350 - 7th Avenue SW","","","","Calgary","T2P 3N9",1,"800, 350 - 7th Avenue SW","","","","Calgary","T2P 3N9",1,"1285",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3878,"Prosper Petroleum Ltd.","Suite 1000,521 - 3rd Avenue SW","","","","Calgary","T2P 3T3",1,"Suite 1000,521 - 3rd Avenue SW","","","","Calgary","T2P 3T3",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3879,"Palliser Oil and Gas Corporation","600, 255-5th Avenue SW
+Bow Valley Square III","","","","Calgary","T2P 3G6",1,"600, 255-5th Avenue SW
+Bow Valley Square III","","","","Calgary","T2P 3G6",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3884,"Painted Pony Petroleum Ltd.","1800 - 736 6th Avenue SW","","","","Calgary","T2P 3T7",1,"1800 - 736 6th Avenue SW","","","","Calgary","T2P 3T7",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3910,"Questerre Energy Corporation","1650, 801 - 6th Avenue SW","","","","Calgary","T2P 3W2",1,"1650, 801 - 6th Avenue SW","","","","Calgary","T2P 3W2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+3913,"Plains Midstream Canada","1400, 607 - 8th Avenue SW","","","","Calgary","T2P 0A7",1,"1400, 607 - 8th Avenue SW","","","","Calgary","T2P 0A7",1,"",1,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3925,"Lightstream Resources Ltd.","2800, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"2800, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"",13,29747,"awang",09-AUG-16 03.09.34.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+3929,"Pinecrest Energy Inc.","500, 255 - 5th Avenue SW","","","","Calgary","T2P 3G6",1,"500, 255 - 5th Avenue SW","","","","Calgary","T2P 3G6",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4002,"Ravens Cross Energy","P.O. Box 2500","","","","Kindersley","S0L 1S0",12,"P.O. Box 2500","","","","Kindersley","S0L 1S0",12,"1285",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4008,"Husky Oil Operations Limited","P.O. Box 4490 Station D","","","","Calgary","T2P 3G7",1,"P.O. Box 4490 Station D","","","","Calgary","T2P 3G7",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4011,"Rife Resources Ltd.","400, 144 - 4th Avenue SW","","","","Calgary","T2P 3N4",1,"400, 144 - 4th Avenue SW","","","","Calgary","T2P 3N4",1,"",10,29747,"awang",27-JUL-16 03.50.10.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4053,"Ravens Cross Energy Ltd.","c/o The Barlon Engineering Group Ltd.
+1110, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"c/o The Barlon Engineering Group Ltd.
+1110, 340 - 12th Avenue SW","","","","Calgary","T2R 1L5",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4088,"Rock Energy Inc.","2000, 530 - 8 Ave SW","","","","Calgary","T2P 3S8",1,"2000, 530 - 8 Ave SW","","","","Calgary","T2P 3S8",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4166,"Ron Resources Ltd.","Box 2169","","","","Sundre","T0M 1X0",1,"Box 2169","","","","Sundre","T0M 1X0",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4167,"Renegade Petroleum Ltd.","500, 850 - 2nd Street SW","","","","Calgary","T2P 0R8",1,"500, 850 - 2nd Street SW","","","","Calgary","T2P 0R8",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4177,"Relentless Resources Ltd.","855, 700 - 4th Avenue SW","","","","Calgary","T2P 3J4",1,"855, 700 - 4th Avenue SW","","","","Calgary","T2P 3J4",1,"",4,0,"",06-DEC-16 01.20.01.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4180,"Red River Oil Inc.","600, 521 - 3rd Avenue SW","","","","Calgary","T2P 3T3",1,"600, 521 - 3rd Avenue SW","","","","Calgary","T2P 3T3",1,"",5,0,"",16-NOV-16 01.25.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4197,"Success Resources Ltd.","Box 1042","","","","Brooks","T1R 1B8",1,"Box 1042","","","","Brooks","T1R 1B8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4208,"Shell Canada Energy","PO BOX 2247
+Station 100","","","","Calgary","T2P 2M6",1,"PO BOX 2247
+Station 100","","","","Calgary","T2P 2M6",1,"",11,0,"",27-OCT-16 10.54.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+4226,"Suncor Energy Oil Sands Limited Partnership","Box 38
+112 - 4th Avenue SW","","","","Calgary","T2P 2V5",1,"Box 38
+112 - 4th Avenue SW","","","","Calgary","T2P 2V5",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4244,"Sphere Energy Corp","750, 815 - 8th Avenue SW","","","","Calgary","T2P 3P2",1,"750, 815 - 8th Avenue SW","","","","Calgary","T2P 3P2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4390,"Spur Resources Ltd.","1200, 332 - 6th Avenue SW","","","","Calgary","T2P 0B2",1,"1200, 332 - 6th Avenue SW","","","","Calgary","T2P 0B2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4414,"Southern Pacific Resource Corp.","Bow Valley Square II
+1700, 205 - 5th Avenue SW","","","","Calgary","T2P 2V7",1,"Bow Valley Square II
+1700, 205 - 5th Avenue SW","","","","Calgary","T2P 2V7",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4424,"Cequence Energy Ltd.","3100, 525 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"3100, 525 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4429,"Spur Energy Corporation","521, 500 Allen Street","","","","Airdrie","T4B 1J6",1,"521, 500 Allen Street","","","","Airdrie","T4B 1J6",1,"1285",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4439,"Spartan Energy Corp.","Suite 500, 850 - 2nd Street SW","","","","Calgary","T2P 0R8",1,"Suite 500, 850 - 2nd Street SW","","","","Calgary","T2P 0R8",1,"",9,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4447,"Tristar Resource Management Ltd.","800, 815 - 8th Avenue SW","","","","Calgary","T2P 3P2",1,"800, 815 - 8th Avenue SW","","","","Calgary","T2P 3P2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4458,"Seven Generations Energy Ltd.","4400, 525-8th Ave SW
+Eighth Avenue Place East","","","","Calgary","T2P 1G1",1,"4400, 525-8th Ave SW
+Eighth Avenue Place East","","","","Calgary","T2P 1G1",1,"",11,0,"",16-DEC-16 02.52.36.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4459,"CQ Energy Resources Canada Partnership","Suite 1200, 525 8th Avenue SW","","","","Calgary","T2P 1G1",1,"Suite 1200, 525 8th Avenue SW","","","","Calgary","T2P 1G1",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4462,"Suncor Energy Inc.","P.O. Box 38","","","","Calgary","T2P 2V5",1,"P.O. Box 38","","","","Calgary","T2P 2V5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4467,"Sydco Energy Inc.","400 620 12 Ave SW","","","","Calgary","T2R 0H5",1,"400 620 12 Ave SW","","","","Calgary","T2R 0H5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4477,"Strategic Oil & Gas Ltd.","Suite 1100, 645 – 7th Avenue SW","","","","Calgary","T2P 4G8",1,"Suite 1100, 645 – 7th Avenue SW","","","","Calgary","T2P 4G8",1,"",10,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4487,"Second Wave Petroleum Inc.","1400, 202 6 Ave SW","","","","Calgary","T2P 2R9",1,"1400, 202 6 Ave SW","","","","Calgary","T2P 2R9",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4492,"Standard Exploration Ltd.","200 816 7 Ave SW","","","","Calgary","T2P1A1",1,"200 816 7 Ave SW","","","","Calgary","T2P1A1",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4499,"Tangle Creek Energy Ltd.","1400, 715 - 5th Avenue SW","","","","Calgary","T2P 2X6",1,"1400, 715 - 5th Avenue SW","","","","Calgary","T2P 2X6",1,"",7,0,"",03-NOV-16 05.50.32.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4500,"Repsol Oil & Gas Canada Inc.","3400, 888 - 3rd Street SW","","","","Calgary","T2P 5C5",1,"3400, 888 - 3rd Street SW","","","","Calgary","T2P 5C5",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4523,"Abandonrite Enviro Services","2800, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"2800, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4536,"Tundra Oil & Gas Partnership","1700 - one Lombard Place","","","","Winnipeg","R3B 0X3",3,"1700 - one Lombard Place","","","","Winnipeg","R3B 0X3",3,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4614,"Trilogy Energy LP","1400, 332 - 6th Avenue SW","","","","Calgary","T2P 0B2",1,"1400, 332 - 6th Avenue SW","","","","Calgary","T2P 0B2",1,"",9,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4630,"Tuscany Energy Ltd.","1800, 633 - 6th Avenue SW","","","","Calgary","T2P 2Y5",1,"1800, 633 - 6th Avenue SW","","","","Calgary","T2P 2Y5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4639,"Craft Oil Ltd.","Suite 1010, 639 - 5th Avenue SW","","","","Calgary","T2P 0M9",1,"Suite 1010, 639 - 5th Avenue SW","","","","Calgary","T2P 0M9",1,"",10,29747,"awang",07-OCT-16 01.21.42.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4644,"Twin Butte Energy Ltd.","410, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"410, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4654,"TAQA North Ltd.","2100, 308 - 4th Ave SW","","","","Calgary","T2P 0H7",1,"2100, 308 - 4th Ave SW","","","","Calgary","T2P 0H7",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4665,"UGR Blair Creek Ltd.","700, 736 - 8th Avenue SW","","","","Calgary","T2P 1H4",1,"700, 736 - 8th Avenue SW","","","","Calgary","T2P 1H4",1,"1285",5,0,"",16-NOV-16 03.54.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4668,"Tourmaline Oil Corp.","3700, 250 - 6th Avenue SW","","","","Calgary","T2P 3H7",1,"3700, 250 - 6th Avenue SW","","","","Calgary","T2P 3H7",1,"",8,0,"",06-DEC-16 02.23.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4682,"Teine Energy Ltd.","2300, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"2300, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4685,"Tetonka Resources Inc.","2600, 144 - 4th Avenue SW","","","","Calgary","T2P 3N4",1,"2600, 144 - 4th Avenue SW","","","","Calgary","T2P 3N4",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4687,"TORC Oil & Gas Ltd.","1800, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"1800, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4693,"Thru Tubing Solutions","1210, 540 5th Ave SW","","","","Calgary","T2P 0M2",1,"1210, 540 5th Ave SW","","","","Calgary","T2P 0M2",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4700,"Vermilion Energy Trust","Centennial Place
+3500, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"Centennial Place
+3500, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4788,"Villanova 4 Oil Corp.","Box 35","","","","Griffin"," S0C 1G0",12,"Box 35","","","","Griffin"," S0C 1G0",12,"",6,0,"",27-OCT-16 10.56.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+4841,"Vale Potash Canada Ltd.","1874 Scarth St","","","","Regina","S4P 4B3",12,"1874 Scarth St","","","","Regina","S4P 4B3",12,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4895,"Wolf Coulee Resources Inc.","2410, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"2410, 500 - 4th Avenue SW","","","","Calgary","T2P 2V6",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4905,"Yangarra Resources Ltd.","1530, 715 - 5th Avenue SW","","","","Calgary","T2P 2X6",1,"1530, 715 - 5th Avenue SW","","","","Calgary","T2P 2X6",1,"1285",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4908,"Yoho Resources Partnership","500, 521 - 3rd Avenue SW","","","","Calgary","T2P 3T3",1,"500, 521 - 3rd Avenue SW","","","","Calgary","T2P 3T3",1,"",6,0,"",31-OCT-16 02.55.34.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4936,"Western Star North","15205 - 112 Avenue NW","","","","Edmonton","T5M 2V7",1,"15205 - 112 Avenue NW","","","","Edmonton","T5M 2V7",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+4939,"Whitecap Resources Inc.","3800, 525 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"3800, 525 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+4941,"Wyatt Oil & Gas Inc.","1410, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"1410, 396 - 11th Avenue SW","","","","Calgary","T2R 0C5",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+5000,"Zargon Oil & Gas Ltd.","700, 333 - 5th Avenue SW","","","","Calgary","T2P 3B6",1,"700, 333 - 5th Avenue SW","","","","Calgary","T2P 3B6",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+5001,"Surge Energy Inc.","2100, 635 - 8th Avenue SW","","","","Calgary","T2P 3M3",1,"2100, 635 - 8th Avenue SW","","","","Calgary","T2P 3M3",1,"",6,0,"",11-NOV-16 07.26.32.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+9061,"Sanjel Corporation","200, 505 - 2nd Street S.W.","","","","Calgary","T2P 1N8",1,"200, 505 - 2nd Street S.W.","","","","Calgary","T2P 1N8",1,"",1,29747,"awang",28-JUL-16 10.53.26.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+9063,"MacBain Properties Ltd.","200, 505 - 2nd Street SW","","","","Calgary","T2P 1N8",1,"200, 505 - 2nd Street SW","","","","Calgary","T2P 1N8",1,"1285",2,29747,"awang",27-JUL-16 03.45.47.000000000 PM,3,02-DEC-10,31-DEC-99,0,1
+10203,"Precision Drilling","800, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"800, 525 - 8th Avenue SW","","","","Calgary","T2P 1G1",1,"",6,29747,"awang",26-OCT-16 03.49.19.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10214,"Halo Exploration Ltd.","400, 1333 - 8th Street SW","","","","Calgary","T2R 1M6",1,"400, 1333 - 8th Street SW","","","","Calgary","T2R 1M6",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10218,"Artisan Energy Corporation","1350 734 7 Ave SW","","","","Calgary","T2P 3P8",1,"1350 734 7 Ave SW","","","","Calgary","T2P 3P8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10231,"Petrus Resources Ltd.","2400, 240 - 4th Avenue SW","","","","Calgary","T2P 4H4",1,"2400, 240 - 4th Avenue SW","","","","Calgary","T2P 4H4",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10243,"AOC Hangingstone Partnership","Bow Valley Square 4
+2000, 250 - 6th Avenue SW
+Attenetion:  Cost Controller","","","","Calgary","T2P 3H7",1,"Bow Valley Square 4
+2000, 250 - 6th Avenue SW
+Attenetion:  Cost Controller","","","","Calgary","T2P 3H7",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10244,"Taku Gas Ltd.","450, 707 - 7th Avenue SW","","","","Calgary","T2P 3H6",1,"450, 707 - 7th Avenue SW","","","","Calgary","T2P 3H6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10247,"Kingsland Energy Corp.","1881 Scarth Street Suite 1500","","","","Regina","S4P 4K9",12,"1881 Scarth Street Suite 1500","","","","Regina","S4P 4K9",12,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10252,"Westbrick Energy Ltd.","2500, 255 - 5th Ave SW","","","","Calgary","T2P 3G6",1,"2500, 255 - 5th Ave SW","","","","Calgary","T2P 3G6",1,"",5,0,"",27-OCT-16 11.12.01.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+10257,"Praxair Services","9020 - 24th Street","","","","Edmonton","T6P 1X8",1,"9020 - 24th Street","","","","Edmonton","T6P 1X8",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10262,"Cordy Environmental","Box 479","","","","Stettler","T0C 2L0",1,"Box 479","","","","Stettler","T0C 2L0",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10269,"Andora Energy Corporation","1505, 505-3rd st SW","","","","Calgary","T2P 3E6",1,"1505, 505-3rd st SW","","","","Calgary","T2P 3E6",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10272,"Town of Elrose","400-441 5 Avenue SW","","","","Calgary","T2P 2V1",1,"400-441 5 Avenue SW","","","","Calgary","T2P 2V1",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10276,"Secure Energy Services Inc.","Bow Valley Square 2
+3600, 205 5th Ave SW","","","","Calgary","T2P 2V7",1,"Bow Valley Square 2
+3600, 205 5th Ave SW","","","","Calgary","T2P 2V7",1,"",8,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10282,"Altagas Extraction and Transmission LP","RR2, Site 2. Box 24","","","","Lacombe","T4L 2N2",1,"RR2, Site 2. Box 24","","","","Lacombe","T4L 2N2",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10283,"Canadian Coyote Energy Ltd.","430, 910 7th Avenue SW
+","","","","Calgary","T2P 3N8",1,"430, 910 7th Avenue SW
+","","","","Calgary","T2P 3N8",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10285,"Encore Coring & Drilling","1345 Highfield Crescent S.E.","","","","Calgary","T2G 5N2",1,"1345 Highfield Crescent S.E.","","","","Calgary","T2G 5N2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10287,"1316751 Alberta Ltd.","#340 1414 - 8th Street S.W.","","","","Calgary","T2R 1J6",1,"#340 1414 - 8th Street S.W.","","","","Calgary","T2R 1J6",1,"",8,0,"",07-OCT-16 05.11.01.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10288,"Nexxco Energy Ltd.","Suite 910, 250-5th Street SW","","","","Calgary","T2P 0R4",1,"Suite 910, 250-5th Street SW","","","","Calgary","T2P 0R4",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10289,"Bernum Petroleum","203, 2303 - 4th Street SW","","","","Calgary","T2S 2S7",1,"203, 2303 - 4th Street SW","","","","Calgary","T2S 2S7",1,"",5,0,"",27-OCT-16 11.27.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+10290,"Resourceful Petroleum Canada Limited","#1800, 510-5th Street SW","","","","Calgary","T2P 3S2",1,"#1800, 510-5th Street SW","","","","Calgary","T2P 3S2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10293,"Blaze Energy Ltd.","Suite 1010, 900 - 6th Ave SW","","","","Calgary","T2P 3K2",1,"Suite 1010, 900 - 6th Ave SW","","","","Calgary","T2P 3K2",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10294,"Dreco Energy Services ULC - Downhole Canada","1507 - 4th St","","","","Nisku","T9E 7M9",1,"1507 - 4th St","","","","Nisku","T9E 7M9",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10296,"Frontier Project Management Ltd.","300, 1601 Westmount Rd. NW","","","","Calgary","T2N 3M2",1,"300, 1601 Westmount Rd. NW","","","","Calgary","T2N 3M2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10300,"Nextraction Energy Corp.","254 – 250 6th Avenue SW,
+PO Box 20004 Bow Valley
+","","","","Calgary","T2P 4H3",1,"254 – 250 6th Avenue SW,
+PO Box 20004 Bow Valley
+","","","","Calgary","T2P 4H3",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10302,"Raging River Exploration Inc.","710, 400-5th Avenue SW","","","","Calgary","T2P 0L6",1,"710, 400-5th Avenue SW","","","","Calgary","T2P 0L6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10304,"Beringer Energy Inc.","Suite 1900, 444-5th Avenue SW","","","","Calgary","T2P 2T8",1,"Suite 1900, 444-5th Avenue SW","","","","Calgary","T2P 2T8",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10307,"BDJ Energy Inc.","Suite 2000, 300-5th Avenue SW","","","","Calgary","T2P 3C4",1,"Suite 2000, 300-5th Avenue SW","","","","Calgary","T2P 3C4",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10308,"Spry2 Energy Inc.","1900, 407 - 2nd Street SW","","","","Calgary","T2P 2Y3",1,"1900, 407 - 2nd Street SW","","","","Calgary","T2P 2Y3",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10312,"Grassy Hill Hutterian Brethren Ltd.","P.O. Box 510","","","","Gull Lake","S0N 1A0",12,"P.O. Box 510","","","","Gull Lake","S0N 1A0",12,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10314,"Ouro Preto Resources Inc.","1000, 640 – 8th Avenue SW
+","","","","Calgary","T2P 1G7",1,"1000, 640 – 8th Avenue SW
+","","","","Calgary","T2P 1G7",1,"",7,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10316,"ORLEN Upstream Canada Ltd.","400-850 2nd Street SW","","","","Calgary","T2P0R8",1,"400-850 2nd Street SW","","","","Calgary","T2P0R8",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10321,"RockEast Energy Corporation","Suite 780, 815-8th Avenue SW","","","","Calgary","T2P 3P2",1,"Suite 780, 815-8th Avenue SW","","","","Calgary","T2P 3P2",1,"",5,0,"",13-DEC-16 02.37.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10322,"Elcano Exploration","Suite 420, 550 - 6th Ave SW","","","","Calgary","T2P 0S2",1,"Suite 420, 550 - 6th Ave SW","","","","Calgary","T2P 0S2",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10323,"Losness Drilling","PO Box 145","","","","Lougheed","T0B 2V0",1,"PO Box 145","","","","Lougheed","T0B 2V0",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10324,"MacKay Operating Corp.","Suite 1000, 150 - 9th Avenue SW","","","","Calgary","T2P 3H9",1,"Suite 1000, 150 - 9th Avenue SW","","","","Calgary","T2P 3H9",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10325,"Blackspur Oil Corporation","1200, 707-7th Avenue SW","","","","Calgary","T2P 3H6",1,"1200, 707-7th Avenue SW","","","","Calgary","T2P 3H6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10326,"Hitic Energy Ltd.","218, 404 - 6th Avenue SW","","","","Calgary","T2P 0R9",1,"218, 404 - 6th Avenue SW","","","","Calgary","T2P 0R9",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10328,"Oak Point C/o ProspEx Resource Mgt Ltd.","1250, 396-11th Ave SW","","","","Calgary","T2R 0C5",1,"1250, 396-11th Ave SW","","","","Calgary","T2R 0C5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10333,"Venturion Oil Limited","#1600, 500-4th Ave SW","","","","Calgary","T2P 2V6",1,"#1600, 500-4th Ave SW","","","","Calgary","T2P 2V6",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10340,"Aqua North Water Systems Ltd.","8819 - 101 Street","","","","Fort St. John","V1J 5K4",2,"8819 - 101 Street","","","","Fort St. John","V1J 5K4",2,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10344,"Velvet Energy Ltd.","Suite 1500, 308 - 4th Ave SW","","","","Calgary","T2P 0H7",1,"Suite 1500, 308 - 4th Ave SW","","","","Calgary","T2P 0H7",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10355,"Black Swan Energy Limited","1200, 255-5th Avenue SW","","","","Calgary","T2P 3G6",1,"1200, 255-5th Avenue SW","","","","Calgary","T2P 3G6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10357,"Freemont Resources Ltd","Suite 200 - 1518 - 7th Street SW","","","","Calgary","T2R 1A7",1,"Suite 200 - 1518 - 7th Street SW","","","","Calgary","T2R 1A7",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10360,"Kelt Exploration Ltd.","Suite 300 311 6 Avenue S.W.","","","","Calgary","T2P 3H2",1,"Suite 300 311 6 Avenue S.W.","","","","Calgary","T2P 3H2",1,"",8,0,"",08-NOV-16 10.30.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+10361,"Alder Ridge Resources Ltd.","Suite 650, 635 - 8 Ave SW","","","","Calgary","T2P 3M3",1,"Suite 650, 635 - 8 Ave SW","","","","Calgary","T2P 3M3",1,"",11,29747,"awang",27-JUL-16 03.47.57.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10364,"Highmark Exploration Inc.","1560-2002 Victoria Avenue","","","","Regina","S4P 0R7",12,"1560-2002 Victoria Avenue","","","","Regina","S4P 0R7",12,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10365,"1764821 Alberta Ltd.","Suite 3900, 350 - 7th Avenue SW","","","","Calgary","T2P 3N9",1,"Suite 3900, 350 - 7th Avenue SW","","","","Calgary","T2P 3N9",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10366,"Spyglass Resources Corp.","Livingston Place  |  West Tower
+1700, 250 - 2nd Street SW","","","","Calgary","T2P 0C1",1,"Livingston Place  |  West Tower
+1700, 250 - 2nd Street SW","","","","Calgary","T2P 0C1",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10367,"Regco Petroleums Ltd.","Box 394 3-11 Bellrose Drive","","","","St. Albert","T8N 5C9",1,"Box 394 3-11 Bellrose Drive","","","","St. Albert","T8N 5C9",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10369,"XTO Energy Canada","Suite 600, 321 6th Avenue SW","","","","Calgary","T2P 3H3",1,"Suite 600, 321 6th Avenue SW","","","","Calgary","T2P 3H3",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10371,"Four Winds Midstream Solutions","105, 10136-128 Avenue","","","","Grande Prairie","T8V 1E9",1,"105, 10136-128 Avenue","","","","Grande Prairie","T8V 1E9",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10372,"Paradise Petroleums Ltd.","10801 Bonaventure Drive SE","","","","Calgary","T2J 6Z8",1,"10801 Bonaventure Drive SE","","","","Calgary","T2J 6Z8",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10373,"Triland Energy Inc.","1210-396 11 Avenue SW","","","","Calgary","T2R 0C5",1,"1210-396 11 Avenue SW","","","","Calgary","T2R 0C5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10374,"Major Oil and Gas Ltd.","1404 - 683, 10 st SW","","","","Calgary","T2P 5G3",1,"1404 - 683, 10 st SW","","","","Calgary","T2P 5G3",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10376,"Blackbird Energy Inc.","400, 444 - 5th Ave SW","","","","Calgary","T2P 2T8",1,"400, 444 - 5th Ave SW","","","","Calgary","T2P 2T8",1,"",4,0,"",24-OCT-16 04.43.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10377,"Canadian Quantum Energy Corporation","Suite 500, 1414 8th St. SW","","","","Calgary","T2R 1J6",1,"Suite 500, 1414 8th St. SW","","","","Calgary","T2R 1J6",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10385,"Ikkuma Resources Corp.","Suite 2700, 605 – 5th Avenue SW","","","","Calgary","T2P 3H5",1,"Suite 2700, 605 – 5th Avenue SW","","","","Calgary","T2P 3H5",1,"",9,0,"",27-OCT-16 12.19.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10387,"Western Union Petro (Canada) Technology Co. Ltd.","Suite 115, BP Centre 240 - 4 Avenue SW","","","","Calgary","T2P 4H4",1,"Suite 115, BP Centre 240 - 4 Avenue SW","","","","Calgary","T2P 4H4",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10388,"Dragonfountain Ltd.","Suite 710 - 2nd Street SW","","","","Calgary","T2P 2Y3",1,"Suite 710 - 2nd Street SW","","","","Calgary","T2P 2Y3",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10391,"Potash Corp","Suite 500
+122-1st Avenue South","","","","Saskatoon","S7K 7G3",12,"Suite 500
+122-1st Avenue South","","","","Saskatoon","S7K 7G3",12,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10392,"New Star Energy Ltd.","1500, 444-5th Avenue SW","","","","Calgary","T2P 2T8",1,"1500, 444-5th Avenue SW","","","","Calgary","T2P 2T8",1,"",3,29747,"awang",27-JUL-16 02.05.36.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10393,"Mobius Resources Corp","Suite 1800
+505 - 3rd Street SW","","","","Calgary","T2P 3E6",1,"Suite 1800
+505 - 3rd Street SW","","","","Calgary","T2P 3E6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10395,"EverGro Energy Corporation","2866 Sunninghill Cres.","","","","Regina","S4V 0N2",12,"2866 Sunninghill Cres.","","","","Regina","S4V 0N2",12,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10396,"Fire Creek Resources Ltd.","206 - 11th Avenue SE","","","","Calgary","T2G 0X8",1,"206 - 11th Avenue SE","","","","Calgary","T2G 0X8",1,"",6,29747,"awang",27-JUL-16 02.04.56.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10397,"Caprock Resources Inc.","2230 Queen Street","","","","Regina","S4T 4C5",12,"2230 Queen Street","","","","Regina","S4T 4C5",12,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10398,"Inplay Oil Corp.","900, 250-5 St SW","","","","Calgary","T2P 0R4",1,"900, 250-5 St SW","","","","Calgary","T2P 0R4",1,"",7,0,"",15-NOV-16 03.06.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10399,"Sahara Energy Ltd.","Suite 700, 700 4th Avenue S.W.","","","","Calgary","T2P 3J4",1,"Suite 700, 700 4th Avenue S.W.","","","","Calgary","T2P 3J4",1,"",6,29747,"awang",27-JUL-16 02.06.30.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10400,"Leucrotta Exploration Ltd.","700, 639-5th Avenue SW","","","","Calgary","T2P 0M9",1,"700, 639-5th Avenue SW","","","","Calgary","T2P 0M9",1,"",9,0,"",27-OCT-16 12.25.00.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10402,"Bruin Oil and Gas","Suite 600, 703 - 6th Avenue SW","","","","Calgary","T2P 0T9",1,"Suite 600, 703 - 6th Avenue SW","","","","Calgary","T2P 0T9",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10403,"Cardinal Energy Ltd.","600, 400 - 3 Ave SW","","","","Calgary","T2P 4H2",1,"600, 400 - 3 Ave SW","","","","Calgary","T2P 4H2",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10405,"WAJAX Power Systems","4343-114 Avenue SE
+","","","","Calgary","T2Z 3M5",1,"4343-114 Avenue SE
+","","","","Calgary","T2Z 3M5",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10406,"Corval Energy Ltd.","Suite 2400, 500-4th Avenue SW
+","","","","Calgary","T2P 2V6",1,"Suite 2400, 500-4th Avenue SW
+","","","","Calgary","T2P 2V6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10409,"Knowledge Energy Inc.","1620, 734 - 7 Ave SW
+","","","","Calgary","T2P 3P8",1,"1620, 734 - 7 Ave SW
+","","","","Calgary","T2P 3P8",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10411,"Response Energy Corporation","1200, 521 3 Ave SW","","","","Calgary","T2P 3T3",1,"1200, 521 3 Ave SW","","","","Calgary","T2P 3T3",1,"",4,29747,"awang",27-JUL-16 02.07.39.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10419,"WSP Canada Inc.","5940 Macleod Trail SW, Suite 900","","","","Calgary","T2H 2G4",1,"5940 Macleod Trail SW, Suite 900","","","","Calgary","T2H 2G4",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10420,"Rifleman Exploration Ltd.","1705 Montgomery Park SE","","","","High River","T1V 0B8",1,"1705 Montgomery Park SE","","","","High River","T1V 0B8",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10421,"K+S Potash Canada GP","220 Wall St","","","","Saskatoon","S7K 3Y3",12,"220 Wall St","","","","Saskatoon","S7K 3Y3",12,"",9,0,"",24-NOV-16 10.47.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+10429,"Shiningstar Energy Ltd.","820, 333-5th Avenue SW","","","","Calgary","T2P 3B6",1,"820, 333-5th Avenue SW","","","","Calgary","T2P 3B6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10432,"Sitka Exploration Ltd","1500, 505 3St SW","","","","Calgary","T2P 3E6",1,"1500, 505 3St SW","","","","Calgary","T2P 3E6",1,"",5,0,"",27-OCT-16 12.37.01.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10434,"NVP Exploration INC","1110, 340 12th Avenue SW","","","","Calgary","T2R 1L5",1,"1110, 340 12th Avenue SW","","","","Calgary","T2R 1L5",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10435,"Scavenger Energy GP Inc.","400, 900 – 6th Ave SW","","","","Calgary","T2P 3K2",1,"400, 900 – 6th Ave SW","","","","Calgary","T2P 3K2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10438,"Koch Oil Sands GP","1500, 111 - 5th Ave SW","","","","Calgary","T2P 3Y6",1,"1500, 111 - 5th Ave SW","","","","Calgary","T2P 3Y6",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10439,"Indepth Energy Inc.","Suite 950, 717 7 Ave SW","","","","Calgary","T2P 0Z3",1,"Suite 950, 717 7 Ave SW","","","","Calgary","T2P 0Z3",1,"",10,29747,"awang",27-JUL-16 03.49.21.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10441,"Steppe Petroleum Inc.","450, 440-2nd Ave SW","","","","Calgary","T2P 5E9",1,"450, 440-2nd Ave SW","","","","Calgary","T2P 5E9",1,"",7,0,"",18-NOV-16 10.41.01.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+10442,"Mapan Energy Ltd.","Suite 1910, 605 – 5th Avenue SW","","","","Calgary","T29 3H5",1,"Suite 1910, 605 – 5th Avenue SW","","","","Calgary","T29 3H5",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10443,"Birchill Canada Limited Partnership","820 815 8 Ave SW","","","","Calgary","T2P 3P2",1,"820 815 8 Ave SW","","","","Calgary","T2P 3P2",1,"",5,0,"",11-OCT-16 04.34.31.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10447,"Term Oil Inc.","2027 Edgar St","","","","Regina","S4N 3K5",12,"2027 Edgar St","","","","Regina","S4N 3K5",12,"",10,29747,"awang",27-JUL-16 03.50.28.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10453,"Flushing Energy Corporation","303 - 1933A 10th Ave SW","","","","Calgary","T3C 0K3",1,"303 - 1933A 10th Ave SW","","","","Calgary","T3C 0K3",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10454,"Melita Resources Ltd.","Box 457","","","","Melita","R0M 1L0",3,"Box 457","","","","Melita","R0M 1L0",3,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10455,"Steel Reef Infrastructure Corp.","Suite 515 - 505, 8 Ave SW","","","","Calgary","T2P 1G2",1,"Suite 515 - 505, 8 Ave SW","","","","Calgary","T2P 1G2",1,"",2,1000342,"pdoeleman",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10456,"Spectrum Wireline Services Ltd.","420 - 333  5th ave sw","","","","Calgary","T2P 3B6",1,"420 - 333  5th ave sw","","","","Calgary","T2P 3B6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10459,"Serafina Energy Ltd.","700, 324 - 8th Avenue SW","","","","Calgary","T2P 2Z2",1,"700, 324 - 8th Avenue SW","","","","Calgary","T2P 2Z2",1,"",6,0,"",14-NOV-16 09.40.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+10460,"Cross Borders Consulting Ltd.","Box 509","","","","Pilot Butte","S0G 3Z0",12,"Box 509","","","","Pilot Butte","S0G 3Z0",12,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10463,"Trinidad Drilling Ltd.","1000, 585 8th Ave SW","","","","Calgary","T2P 1G1",1,"1000, 585 8th Ave SW","","","","Calgary","T2P 1G1",1,"",6,1001376,"pdoeleman",01-SEP-16 03.36.29.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10467,"Mosaic Potash Esterhazy","SK- 637","","","","Esterhazy","S0A 0X0",12,"SK- 637","","","","Esterhazy","S0A 0X0",12,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10471,"1894078 Alberta Ltd","4500, 855 2nd Street SW,","","","","Calgary","T2P 4K7",1,"4500, 855 2nd Street SW,","","","","Calgary","T2P 4K7",1,"",9,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10472,"Tamarack Valley Energy Ltd.","3100, 250 - 6th Ave SW","","","","Calgary","T2P 3H7",1,"3100, 250 - 6th Ave SW","","","","Calgary","T2P 3H7",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10474,"Enhance Energy Inc.","Suite 900, 333 5 Ave SW","","","","Calgary","T2P 3B6",1,"Suite 900, 333 5 Ave SW","","","","Calgary","T2P 3B6",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10475,"Jupiter Resources Inc.","Suite 1100, 585 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"Suite 1100, 585 - 8 Ave SW","","","","Calgary","T2P 1G1",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10477,"Envolve Energy Services Corp.","PO Box 1270 Stn Main","","","","Grande Prairie","T8V 4Z1",1,"PO Box 1270 Stn Main","","","","Grande Prairie","T8V 4Z1",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10478,"Freehold Royalties Partnership","400, 144 - 4th Ave SW","","","","Calgary","T2P 3N4",1,"400, 144 - 4th Ave SW","","","","Calgary","T2P 3N4",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10481,"Shield Energy Ltd.","1260, 840 - 7 Ave SW","","","","Calgary","T2P 3G2",1,"1260, 840 - 7 Ave SW","","","","Calgary","T2P 3G2",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10483,"Toro Oil and Gas Ltd.","2200, 250 5th St SW","","","","Calgary","T2P 0R4",1,"2200, 250 5th St SW","","","","Calgary","T2P 0R4",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10488,"Peaceland Farms Ltd.","PO Box 6051","","","","Fort St. John","V1J 4H6",2,"PO Box 6051","","","","Fort St. John","V1J 4H6",2,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10492,"Virginia Hills Oil Corp.","1500, 202 - 6th Ave SW","","","","Calgary","T2P 2R9",1,"1500, 202 - 6th Ave SW","","","","Calgary","T2P 2R9",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10497,"Altabras Energy Services Corp.","PO box 6563, Station D","","","","Calgary","T2P 2E4",1,"PO box 6563, Station D","","","","Calgary","T2P 2E4",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10498,"AOC Kaybob Partnership","1200, 215- 9th Avenue, S.W. Calgary","","","","Calgary","T2P 1K3",1,"1200, 215- 9th Avenue, S.W. Calgary","","","","Calgary","T2P 1K3",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10502,"Catapult Environmental Inc.","600, 800 - 6 Ave SW","","","","Calgary","T2P 3G3",1,"600, 800 - 6 Ave SW","","","","Calgary","T2P 3G3",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10503,"Questfire Energy Corporation","110, 350 - 7 Ave SW","","","","Calgary","T2P 3N9",1,"110, 350 - 7 Ave SW","","","","Calgary","T2P 3N9",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10507,"AOC Simonette Partnership","1200, 215 - 9th Ave SW","","","","Calgary","T2P 1K3",1,"1200, 215 - 9th Ave SW","","","","Calgary","T2P 1K3",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10510,"Hawk Exploration Ltd.","1320 - 396, 11 Ave SW","","","","Calgary","T2R 0C5",1,"1320 - 396, 11 Ave SW","","","","Calgary","T2R 0C5",1,"",6,29747,"awang",28-JUL-16 10.08.54.000000000 AM,3,01-JAN-01,31-DEC-99,1,1
+10514,"Glenogle Energy Inc.","1400, 444 - 5 Ave SW","","","","Calgary","T2P 2T8",1,"1400, 444 - 5 Ave SW","","","","Calgary","T2P 2T8",1,"",7,0,"",08-NOV-16 10.33.31.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+10515,"HESC Energy Limited Partnership","800, 903 8th AVE SW","","","","Calgary","T2P 0P7",1,"800, 903 8th AVE SW","","","","Calgary","T2P 0P7",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10516,"Integrated Sustainability Consultants Ltd.","600, 540 5th Ave SW","","","","Calgary","T2P 0M2",1,"600, 540 5th Ave SW","","","","Calgary","T2P 0M2",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10523,"AOC Grande Prairie Partnership","1200, 215 - 9 Ave SW","","","","Calgary","T2P 1K3",1,"1200, 215 - 9 Ave SW","","","","Calgary","T2P 1K3",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10530,"Forge Oil & Gas Limited","Suite 2000, 840 – 7th Avenue S.W.","","","","Calgary","AB T2P 3G2",1,"Suite 2000, 840 – 7th Avenue S.W.","","","","Calgary","AB T2P 3G2",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10533,"The Crossing Company Incorporated","1807 8 Street","","","","Nisku","T9E 7S8",1,"1807 8 Street","","","","Nisku","T9E 7S8",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10534,"Groundstar Resources Limited","2300, 144 - 4th Ave SW","","","","Calgary","T2P 3N4",1,"2300, 144 - 4th Ave SW","","","","Calgary","T2P 3N4",1,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10545,"Todd Energy Canada Ltd.","3100, 500 – 4th Ave SW","","","","Calgary","T2P 2V6",1,"3100, 500 – 4th Ave SW","","","","Calgary","T2P 2V6",1,"",6,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10547,"Rocky River Petroleum Ltd.","325, 333 - 24th Ave SW","","","","Calgary","T2S 3E6",1,"325, 333 - 24th Ave SW","","","","Calgary","T2S 3E6",1,"",4,29747,"awang",27-JUL-16 03.43.07.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10548,"Nytis Exploration Co Inc.","1520, 700-6th Ave SW","","","","Calgary","T2P 0T8",1,"1520, 700-6th Ave SW","","","","Calgary","T2P 0T8",1,"",5,0,"",27-OCT-16 12.46.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10549,"Mutiny Oil & Gas Ltd.","801 - 6 Ave SW","","","","Calgary","T2P 3W2",1,"801 - 6 Ave SW","","","","Calgary","T2P 3W2",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10553,"R Batke Oilfield Ltd. NLSD Trade Exposure Centre","PO Box 6515","","","","Bonnyville","T9N 1H1",1,"PO Box 6515","","","","Bonnyville","T9N 1H1",1,"",1,0,"",24-JUN-16 03.46.14.000000000 PM,1,01-JAN-01,31-DEC-99,1,1
+10554,"Canyon Technical Services Ltd.","2900, 255 - 5 Ave SW","","","","Calgary","T2P 3G6",1,"2900, 255 - 5 Ave SW","","","","Calgary","T2P 3G6",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10561,"Octane Engineering","Suite 1600, 144 – 4th Ave SW","","","","Calgary","T2P 3N4",1,"Suite 1600, 144 – 4th Ave SW","","","","Calgary","T2P 3N4",1,"",5,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10566,"Martin Brower of Canada Co.","6990 Creditview Road, Unit #5","","","","Mississauga","L5N 8R9",9,"6990 Creditview Road, Unit #5","","","","Mississauga","L5N 8R9",9,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10567,"Recem Inc."," 10044 - 94 St NW","","","","Edmonton","T5H 1Z3",1," 10044 - 94 St NW","","","","Edmonton","T5H 1Z3",1,"",4,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10568,"Ribbon Creek Resources Inc.","1100, 521 - 3rd Ave SW","","","","Calgary","T2P 3T3",1,"1100, 521 - 3rd Ave SW","","","","Calgary","T2P 3T3",1,"",4,29747,"awang",27-JUL-16 03.44.04.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10570,"Ledcor Pipeline Limited","9910 - 39 Ave NW","","","","Edmonton","T6E 5H8",1,"9910 - 39 Ave NW","","","","Edmonton","T6E 5H8",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10571,"Polar Star Canadian Oil and Gas, Inc.","1900, 700 - 4th Ave SW","","","","Calgary","T2P 3J4",1,"1900, 700 - 4th Ave SW","","","","Calgary","T2P 3J4",1,"",3,1283,"CGaine",24-AUG-16 02.50.38.000000000 PM,3,22-AUG-16,31-DEC-99,0,1
+10576,"Rally Canada Resources Ltd.","Suite 520, 815 - 8 Ave SW","","","","Calgary","T2P 3P2",1,"Suite 520, 815 - 8 Ave SW","","","","Calgary","T2P 3P2",1,"",3,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+10579,"Baytech Energy Investment Inc.","Suite 1580, 727 – 7th Avenue SW","","","","Calgary","T2P 0Z5",1,"Suite 1580, 727 – 7th Avenue SW","","","","Calgary","T2P 0Z5",1,"",1,0,"",24-JUN-16 03.46.14.000000000 PM,1,01-JAN-01,31-DEC-99,1,1
+10581,"Duracon Concrete Corp.","","","","","","",,"","","","","","",,"",2,0,"",24-JUN-16 03.46.14.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+10583,"Granite Oil Corp.","432, 222 - 3rd Ave SW","","","","Calgary","T2P 0B4",1,"432, 222 - 3rd Ave SW","","","","Calgary","T2P 0B4",1,"",1,0,"",24-JUN-16 03.46.14.000000000 PM,1,01-JAN-01,31-DEC-99,1,1
+30075,"Advance Drilling Ltd.","1001 505 - 3 Street SW","","","","Calgary","T2P 3E6",1,"1001 505 - 3 Street SW","","","","Calgary","T2P 3E6",1,"",2,29747,"awang",26-OCT-16 03.57.24.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30076,"Akita Drilling Ltd.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.59.54.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30081,"Beaver Drilling Ltd.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 04.01.08.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30089,"Chinook Drilling","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.53.29.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30095,"Ensign Drilling Inc.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.51.33.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30096,"Excalibur Drilling Ltd.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.52.27.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30100,"Horizon Drilling Inc.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.55.57.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30104,"Jomax Drilling (1988) Ltd.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 04.02.02.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30106,"Lasso Drilling Corporation","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.53.05.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30108,"Nabors Drilling","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 04.01.32.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30112,"Panther Drilling Corp.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 04.10.42.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30115,"Quintera Drilling","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.50.46.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30116,"Red Dog Drilling Inc.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 04.09.30.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30123,"Tempco Drilling Company Inc.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 03.57.55.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30128,"Treo Drilling Company LP","","","","","","",12,"","","","","","",12,"",2,29747,"awang",26-OCT-16 03.59.20.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30134,"Xtreme Coil Drilling Corp.","","","","","","",1,"","","","","","",1,"",1,29747,"awang",26-OCT-16 04.05.12.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30140,"Patterson-UTI Drilling","","","","","","",244,"","","","","","",244,"",2,29747,"awang",26-OCT-16 04.04.05.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30147,"Savanna Drilling","","","","","","",1,"","","","","","",1,"",2,29747,"awang",26-OCT-16 03.50.27.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30148,"Predator Drilling Inc.","211, 37428 RR273","Clearview Industrial Park,","","","Red Deer","T4E 0A1",1,"211, 37428 RR273","Clearview Industrial Park,","","","Red Deer","T4E 0A1",1,"",3,29747,"awang",26-OCT-16 03.56.20.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30155,"Bonanza Drilling Inc.","Box 537","29 Martin Way","","","Brooks","T1R 1B5",1,"Box 537","29 Martin Way","","","Brooks","T1R 1B5",1,"",3,29747,"awang",26-OCT-16 03.54.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30158,"Komat Drilling","328 South Railway St. East","","","","Medicine Hat","T1A 2V4",1,"328 South Railway St. East","","","","Medicine Hat","T1A 2V4",1,"",2,29747,"awang",26-OCT-16 04.00.49.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30169,"Fox Drilling Inc","2-3710 18 Ave N","","","","Lethbridge","T1H 5S7",1,"2-3710 18 Ave N","","","","Lethbridge","T1H 5S7",1,"",3,29747,"awang",26-OCT-16 04.07.03.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30177,"Alliance Drilling And Oilfield Service Ltd","477 Devonian St","","","","Estevan","S4A 2A5",12,"477 Devonian St","Estevan","","","","S4A 2A5",12,"",2,29747,"awang",26-OCT-16 04.08.00.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30183,"Crusader Drilling","Suite 5-76 Seventh Ave S","","","","Yorkton","S3N3V2",12,"Suite 5-76 Seventh Ave S","","","","Yorkton","S3N3V2",12,"",2,29747,"awang",26-OCT-16 04.03.11.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30184,"Stampede Drilling Ltd","304 Petterson Dr","","","","Estevan","S4A 1N7",12,"304 Petterson Dr","","","","Estevan","S4A 1N7",12,"",3,29747,"awang",26-OCT-16 04.09.00.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30185,"Sirius Well Manufacturing Services Canada Ltd.","355 4th Ave SW, Suite 840","","","","Calgary","T2P 0J1",1,"355 4th Ave SW, Suite 840","","","","Calgary","T2P 0J1",1,"",3,29747,"awang",26-OCT-16 04.06.33.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30188,"DC Drilling Inc.","513 Tanner Dr SE","","","","Airdrie","T4A2E7",1,"513 Tanner Dr SE","","","","Airdrie","T4A2E7",1,"",4,29747,"awang",26-OCT-16 04.05.28.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30189,"Boulder Energy Ltd","540, 222 - 3rd Ave SW","","","","Calgary","T2P0B4",1,"","","","","","",1,"",3,29747,"awang",22-JUL-16 03.46.22.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30192,"Goldenkey Oil Inc.","1580 - 727 7 Avenue SW","","","","Calgary","T2P 0Z5",1,"1580 - 727 7 Avenue SW","","","","Calgary","T2P 0Z5",1,"",4,29747,"awang",07-JUL-16 05.18.03.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30193,"Ventura Resources Inc","3300, 308 - 4th Avenue SW","","","","Calgary","T2P 0H7",1,"3300, 308 - 4th Avenue SW","","","","Calgary","T2P 0H7",1,"",5,29747,"awang",30-SEP-16 06.39.26.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30195,"GP Masonry Supply","9728 132 Ave","","","","Grande Prairie ","T8V 4J6",1,"9728 132 Ave","","","","Grande Prairie ","T8V 4J6",1,"",2,29747,"awang",07-JUL-16 04.26.42.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30196,"North American Helium Inc.","101, 750 11 ST SW","","","","Calgary","T2P 3N7",1,"101, 750 11 ST SW","","","","Calgary","T2P 3N7",1,"",1,29747,"awang",20-JUL-16 01.24.24.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30197,"Audax Investments","Box 1565","","","","Estevan","S4A 2L7",12,"Box 1565 ","","","","Estevan","S4A 2L7",12,"",1,29747,"awang",20-JUL-16 01.42.44.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30198,"Hemisphere Energy Corporation","2000, 1055 West Hastings St.","","","","Vancouver","V6E 2E9",2,"","","","","","",,"",1,29747,"awang",23-JUL-16 09.00.05.000000000 AM,1,01-JAN-01,31-DEC-99,0,1
+30199,"Deltastream Energy Corp.","Suite 1950 – 633 6th Ave SW","","","","Calgary","T2P 2Y5",1,"","","","","","",1,"",2,29747,"awang",02-AUG-16 02.45.11.000000000 PM,3,02-AUG-16,31-DEC-99,0,1
+30200,"Mountain Coil Tubing","Suite 400, 707 – 7th Ave SW","","","","Calgary","",,"Suite 400, 707 – 7th Ave SW","","","","Calgary","",,"",1,1283,"CGaine",24-AUG-16 02.48.23.000000000 PM,1,23-AUG-16,31-DEC-99,0,
+30201,"Savanna Well Servicing","311 6 Ave SW #800","","","","Calgary","T2P 4M9",1,"311 6 Ave SW #800","","","","Calgary","T2P 4M9",1,"",1,1001376,"pdoeleman",01-SEP-16 03.19.22.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30202,"Peaceland Oilfield Services Ltd.","P.O.BOX 6132","","","","Fort St. John","V1J 4H6",2,"P.O.BOX 6132","","","","Fort St. John","V1J 4H6",2,"",1,29747,"awang",14-SEP-16 01.52.42.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30204,"ExxonMobil Canada Energy","Attn: AP PO Box 2480 STN M","","","","Calgary","T2P 3M9",1,"Attn: AP PO Box 2480 STN M","","","","Calgary","T2P 3M9",1,"",2,0,"",07-OCT-16 05.26.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30205,"DCP Oil Corp.","1900, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"1900, 520 - 3rd Avenue SW","","","","Calgary","T2P 0R3",1,"",3,29747,"awang",30-SEP-16 06.38.40.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+30206,"Hummingbird Energy Inc.","2063 Indian Fort Dr.","","","","Surrey","V4A 3L7",2,"2063 Indian Fort Dr.","","","","Surrey","V4A 3L7",2,"",2,29747,"awang",30-SEP-16 06.32.24.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30207,"Altura Energy Inc.","200, 640 5th Ave SW","","","","Calgary","T2P 3G4",1,"200, 640 5th Ave SW","","","","Calgary","T2P 3G4",1,"",2,29747,"awang",30-SEP-16 06.32.52.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30208,"Rampart Oil Inc.","1100, 736 - 8th Ave SW","","","","Calgary","T2P 1H4",1,"1100, 736 - 8th Ave SW","","","","Calgary","T2P 1H4",1,"",2,29747,"awang",04-OCT-16 03.56.49.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30209,"Avalon Oil and Gas Ltd","1120, 833 - 4th Ave SW","","","","Calgary","T2P 3T5",1,"1120, 833 - 4th Ave SW","","","","Calgary","T2P 3T5",1,"",2,29747,"awang",07-OCT-16 11.51.17.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+30210,"Lehigh Inland Cement Ltd","C/O Lockbox 310170 PO Box 578 STNM","","","","Calgary"," T2P 2J3",1,"C/O Lockbox 310170 PO Box 578 STNM","","","","Calgary"," T2P 2J3",1,"",2,0,"",12-OCT-16 11.00.01.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+30211,"Kelt Exploration (LNG) Ltd","Suite 300 311 6 Avenue S.W.","","","","Calgary","T2P 3H2",1,"Suite 300 311 6 Avenue S.W.","","","","Calgary","T2P 3H2",1,"",3,0,"",08-NOV-16 10.29.02.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+30212,"Star Valley Drilling Ltd.","","","","","","",,"","","","","","",,"",2,29747,"awang",26-OCT-16 04.31.57.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30213,"Quinn Drilling Inc.","","","","","","",,"","","","","","",,"",1,29747,"awang",26-OCT-16 04.23.32.000000000 PM,1,01-JAN-01,31-DEC-99,0,
+30214,"Twilight Drilling Ltd.","","","","","","",,"","","","","","",,"",2,29747,"awang",26-OCT-16 04.31.46.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30215,"CWC Ironhand Drilling","","","","","","",,"","","","","","",,"",1,29747,"awang",26-OCT-16 04.24.56.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30216,"Citadel Drilling Ltd.","","","","","","",,"","","","","","",,"",2,29747,"awang",26-OCT-16 04.31.37.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30217,"Betts Drilling Ltd.","","","","","","",,"","","","","","",,"",1,29747,"awang",26-OCT-16 04.30.06.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30218,"Vortex Drilling Ltd.","","","","","","",,"","","","","","",,"",2,29747,"awang",26-OCT-16 04.31.28.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30219,"D2 Drilling Inc.","","","","","","",,"","","","","","",,"",1,29747,"awang",26-OCT-16 04.31.17.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30221,"STEP Energy Services Ltd.","300, 505 - 3rd Street SW","","","","Calgary","T2P 3E6",1,"300, 505 - 3rd Street SW","","","","Calgary","T2P 3E6",1,"",2,29747,"awang",01-NOV-16 11.22.05.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+30222,"NOVA Chemicals Corporation","1000-7th Ave SW","","","","Calgary","T2P 5C6",1,"1000-7th Ave SW","","","","Calgary","T2P 5C6",1,"",2,0,"",01-NOV-16 03.46.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30223,"Turnstone Energy Inc.","","","","","","",,"","","","","","",,"",2,0,"",03-NOV-16 02.48.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30224,"City of Medicine Hat","","","","","","",,"","","","","","",,"",2,0,"",03-NOV-16 03.05.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30225,"Gambit Oil Corp","PO Box 20082","","","","Calgary","T2P 4J2",1,"PO Box 20082","","","","Calgary","T2P 4J2",1,"",3,0,"",07-NOV-16 01.25.02.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+30226,"Gensource Potash Corporation","1100, 201 - 1st Ave South","","","","Saskatoon","S7K 1J5",12,"1100, 201 - 1st Ave South","","","","Saskatoon","S7K 1J5",12,"",2,0,"",22-NOV-16 04.15.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30227,"Mosaic Potash Colonsay","Junction Highway 16 & 2","","","","Colonsay","S0K 0Z0",12,"Junction Highway 16 & 2","","","","Colonsay","S0K 0Z0",12,"",2,0,"",22-NOV-16 04.15.31.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30228,"Canexus Corporation","2100, 144 - 4th Ave SW","","","","Calgary","T2P 3N4",1,"2100, 144 - 4th Ave SW","","","","Calgary","T2P 3N4",1,"",2,0,"",02-DEC-16 12.00.33.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30229,"Bertram Drilling Corp.","PO Box 100","","","","Carbon","T0M 0L0",1,"PO Box 100","","","","Carbon","T0M 0L0",1,"",3,0,"",05-DEC-16 04.27.01.000000000 PM,3,01-JAN-01,31-DEC-99,0,1
+30230,"Stewart Steel","PO Box 1087","","","","Weyburn","S4H 2L3",12,"PO Box 1087","","","","Weyburn","S4H 2L3",12,"",1,0,"",05-DEC-16 04.44.01.000000000 PM,1,01-JAN-01,31-DEC-99,0,1
+30231,"Novus Energy Inc.","1700, 700 - 4th Ave SW","","","","Calgary","T2P 3J4",1,"1700, 700 - 4th Ave SW","","","","Calgary","T2P 3J4",1,"",2,0,"",08-DEC-16 08.27.01.000000000 AM,3,01-JAN-01,31-DEC-99,0,1
+30232,"J.B. Drilling Ltd.","PO Box 119","","","","Climax","S0N 0N0",12,"PO Box 119","","","","Climax","S0N 0N0",12,"",3,0,"",08-DEC-16 02.53.31.000000000 PM,3,01-JAN-01,31-DEC-99,1,1
+30233,"Tidewater Midstream and Infrastructure Ltd.","1500, 250-2nd Street SW","","","","Calgary","T2P 0C1",1,"1500, 250-2nd Street SW","","","","Calgary","T2P 0C1",1,"",2,0,"",21-DEC-16 10.18.01.000000000 AM,3,01-JAN-01,31-DEC-99,0,1

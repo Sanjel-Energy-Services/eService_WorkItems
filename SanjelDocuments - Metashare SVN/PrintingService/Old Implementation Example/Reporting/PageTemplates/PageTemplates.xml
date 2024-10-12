@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<PageTemplates>
+
+  <Metadata>
+    <Description>A list of page template in JDT.</Description>
+    <RevisionDate>Feb 9th, 2014</RevisionDate>
+    <RevisedBy>Hai Yang</RevisedBy>
+  </Metadata>
+
+  <PageTemplate IsUserDefined="False" TemplateName="Slow Rate Bradenhead Squeeze Procedure" JobType="" TemplateFile="BR SR Test - CAN Version Test 7.docx" MarkupFile="BR SR Test - CAN Version Test 7.xml"/>
+
+</PageTemplates>

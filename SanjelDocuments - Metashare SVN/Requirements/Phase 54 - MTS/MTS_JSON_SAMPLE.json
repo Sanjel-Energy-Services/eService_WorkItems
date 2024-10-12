@@ -1,0 +1,115 @@
+{
+	"Id": 42918,
+	"Date": "[Current Time when printing]",
+	"Unit": "[Bulk Unit Number or Third Party Company Name]",
+	"Driver": "[Driver Name]",
+	"GoWithCrew": "Yes",
+	"Station": "GP Bulk Plant",
+	"ShippingLoadSheet1": {
+		"Id": 2798,
+		"GoWithCrew": "No",
+		"EstimatedLoadTime": "7/11/2023 7:00:00 PM",
+		"ExpOnLoactionTime": "7/11/2023 7:00:00 PM",
+		"Client": "Arc Resources Ltd.",
+		"ClientRep": "Rick Finkle",
+		"Rig": "Ensign 886",
+		"Loaction": "102/05-17-031-21W3/00",
+		"DispatchedBy": "Jordan Parish",
+		"OffloadInstruction": {
+			"Bin1": {
+				"Bin": "1985",
+			"BaseTonnage": 8,
+			"BaseTonnageUnit": "t",
+			"Product": "ECOprime + 0.5% SCA-7 + 0.25% MCR-7 + 0.3% ASM-3 +1% FWC-2 + 0.2% CDF-6P",
+			"TotalTonnage": 8.28,
+			"TotalTonnageUnit": "t",
+			},
+			"Bin2": {
+				"Bin": "1958",
+			"BaseTonnage": 3,
+			"BaseTonnageUnit": "t",
+			"Product": "ECOprime + 0.5% SCA-7 + 0.25% MCR-7 + 0.3% ASM-3 +1% FWC-2 + 0.2% CDF-6P",
+			"TotalTonnage": 3.11,
+			"TotalTonnageUnit": "t",
+			}
+		}
+	},
+	"ProductHaulSlip2": {
+		"ShippingLoadSheetId": 2799,
+		"GoWithCrew": "Yes",
+		"EstimatedLoadTime": "7/11/2023 7:00:00 PM",
+		"ExpOnLoactionTime": "7/11/2023 7:00:00 PM",
+		"Client": "Whitecap Resources Inc.",
+		"ClientRep": "Morgan Sweeting",
+		"Rig": "Bonanza 2",
+		"Loaction": "102/7-16-31-19w3",
+		"DispatchedBy": "Jordan Parish",
+		"OffloadInstruction": {}
+		}
+	},
+	"BulkerPodLoad": {
+		"Pod1": {
+			"PodIndex": 0,
+			"ShippingLoadSheetId": 2798,
+			"BaseTonnage": 8,
+			"BaseTonnageUnit": "t",
+			"Product": "ECOprime + 0.5% SCA-7 + 0.25% MCR-7 + 0.3% ASM-3 +1% FWC-2 + 0.2% CDF-6P",
+			"TotalTonnage": 8.28,
+			"TotalTonnageUnit": "t",
+			"Temp": 18.5
+		},
+		"Pod2": {
+			"PodIndex": 1,
+			"ShippingLoadSheetId": 2798,
+			"BaseTonnage": 3,
+			"BaseTonnageUnit": "t",
+			"Product": "ECOprime + 0.5% SCA-7 + 0.25% MCR-7 + 0.3% ASM-3 +1% FWC-2 + 0.2% CDF-6P",
+			"TotalTonnage": 3.11,
+			"TotalTonnageUnit": "t",
+			"Temp": 19
+		},
+		"Pod3": {
+			"PodIndex": 2,
+			"ShippingLoadSheetId": 2799,
+			"BaseTonnage": 5,
+			"BaseTonnageUnit": "m3",
+			"Product": "Visweep DM + 400.1kg/m3 Bulk Ground Silica + 3.5kg/m3 WG-4P + 1kg/m3 SCA-5 + 1.5kg/m3 DF-6P",
+			"TotalTonnage": 2.03,
+			"TotalTonnageUnit": "t",
+			"Temp": 15
+		},
+		"Pod4": {
+			"PodIndex": 3,
+			"ShippingLoadSheetId": 0,
+			"BaseTonnage": 0,
+			"Product": "",
+			"TotalTonnage": 0,
+			"TotalTonnageUnit": "",
+			"Temp": 0
+		}
+	},
+	"TotalWeightsSample": {
+		"Blend1": {
+			"BlendRequestId": 46400,
+			"BaseTonnage": 11,
+			"BaseTonnageUnit": "t",
+			"Product": "ECOprime + 0.5% SCA-7 + 0.25% MCR-7 + 0.3% ASM-3 +1% FWC-2 + 0.2% CDF-6P",
+			"TotalTonnage": 11.39,
+			"TotalTonnageUnit": "t",
+			"Sample": "",
+			"RequestedBy": "",
+			"BlendedBy": "jshaw"
+		},
+		"Blend2": {
+			"BlendRequestId": 46399,
+			"BaseTonnage": 5,
+			"BaseTonnageUnit": "m3",
+			"Product": "Visweep DM + 400.1kg/m3 Bulk Ground Silica + 3.5kg/m3 WG-4P + 1kg/m3 SCA-5 + 1.5kg/m3 DF-6P",
+			"TotalTonnage": 2.03,
+			"TotalTonnageUnit": "t",
+			"Sample": "",
+			"RequestedBy": "",
+			"BlendedBy": "jshaw"
+		}
+	}
+}

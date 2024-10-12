@@ -1,0 +1,12 @@
+  <ReportParameters>
+    <ReportParameter Name="BusinessUnit">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>BusinessUnit</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SupervisorName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>SupervisorName</Prompt>
+    </ReportParameter>
+  </ReportParameters>

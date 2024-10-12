@@ -1,0 +1,48 @@
+
+
+update BlendChemical set BulkDensity = 0.92045*1000 where upper(name)='ASM-3' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.6569*1000 where upper(name)='ASM-5' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.7093*1000 where upper(name)='ASM-6' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.5633*1000 where upper(name)='Bulk Barite' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.765*1000 where upper(name)='CaCl2' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.4833*1000 where upper(name)='CDF-6P' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.179*1000 where upper(name)='CDM-5' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.2526*1000 where upper(name)='CDM-6' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.51015*1000 where upper(name)='CFL-10' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.582*1000 where upper(name)='CFL-3' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.334*1000 where upper(name)='CFL-4' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.531*1000 where upper(name)='CFL-6' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.743*1000 where upper(name)='CFL-7' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.518*1000 where upper(name)='CFL-8' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.690*1000 where upper(name)='CFR' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.637*1000 where upper(name)='CFR-2' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.428*1000 where upper(name)='CFR-5' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.305*1000 where upper(name)='EA-1' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.389*1000 where upper(name)='EA-3' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.1111*1000 where upper(name)='Flyash' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.3213*1000 where upper(name)='FWC-2' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.2052*1000 where upper(name)='GCA-1' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.7881*1000 where upper(name)='GSS-1' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.963*1000 where upper(name)='Hematite' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.576*1000 where upper(name)='HTR' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.8581*1000 where upper(name)='HTR-2' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.02885*1000 where upper(name)='HTR-3A' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.235*1000 where upper(name)='KCl' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.07*1000 where upper(name)='LCC-1' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.09*1000 where upper(name)='LCF-7' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.284*1000 where upper(name)='LCG-1' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.972*1000 where upper(name)='LCG-2' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.554*1000 where upper(name)='LCG-4' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.471*1000 where upper(name)='LCG-5' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.5003*1000 where upper(name)='LTR' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.1994*1000 where upper(name)='MCR-7' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.1697*1000 where upper(ProductDescription)='Fine Salt' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.1636*1000 where upper(name)='QSR-2' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.419*1000 where upper(name)='SCA-5' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.0317*1000 where upper(name)='SCA-6' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.4715*1000 where upper(name)='SCA-7' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.1299*1000 where upper(name) like '%Silica Flour%' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 1.1498*1000 where upper(name)='SPC-II' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.7093*1000 where upper(name)='WG-6P' and effective_end_datetime > getdate();
+update BlendChemical set BulkDensity = 0.3499*1000 where upper(name)='WIE-1' and effective_end_datetime > getdate();
+

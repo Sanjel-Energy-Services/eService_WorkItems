@@ -1,0 +1,40 @@
+            var sanjelUserList = MetaShare.Common.Core.CommonService.ServiceFactory.Instance.GetService<ISanjelUserService>().SelectAll();
+            var userGroupList = MetaShare.Common.Core.CommonService.ServiceFactory.Instance.GetService<IUserGroupService>(serviceFactory).SelectAll();
+            var userPermissionList = MetaShare.Common.Core.CommonService.ServiceFactory.Instance.GetService<IUserPermissionService>(serviceFactory).SelectAll();
+            var userGroupSanjelUserList = MetaShare.Common.Core.CommonService.ServiceFactory.Instance.GetService<IUserGroupSanjelUserService>(serviceFactory).SelectAll();
+            var userGroupUserPermissionList = MetaShare.Common.Core.CommonService.ServiceFactory.Instance.GetService<IUserGroupUserPermissionService>(serviceFactory).SelectAll();
+
+
+
+        
+        public static bool HavePermission(string permissionName, string userName)
+        {
+            bool hasPermission = false;
+
+            var sanjelUser =
+                sanjelUserList.Find(p =>
+                    string.Equals(p.Name.ToLower(), userName.ToLower()));
+            if (sanjelUser != null)
+            {
+                var userPermission =
+                    UserPermissionList.Find(p =>
+                        string.Equals(p.Name.ToLower(), permissionName.ToLower()));
+                if (userPermission != null)
+                {
+                    var sanjelUserGroups =
+                        userGroupSanjelUserList.FindAll(p =>
+                            p.SanjelUser.Id == sanjelUser.Id);
+                    if (sanjelUserGroups.Count > 0)
+                    {
+                        int[] userGroupId = sanjelUserGroups.Select(p => p.UserGroup.Id).Distinct().Except(new[] { 0 })
+                            .ToArray();
+                        var userGroupUserPermissions =
+                            userGroupUserPermissionList.FindAll(p =>
+                                userGroupId.Contains(p.UserGroup.Id) && p.UserPermission.Id == userPermission.Id);
+                        if (userGroupUserPermissions.Count == 1)  hasPermission = true;
+                    }
+                }
+            }
+
+            return hasPermission;
+        }

@@ -1,0 +1,163 @@
+
+#paper
+{ 
+    width: 612px;
+    height: 792px;
+    margin: 18px 18px 18px 18px;
+}
+
+#pricingPage
+{ 
+    font-family: "Helvetica";
+    font-size: 9px;
+    color: black;
+    text-align: left;
+    vertical-align: top;
+    line-height: 2px;
+}
+
+#sanjelLogo
+{
+    height: 35px;
+    vertical-align: top;
+}
+
+.jdtHeader
+{
+    height: 96px;
+    margin-top: 18px;
+    padding: 0px 0px 0px 0px;
+}
+
+.pageTitle
+{
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 12px;
+    padding: 1px 0px 1px 0px;
+}
+
+.sectionTitle
+{
+    font-family: "Helvetica";
+    font-weight: bold;
+    font-size: 8px;
+    padding: 10px 0px 0px 0px;
+}
+
+.tableTitle
+{
+    font-family: "Helvetica";
+    font-weight: bold;
+    font-size: 8px;
+    padding: 4px 0px 0px 0px;
+    text-align: right;
+}
+
+.tableContent
+{
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 8px;
+    padding: 2px 0px 0px 0px;
+    text-align: right;
+}
+
+.sectionTotalLabel
+{
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 8px;
+    padding: 2px 1px 0px 0px;
+    text-align: right;
+    width: 508px;
+}
+
+.sectionTotalValue
+{
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 8px;
+    padding: 2px 0px 0px 0px;
+    text-align: right;
+    width: 68px;
+    border-top: 0.8px solid #6E273D;
+}
+
+.grandTotalValue
+{
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 8px;
+    padding: 2px 0px 0px 0px;
+    text-align: right;
+    width: 69px;
+    border-top: 1.6px solid #6E273D;
+    border-bottom: 1.6px solid #6E273D;
+}
+
+.pageBanner
+{
+    font-family: "Helvetica";
+    font-weight: bold;
+    color: white;
+    font-size: 10px;
+    padding: 2px 0px 1px 0px;
+	background-color: #6E273D;
+}
+
+.FooterText
+{
+    font-size: 6px;
+    padding: 10px 0px 0px 0px;
+}
+
+.MediumHorizontalLine
+{
+    line: 0.8px solid #6E273D;
+    padding: 8px 0px 2px 0px;
+}
+
+.ThickHorizontalLine
+{
+    line: 1.6px solid #6E273D;
+    padding: 2px 0px 0px 0px;
+}
+
+.SectionTitleLine
+{
+    line: 0.8px solid #6E273D;
+    padding: 2px 293px 2px 0px;
+}
+
+.wideColWidth2
+{
+    width: 213px;
+}
+
+.wideColWidth
+{
+    width: 69px;
+}
+
+.mediumColWidth
+{
+    width: 52px;
+}
+
+.narrowColWidth
+{
+    width: 40px;
+}
+
+.rightAlign
+{
+    text-align: right;
+    padding-left: 0px;
+}
+
+.leftAlign
+{
+    text-align: left;
+    padding-right: 0px;
+}

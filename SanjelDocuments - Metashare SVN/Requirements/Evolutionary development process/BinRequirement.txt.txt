@@ -1,0 +1,42 @@
+1 业务场景
+  Bin 是Sanjel分配给井架的用来贮存干水泥的容器，目前只有P-Tank和Mego Silo两种类型。它在分配给井架之后，就会一直跟着井架走，直到有人把它解除分配。解除分配后就认为是In Yard状态。否则是Assigned状态，并且知道是分配给哪个Rig了。
+每个Bin有它的所属的ServicePoint，它可以在各地区间进行转借，基本业务逻辑与Crew相似。需要加上相关属性。
+2 需求
+  现在需要创建一个Bin的管理系统对所有的Bin进行管理，Bin的属性有Bin Number、Bin Type、ServicePoint、Location、Notes，Bin的管理系统需要以下功能：
+ 2.1 在OnLine的Resource中增加Bin Board，用于可视化管理所有的Bin
+ 2.2 Bin的增删改查
+ 2.3 将Bin分配给Rig
+3 功能介绍
+ 3.1 Bin Board
+  在Online的Resource中增加Bin Board，用于可视化管理所有的Bin。
+  Bin Board的字段有：
+  Bin Number
+  Location-显示Yard或Rig Name
+  Notes
+ 3.2 Add the Bin
+  在Bin Board上右键点击，选择Add the Bin，弹出Add the Bin窗口。
+  选择Bin的类型，选择Bin的ServicePoint，填写Bin的数量后Save。
+  BinBoard中将显示出所有已添加的Bin，bin的状态为In Yard，Bin Number为自动生成，不可修改。
+ 3.3 Update Bin
+  对Bin Board上某一个Bin右键点击，选择Update Bin，弹出Update Bin窗口。
+  Bin Number、Location只读，不可修改。
+  Bin Type、ServicePoint、Notes可修改，修改完成后Save，Update Bin完成。
+  修改后的Bin会展示在BinBoard上。
+ 3.4 Update Bin Notes
+  右键点击Bin Board上某一个Bin的Notes，选择Update Notes，弹窗Update Notes窗口。
+  填写或修改Nptes后Save，Update Notes完成。
+ 3.5 Remove the Bin
+  右键点击BinBoard上某一个Bin的Location，选择Remove the Bin。
+  弹出确认窗，显示该Bin所属Rig的Job状态，询问是否继续Remove。
+  点击确认，Bin从Rig上收回，Bin的Location变更为Yard。
+  Bin的Location为Yard时，右键点击无效。
+  通过在Rig Board上右键点击一个Bin选择Remove the Bin，让Bin的Location恢复Yard。
+ 3.6 Assign Bin to Rig
+  在Rig Board上右键点击一个Bin为Needed的RigJob的Bin，选择Assign a Bin，弹出Assign a Bin窗口。
+  选择Bin Type，筛选出该Bin Type下所有的Bin。
+  选择Bin后Save，支持多选。
+  若该Bin的Location为Yard，则Assign Bin to Rig成功，Bin的Location修改为Rig Name。
+  若该Bin的Location不为Yard，则弹出确认窗口，显示Bin所属Rig的Job信息，用户自行判断是否继续。
+  单独的Bin可以同时分配给多个Rig，但不可在同一RigJob中重复存在。
+  
+  

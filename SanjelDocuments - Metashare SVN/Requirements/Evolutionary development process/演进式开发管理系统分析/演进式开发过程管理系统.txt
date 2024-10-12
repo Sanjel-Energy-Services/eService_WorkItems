@@ -1,0 +1,32 @@
+﻿演进式开发过程管理系统
+所需实体和思路
+1 Requirement
+是用户提出的需求，包括：
+Background：需求背景
+Analyze：使用5W2H的方式对Requirement进行分析，记录分析过程，在分析过程中，User Story就已经出现了。
+BackLog：根据分析结果，形成BackLog，此处的BackLog需要细化到某一个模快，不用太详细，描述系统与用户之间的交互。
+Task：在BackLog形成后，系统也基本已经形成，此时形成Task，需要细化到某一个功能，形成程序员可执行的任务，任务的粒度应控制在单个子系统环境可测试的规模，测试要求能够自动化运行。
+
+注:Requirement可能范围很宽泛，对于范围很宽泛的Requirement，需要将其分解成若干个子Requirement，并分别进行记录。
+【子Requirement和Requirement属于聚合关系。】
+
+2 Test Case
+根据Requirement中对Backlog的目标定义，形成可操作的目标检测流程。通过Test Case的设计，可以对应设计数据结构、交互界面。
+
+注：BackLog在Requirement中有自己独立的编号，Test Case应与BackLog相对应。
+【Test Case与Requirement的关联关系为双向关联，关系为*——1】
+
+4 Code
+代码包括程序代码、数据库脚本及实际。
+【Code与Requirement为1——1的关系】
+
+5 Executable
+最后形成的可执行程序。可执行程序必须要保证通过Test Case定义的测试。
+【Executable和TestCase为1——1的关系】
+
+6 Bug
+这里指的是在系统交付运行后，用户反馈的系统实现缺陷。它可以是分析、设计及编码中的缺陷导致的，在修补此缺陷时，同步修补更新相关文档。
+
+在发生异常或需要改动时，先通过Test Case找到Requirement，查看对应的BackLog是否合理，如果不合理，则需要及时进行改动并生成新的Task。
+改动的部分需要在Requirement中记录下来，让所有人知道改动了哪里，为什么改动。
+

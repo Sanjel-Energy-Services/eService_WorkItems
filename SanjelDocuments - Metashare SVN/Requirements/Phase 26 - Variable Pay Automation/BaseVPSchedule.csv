@@ -1,0 +1,61 @@
+ID,System_Id,PayArea,PerPercentatge,PayPositionDescription,PayAreaid,PayAreaDescription,RevenueStart,RevenueEnd,PayPositionName,BaseAmount,PayPositionid
+1,1,W,0,Supervisor 4 - Primary Cementing,2,West,0,10001,Supervisor 4,320,4
+2,2,W,0,Supervisor 4 - Primary Cementing,2,West,10001,20001,Supervisor 4,370,4
+3,3,W,0.00465,Supervisor 4 - Primary Cementing,2,West,20001,1000001,Supervisor 4,370,4
+4,4,W,0,Supervisor 3 - Primary Cementing,2,West,0,10001,Supervisor 3,300,3
+5,5,W,0,Supervisor 3 - Primary Cementing,2,West,10001,20001,Supervisor 3,350,3
+6,6,W,0.00415,Supervisor 3 - Primary Cementing,2,West,20001,1000001,Supervisor 3,350,3
+7,7,W,0,Supervisor 2 - Primary Cementing,2,West,0,10001,Supervisor 2,280,2
+8,8,W,0,Supervisor 2 - Primary Cementing,2,West,10001,20001,Supervisor 2,330,2
+9,9,W,0.00365,Supervisor 2 - Primary Cementing,2,West,20001,1000001,Supervisor 2,330,2
+10,10,W,0,Supervisor 1 - Primary Cementing,2,West,0,10001,Supervisor 1,260,1
+11,11,W,0,Supervisor 1 - Primary Cementing,2,West,10001,20001,Supervisor 1,290,1
+12,12,W,0.00315,Supervisor 1 - Primary Cementing,2,West,20001,1000001,Supervisor 1,290,1
+13,13,W,0,Operator 3 - Primary Cementing,2,West,0,10001,Operator 3,250,7
+14,14,W,0,Operator 3 - Primary Cementing,2,West,10001,20001,Operator 3,280,7
+15,15,W,0.0029,Operator 3 - Primary Cementing,2,West,20001,1000001,Operator 3,280,7
+16,16,W,0,Operator 2 - Primary Cementing,2,West,0,10001,Operator 2,230,6
+17,17,W,0,Operator 2 - Primary Cementing,2,West,10001,20001,Operator 2,270,6
+18,18,W,0.00265,Operator 2 - Primary Cementing,2,West,20001,1000001,Operator 2,270,6
+19,19,W,0,Operator 1 - Primary Cementing,2,West,0,10001,Operator 1,220,5
+20,20,W,0,Operator 1 - Primary Cementing,2,West,10001,20001,Operator 1,240,5
+21,21,W,0.0024,Operator 1 - Primary Cementing,2,West,20001,1000001,Operator 1,240,5
+22,22,W,0,Support - Primary Cementing,2,West,0,10001,Support,210,8
+23,23,W,0,Support - Primary Cementing,2,West,10001,20001,Support,225,8
+24,24,W,0.00215,Support - Primary Cementing,2,West,20001,1000001,Support,225,8
+25,25,E,0,Supervisor 4 - Primary Cementing,1,West,0,10001,Supervisor 4,285,4
+26,26,E,0,Supervisor 4 - Primary Cementing,1,West,10001,20001,Supervisor 4,335,4
+27,27,E,0.00365,Supervisor 4 - Primary Cementing,1,West,20001,1000001,Supervisor 4,335,4
+28,28,E,0,Supervisor 3 - Primary Cementing,1,West,0,10001,Supervisor 3,265,3
+29,29,E,0,Supervisor 3 - Primary Cementing,1,West,10001,20001,Supervisor 3,315,3
+30,30,E,0.00315,Supervisor 3 - Primary Cementing,1,West,20001,1000001,Supervisor 3,315,3
+31,31,E,0,Supervisor 2 - Primary Cementing,1,West,0,10001,Supervisor 2,245,2
+32,32,E,0,Supervisor 2 - Primary Cementing,1,West,10001,20001,Supervisor 2,295,2
+33,33,E,0.00265,Supervisor 2 - Primary Cementing,1,West,20001,1000001,Supervisor 2,295,2
+34,34,E,0,Supervisor 1 - Primary Cementing,1,West,0,10001,Supervisor 1,225,1
+35,35,E,0,Supervisor 1 - Primary Cementing,1,West,10001,20001,Supervisor 1,255,1
+36,36,E,0.00215,Supervisor 1 - Primary Cementing,1,West,20001,1000001,Supervisor 1,255,1
+37,37,E,0,Operator 3 - Primary Cementing,1,West,0,10001,Operator 3,215,7
+38,38,E,0,Operator 3 - Primary Cementing,1,West,10001,20001,Operator 3,245,7
+39,39,E,0.0019,Operator 3 - Primary Cementing,1,West,20001,1000001,Operator 3,245,7
+40,40,E,0,Operator 2 - Primary Cementing,1,West,0,10001,Operator 2,195,6
+41,41,E,0,Operator 2 - Primary Cementing,1,West,10001,20001,Operator 2,235,6
+42,42,E,0.00165,Operator 2 - Primary Cementing,1,West,20001,1000001,Operator 2,235,6
+43,43,E,0,Operator 1 - Primary Cementing,1,West,0,10001,Operator 1,185,5
+44,44,E,0,Operator 1 - Primary Cementing,1,West,10001,20001,Operator 1,205,5
+45,45,E,0.0014,Operator 1 - Primary Cementing,1,West,20001,1000001,Operator 1,205,5
+46,46,E,0,Support - Primary Cementing,1,West,0,10001,Support,175,8
+47,47,E,0,Support - Primary Cementing,1,West,10001,20001,Support,190,8
+48,48,E,0.00115,Support - Primary Cementing,1,West,20001,1000001,Support,190,8
+49,49,W,0,Supervisor - Remedial Cementing,2,West,0,10001,Supervisor - Remedial,315,9
+50,50,W,0.004,Supervisor - Remedial Cementing,2,West,10001,1000001,Supervisor - Remedial,340,9
+51,51,W,0,Operator - Remedial Cementing,2,West,0,10001,Operator - Remedial,230,10
+52,52,W,0.002,Operator - Remedial Cementing,2,West,10001,1000001,Operator - Remedial,250,10
+53,53,W,0,Support - Remedial Cementing,2,West,0,10001,Support - Remedial,220,11
+54,54,W,0.0015,Support - Remedial Cementing,2,West,10001,1000001,Support - Remedial,240,11
+55,55,E,0,Supervisor - Remedial Cementing,1,West,0,10001,Supervisor - Remedial,315,9
+56,56,E,0.004,Supervisor - Remedial Cementing,1,West,10001,1000001,Supervisor - Remedial,340,9
+57,57,E,0,Operator - Remedial Cementing,1,West,0,10001,Operator - Remedial,230,10
+58,58,E,0.002,Operator - Remedial Cementing,1,West,10001,1000001,Operator - Remedial,250,10
+59,59,E,0,Support - Remedial Cementing,1,West,0,10001,Support - Remedial,220,11
+60,60,E,0.0015,Support - Remedial Cementing,1,West,10001,1000001,Support - Remedial,240,11

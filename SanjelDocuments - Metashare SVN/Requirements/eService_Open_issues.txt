@@ -1,0 +1,2 @@
+1. eService send attachment to server, sometimes some files not sent succesfully, leave the job package on local as "PreTransmitted". Even all files were transmitted succesfully, still the status not updated to "Trnmistted". This leave the job status on server as Pre-Transmitted. So manual modification is needed.
+2. There are unknown reasons cause field job contains empty line in attachment section. This will casue local exception while sending job to server and also cause job assembly problem. The empty line should be removed before the job is sent.

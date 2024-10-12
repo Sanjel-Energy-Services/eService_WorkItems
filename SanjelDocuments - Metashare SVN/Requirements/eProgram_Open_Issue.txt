@@ -1,0 +1,1 @@
+1. Import program should validate if blend additive data are good, e.g. if Additive name, method, amount, unit are filled in properly. If not, save in InProgress status.

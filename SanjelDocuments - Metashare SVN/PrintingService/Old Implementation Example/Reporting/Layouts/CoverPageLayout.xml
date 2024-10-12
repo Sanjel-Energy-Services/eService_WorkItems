@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<fields>
+  <field id="fldHighProfile" dataField="HighProfileWell"/>
+  <field id="fldCustomerName" dataField="CustomerName"/>
+  <field id="fldAddressLine1" dataField="CustomerAddressLine1"/>
+  <field id="fldAddressLine2" dataField="CustomerAddressLine2"/>
+  <field id="fldAddressLine3" dataField="CustomerAddressLine3"/>
+  <field id="fldAddressLine4" dataField="CustomerAddressLine4"/>
+  <field id="fldCustomerContactName" dataField="CustomerContactName"/>
+  <field id="fldCustomerContactPhone" dataField="CustomerContactPhone"/>
+  <field id="fldCustomerContactEmail" dataField="CustomerContactEmail"/>
+  <field id="fldQuotationId" dataField="QuotationId"/>
+  <field id="fldProposalDate" dataField="ProposalDate"/>
+  <field id="fldRevisonDescription" dataField="RevisionName"/>
+  <field id="fldWellLocation1" dataField="SurfaceLocation"/>
+  <field id="fldWellLocation2" dataField="DownHoleLocation"/>
+  <field id="fldWellName" dataField="WellNameAndLoc"/>
+  <field id="fldProposalTitleLine1" dataField="JobTypeName"/>
+  <field id="fldProposalTitleLine2" dataField="JobDescription"/>
+  <field id="fldSalesTitle" dataField="SaleTitle"/>
+  <field id="fldSalesName" dataField="EmployeeSalesPersonName"/>
+  <field id="fldSalesPhone" dataField="EmployeeSalesPersonPhone"/>
+  <field id="fldSalesEmail" dataField="EmployeeSalesPersonEmail"/>
+  <field id="fldTechTitle" dataField="TechTitle"/>
+  <field id="fldTechName" dataField="EmployeeEngineerName"/>
+  <field id="fldTechPhone" dataField="SanjelTsPhone"/>
+  <field id="fldTechEmail" dataField="SanjelTsEmail"/>
+  <field id="fldServiceLocationTitle" dataField="ServicePointTitle"/>
+  <field id="fldServiceLocationName" dataField="ServicePoint"/>
+  <field id="fldServiceLocationPhone" dataField=""/>
+</fields>

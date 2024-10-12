@@ -1,0 +1,10 @@
+.NET\O2S.Components.PDF4NET.NET.dll - PDF4NET assembly for .NET 5/6
+.NET\O2S.Components.PDF4NET.Render.NET.dll - PDF4NET.Render assembly for .NET 5/6 (PDF4NET+Render product only)
+.NET Core\O2S.Components.PDF4NET.NETCore.dll - PDF4NET assembly for .NET Core 2.x/3.x
+.NET Core\O2S.Components.PDF4NET.Render.NETCore.dll - PDF4NET.Render assembly for .NET Core 2.x/3.x (PDF4NET+Render product only)
+.NET Framework\O2S.Components.PDF4NET.Win.dll - PDF4NET assembly for .NET Framework 4.x
+.NET Framework\O2S.Components.PDF4NET.Render.Win.dll - PDF4NET.Render assembly for .NET Framework 4.x (PDF4NET+Render product only)
+.NET Standard\O2S.Components.PDF4NET.NETStandard.dll - PDF4NET assembly for .NET Standard 2.x
+.NET Standard\O2S.Components.PDF4NET.Render.NETStandard.dll - PDF4NET.Render assembly for .NET Standard 2.x (PDF4NET+Render product only)
+.NET Windows\O2S.Components.PDF4NET.NET.Win.dll - PDF4NET assembly for .NET 5/6 Windows only
+.NET Windows\O2S.Components.PDF4NET.Render.NET.Win.dll - PDF4NET.Render assembly for .NET 5/6 Windows only (PDF4NET+Render product only)

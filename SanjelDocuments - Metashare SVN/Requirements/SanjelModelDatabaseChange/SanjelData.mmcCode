@@ -1,0 +1,3578 @@
+Model SanjelData;
+
+package SanjelData.BusinessEntities /*BusinessEntities*/ ;
+
+package SanjelData.BusinessEntities.BaseEntities /*BaseEntites*/ ;
+
+class SanjelData.BusinessEntities.BaseEntities.JobBase /*JobBase*/ 
+{
+	string ClientCompanyShortName /*ClientCompanyShortName*/ ;
+	datetime JobDatetime /*JobDateTime*/ ;
+	int JobDuration /*JobDuration*/ ;
+	bool PreJobTesting /*PreJobTesting*/ ;
+	string ProgramId /*ProgramId*/ ;
+	int PumperCount /*PumperCount*/ ;
+	double RiskMatrix /*RiskMatrix*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.BaseEntities.JobBaseJobType /*Association7PEa*/ 
+	{
+		JobBase /*JobBase*/ : SanjelData.BusinessEntities.BaseEntities.JobBase   "0..*"  --->   "1..1"  JobType /*JobType*/ : SanjelData.Common.BusinessEntities.Operation.JobType 
+	}
+	SanjelData.BusinessEntities.BaseEntities.JobBaseClientCompany /*JobBaseClientCompany*/ 
+	{
+		ClientCompany /*ClientCompany*/ : SanjelData.Common.BusinessEntities.Organization.ClientCompany   "1..1"  <---   "0..*"  JobBase /*JobBase*/ : SanjelData.BusinessEntities.BaseEntities.JobBase 
+	}
+	SanjelData.BusinessEntities.BaseEntities.JobBaseRig /*JobBaseRig*/ 
+	{
+		JobBase /*JobBase*/ : SanjelData.BusinessEntities.BaseEntities.JobBase   "0..*"  --->   "1..1"  Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig 
+	}
+	SanjelData.BusinessEntities.BaseEntities.JobBaseServicePoint /*JobBaseServicePoint*/ 
+	{
+		JobBase /*JobBase*/ : SanjelData.BusinessEntities.BaseEntities.JobBase   "0..*"  --->   "1..1"  ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+package SanjelData.BusinessEntities.BulkPlant /*BulkPlant*/ ;
+
+class SanjelData.BusinessEntities.BulkPlant.BlendCut /*BlendCut*/ 
+{
+	double ActualWeight /*ActualWeight*/ ;
+	double BlendTemp /*BlendTemp*/ ;
+	string BulkPlantOperator /*BulkPlantOperator*/ ;
+	datetime EndTime /*EndTime*/ ;
+	int ProductHaulLoadId /*ProductHaulLoadId*/ ;
+	int SequenceNumber /*SequenceNumber*/ ;
+	datetime StartTime /*StartTime*/ ;
+	double TargetWeight /*TargetWeight*/ ;
+	int TransferCount /*TransferCount*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.BulkPlant.BlendCutDetail /*BlendCutDetail*/ 
+	{
+		BlendCut /*BlendCut*/ : SanjelData.BusinessEntities.BulkPlant.BlendCut   "1..1"  *-->   "1..*"  CutDetails /*CutDetails*/ : SanjelData.BusinessEntities.BulkPlant.CutDetail 
+	}
+
+}
+
+class SanjelData.BusinessEntities.BulkPlant.BlendLog /*BlendLog*/ 
+{
+	datetime BlendDate /*BlendDate*/ ;
+	int BlendServicePointId /*BlendServicePointId*/ ;
+	string BlendServicePointName /*BlendServicePointName*/ ;
+	double BlendTemp /*BlendTemp*/ ;
+	int BulkPlantId /*BulkPlantId*/ ;
+	string BulkPlantName /*BulkPlantName*/ ;
+	string BulkPlantOperator /*BulkPlantOperator*/ ;
+	int CallSheetNumber /*CallSheetNumber*/ ;
+	string ClientCompany /*ClientCompany*/ ;
+	string ClientSystemStamp /*ClientSystemStamp*/ ;
+	string ClientVersionStamp /*ClientVersionStamp*/ ;
+	string CurrentLocation /*CurrentLocation*/ ;
+	datetime EndTime /*EndTime*/ ;
+	string LoadSheetNumber /*LoadSheetNumber*/ ;
+	string MtsNumber /*MtsNumber*/ ;
+	int ProductHaulLoadId /*ProductHaulLoadId*/ ;
+	string SampleNumber /*SampleNumber*/ ;
+	datetime StartTime /*StartTime*/ ;
+	string Status /*Status*/ ;
+	double StoragePod1Total /*StoragePod1Total*/ ;
+	double StoragePod2Total /*StoragePod2Total*/ ;
+	double StoragePod3Total /*StoragePod3Total*/ ;
+	double StoragePod4Total /*StoragePod4Total*/ ;
+	double TotalBlendTime /*TotalBlendTime*/ ;
+	datetime TransferDate /*TransferDate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.BulkPlant.BlendSample /*BlendSample*/ 
+{
+	datetime DateTime /*DateTime*/ ;
+	string Label /*Label*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.BulkPlant.BlendTankLog /*BlendTankLog*/ 
+{
+	string BlendName /*BlendName*/ ;
+	double BlendTankWeight /*BlendTankWeight*/ ;
+	int CutIndex /*CutIndex*/ ;
+	string EventName /*EventName*/ ;
+	datetime EventTimestamp /*EventTimestamp*/ ;
+	int ProductHaulLoadId /*ProductHaulLoadId*/ ;
+	double Rate /*Rate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.BulkPlant.BlendTransfer /*BlendTransfer*/ 
+{
+	int BlendServicePointId /*BlendServicePointId*/ ;
+	string BlendServicePointName /*BlendServicePointName*/ ;
+	double BlendTemp /*BlendTemp*/ ;
+	datetime EndTime /*EndTime*/ ;
+	string MtsNumber /*MtsNumber*/ ;
+	int ProductHaulLoadId /*ProductHaulLoadId*/ ;
+	string SourceLocation /*SourceLocation*/ ;
+	double SourcePod1Weight /*SourcePod1Weight*/ ;
+	double SourcePod2Weight /*SourcePod2Weight*/ ;
+	double SourcePod3Weight /*SourcePod3Weight*/ ;
+	double SourcePod4Weight /*SourcePod4Weight*/ ;
+	datetime StartTime /*StartTime*/ ;
+	string TargetLocation /*TargetLocation*/ ;
+	double TargetPod1Weight /*TargetPod1Weight*/ ;
+	double TargetPod2Weight /*TargetPod2Weight*/ ;
+	double TargetPod3Weight /*TargetPod3Weight*/ ;
+	double TargetPod4Weight /*TargetPod4Weight*/ ;
+	double TotalTransferWeight /*TotalTransferWeight*/ ;
+	datetime TransferDate /*TransferDate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.BulkPlant.CutDetail /*CutDetail*/ 
+{
+	double ActualWeight /*ActualWeight*/ ;
+	int BlendChemicalId /*BlendChemicalId*/ ;
+	string BlendChemicalName /*BlendChemicalName*/ ;
+	string LotNumber /*LotNumber*/ ;
+	double ReportedWeight /*ReportedWeight*/ ;
+	int SequenceNumber /*SequenceNumber*/ ;
+	string SourceLocation /*SourceLocation*/ ;
+	datetime StartTime /*StartTime*/ ;
+	datetime StopTime /*StopTime*/ ;
+	double TargetWeight /*TargetWeight*/ ;
+
+}
+association 
+{
+
+}
+
+package SanjelData.BusinessEntities.HumanResources /*HumanResources*/ ;
+
+package SanjelData.BusinessEntities.HumanResources.WorkforceReadiness /*WorkforceReadiness*/ ;
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan /*AssignedPlan*/ 
+{
+	datetime ApprovalSentDateTime /*ApprovalSentDateTime*/ ;
+	datetime ApprovedDateTime /*ApprovedDateTime*/ ;
+	datetime CompletedDateTime /*CompletedDateTime*/ ;
+	datetime DateAssigned /*DateAssigned*/ ;
+	bool IsActive /*IsActive*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanApprovedBy /*AssignedPlanApprovedBy*/ 
+	{
+		ApprovedBy /*ApprovedBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanAssignedTo /*AssignedPlanAssignedTo*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..*"  --->   "1..1"  AssignedTo /*AssignedTo*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanDistrictManager /*AssignedPlanDistrictManager*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..*"  --->   "1..1"  DistrictManager /*DistrictManager*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanStatus /*AssignedPlanStatus*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..*"  --->   "1..1"  AssignedPlanStatus /*AssignedPlanStatus*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanStatus 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanTimeLineDateTime /*AssignedPlanTimeLineDateTime*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..1"  <---   "0..*"  AssignedPlanTimeLine /*AssignedPlanTimeLine*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanTimeLine 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Association0tPt /*Association0tPt*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..1"  <---   "0..*"  AssignedPlanItem /*AssignedPlanItem*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItem 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Association8Iry /*Association8Iry*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..1"  <---   "1..*"  AssignedPlanMentor /*AssignedPlanMentor*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanMentor 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssociationBobw /*AssociationBobw*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..1"  <---   "1..*"  AssignedPlanNotification /*AssignedPlanNotification*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanNotification 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssociationlTfN /*AssociationlTfN*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "1..1"  <---   "1..*"  AssignedPlanComment /*AssignedPlanComment*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanComment 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanAssignedPlan /*PlanAssignedPlan*/ 
+	{
+		AssigendPlan /*AssigendPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlan   "0..*"  --->   "1..1"  Plan /*Plan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Plan 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanComment /*AssignedPlanComment*/ 
+{
+	longstring Comments /*Comments*/ ;
+	datetime CreatedDateTime /*CreatedDateTime*/ ;
+	bool IsActive /*IsActive*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssociationtHPO /*AssociationtHPO*/ 
+	{
+		AssignedPlanComment /*AssignedPlanComment*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanComment   "1..*"  --->   "1..1"  CreatedBy /*CreatedBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItem /*AssignedPlanItem*/ 
+{
+	datetime CompletedDateTime /*CompletedDateTime*/ ;
+	bool IsRquiredForProfessional /*IsRquiredForProfessional*/ ;
+	longstring LMSCertificate /*LMSCertificate*/ ;
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItemStatus PlanItemStatus /*PlanItemStatus*/ ;
+	datetime SignedOffDateTime /*SignedOffDateTime*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Association9Z6J /*Association9Z6J*/ 
+	{
+		AssignedPlanItem /*AssignedPlanItem*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItem   "0..*"  --->   "1..1"  PlantItem /*PlantItem*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItem 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssociationohCT /*AssociationohCT*/ 
+	{
+		AssignedPlanItem /*AssignedPlanItem*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItem   "1..*"  --->   "1..1"  SignedOffBy /*SignedOffBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Associationrdhb /*Associationrdhb*/ 
+	{
+		AssignedPlan /*AssignedPlan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItem   "1..*"  --->   "1..1"  CompletedBy /*CompletedBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssociationVBrC /*AssociationVBrC*/ 
+	{
+		AssignedPlanItem /*AssignedPlanItem*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItem   "1..*"  --->   "1..1"  AssignedPlanItemStatus /*AssignedPlanItemStatus*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItemStatus 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanItemStatus /*AssignedPlanItemStatus*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanMentor /*AssignedPlanMentor*/ 
+{
+	bool IsActive /*IsActive*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssociationBzJF /*AssociationBzJF*/ 
+	{
+		AssignedPlanMentor /*AssignedPlanMentor*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanMentor   "1..*"  --->   "1..1"  Mentor /*Mentor*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Associationlc6v /*Associationlc6v*/ 
+	{
+		AssignedBy /*AssignedBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  AssignedPlanMentor /*AssignedPlanMentor*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanMentor 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanNotification /*AssignedPlanNotification*/ 
+{
+	longstring Notification /*Notification*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Associationf6XL /*Associationf6XL*/ 
+	{
+		AssignedPlanNotification /*AssignedPlanNotification*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanNotification   "1..*"  --->   "1..1"  SentTo /*SentTo*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssociationYPM6 /*AssociationYPM6*/ 
+	{
+		AssignedPlanNotification /*AssignedPlanNotification*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanNotification   "1..*"  --->   "1..1"  SentBy /*SentBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanStatus /*AssignedPlanStatus*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.AssignedPlanTimeLine /*AssignedPlanTimeLine*/ 
+{
+	datetime TimeLineDateTime /*TimeLineDateTime*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Plan /*Plan*/ 
+{
+	datetime CreatedOn /*CreatedOn*/ ;
+	bool IsActive /*IsActive*/ ;
+	bool MentorsRequired /*MentorsRequired*/ ;
+	longstring Prerequisites /*Prerequisites*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanCreatedBy /*PlanCreatedBy*/ 
+	{
+		CreatedBy /*CreatedBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "0..*"  Plan /*Plan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Plan 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanPlanItem /*PlanPlanItem*/ 
+	{
+		Plan /*Plan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Plan   "1..1"  *-->   "1..*"  PlanItem /*PlanItem*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItem 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanPlanType /*PlanPlanType*/ 
+	{
+		Plan /*Plan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Plan   "0..*"  --->   "1..1"  PlanType /*PlanType*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanType 
+	}
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanPositionFamily /*PlanPositionFamily*/ 
+	{
+		Plan /*Plan*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.Plan   "0..*"  --->   "1..1"  PositionFamily /*PositionFamily*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PositionFamily 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItem /*PlanItem*/ 
+{
+	datetime CreatedOn /*CreatedOn*/ ;
+	longstring Details /*Details*/ ;
+	longstring DocumentLink /*DocumentLink*/ ;
+	string DurationUnitOfMeasure /*DurationUnitOfMeasure*/ ;
+	int ExpectedDuration /*ExpectedDuration*/ ;
+	bool IsActive /*IsActive*/ ;
+	bool IsLMSItem /*IsLMSItem*/ ;
+	longstring LMSCourseId /*LMSCourseId*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItemCreateBy /*PlanItemCreateBy*/ 
+	{
+		CreatedBy /*CreatedBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..1"  PlanItem /*PlanItem*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItem 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItemNote /*PlanItemNote*/ 
+{
+	datetime CreatedOn /*CreatedOn*/ ;
+	string DocumentLink /*DocumentLink*/ ;
+	string DocumentName /*DocumentName*/ ;
+	bool IsActive /*IsActive*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItemNoteCreatedBy /*PlanItemNoteCreatedBy*/ 
+	{
+		CreatedBy /*CreatedBy*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  PlanItemNote /*PlanItemNote*/ : SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItemNote 
+	}
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanType /*PlanType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PositionFamily /*PositionFamily*/ 
+{
+
+}
+association 
+{
+
+}
+
+enum SanjelData.BusinessEntities.HumanResources.WorkforceReadiness.PlanItemStatus /*PlanItemStatus*/ 
+{
+	[ Assigned ] Assigned /*Assigned*/ = 1 ;
+	[ Completed ] Completed /*Completed*/ = 2 ;
+	[ SignedOff ] SignedOff /*SignedOff*/ = 3 ;
+	[ Approved ] Approved /*Approved*/ = 4 ;
+	[ Waived ] Waived /*Waived*/ = 5 ;
+
+}
+
+package SanjelData.BusinessEntities.Lab /*Lab*/ ;
+
+class SanjelData.BusinessEntities.Lab.LabDatabaseView /*LabDatabaseView*/ 
+{
+	string Additives /*Additives*/ ;
+	decimal BHCT /*BHCT*/ ;
+	decimal BHST /*BHST*/ ;
+	string BlendBase /*BlendBase*/ ;
+	string BlendName /*BlendName*/ ;
+	string ClientName /*ClientName*/ ;
+	datetime Date /*Date*/ ;
+	decimal Density /*Density*/ ;
+	decimal FluidLoss /*FluidLoss*/ ;
+	decimal FreeWater /*FreeWater*/ ;
+	decimal FreeWaterAngle /*FreeWaterAngle*/ ;
+	string IterationId /*IterationId*/ ;
+	string JobType /*JobType*/ ;
+	string ProgramNumber /*ProgramNumber*/ ;
+	decimal TT100 /*TT100*/ ;
+	decimal TT40 /*TT40*/ ;
+	int Type /*Type*/ ;
+	int VersionId /*VersionId*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Lab.LabSample /*LabSample*/ 
+{
+	int ClientCompanyId /*ClientCompanyId*/ ;
+	string ClientCompanyName /*ClientCompanyName*/ ;
+	longstring Comments /*Comments*/ ;
+	string ContainerCount /*ContainerCount*/ ;
+	datetime DateCollected /*DateCollected*/ ;
+	bool Discarded /*Discarded*/ ;
+	bool HighProfile /*HighProfile*/ ;
+	int LoginNo /*LoginNo*/ ;
+	longstring LSD /*LSD*/ ;
+	string MTSNumber /*MTSNumber*/ ;
+	string OldId /*OldId*/ ;
+	string QuantityAndUnit /*Quantity*/ ;
+	string SampleSource /*SampleSource*/ ;
+	SanjelData.BusinessEntities.Lab.SampleType SampleType /*SampleType*/ ;
+	int ServicePointId /*ServicePointId*/ ;
+	string ServicePointName /*ServicePointName*/ ;
+	string StorageLocation /*StorageLocation*/ ;
+	string WellName /*WellName*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Lab.QualityControlLabSample /*QualityControlLabSample*/ 
+	{
+		LabSample /*LabSample*/ : SanjelData.BusinessEntities.Lab.LabSample   "1..1"  <---   "1..1"  QualityControl /*QualityControl*/ : SanjelData.BusinessEntities.Lab.QualityControl 
+	}
+	SanjelData.BusinessEntities.Lab.WaterAnalysisLabSample /*WaterAnalysisLabSample*/ 
+	{
+		LabSample /*LabSample*/ : SanjelData.BusinessEntities.Lab.LabSample   "1..1"  <---   "1..1"  WaterAnalysis /*WaterAnalysis*/ : SanjelData.BusinessEntities.Lab.WaterAnalysis 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Lab.QualityControl /*QualityControl*/ 
+{
+	decimal Blaine /*Blaine*/ ;
+	decimal Density /*Density*/ ;
+	decimal FreeWater /*FreeWater*/ ;
+	decimal InitialBC /*InitialBC*/ ;
+	string OldSampleId /*OldSampleId*/ ;
+	decimal OneDay /*OneDay*/ ;
+	datetime ProductionWeek /*ProductionWeek*/ ;
+	decimal RetainedSieve /*RetainedSieve*/ ;
+	decimal Rheology /*Rheology*/ ;
+	decimal SpecificGravity /*SpecificGravity*/ ;
+	decimal TenMinGelStrength /*TenMinGelStrength*/ ;
+	decimal TenSecGelStrength /*TenSecGelStrength*/ ;
+	SanjelData.BusinessEntities.Lab.TestRequestType TestRequestType /*TestRequestType*/ ;
+	decimal TT100 /*TT100*/ ;
+	decimal TT40 /*TT40*/ ;
+	decimal VicatInitialSet /*VicatInitialSet*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Lab.TestIteration /*TestIteration*/ 
+{
+	longstring AdditiveListJson /*AdditiveListJson*/ ;
+	int CementLoginNo /*CementLoginNo*/ ;
+	SanjelData.BusinessEntities.Lab.CementSource CementSource /*CementSource*/ ;
+	longstring Comment /*Comment*/ ;
+	decimal Density /*Density*/ ;
+	int IterationIndex /*IterationIndex*/ ;
+	longstring LabTestListJson /*LabTestListJson*/ ;
+	string OldId /*OldId*/ ;
+	bool PerformanceRequirement /*PerformanceRequirement*/ ;
+	string Salt /*Salt*/ ;
+	decimal SaltConcentration /*SaltConcentration*/ ;
+	bool SGPowder /*SGPowder*/ ;
+	bool SGSlurry /*SGSlurry*/ ;
+	int WaterLoginNo /*WaterLoginNo*/ ;
+	SanjelData.BusinessEntities.Lab.WaterSource WaterSource /*WaterSource*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Lab.TestRequest-TestIteration /*TestRequestTestIteration*/ 
+	{
+		TestIterations /*TestIterations*/ : SanjelData.BusinessEntities.Lab.TestIteration   "1..*"  <--*   "1..1"  TestRequest /*TestRequest*/ : SanjelData.BusinessEntities.Lab.TestRequest 
+	}
+	SanjelData.BusinessEntities.Lab.TestResult-TestIteration /*TestResultTestIteration*/ 
+	{
+		TestIteration /*TestIteration*/ : SanjelData.BusinessEntities.Lab.TestIteration   "1..1"  *-->   "0..*"  TestResults /*TestResults*/ : SanjelData.BusinessEntities.Lab.TestResult 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Lab.TestOutput /*TestOutput*/ 
+{
+	string Label /*Label*/ ;
+	string OldId /*OldId*/ ;
+	string Sort /*Sort*/ ;
+	string Unit /*Unit*/ ;
+	decimal Value /*Value*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Lab.TestOutputTestResultFile /*TestOutputTestResultFile*/ 
+	{
+		TestOutputs /*TestOutputs*/ : SanjelData.BusinessEntities.Lab.TestOutput   "0..*"  <--*   "1..1"  TestResult /*TestResult*/ : SanjelData.BusinessEntities.Lab.TestResult 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Lab.TestRequest /*TestRequest*/ 
+{
+	decimal BHCT /*BHCT*/ ;
+	decimal BHST /*BHST*/ ;
+	int CementLoginNo /*CementLoginNo*/ ;
+	SanjelData.BusinessEntities.Lab.CementSource CementSource /*CementSource*/ ;
+	string ClientName /*ClientName*/ ;
+	string ClientServiceRepresentative /*ClientServiceRepresentative*/ ;
+	string ClientServiceRepresentativeEmail /*ClientServiceRepresentativeEmail*/ ;
+	longstring Comment /*Comment*/ ;
+	datetime DateRequired /*DateRequired*/ ;
+	bool IsOnePageReport /*IsOnePageReport*/ ;
+	bool LoadAndGo /*LoadAndGo*/ ;
+	string OldId /*OldId*/ ;
+	string ProgramNumber /*ProgramNumber*/ ;
+	string RequestedBy /*RequestedBy*/ ;
+	datetime RequestedOn /*RequestedOn*/ ;
+	SanjelData.BusinessEntities.Lab.LabTestRequestSource RequestSource /*RequestSource*/ ;
+	bool SpecificGravity /*SpecificGravity*/ ;
+	SanjelData.BusinessEntities.Lab.TestRequestStatus Status /*Status*/ ;
+	string TechnicalServiceRepresentative /*TechnicalServiceRepresentative*/ ;
+	string TechnicalServiceRepresentativeEmail /*TechnicalServiceRepresentativeEmail*/ ;
+	string TemplateBlendBase /*TemplateBlendBase*/ ;
+	string TemplateBlendName /*TemplateBlendName*/ ;
+	string TemplateJobType /*TemplateJobType*/ ;
+	SanjelData.BusinessEntities.Lab.TestRequestType Type /*Type*/ ;
+	int WaterLoginNo /*WaterLoginNo*/ ;
+	SanjelData.BusinessEntities.Lab.WaterSource WaterSource /*WaterSource*/ ;
+	string WellDownholeLocation /*WellDownholeLocation*/ ;
+	string WellName /*WellName*/ ;
+	decimal WellPressure /*WellPressure*/ ;
+	string WellServicePoint /*WellServicePoint*/ ;
+	string WellSurfaceLocation /*WellSurfaceLocation*/ ;
+	decimal WellTMD /*WellTMD*/ ;
+	decimal WellTVD /*WellTVD*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Lab.TestResult /*TestResult*/ 
+{
+	bool Approved /*Approved*/ ;
+	bool Deleted /*Deleted*/ ;
+	string InstrumentId /*InstrumentId*/ ;
+	string OldId /*OldId*/ ;
+	string Schedule /*Schedule*/ ;
+	datetime TestDateTime /*TestDateTime*/ ;
+	SanjelData.BusinessEntities.Lab.LabTestType TestType /*TestType*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Lab.AssociationLleV /*AssociationLleV*/ 
+	{
+		TestResult /*TestResult*/ : SanjelData.BusinessEntities.Lab.TestResult   "1..1"  *-->   "1..1"  TestResultFile /*TestResultFile*/ : SanjelData.BusinessEntities.Lab.TestResultFile 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Lab.TestResultFile /*TestResultFile*/ 
+{
+	longstring Content /*Content*/ ;
+	string FileName /*FileName*/ ;
+	string OldId /*OldId*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Lab.WaterAnalysis /*WaterAnalysis*/ 
+{
+	string Appearance /*Appearance*/ ;
+	decimal Bicarbonate /*Bicarbonate*/ ;
+	decimal Calcium /*Calcium*/ ;
+	decimal Carbonate /*Carbonate*/ ;
+	decimal Chloride /*Chloride*/ ;
+	string Colour /*Colour*/ ;
+	longstring Content /*Content*/ ;
+	datetime DateAnalyzed /*DateAnalyzed*/ ;
+	string FileName /*FileName*/ ;
+	decimal Hydroxide /*Hydroxide*/ ;
+	decimal Iron /*Iron*/ ;
+	bool IsH2SPresent /*IsH2SPresent*/ ;
+	string LabAnalyst /*LabAnalyst*/ ;
+	decimal Magnesium /*Magnesium*/ ;
+	string Notes /*Notes*/ ;
+	string Odour /*Odour*/ ;
+	string OldId /*OldId*/ ;
+	string OldSampleId /*OldSampleId*/ ;
+	decimal PAlkanity /*PAlkanity*/ ;
+	string AnalysisMethod /*PAnalysisMethod*/ ;
+	decimal PH /*PH*/ ;
+	decimal RemainingVolume /*RemainingVolume*/ ;
+	string SalesRep /*SalesRep*/ ;
+	decimal Sodium /*Sodium*/ ;
+	decimal SpecificGravity /*SpecificGravity*/ ;
+	decimal Sulfate /*Sulfate*/ ;
+	decimal TAlkanity /*TAlkanity*/ ;
+	string WaterSource /*WaterSource*/ ;
+	bool WithinSpecs /*WithinSpecs*/ ;
+
+}
+association 
+{
+
+}
+
+enum SanjelData.BusinessEntities.Lab.CementSource /*CementSource*/ 
+{
+	[ Unknown ] Unknown /*Unknown*/ = 0 ;
+	[ Lab ] Lab /*Lab*/ = 1 ;
+	[ Field ] Field /*Field*/ = 2 ;
+	[ BulkPlant ] BulkPlant /*BulkPlant*/ = 3 ;
+
+}
+
+enum SanjelData.BusinessEntities.Lab.LabTestRequestSource /*LabTestRequestSource*/ 
+{
+	[ HangFire ] HangFire /*HangFire*/ = 0 ;
+	[ WebForm ] WebForm /*WebForm*/ = 1 ;
+
+}
+
+enum SanjelData.BusinessEntities.Lab.LabTestType /*LabTestType*/ 
+{
+	[ ThickeningTime ] ThickeningTime /*ThickeningTime*/ = 1 ;
+	[ CompressiveStrength ] CompressiveStrength /*CompressiveStrength*/ = 2 ;
+	[ Rheology ] Rheology /*Rheology*/ = 4 ;
+	[ StaticGelStrengthAnalyzers ] StaticGelStrengthAnalyzers /*StaticGelStrengthAnalyzers*/ = 8 ;
+	[ CriticalInterval ] CriticalInterval /*CriticalInterval*/ = 16 ;
+	[ FluidLoss ] FluidLoss /*FluidLoss*/ = 32 ;
+	[ FreeWater ] FreeWater /*FreeWater*/ = 64 ;
+	[ WaterAnalysis ] WaterAnalysis /*WaterAnalysis*/ = 128 ;
+	[ SpecificGravity ] SpecificGravity /*SpecificGravity*/ = 256 ;
+
+}
+
+enum SanjelData.BusinessEntities.Lab.SampleType /*SampleType*/ 
+{
+	[ Unknown ] Unknown /*Unknown*/ = 0 ;
+	[ Cement ] Cement /*Cement*/ = 1 ;
+	[ Water ] Water /*Water*/ = 2 ;
+	[ Experimental ] Experimental /*Experimental*/ = 3 ;
+	[ Additive ] Additive /*Additive*/ = 4 ;
+	[ Other ] Other /*Other*/ = 5 ;
+
+}
+
+enum SanjelData.BusinessEntities.Lab.TestRequestStatus /*TestRequestStatus*/ 
+{
+	[ NewRequest ] NewRequest /*NewRequest*/ = 0 ;
+	[ InProgress ] InProgress /*InProgress*/ = 1 ;
+	[ Completed ] Completed /*Completed*/ = 2 ;
+	[ Cancelled ] Cancelled /*Cancelled*/ = 3 ;
+
+}
+
+enum SanjelData.BusinessEntities.Lab.TestRequestType /*TestRequestType*/ 
+{
+	[ Unknown ] Unknown /*Unknown*/ = 0 ;
+	[ BlendTest ] BlendTest /*BlendTest*/ = 1 ;
+	[ ExperimentalTest ] ExperimentalTest /*ExperimentalTest*/ = 2 ;
+	[ WaterAnalysisTest ] WaterAnalysisTest /*WaterAnalysisTest*/ = 3 ;
+	[ QualityControlTest ] QualityControlTest /*QualityControlTest*/ = 4 ;
+
+}
+
+enum SanjelData.BusinessEntities.Lab.WaterSource /*WaterSource*/ 
+{
+	[ Unknown ] Unknown /*Unknown*/ = 0 ;
+	[ Tap ] Tap /*Tap*/ = 1 ;
+	[ Field ] Field /*Field*/ = 2 ;
+
+}
+
+package SanjelData.BusinessEntities.Operation /*Operation*/ ;
+
+package SanjelData.BusinessEntities.Operation.Crew /*Crew*/ ;
+
+class SanjelData.BusinessEntities.Operation.Crew.CrewPosition /*CrewPosition*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		CrewPosition /*CrewPosition*/ : SanjelData.BusinessEntities.Operation.Crew.CrewPosition   "1..1"  <---   "1..*"  SanjelCrewWorkerSection /*SanjelCrewWorkerSection*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrewWorkerSection 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Crew.CrewType /*CrewType*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		Crew /*Crew*/ : SanjelData.Common.BusinessEntities.Operation.Crew   "1..*"  --->   "1..1"  Type /*Type*/ : SanjelData.BusinessEntities.Operation.Crew.CrewType 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Crew.SanjelCrew /*SanjelCrew*/ : SanjelData.Common.BusinessEntities.Operation.Crew /*Crew*/ 
+{
+	string Rotation /*Rotation*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		RigJobSanjelCrewSection /*RigJobSanjelCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobSanjelCrewSection   "1..1"  --->   "0..1"  SanjelCrew /*SanjelCrew*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrew 
+	}
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		SanjelCrew /*SanjelCrew*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrew   "1..1"  *-->   "0..*"  SanjelCrewTruckUnitSection /*SanjelCrewTruckUnitSection*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrewTruckUnitSection 
+	}
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		SanjelCrew /*SanjelCrew*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrew   "1..1"  *-->   "0..*"  SanjelCrewWorkerSection /*SanjelCrewWorkerSection*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrewWorkerSection 
+	}
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		CrewNote /*CrewNote*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrewNote   "1..*"  --->   "1..1"  SanjelCrew /*SanjelCrew*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrew 
+	}
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		SanjelCrew /*SanjelCrew*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrew   "1..1"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "1..1"  SanjelCrew /*SanjelCrew*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrew 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewScheduleSanjelCrew /*SanjelCrewScheduleSanjelCrew*/ 
+	{
+		SanjelCrew /*SanjelCrew*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrew   "1..1"  <---   "1..1"  SanjelCrewSchedule /*SanjelCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewSchedule 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Crew.SanjelCrewNote /*SanjelCrewNote*/ : SanjelData.Common.BusinessEntities.Note.Note /*Note*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Operation.Crew.SanjelCrewTruckUnitSection /*SanjelCrewTruckUnitSection*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		SanjelCrewTruckUnitSection /*SanjelCrewTruckUnitSection*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrewTruckUnitSection   "1..1"  --->   "1..1"  TruckUnit /*TruckUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Crew.SanjelCrewWorkerSection /*SanjelCrewWorkerSection*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.HumanResources.SanjelCrewWorkerScetionWorker /*SanjelCrewWorkerScetionWorker*/ 
+	{
+		SanjelCrewWorkerSection /*SanjelCrewWorkerSection*/ : SanjelData.BusinessEntities.Operation.Crew.SanjelCrewWorkerSection   "1..1"  --->   "1..1"  Worker /*Worker*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Crew.ThirdPartyBulkerCrew /*ThirdPartyBulkerCrew*/ : SanjelData.Common.BusinessEntities.Operation.Crew /*Crew*/ 
+{
+	string SupplierContactName /*SupplierContactName*/ ;
+	string SupplierContactNumber /*SupplierContactNumber*/ ;
+	string ThirdPartyUnitNumber /*ThirdPartyUnitNumber*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule. 
+	{
+		ThirdPartyBulkerCrew /*ThirdPartyBulkerCrew*/ : SanjelData.BusinessEntities.Operation.Crew.ThirdPartyBulkerCrew   "1..1"  <---   "0..*"  ThirdPartyBulkerCrewSchedule /*ThirdPartyBulkerCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.ThirdPartyBulkerCrewSchedule 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch. 
+	{
+		ContractorCompany /*ContractorCompany*/ : SanjelData.BusinessEntities.Operation.Dispatch.ContractorCompany   "0..1"  <---   "1..1"  ThirdPartyBulkerCrew /*ThirdPartyBulkerCrew*/ : SanjelData.BusinessEntities.Operation.Crew.ThirdPartyBulkerCrew 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch. 
+	{
+		RigJobThirdPartyBulkerCrewSection /*RigJobThirdPartyBulkerCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobThirdPartyBulkerCrewSection   "1..1"  --->   "0..1"  ThirdPartyBulkerCrew /*ThirdPartyBulkerCrew*/ : SanjelData.BusinessEntities.Operation.Crew.ThirdPartyBulkerCrew 
+	}
+	SanjelData.BusinessEntities.Operation.Crew. 
+	{
+		ThirdPartyBulkerCrew /*ThirdPartyBulkerCrew*/ : SanjelData.BusinessEntities.Operation.Crew.ThirdPartyBulkerCrew   "1..1"  <---   "1..*"  ThirdPartyBulkerCrewNote /*ThirdPartyBulkerCrewNote*/ : SanjelData.BusinessEntities.Operation.Crew.ThirdPartyBulkerCrewNote 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Crew.ThirdPartyBulkerCrewNote /*ThirdPartyBulkerCrewNote*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.BusinessEntities.Operation.Dispatch /*Dispatch*/ ;
+
+class SanjelData.BusinessEntities.Operation.Dispatch.CallSheet /*CallSheet*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Operation.Dispatch.ClientConsultant /*ClientConsultant*/ 
+{
+	string Cell /*Cell*/ ;
+	string Email /*Email*/ ;
+	string Phone2 /*Phone2*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		Client /*Client*/ : SanjelData.Common.BusinessEntities.Organization.ClientCompany   "1..1"  <---   "0..*"  ClientConsultant /*ClientConsultant*/ : SanjelData.BusinessEntities.Operation.Dispatch.ClientConsultant 
+	}
+	SanjelData.Common.BusinessEntities.HumanResources. 
+	{
+		ClientConsultant /*ClientConsultant*/ : SanjelData.BusinessEntities.Operation.Dispatch.ClientConsultant   "0..*"  --->   "1..1"  WorkShift /*WorkShift*/ : SanjelData.Common.BusinessEntities.HumanResources.ShiftType 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobClientConsultant1 /*RigJobClientConsultant1*/ 
+	{
+		ClientConsultant1 /*ClientConsultant1*/ : SanjelData.BusinessEntities.Operation.Dispatch.ClientConsultant   "1..1"  <---   "0..*"  RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobClientConsultant2 /*RigJobClientConsultant2*/ 
+	{
+		ClientConsultant2 /*ClientConsultant2*/ : SanjelData.BusinessEntities.Operation.Dispatch.ClientConsultant   "1..1"  <---   "0..*"  RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Dispatch.ContractorCompany /*ContractorCompany*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulContractorCompany /*ProductHaulContractorCompany*/ 
+	{
+		ContractorCompany /*ContractorCompany*/ : SanjelData.BusinessEntities.Operation.Dispatch.ContractorCompany   "1..1"  <---   "0..*"  ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Dispatch.EstimateJob /*EstimateJob*/ : SanjelData.BusinessEntities.BaseEntities.JobBase /*JobBase*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Operation.Dispatch.RigJob /*RigJob*/ : SanjelData.BusinessEntities.BaseEntities.JobBase /*JobBase*/ 
+{
+	int CallSheetId /*CallSheetId*/ ;
+	int CallSheetNumber /*CallSheetNumber*/ ;
+	string Directions /*Directions*/ ;
+	bool IsCoDCleared /*IsCoDCleared*/ ;
+	bool IsDownholeLocation /*IsDownholeLocation*/ ;
+	bool IsHighProfile /*IsHighProfile*/ ;
+	bool IsListed /*IsListed*/ ;
+	bool IsNeedBins /*IsNeedBins*/ ;
+	bool IsProjectRig /*IsProjectRig*/ ;
+	bool IsServiceRig /*IsServiceRig*/ ;
+	int JobAlertId /*JobAlertId*/ ;
+	SanjelData.BusinessEntities.Operation.Dispatch.JobLifeStatus JobLifeStatus /*JobLifeStatus*/ ;
+	int JobNumber /*JobNumber*/ ;
+	string JobUniqueId /*JobUniqueId*/ ;
+	decimal Latitude /*Latitude*/ ;
+	decimal Longitude /*Longitude*/ ;
+	int MaxProgramRevision /*MaxProgramRevision*/ ;
+	string Notes /*Notes*/ ;
+	int ProgramRevision /*ProgramRevision*/ ;
+	SanjelData.Common.BusinessEntities.WellSite.RigStatus RigStatus /*RigStatus*/ ;
+	string SurfaceLocation /*SurfaceLocation*/ ;
+	string WellLocation /*WellLocation*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobNubbinInformation /*RigJobNubbinInformation*/ 
+	{
+		NubbinInformation /*NubbinInformation*/ : SanjelData.Common.BusinessEntities.Equipment.NubbinInformation   "0..*"  --->   "0..1"  RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobPlugLoadingHeadInformation /*RigJobPlugLoadingHeadInformation*/ 
+	{
+		PlugLoadingHeadInformation /*PlugLoadingHeadInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadInformation   "0..*"  --->   "0..1"  RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobRigJobSanjelCrewSection /*RigJobRigJobSanjelCrewSection*/ 
+	{
+		RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob   "1..1"  <---   "0..*"  RigJobSanjelCrewSection /*RigJobSanjelCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobSanjelCrewSection 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobRigJobThirdPartyBulkerCrewSection /*RigJobRigJobThirdPartyBulkerCrewSection*/ 
+	{
+		RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob   "1..1"  <---   "0..*"  RigJobThirdPartyBulkerCrewSection /*RigJobThirdPartyBulkerCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobThirdPartyBulkerCrewSection 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobSwedgeInformation /*RigJobSwedgeInformation*/ 
+	{
+		RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob   "0..1"  <---   "0..*"  SwedgeInformation /*SwedgeInformation*/ : SanjelData.Common.BusinessEntities.Equipment.SwedgeInformation 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobWellLocationType /*RigJobWellLocationType*/ 
+	{
+		RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob   "0..*"  --->   "1..1"  WellLocationType /*WellLocationType*/ : SanjelData.Common.BusinessEntities.WellSite.WellLocationType 
+	}
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobWitsBoxInformation /*RigJobWitsBoxInformation*/ 
+	{
+		RigJob /*RigJob*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJob   "0..1"  <---   "0..*"  WitsBoxInformation /*WitsBoxInformation*/ : SanjelData.Common.BusinessEntities.Equipment.WitsBoxInformation 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Dispatch.RigJobSanjelCrewSection /*RigJobSanjelCrewSection*/ 
+{
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobCrewSectionStatus RigJobCrewSectionStatus /*RigJobCrewSectionStatus*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulRigJobSanjelCrewSection /*ProductHaulRigJobSanjelCrewSection*/ 
+	{
+		ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul   "0..1"  <---   "1..1"  RigJobSanjelCrewSection /*RigJobSanjelCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobSanjelCrewSection 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewScheduleRigJobSanjelCrewSection /*SanjelCrewScheduleRigJobSanjelCrewSection*/ 
+	{
+		RigJobSanjelCrewSection /*RigJobSanjelCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobSanjelCrewSection   "0..1"  <---   "1..1"  SanjelCrewSchedule /*SanjelCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewSchedule 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Dispatch.RigJobThirdPartyBulkerCrewSection /*RigJobThirdPartyBulkerCrewSection*/ 
+{
+	SanjelData.BusinessEntities.Operation.Dispatch.RigJobCrewSectionStatus RigJobCrewSectionStatus /*RigJobCrewSectionStatus*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule. 
+	{
+		RigJobThirdPartyBulkerCrewSection /*RigJobThirdPartyBulkerCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobThirdPartyBulkerCrewSection   "0..1"  <---   "1..1"  ThirdPartyBulkerCrewSchedule /*ThirdPartyBulkerCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.ThirdPartyBulkerCrewSchedule 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulRigJobThirdPartyBulkerCrewSection /*ProductHaulRigJobThirdPartyBulkerCrewSection*/ 
+	{
+		ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul   "0..1"  <---   "1..1"  RigJobThirdPartyBulkerCrewSection /*RigJobThirdPartyBulkerCrewSection*/ : SanjelData.BusinessEntities.Operation.Dispatch.RigJobThirdPartyBulkerCrewSection 
+	}
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Dispatch.JobLifeStatus /*JobLifeStatus*/ 
+{
+	[ None ] None /*None*/ = 0 ;
+	[ Alerted ] Alerted /*Alerted*/ = 1 ;
+	[ Pending ] Pending /*Pending*/ = 2 ;
+	[ Confirmed ] Confirmed /*Confirmed*/ = 3 ;
+	[ Scheduled ] Scheduled /*Scheduled*/ = 4 ;
+	[ Dispatched ] Dispatched /*Dispatched*/ = 5 ;
+	[ Canceled ] Canceled /*Canceled*/ = 6 ;
+	[ InProgress ] InProgress /*InProgress*/ = 7 ;
+	[ Completed ] Completed /*Completed*/ = 8 ;
+	[ Deleted ] Deleted /*Deleted*/ = 9 ;
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Dispatch.RigJobCrewSectionStatus /*RigJobCrewSectionStatus*/ 
+{
+	[ Assigned ] Assigned /*Assigned*/ = 1 ;
+	[ Scheduled ] Scheduled /*Scheduled*/ = 2 ;
+	[ Removed ] Removed /*Removed*/ = 3 ;
+	[ Called ] Called /*Called*/ = 4 ;
+	[ LogOnDuty ] LogOnDuty /*LogOnDuty*/ = 5 ;
+	[ LogOffDuty ] LogOffDuty /*LogOffDuty*/ = 6 ;
+
+}
+
+package SanjelData.BusinessEntities.Operation.PostJobReport /*PostJobReport*/ ;
+
+package SanjelData.BusinessEntities.Operation.Schedule /*Schedule*/ ;
+
+package SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule /*ProductSchedule*/ ;
+
+class SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendUnloadSheet /*BlendUnloadSheet*/ 
+{
+	double UnloadAmount /*UnloadAmount*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.WellSite.BlendUnloadSheetDestination /*BlendUnloadSheetDestination*/ 
+	{
+		BlendUnloadSheet /*BlendUnloadSheet*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendUnloadSheet   "1..*"  --->   "1..1"  DestinationStorage /*DestinationStorage*/ : SanjelData.BusinessEntities.WellSite.BinInformation 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheetBlendUnloadSheet /*ShippingLoadSheetBlendUnloadSheet*/ 
+	{
+		BlendUnloadSheets /*BlendUnloadSheets*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendUnloadSheet   "0..*"  <->*   "1..1"  ShippingLoadSheet /*ShippingLoadSheet*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheet 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.PodLoad /*PodLoad*/ 
+{
+	double LoadAmount /*LoadAmount*/ ;
+	int PodIndex /*PodIndex*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulPodLoad /*ProductHaulPodLoad*/ 
+	{
+		PodLoad /*PodLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.PodLoad   "1..*"  <--*   "1..1"  ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheetPodLoad /*ShippingLoadSheetPodLoad*/ 
+	{
+		PodLoad /*PodLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.PodLoad   "0..*"  --->   "1..1"  ShippingLoadSheet /*ShippingLoadSheet*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheet 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul /*ProductHaul*/ 
+{
+	string Comments /*Comments*/ ;
+	datetime EstimatedLoadTime /*EstimatedLoadTime*/ ;
+	double EstimatedTravelTime /*EstimatedTravelTime*/ ;
+	datetime ExpectedOnLocationTime /*ExpectedOnLocationTime*/ ;
+	bool IsGoWithCrew /*IsGoWithCrew*/ ;
+	bool IsThirdParty /*IsThirdParty*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulStatus ProductHaulLifeStatus /*ProductHaulLifeStatus*/ ;
+	string SupplierContactName /*SupplierContactName*/ ;
+	string SupplierContactNumber /*SupplierContactNumber*/ ;
+	string ThirdPartyUnitNumber /*ThirdPartyUnitNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.WellSite.ProductHaulBulkPlant /*ProductHaulBulkPlant*/ 
+	{
+		BulkPlant /*BulkPlant*/ : SanjelData.Common.BusinessEntities.WellSite.Rig   "1..1"  <---   "0..*"  ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulBulkUnit /*ProductHaulBulkUnit*/ 
+	{
+		BulkUnit /*BulkUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit   "1..1"  <---   "0..*"  ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulCrew /*ProductHaulCrew*/ 
+	{
+		Crew /*Crew*/ : SanjelData.Common.BusinessEntities.Operation.Crew   "1..1"  <---   "0..*"  ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulDriver /*ProductHaulDriver*/ 
+	{
+		Driver /*Driver*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "0..*"  ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulDriver2 /*ProductHaulDriver2*/ 
+	{
+		Driver2 /*Driver2*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "0..*"  ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoads /*ProductHaulLoads*/ 
+	{
+		ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul   "0..1"  <-->   "1..*"  ProductHaulLoads /*ProductHaulLoads*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulSchedule /*ProductHaulSchedule*/ 
+	{
+		ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul   "1..1"  --->   "1..1"  Schedule /*Schedule*/ : SanjelData.Common.Model.Scheduling.Schedule 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulShippingLoadSheet /*ProductHaulShippingLoadSheet*/ 
+	{
+		ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul   "1..1"  *<->   "1..*"  ShippingLoadSheets /*ShippingLoadSheets*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheet 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulTractorUnit /*ProductHaulTractorUnit*/ 
+	{
+		ProductHaul /*ProductHaul*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaul   "0..*"  --->   "1..1"  TractorUnit /*TractorUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad /*ProductHaulLoad*/ 
+{
+	double BaseBlendWeight /*BaseBlendWeight*/ ;
+	int BlendSectionId /*BlendSectionId*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendShippingStatus BlendShippingStatus /*BlendShippingStatus*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendTestingStatus BlendTestingStatus /*BlendTestingStatus*/ ;
+	double BulkVolume /*BulkVolume*/ ;
+	int CallSheetId /*CallSheetId*/ ;
+	int CallSheetNumber /*CallSheetNumber*/ ;
+	string ClientRepresentative /*ClientRepresentative*/ ;
+	string Comments /*Comments*/ ;
+	double Density /*Density*/ ;
+	string DispatchBy /*DispatchBy*/ ;
+	string DriverName /*DriverName*/ ;
+	datetime EstmatedLoadTime /*EstmatedLoadTime*/ ;
+	datetime ExpectedOnLocationTime /*ExpectedOnLocationTime*/ ;
+	bool IsBlendTest /*IsBlendTest*/ ;
+	bool IsGoWithCrew /*IsGoWithCrew*/ ;
+	bool IsTotalBlendTonnage /*IsTotalBlendTonnage*/ ;
+	datetime JobDate /*JobDate*/ ;
+	string LoadSheetSerialNumber /*LoadSheetSerialNumber*/ ;
+	double MixWater /*MixWater*/ ;
+	datetime OnLocationTime /*OnLocationTime*/ ;
+	int PodIndex /*PodIndex*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadStatus ProductHaulLoadLifeStatus /*ProductHaulLoadLifeStatus*/ ;
+	string ProgramId /*ProgramId*/ ;
+	double RemainsAmount /*RemainsAmount*/ ;
+	double SackWeight /*SackWeight*/ ;
+	double TotalBlendWeight /*TotalBlendWeight*/ ;
+	string WellLocation /*WellLocation*/ ;
+	double Yield /*Yield*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.AllProductLoadList /*AllProductLoadList*/ 
+	{
+		AllProductLoadList /*AllProductLoadList*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductLoadSection   "0..*"  <--*   "1..1"  ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.AssociationHQf1 /*AssociationHQf1*/ 
+	{
+		ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad   "0..*"  --->   "1..1"  SourceStorage /*SourceStorage*/ : SanjelData.Common.BusinessEntities.Equipment.Bin 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendCategory /*BlendCategory*/ 
+	{
+		BlendCategory /*BlendCategory*/ : SanjelData.Common.BusinessEntities.Products.BlendCategory   "1..1"  <---   "0..*"  ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.Customer /*Customer*/ 
+	{
+		Customer /*Customer*/ : SanjelData.Common.BusinessEntities.Organization.ClientCompany   "1..1"  <---   "0..*"  ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadBin /*ProductHaulLoadBin*/ 
+	{
+		Bin /*Bin*/ : SanjelData.Common.BusinessEntities.Equipment.Bin   "1..1"  <---   "0..*"  ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadBlendChemical /*ProductHaulLoadBlendChemical*/ 
+	{
+		BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical   "1..1"  <---   "0..*"  ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadBulkPlant /*ProductHaulLoadBulkPlant*/ 
+	{
+		BulkPlant /*BulkPlant*/ : SanjelData.Common.BusinessEntities.WellSite.Rig   "1..1"  <---   "0..*"  ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadJobType /*ProductHaulLoadJobType*/ 
+	{
+		JobType /*JobType*/ : SanjelData.Common.BusinessEntities.Operation.JobType   "1..1"  <---   "0..*"  ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadRig /*ProductHaulLoadRig*/ 
+	{
+		ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad   "1..1"  --->   "0..1"  Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadShippingLoadSheet /*ProductHaulLoadShippingLoadSheet*/ 
+	{
+		ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad   "1..1"  <---   "0..*"  ShippingLoadSheets /*ShippingLoadSheets*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheet 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ServicePoint /*ServicePoint*/ 
+	{
+		ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad   "0..*"  --->   "1..1"  ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.Unit /*Unit*/ 
+	{
+		ProductHaulLoad /*ProductHaulLoad*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoad   "0..*"  --->   "1..1"  Unit /*Unit*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductLoadSection /*ProductLoadSection*/ 
+{
+	double BagSize /*BagSize*/ ;
+	bool IsFromBase /*IsFromBase*/ ;
+	double LoadedAmount /*LoadedAmount*/ ;
+	double NumberOfBags /*NumberOfBags*/ ;
+	double RequiredAmount /*RequiredAmount*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule. 
+	{
+		BlendAdditiveMeasureUnit /*BlendAdditiveMeasureUnit*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit   "1..1"  <---   "0..*"  ProductLoadSection /*ProductLoadSection*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductLoadSection 
+	}
+	SanjelData.Common.BusinessEntities.Products. 
+	{
+		AdditiveBlendMethod /*AdditiveBlendMethod*/ : SanjelData.Common.BusinessEntities.Products.AdditiveBlendMethod   "1..1"  <---   "0..*"  ProductLoadSection /*ProductLoadSection*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductLoadSection 
+	}
+	SanjelData.Common.BusinessEntities.Products.ProductLoadSectionBlendChemical /*ProductLoadSectionBlendChemical*/ 
+	{
+		BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical   "1..1"  <---   "0..*"  ProductLoadSection /*ProductLoadSection*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductLoadSection 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheet /*ShippingLoadSheet*/ 
+{
+	string BlendDescription /*BlendDescription*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendTestingStatus BlendTestStatus /*BlendTestStatus*/ ;
+	int CallSheetId /*CallSheetId*/ ;
+	int CallSheetNumber /*CallSheetNumber*/ ;
+	string ClientName /*ClientName*/ ;
+	string ClientRepresentative /*ClientRepresentative*/ ;
+	string Destination /*Destination*/ ;
+	datetime ExpectedOnLocationTime /*ExpectedOnLocationTime*/ ;
+	bool IsGoWithCrew /*IsGoWithCrew*/ ;
+	double LoadAmount /*LoadAmount*/ ;
+	datetime OnLocationTime /*OnLocationTime*/ ;
+	string ProgramId /*ProgramId*/ ;
+	string RigName /*RigName*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingStatus ShippingStatus /*ShippingStatus*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulBinLoadHistory /*ProductHaulBinLoadHistory*/ 
+	{
+		BinLoadHistory /*BinLoadHistory*/ : SanjelData.BusinessEntities.WellSite.BinLoadHistory   "1..1"  --->   "0..1"  ShippingLoadSheet /*ShippingLoadSheet*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheet 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheetSourceStorage /*ShippingLoadSheetSourceStorage*/ 
+	{
+		ShippingLoadSheet /*ShippingLoadSheet*/ : SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingLoadSheet   "1..*"  --->   "1..1"  SourceStorage /*SourceStorage*/ : SanjelData.BusinessEntities.WellSite.BinInformation 
+	}
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendShippingStatus /*BlendShippingStatus*/ 
+{
+	[ Empty ] Empty /*Empty*/ = 0 ;
+	[ HaulScheduled ] HaulScheduled /*HaulScheduled*/ = 1 ;
+	[ ParitialHaulScheduled ] ParitialHaulScheduled /*ParitialHaulScheduled*/ = 2 ;
+	[ OnLocation ] OnLocation /*OnLocation*/ = 3 ;
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendTestingStatus /*BlendTestingStatus*/ 
+{
+	[ None ] None /*None*/ = 0 ;
+	[ Requested ] Requested /*Requested*/ = 1 ;
+	[ Testing ] Testing /*Testing*/ = 2 ;
+	[ Pass ] Pass /*Pass*/ = 3 ;
+	[ Fail ] Fail /*Fail*/ = 4 ;
+	[ Approved ] Approved /*Approved*/ = 5 ;
+	[ Denied ] Denied /*Denied*/ = 6 ;
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulLoadStatus /*ProductHaulLoadStatus*/ 
+{
+	[ Empty ] Empty /*Empty*/ = 0 ;
+	[ Scheduled ] Scheduled /*Scheduled*/ = 1 ;
+	[ OnLocation ] OnLocation /*OnLocation*/ = 2 ;
+	[ Blending ] Blending /*Blending*/ = 3 ;
+	[ BlendCompleted ] BlendCompleted /*BlendCompleted*/ = 4 ;
+	[ Loaded ] Loaded /*Loaded*/ = 5 ;
+	[ HaulScheduled ] HaulScheduled /*HaulScheduled*/ = 6 ;
+	[ Stored ] Stored /*Stored*/ = 7 ;
+	[ JobCanceled ] JobCanceled /*JobCanceled*/ = 8 ;
+	[ Recycled ] Recycled /*Recycled*/ = 9 ;
+	[ FaultBlend ] FaultBlend /*FaultBlend*/ = 10 ;
+	[ GoodToUse ] GoodToUse /*GoodToUse*/ = 11 ;
+	[ Reblended ] Reblended /*Reblended*/ = 12 ;
+	[ Ready ] Ready /*Ready*/ = 13 ;
+	[ PartialHaulScheduled ] PartialHaulScheduled /*PartialHaulScheduled*/ = 14 ;
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ProductHaulStatus /*ProductHaulStatus*/ 
+{
+	[ Empty ] Empty /*Empty*/ = 0 ;
+	[ Pending ] Pending /*Pending*/ = 1 ;
+	[ Scheduled ] Scheduled /*Scheduled*/ = 2 ;
+	[ InProgress ] InProgress /*InProgress*/ = 3 ;
+	[ OnLocation ] OnLocation /*OnLocation*/ = 4 ;
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.ShippingStatus /*ShippingStatus*/ 
+{
+	[ Empty ] Empty /*Empty*/ = 0 ;
+	[ Scheduled ] Scheduled /*Scheduled*/ = 1 ;
+	[ Loaded ] Loaded /*Loaded*/ = 2 ;
+	[ OnLocation ] OnLocation /*OnLocation*/ = 3 ;
+
+}
+
+package SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule /*ResourceSchedule*/ ;
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.CrewScheduleType /*CrewScheduleType*/ : SanjelData.Common.Model.Scheduling.ScheduleType /*ScheduleType*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule. 
+	{
+		CrewScheduleType /*CrewScheduleType*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.CrewScheduleType   "1..1"  <---   "0..*"  ThirdPartyBulkerCrewSchedule /*ThirdPartyBulkerCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.ThirdPartyBulkerCrewSchedule 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewScheduleCrewScheduleType /*SanjelCrewScheduleCrewScheduleType*/ 
+	{
+		CrewScheduleType /*CrewScheduleType*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.CrewScheduleType   "1..1"  <---   "0..*"  SanjelCrewSchedule /*SanjelCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewSchedule 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewSchedule /*SanjelCrewSchedule*/ : SanjelData.Common.Model.Scheduling.Schedule /*Schedule*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewScheduleWorkerSchedule /*AssociationNjWV*/ 
+	{
+		SanjelCrewSchedule /*SanjelCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewSchedule   "1..1"  *-->   "1..*"  WorkerSchedule /*WorkerSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.WorkerSchedule 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewScheduleUnitSchedule /*SanjelCrewScheduleUnitSchedule*/ 
+	{
+		SanjelCrewSchedule /*SanjelCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewSchedule   "1..1"  *-->   "1..*"  UnitSchedule /*UnitSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitSchedule 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewScheduleWorkingServicePoint /*SanjelCrewScheduleWorkingServicePoint*/ 
+	{
+		SanjelCrewSchedule /*SanjelCrewSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.SanjelCrewSchedule   "0..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.ThirdPartyBulkerCrewSchedule /*ThirdPartyBulkerCrewSchedule*/ : SanjelData.Common.Model.Scheduling.Schedule /*Schedule*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitCount /*UnitCount*/ 
+{
+	int ScmsCount /*ScmsCount*/ ;
+	int ScmtCount /*ScmtCount*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitStatus UnitStatus /*UnitStatus*/ ;
+	datetime WorkDate /*WorkDate*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.ServicePointUnitCount /*ServicePointUnitCount*/ 
+	{
+		ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  UnitCount /*UnitCount*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitCount 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitLocation /*UnitLocation*/ 
+{
+	decimal Latitude /*Latitude*/ ;
+	decimal Longitude /*Longitude*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.Association3eic /*Association3eic*/ 
+	{
+		Unit /*Unit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit   "1..1"  <---   "1..1"  UnitLocation /*UnitLocation*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitLocation 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.AssociationD5Hv /*AssociationD5Hv*/ 
+	{
+		UnitLocation /*UnitLocation*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitLocation   "0..*"  --->   "1..1"  UnitMainType /*UnitMainType*/ : SanjelData.Common.BusinessEntities.Equipment.UnitMainType 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.AssociationHOr6 /*AssociationHOr6*/ 
+	{
+		UnitLocation /*UnitLocation*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitLocation   "0..*"  --->   "1..1"  UnitSubType /*UnitSubType*/ : SanjelData.Common.BusinessEntities.Equipment.UnitSubType 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.AssociationR0A7 /*AssociationR0A7*/ 
+	{
+		Driver /*Driver*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..1"  UnitLocation /*UnitLocation*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitLocation 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitSchedule /*UnitSchedule*/ : SanjelData.Common.Model.Scheduling.Schedule /*Schedule*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule. 
+	{
+		TruckUnit /*TruckUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit   "1..1"  <---   "1..1"  UnitSchedule /*UnitSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitSchedule 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		UnitSchedule /*UnitSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitSchedule   "0..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule. 
+	{
+		UnitSchedule /*UnitSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitSchedule   "0..*"  --->   "1..1"  UnitScheduleType /*UnitScheduleType*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitScheduleType 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitScheduleType /*UnitScheduleType*/ : SanjelData.Common.Model.Scheduling.ScheduleType /*ScheduleType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.VesselCount /*VesselCount*/ 
+{
+	int BtrainCount /*BtrainCount*/ ;
+	int BulkerCount /*BulkerCount*/ ;
+	datetime WorkDate /*WorkDate*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitStatus UnitStatus /*UnitStatus*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.ServicePointVesselCount /*ServicePointVesselCount*/ 
+	{
+		ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  VesselCount /*VesselCount*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.VesselCount 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.WorkerSchedule /*WorkerSchedule*/ : SanjelData.Common.Model.Scheduling.Schedule /*Schedule*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule. 
+	{
+		WorkerSchedule /*WorkerSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.WorkerSchedule   "0..*"  --->   "1..1"  WorkerScheduleType /*WorkerScheduleType*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.WorkerScheduleType 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		WorkerSchedule /*WorkerSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.WorkerSchedule   "0..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.Common.BusinessEntities.HumanResources.WorkerScheduleWorker /*WorkerScheduleWorker*/ 
+	{
+		Worker /*Worker*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..1"  WorkerSchedule /*WorkerSchedule*/ : SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.WorkerSchedule 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.WorkerScheduleType /*WorkerScheduleType*/ : SanjelData.Common.Model.Scheduling.ScheduleType /*ScheduleType*/ 
+{
+
+}
+association 
+{
+
+}
+
+enum SanjelData.BusinessEntities.Operation.Schedule.ResourceSchedule.UnitStatus /*UnitStatus*/ 
+{
+	[ None ] None /*None*/ = 0 ;
+	[ Active ] Active /*Active*/ = 1 ;
+	[ Manned ] Manned /*Manned*/ = 2 ;
+
+}
+
+package SanjelData.BusinessEntities.Sales /*Sales*/ ;
+
+class SanjelData.BusinessEntities.Sales.JobDesign /*JobDesign*/ : SanjelData.BusinessEntities.BaseEntities.JobBase /*JobBase*/ 
+{
+	bool IsMultipleWell /*IsMultipleWell*/ ;
+	int Revision /*Revision*/ ;
+	string RevisionDescription /*RevisionDescription*/ ;
+	string SurfaceLocation /*SurfaceLocation*/ ;
+	int WellCount /*WellCount*/ ;
+	string WellLocation /*WellLocation*/ ;
+	datetime ProgramGeneratedDate /*ProgramGeneratedDate*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Sales.JobDesignProgramPumpingJobSection /*JobDesignProgramPumpingJobSection*/ 
+	{
+		JobDesign /*JobDesign*/ : SanjelData.BusinessEntities.Sales.JobDesign   "1..1"  *-->   "1..*"  JobDesignPumpingJobSection /*JobDesignPumpingJobSection*/ : SanjelData.BusinessEntities.Sales.JobDesignPumpingJobSection 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Sales.JobDesignPumpingJobSection /*JobDesignPumpingJobSection*/ 
+{
+	int JobDuration /*JobDuration*/ ;
+	int PumperCount /*PumperCount*/ ;
+	double RiskMatrix /*RiskMatrix*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.Sales.ProgramPumpingJobSectionJobType /*ProgramPumpingJobSectionJobType*/ 
+	{
+		JobDesignPumpingJobSection /*JobDesignPumpingJobSection*/ : SanjelData.BusinessEntities.Sales.JobDesignPumpingJobSection   "0..*"  --->   "1..1"  JobType /*JobType*/ : SanjelData.Common.BusinessEntities.Operation.JobType 
+	}
+
+}
+
+class SanjelData.BusinessEntities.Sales.WellObjective /*WellObjective*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.BusinessEntities.VariablePay /*VariablePay*/ ;
+
+class SanjelData.BusinessEntities.VariablePay.BaseVariablePaySchedule /*BaseVariablePaySchedule*/ 
+{
+	double BaseAmount /*BaseAmount*/ ;
+	double Percentage /*Percentage*/ ;
+	double RevenueEnd /*RevenueEnd*/ ;
+	double RevenueStart /*RevenueStart*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PaySchedulePayArea /*PaySchedulePayArea*/ 
+	{
+		PayArea /*PayArea*/ : SanjelData.BusinessEntities.VariablePay.PayArea   "1..1"  <---   "0..*"  PaySchedule /*PaySchedule*/ : SanjelData.BusinessEntities.VariablePay.BaseVariablePaySchedule 
+	}
+	SanjelData.BusinessEntities.VariablePay.PaySchedulePayPosition /*PaySchedulePayPosition*/ 
+	{
+		PayPosition /*PayPosition*/ : SanjelData.BusinessEntities.VariablePay.PayPosition   "1..1"  <---   "1..*"  PaySchedule /*PaySchedule*/ : SanjelData.BusinessEntities.VariablePay.BaseVariablePaySchedule 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.BTrainPaySchedule /*BTrainPaySchedule*/ 
+{
+	double MinKm /*MinKm*/ ;
+	double PayLoadRate /*PayLoadRate*/ ;
+	double PerKmRate /*PerKmRate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.ChemVanPaySchedule /*ChemVanPaySchedule*/ 
+{
+	double MinKm /*MinKm*/ ;
+	double PerKmRate /*PerKmRate*/ ;
+	double PerLoadRate /*PerLoadRate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.CrewEfficiencyBonusPaySchedule /*CrewEfficiencyBonusPaySchedule*/ 
+{
+	double PayRatio /*PayRatio*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.CrewEfficiencyBonusPaySchedulePayAsPosition /*CrewEfficiencyBonusPaySchedulePayAsPosition*/ 
+	{
+		CrewEfficiencyBonusPaySchedule /*CrewEfficiencyBonusPaySchedule*/ : SanjelData.BusinessEntities.VariablePay.CrewEfficiencyBonusPaySchedule   "0..*"  --->   "1..1"  PayAsPosition /*PayAsPosition*/ : SanjelData.BusinessEntities.VariablePay.PayPosition 
+	}
+	SanjelData.BusinessEntities.VariablePay.CrewEfficiencyBonusPayScheduleServiceLine /*CrewEfficiencyBonusPayScheduleServiceLine*/ 
+	{
+		CrewEfficiencyBonusPaySchedule /*CrewEfficiencyBonusPaySchedule*/ : SanjelData.BusinessEntities.VariablePay.CrewEfficiencyBonusPaySchedule   "0..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.ExtendTravelPaySchedule /*ExtendTravelPaySchedule*/ 
+{
+	double BaseRate /*BaseRate*/ ;
+	double HourThreshold /*HourThreshold*/ ;
+	double KmThreshold /*KmThreshold*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.EXTLPaySchedule /*EXTLPaySchedule*/ 
+{
+	double HourlyRate /*HourlyRate*/ ;
+	double HourThreshold /*HourThreshold*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.EXTLPaySchedulePayPosition /*EXTLPaySchedulePayPosition*/ 
+	{
+		EXTLPaySchedule /*EXTLPaySchedule*/ : SanjelData.BusinessEntities.VariablePay.EXTLPaySchedule   "0..*"  --->   "1..1"  PayPosition /*PayPosition*/ : SanjelData.BusinessEntities.VariablePay.PayPosition 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.HotShotPaySchedule /*HotShotPaySchedule*/ 
+{
+	double PerKmRate /*PerKmRate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.MonthlyJobCountIncentiveSchedule /*MonthlyJobCountIncentiveSchedule*/ 
+{
+	double Amount /*Amount*/ ;
+	int JobCount /*JobCount*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayArea /*PayArea*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PayEntryPayArea /*PayEntryPayArea*/ 
+	{
+		PayArea /*PayArea*/ : SanjelData.BusinessEntities.VariablePay.PayArea   "1..1"  <---   "1..*"  PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry 
+	}
+	SanjelData.BusinessEntities.VariablePay.ProductHaulPaySchedulePayArea /*ProductHaulPaySchedulePayArea*/ 
+	{
+		PayArea /*PayArea*/ : SanjelData.BusinessEntities.VariablePay.PayArea   "1..1"  <---   "0..*"  ProductHaulPaySchedule /*ProductHaulPaySchedule*/ : SanjelData.BusinessEntities.VariablePay.ProductHaulPaySchedule 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkAssignmentPayArea /*WorkAssignmentPayArea*/ 
+	{
+		PayArea /*PayArea*/ : SanjelData.BusinessEntities.VariablePay.PayArea   "1..1"  <---   "0..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayEntry /*PayEntry*/ 
+{
+	double Amount /*Amount*/ ;
+	int CrewCount /*CrewCount*/ ;
+	bool IsTwoWay /*IsTwoWay*/ ;
+	datetime JobDate /*JobDate*/ ;
+	string JobNumber /*JobNumber*/ ;
+	double JobRevenue /*JobRevenue*/ ;
+	string JobUniqueId /*JobUniqueId*/ ;
+	double LoadQuantity /*LoadQuantity*/ ;
+	string MtsNumber /*MtsNumber*/ ;
+	double StandyHour /*StandyHour*/ ;
+	SanjelData.BusinessEntities.VariablePay.PayrollStatus Status /*Status*/ ;
+	double TravelDistance /*TravelDistance*/ ;
+	double TravelTime /*TravelTime*/ ;
+	string UniqueId /*UniqueId*/ ;
+	longstring WorkDescription /*WorkDescription*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PayEntryClientCompany /*PayEntryClientCompany*/ 
+	{
+		ClientCompany /*ClientCompany*/ : SanjelData.Common.BusinessEntities.Organization.ClientCompany   "1..1"  <---   "1..*"  PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryEmployee /*PayEntryEmployee*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryJobProvince /*PayEntryJobProvince*/ 
+	{
+		JobProvince /*JobProvince*/ : SanjelData.Common.Entities.General.ProvinceOrState   "1..1"  <---   "0..*"  PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryPayPeriod /*PayEntryPayPeriod*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  PayPeriod /*PayPeriod*/ : SanjelData.BusinessEntities.VariablePay.PayPeriod 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryPayPeriodSummary /*PayEntryPayPeriodSummary*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  PayPeriodSummary /*PayPeriodSummary*/ : SanjelData.BusinessEntities.VariablePay.PayPeriodSummary 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryPayPosition1 /*PayEntryPayPosition1*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  PayPosition /*PayPosition*/ : SanjelData.BusinessEntities.VariablePay.PayPosition 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryPaySummaryType /*PayEntryPaySummaryType*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "0..*"  --->   "1..1"  PaySummaryType /*PaySummaryType*/ : SanjelData.BusinessEntities.VariablePay.PaySummaryType 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryPayType /*PayEntryPayType*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  PayType /*PayType*/ : SanjelData.BusinessEntities.VariablePay.PayType 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryServiceLine /*PayEntryServiceLine*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryServicePoint /*PayEntryServicePoint*/ 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "1..*"  PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryWorkAssignement /*PayEntryWorkAssignement*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryWorkingServicePoint /*PayEntryWorkingServicePoint*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayEntryWorkType /*PayEntryWorkType*/ 
+	{
+		PayEntry /*PayEntry*/ : SanjelData.BusinessEntities.VariablePay.PayEntry   "1..*"  --->   "1..1"  WorkType /*WorkType*/ : SanjelData.BusinessEntities.VariablePay.WorkType 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayPeriod /*PayPeriod*/ 
+{
+	datetime DueDate /*DueDate*/ ;
+	datetime EndDate /*EndDate*/ ;
+	datetime PayDate /*PayDate*/ ;
+	int PayPeriodNumber /*PayPeriodNumber*/ ;
+	datetime StartDate /*StartDate*/ ;
+	SanjelData.BusinessEntities.VariablePay.PayrollStatus Status /*Status*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PayPeriodSummaryPayPeriod /*PayPeriodSummaryPayPeriod*/ 
+	{
+		PayPeriod /*PayPeriod*/ : SanjelData.BusinessEntities.VariablePay.PayPeriod   "1..1"  <---   "1..*"  PayPeriodSummary /*PayPeriodSummary*/ : SanjelData.BusinessEntities.VariablePay.PayPeriodSummary 
+	}
+	SanjelData.BusinessEntities.VariablePay.PaySummaryPayPeriod /*PaySummaryPayPeriod*/ 
+	{
+		PayPeriod /*PayPeriod*/ : SanjelData.BusinessEntities.VariablePay.PayPeriod   "1..1"  <---   "1..*"  PaySummary /*PaySummary*/ : SanjelData.BusinessEntities.VariablePay.PaySummary 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayPeriodSummary /*PayPeriodSummary*/ 
+{
+	double Amount /*Amount*/ ;
+	SanjelData.BusinessEntities.VariablePay.PayrollStatus Status /*Status*/ ;
+	string UniqueId /*UniqueId*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PayPeriodSummaryServiceLine /*PayPeriodSummaryServiceLine*/ 
+	{
+		PayPeriodSummary /*PayPeriodSummary*/ : SanjelData.BusinessEntities.VariablePay.PayPeriodSummary   "1..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayPeriodSummaryServicePoint /*PayPeriodSummaryServicePoint*/ 
+	{
+		PayPeriodSummary /*PayPeriodSummary*/ : SanjelData.BusinessEntities.VariablePay.PayPeriodSummary   "1..*"  --->   "1..1"  ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.BusinessEntities.VariablePay.PaySummaryPayPeriodSummary /*PaySummaryPayPeriodSummary*/ 
+	{
+		PayPeriodSummary /*PayPeriodSummary*/ : SanjelData.BusinessEntities.VariablePay.PayPeriodSummary   "1..1"  <---   "1..*"  PaySummary /*PaySummary*/ : SanjelData.BusinessEntities.VariablePay.PaySummary 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayPosition /*PayPosition*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.MappingPayPostion /*MappingPayPostion*/ 
+	{
+		PayPosition /*PayPosition*/ : SanjelData.BusinessEntities.VariablePay.PayPosition   "1..1"  <---   "1..*"  PayPositionMapping /*PayPositionMapping*/ : SanjelData.BusinessEntities.VariablePay.PayPositionMapping 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayPositionServiceLine /*PayPositionServiceLine*/ 
+	{
+		PayPosition /*PayPosition*/ : SanjelData.BusinessEntities.VariablePay.PayPosition   "1..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+	SanjelData.BusinessEntities.VariablePay.StandbyPaySchedulePayPosition /*StandbyPaySchedulePayPosition*/ 
+	{
+		PayPosition /*PayPosition*/ : SanjelData.BusinessEntities.VariablePay.PayPosition   "1..1"  <---   "0..*"  StandbyPaySchedule /*StandbyPaySchedule*/ : SanjelData.BusinessEntities.VariablePay.StandbyPaySchedule 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayPositionMapping /*PayPositionMapping*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.MappingHrPosition /*MappingHrPosition*/ 
+	{
+		HrPosition /*HrPosition*/ : SanjelData.Common.BusinessEntities.HumanResources.BonusPosition   "1..1"  <---   "1..*"  PayPositionMapping /*PayPositionMapping*/ : SanjelData.BusinessEntities.VariablePay.PayPositionMapping 
+	}
+	SanjelData.BusinessEntities.VariablePay.MappingJobRole /*MappingJobRole*/ 
+	{
+		JobRole /*JobRole*/ : SanjelData.Common.BusinessEntities.Operation.JobRole   "1..1"  <---   "1..*"  PayPositionMapping /*PayPositionMapping*/ : SanjelData.BusinessEntities.VariablePay.PayPositionMapping 
+	}
+	SanjelData.BusinessEntities.VariablePay.MappingServiceLine /*MappingServiceLine*/ 
+	{
+		PayPositionMapping /*PayPositionMapping*/ : SanjelData.BusinessEntities.VariablePay.PayPositionMapping   "1..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayrollExportMapping /*PayrollExportMapping*/ 
+{
+	string EarningCode /*EarningCode*/ ;
+	string PayrollDescription /*PayrollDescription*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PayrollExportMappingPaySummaryType /*PayrollExportMappingPaySummaryType*/ 
+	{
+		PayrollExportMapping /*PayrollExportMapping*/ : SanjelData.BusinessEntities.VariablePay.PayrollExportMapping   "0..*"  --->   "1..1"  PayType /*PayType*/ : SanjelData.BusinessEntities.VariablePay.PayType 
+	}
+	SanjelData.BusinessEntities.VariablePay.PayrollExportMappingServiceLine /*PayrollExportMappingServiceLine*/ 
+	{
+		PayrollExportMapping /*PayrollExportMapping*/ : SanjelData.BusinessEntities.VariablePay.PayrollExportMapping   "0..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PaySummary /*PaySummary*/ 
+{
+	double BaseVariablePayAmount /*BaseVariablePayAmount*/ ;
+	double MealAllowance /*MealAllowance*/ ;
+	double StandbyAmount /*StandbyAmount*/ ;
+	SanjelData.BusinessEntities.VariablePay.PayrollStatus Status /*Status*/ ;
+	double SumOfOVPP /*SumOfOVPP*/ ;
+	double TotalAmount /*TotalAmount*/ ;
+	string UniqueId /*UniqueId*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PaySummaryEmployee /*PaySummaryEmployee*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  PaySummary /*PaySummary*/ : SanjelData.BusinessEntities.VariablePay.PaySummary 
+	}
+	SanjelData.BusinessEntities.VariablePay.PaySummaryServiceLine /*PaySummaryServiceLine*/ 
+	{
+		PaySummary /*PaySummary*/ : SanjelData.BusinessEntities.VariablePay.PaySummary   "1..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+	SanjelData.BusinessEntities.VariablePay.PaySummaryServicePoint /*PaySummaryServicePoint*/ 
+	{
+		PaySummary /*PaySummary*/ : SanjelData.BusinessEntities.VariablePay.PaySummary   "1..*"  --->   "1..1"  ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PaySummaryType /*PaySummaryType*/ 
+{
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.PayTypePaySummaryType /*PayTypePaySummaryType*/ 
+	{
+		PaySummaryType /*PaySummaryType*/ : SanjelData.BusinessEntities.VariablePay.PaySummaryType   "1..1"  <---   "0..*"  PayType /*PayType*/ : SanjelData.BusinessEntities.VariablePay.PayType 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.PayType /*PayType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.ProductHaulPaySchedule /*ProductHaulPaySchedule*/ 
+{
+	double PerHaulRate /*PerHaulRate*/ ;
+	double PerKmRate /*PerKmRate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.RTBAPaySchedule /*RTBAPaySchedule*/ 
+{
+	double BaseRate /*BaseRate*/ ;
+	double KmThreshold /*KmThreshold*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.SelfLoadPaySchedule /*SelfLoadPaySchedule*/ 
+{
+	double PerLoadRate /*PerLoadRate*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.StandbyPaySchedule /*StandbyPaySchedule*/ 
+{
+	double HoulyRate /*HoulyRate*/ ;
+	double HourThreshold /*HourThreshold*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.WorkAssignment /*WorkAssignment*/ 
+{
+	int CrewCount /*CrewCount*/ ;
+	datetime EndTime /*EndTime*/ ;
+	bool IsCrewEfficiency /*IsCrewEfficiency*/ ;
+	bool IsEligibleStandby /*IsEligibleStandby*/ ;
+	bool IsMultipleWellProject /*IsMultipleWellProject*/ ;
+	bool IsTwoWay /*IsTwoWay*/ ;
+	datetime JobDateTime /*JobDateTime*/ ;
+	SanjelData.BusinessEntities.VariablePay.JobFlag JobFlag /*JobFlag*/ ;
+	int JobIndex /*JobIndex*/ ;
+	string JobNumber /*JobNumber*/ ;
+	double JobRevenue /*JobRevenue*/ ;
+	string JobUniqueId /*JobUniqueId*/ ;
+	int LoadQuantity /*LoadQuantity*/ ;
+	string MtsNumber /*MtsNumber*/ ;
+	int SourceId /*SourceId*/ ;
+	double StandbyHours /*StandbyHours*/ ;
+	datetime StartTime /*StartTime*/ ;
+	SanjelData.BusinessEntities.VariablePay.WorkAssignmentStatus Status /*Status*/ ;
+	double TravelDistance /*TravelDistance*/ ;
+	double TravelTime /*TravelTime*/ ;
+	longstring WorkDescription /*WorkDescription*/ ;
+	double WorkingHours /*WorkingHours*/ ;
+	string WorkLocation /*WorkLocation*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.VariablePay.WorkAcitivityJobPosition /*WorkAcitivityJobPosition*/ 
+	{
+		HrPosition /*HrPosition*/ : SanjelData.Common.BusinessEntities.HumanResources.BonusPosition   "1..1"  <---   "1..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkAcitvityEmployee /*WorkAcitvityEmployee*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkActivityHomeServicePoint /*WorkActivityHomeServicePoint*/ 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "1..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkActivityJobRole /*WorkActivityJobRole*/ 
+	{
+		JobRole /*JobRole*/ : SanjelData.Common.BusinessEntities.Operation.JobRole   "1..1"  <---   "1..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkActivityServiceLine /*WorkActivityServiceLine*/ 
+	{
+		ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine   "1..1"  <---   "1..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkActivityServicePoint /*WorkActivityServicePoint*/ 
+	{
+		WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment   "1..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkActivityWorkType /*WorkActivityWorkType*/ 
+	{
+		WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment   "1..*"  --->   "1..1"  WorkType /*WorkType*/ : SanjelData.BusinessEntities.VariablePay.WorkType 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkAssignmentClientCompany /*WorkAssignmentClientCompany*/ 
+	{
+		ClientCompany /*ClientCompany*/ : SanjelData.Common.BusinessEntities.Organization.ClientCompany   "1..1"  <---   "1..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+	SanjelData.BusinessEntities.VariablePay.WorkAssignmentJobProvince /*WorkAssignmentJobProvince*/ 
+	{
+		JobProvince /*JobProvince*/ : SanjelData.Common.Entities.General.ProvinceOrState   "1..1"  <---   "0..*"  WorkAssignment /*WorkAssignment*/ : SanjelData.BusinessEntities.VariablePay.WorkAssignment 
+	}
+
+}
+
+class SanjelData.BusinessEntities.VariablePay.WorkType /*WorkType*/ 
+{
+
+}
+association 
+{
+
+}
+
+enum SanjelData.BusinessEntities.VariablePay.JobFlag /*JobFlag*/ 
+{
+	[ None ] None /*None*/ = 0 ;
+	[ Complete ] Complete /*Complete*/ = 1 ;
+	[ Code900 ] Code9000 /*Code9000*/ = 2 ;
+	[ Incomplete ] Incomplete /*Incomplete*/ = 3 ;
+	[ DayRate ] DayRate /*DayRate*/ = 4 ;
+
+}
+
+enum SanjelData.BusinessEntities.VariablePay.PayrollStatus /*PayrollStatus*/ 
+{
+	[ Open ] Open /*Open*/ = 1 ;
+	[ CutOff ] CutOff /*CutOff*/ = 2 ;
+	[ PendingApproval ] PendingApproval /*PendingApproval*/ = 4 ;
+	[ Approved ] Approved /*Approved*/ = 8 ;
+	[ Closed ] Closed /*Closed*/ = 16 ;
+
+}
+
+enum SanjelData.BusinessEntities.VariablePay.WorkAssignmentStatus /*WorkAssignmentStatus*/ 
+{
+	[ Completed ] Completed /*Completed*/ = 4 ;
+	[ Approved ] Approved /*Approved*/ = 8 ;
+
+}
+
+package SanjelData.BusinessEntities.WellSite /*WellSite*/ ;
+
+class SanjelData.BusinessEntities.WellSite.BinInformation /*BinInformation*/ 
+{
+	SanjelData.BusinessEntities.WellSite.BinStatus BinStatus /*BinStatus*/ ;
+	SanjelData.BusinessEntities.Operation.Schedule.ProductSchedule.BlendTestingStatus BlendTestingStatus /*BlendTestingStatus*/ ;
+	double Capacity /*Capacity*/ ;
+	int LastProductHaulLoadId /*LastProductHaulLoadId*/ ;
+	int PodIndex /*PodIndex*/ ;
+	double Quantity /*Quantity*/ ;
+	double Volume /*Volume*/ ;
+
+}
+association 
+{
+	SanjelData.BusinessEntities.WellSite.BinAssignement /*BinAssignment*/ 
+	{
+		BinInformation /*BinInformation*/ : SanjelData.BusinessEntities.WellSite.BinInformation   "1..1"  <---   "0..*"  BinLoadHistory /*BinLoadHistory*/ : SanjelData.BusinessEntities.WellSite.BinLoadHistory 
+	}
+	SanjelData.BusinessEntities.WellSite.BinInformationBin /*BinInformationBin*/ 
+	{
+		Bin /*Bin*/ : SanjelData.Common.BusinessEntities.Equipment.Bin   "1..1"  <---   "1..1"  BinInformation /*BinInformation*/ : SanjelData.BusinessEntities.WellSite.BinInformation 
+	}
+	SanjelData.BusinessEntities.WellSite.BinInformationBlendChemical /*BinInformationBlendChemical*/ 
+	{
+		BinInformation /*BinInformation*/ : SanjelData.BusinessEntities.WellSite.BinInformation   "1..1"  --->   "0..1"  BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical 
+	}
+	SanjelData.Common.BusinessEntities.WellSite.BinInformationRig /*BinInformationRig*/ 
+	{
+		BinInformation /*BinInformation*/ : SanjelData.BusinessEntities.WellSite.BinInformation   "0..*"  --->   "0..1"  Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig 
+	}
+	SanjelData.BusinessEntities.WellSite.BinInformationWorkingServicePoint /*BinInformationWorkingServicePoint*/ 
+	{
+		BinInformation /*BinInformation*/ : SanjelData.BusinessEntities.WellSite.BinInformation   "0..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.BusinessEntities.WellSite.BinLoadHistory /*BinLoadHistory*/ 
+{
+	string BlendDescription /*BlendDescription*/ ;
+	string BlendName /*BlendName*/ ;
+	double InQuantity /*InQuantity*/ ;
+	int JobNumber /*JobNumber*/ ;
+	string Notes /*Notes*/ ;
+	double OutQuantity /*OutQuantity*/ ;
+	double Remains /*Remains*/ ;
+	string Username /*Username*/ ;
+
+}
+association 
+{
+
+}
+
+enum SanjelData.BusinessEntities.WellSite.BinStatus /*BinStatus*/ 
+{
+	[ Yard ] Yard /*Yard*/ = 0 ;
+	[ Assigned ] Assigned /*Assigned*/ = 1 ;
+
+}
+
+package SanjelData.Common /*Common*/ ;
+
+package SanjelData.Common.BusinessEntities /*BusinessEntities*/ ;
+
+package SanjelData.Common.BusinessEntities.Equipment /*Equipment*/ ;
+
+class SanjelData.Common.BusinessEntities.Equipment.Bin /*Bin*/ 
+{
+	int PodCount /*PodCount*/ ;
+	double Volume /*Volume*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment.BinNote /*BinNote*/ 
+	{
+		Bin /*Bin*/ : SanjelData.Common.BusinessEntities.Equipment.Bin   "1..1"  <---   "1..*"  BinNote /*BinNote*/ : SanjelData.Common.BusinessEntities.Equipment.BinNote 
+	}
+	SanjelData.Common.BusinessEntities.Equipment.BinServicePoint /*BinServicePoint*/ 
+	{
+		Bin /*Bin*/ : SanjelData.Common.BusinessEntities.Equipment.Bin   "0..*"  --->   "1..1"  HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.Common.BusinessEntities.Equipment.BinType /*BinType*/ 
+	{
+		Bin /*Bin*/ : SanjelData.Common.BusinessEntities.Equipment.Bin   "0..*"  --->   "1..1"  BinType /*BinType*/ : SanjelData.Common.BusinessEntities.Equipment.BinType 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.BinNote /*BinNote*/ : SanjelData.Common.BusinessEntities.Note.Note /*Note*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.BinType /*BinType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.Manifold /*Manifold*/ 
+{
+	string SerialNumber /*SerialNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Manifold /*Manifold*/ : SanjelData.Common.BusinessEntities.Equipment.Manifold   "0..*"  --->   "1..1"  ManifoldType /*ManifoldType*/ : SanjelData.Common.BusinessEntities.Equipment.ManifoldType 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Manifold /*Manifold*/ : SanjelData.Common.BusinessEntities.Equipment.Manifold   "1..1"  <---   "1..1"  PlugLoadingHeadInformation /*PlugLoadingHeadInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadInformation 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Manifold /*Manifold*/ : SanjelData.Common.BusinessEntities.Equipment.Manifold   "1..1"  <---   "1..1"  ManifoldInformation /*ManifoldInformation*/ : SanjelData.Common.BusinessEntities.Equipment.ManifoldInformation 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "1..1"  Manifold /*Manifold*/ : SanjelData.Common.BusinessEntities.Equipment.Manifold 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.ManifoldInformation /*ManifoldInformation*/ 
+{
+	int CallsheetNumber /*CallsheetNumber*/ ;
+	SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus EquipmentStatus /*EquipmentStatus*/ ;
+	string Location /*Location*/ ;
+	longstring Notes /*Notes*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		ManifoldInformation /*ManifoldInformation*/ : SanjelData.Common.BusinessEntities.Equipment.ManifoldInformation   "1..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.ManifoldType /*ManifoldType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.Nubbin /*Nubbin*/ 
+{
+	string SerialNumber /*SerialNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  Nubbin /*Nubbin*/ : SanjelData.Common.BusinessEntities.Equipment.Nubbin 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Nubbin /*Nubbin*/ : SanjelData.Common.BusinessEntities.Equipment.Nubbin   "0..*"  --->   "1..1"  NubbinSize /*NubbinSize*/ : SanjelData.Common.BusinessEntities.Equipment.NubbinSize 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Nubbin /*Nubbin*/ : SanjelData.Common.BusinessEntities.Equipment.Nubbin   "0..*"  --->   "1..1"  NubbinThreadType /*NubbinThreadType*/ : SanjelData.Common.BusinessEntities.Equipment.NubbinThreadType 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Nubbin /*Nubbin*/ : SanjelData.Common.BusinessEntities.Equipment.Nubbin   "1..1"  <---   "1..1"  NubbinInformation /*NubbinInformation*/ : SanjelData.Common.BusinessEntities.Equipment.NubbinInformation 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.NubbinInformation /*NubbinInformation*/ 
+{
+	int CallSheetNumber /*CallSheetNumber*/ ;
+	SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus EquipmentStatus /*EquipmentStatus*/ ;
+	string Location /*Location*/ ;
+	string Notes /*Notes*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		NubbinInformation /*NubbinInformation*/ : SanjelData.Common.BusinessEntities.Equipment.NubbinInformation   "0..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.NubbinSize /*NubbinSize*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.NubbinThreadType /*NubbinThreadType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHead /*PlugLoadingHead*/ 
+{
+	string SerialNumber /*SerialNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHead /*PlugLoadingHead*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHead   "0..*"  --->   "1..1"  PlugLoadingHeadSize /*PlugLoadingHeadSize*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSize 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  PlugLoadingHead /*PlugLoadingHead*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHead 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHead /*PlugLoadingHead*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHead   "0..*"  --->   "1..1"  PlugLoadingHeadType /*PlugLoadingHeadType*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadType 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHead /*PlugLoadingHead*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHead   "1..1"  <---   "1..1"  PlugLoadingHeadInformation /*PlugLoadingHeadInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadInformation 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHead /*PlugLoadingHead*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHead   "0..*"  --->   "1..1"  PlugLoadingHeadSpecialty /*PlugLoadingHeadSpecialty*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSpecialty 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHead /*PlugLoadingHead*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHead   "0..*"  --->   "1..1"  PlugLoadingHeadThreadType /*PlugLoadingHeadThreadType*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadThreadType 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadInformation /*PlugLoadingHeadInformation*/ 
+{
+	int CallsheetNumber /*CallsheetNumber*/ ;
+	SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus EquipmentStatus /*EquipmentStatus*/ ;
+	string Location /*Location*/ ;
+	longstring Notes /*Notes*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHeadInformation /*PlugLoadingHeadInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadInformation   "1..1"  --->   "1..1"  PlugLoadingHeadSub /*PlugLoadingHeadSub*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSub 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHeadInformation /*PlugLoadingHeadInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadInformation   "1..1"  --->   "1..1"  TopDriveAdaptor /*TopDriveAdaptor*/ : SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptor 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		PlugLoadingHeadInformation /*PlugLoadingHeadInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadInformation   "1..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSize /*PlugLoadingHeadSize*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSpecialty /*PlugLoadingHeadSpecialty*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSub /*PlugLoadingHeadSub*/ 
+{
+	string SerialNumber /*SerialNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHeadSub /*PlugLoadingHeadSub*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSub   "1..1"  <---   "1..1"  PlugLoadingHeadSubInformation /*PlugLoadingHeadSubInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSubInformation 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  PlugLoadingHeadSub /*PlugLoadingHeadSub*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSub 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHeadSub /*PlugLoadingHeadSub*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSub   "0..*"  --->   "1..1"  PlugLoadingHeadSubThreadType /*PlugLoadingHeadSubThreadType*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSubThreadType 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		PlugLoadingHeadSub /*PlugLoadingHeadSub*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSub   "0..*"  --->   "1..1"  PlugLoadingHeadSubSize /*PlugLoadingHeadSubSize*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSubSize 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSubInformation /*PlugLoadingHeadSubInformation*/ 
+{
+	int CallsheetNumber /*CallsheetNumber*/ ;
+	SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus EquipmentStatus /*EquipmentStatus*/ ;
+	string Location /*Location*/ ;
+	longstring Notes /*Notes*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		PlugLoadingHeadSubInformation /*PlugLoadingHeadSubInformation*/ : SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSubInformation   "1..1"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSubSize /*PlugLoadingHeadSubSize*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadSubThreadType /*PlugLoadingHeadSubThreadType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadThreadType /*PlugLoadingHeadThreadType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.PlugLoadingHeadType /*PlugLoadingHeadType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.StoragePod /*StoragePod*/ 
+{
+	int PodIndex /*PodIndex*/ ;
+	double Volume /*Volume*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.Swedge /*Swedge*/ 
+{
+	string SerialNumber /*SerialNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Swedge /*Swedge*/ : SanjelData.Common.BusinessEntities.Equipment.Swedge   "0..*"  --->   "1..1"  SwedgeThreadType /*SwedgeThreadType*/ : SanjelData.Common.BusinessEntities.Equipment.SwedgeThreadType 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  Swedge /*Swedge*/ : SanjelData.Common.BusinessEntities.Equipment.Swedge 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Swedge /*Swedge*/ : SanjelData.Common.BusinessEntities.Equipment.Swedge   "0..*"  --->   "1..1"  SwedgeSize /*SwedgeSize*/ : SanjelData.Common.BusinessEntities.Equipment.SwedgeSize 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		Swedge /*Swedge*/ : SanjelData.Common.BusinessEntities.Equipment.Swedge   "1..1"  <---   "1..1"  SwedgeInformation /*SwedgeInformation*/ : SanjelData.Common.BusinessEntities.Equipment.SwedgeInformation 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.SwedgeInformation /*SwedgeInformation*/ 
+{
+	int CallSheetNumber /*CallSheetNumber*/ ;
+	SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus EquipmentStatus /*EquipmentStatus*/ ;
+	string Location /*Location*/ ;
+	string Notes /*Notes*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		SwedgeInformation /*SwedgeInformation*/ : SanjelData.Common.BusinessEntities.Equipment.SwedgeInformation   "0..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.SwedgeSize /*SwedgeSize*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.SwedgeThreadType /*SwedgeThreadType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.ThreadType /*ThreadType*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.WellSite.RigThreadType /*RigThreadType*/ 
+	{
+		Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig   "0..*"  --->   "1..1"  ThreadType /*ThreadType*/ : SanjelData.Common.BusinessEntities.Equipment.ThreadType 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.TopDrivceAdaptorInformation /*TopDrivceAdaptorInformation*/ 
+{
+	int CallsheetNumber /*CallsheetNumber*/ ;
+	SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus EquipmentStatus /*EquipmentStatus*/ ;
+	string Location /*Location*/ ;
+	longstring Notes /*Notes*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		TopDrivceAdaptorInformation /*TopDrivceAdaptorInformation*/ : SanjelData.Common.BusinessEntities.Equipment.TopDrivceAdaptorInformation   "1..1"  --->   "1..1"  TopDriveAdaptor /*TopDriveAdaptor*/ : SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptor 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		TopDrivceAdaptorInformation /*TopDrivceAdaptorInformation*/ : SanjelData.Common.BusinessEntities.Equipment.TopDrivceAdaptorInformation   "1..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptor /*TopDriveAdaptor*/ 
+{
+	string SerialNumber /*SerialNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		TopDrivceAdaptorSize /*TopDrivceAdaptorSize*/ : SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptorSize   "1..1"  <---   "0..*"  TopDriveAdaptor /*TopDriveAdaptor*/ : SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptor 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		TopDriveAdaptor /*TopDriveAdaptor*/ : SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptor   "0..*"  --->   "1..1"  TopDrviceAdaptorThreadType /*TopDrviceAdaptorThreadType*/ : SanjelData.Common.BusinessEntities.Equipment.TopDrviceAdaptorThreadType 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "1..1"  TopDriveAdaptor /*TopDriveAdaptor*/ : SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptor 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.TopDriveAdaptorSize /*TopDriveAdaptorSize*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.TopDrviceAdaptorThreadType /*TopDrviceAdaptorThreadType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.TruckUnit /*TruckUnit*/ 
+{
+	string UnitNumber /*UnitNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		TruckUnit /*TruckUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit   "0..*"  --->   "1..1"  UnitMainType /*UnitMainType*/ : SanjelData.Common.BusinessEntities.Equipment.UnitMainType 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  TruckUnit /*TruckUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		TruckUnit /*TruckUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit   "0..*"  --->   "1..1"  UnitSubType /*UnitSubType*/ : SanjelData.Common.BusinessEntities.Equipment.UnitSubType 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		TruckUnit /*TruckUnit*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnit   "1..1"  <---   "1..*"  TruckUnitNote /*TruckUnitNote*/ : SanjelData.Common.BusinessEntities.Equipment.TruckUnitNote 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.TruckUnitNote /*TruckUnitNote*/ : SanjelData.Common.BusinessEntities.Note.Note /*Note*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.UnitMainType /*UnitMainType*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		UnitMainType /*UnitMainType*/ : SanjelData.Common.BusinessEntities.Equipment.UnitMainType   "1..1"  <---   "1..1"  UnitSubType /*UnitSubType*/ : SanjelData.Common.BusinessEntities.Equipment.UnitSubType 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.UnitSubType /*UnitSubType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.WitsBox /*WitsBox*/ 
+{
+	string SerialNumber /*SerialNumber*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		HomeServicePoint /*HomeServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "0..*"  WitsBox /*WitsBox*/ : SanjelData.Common.BusinessEntities.Equipment.WitsBox 
+	}
+	SanjelData.Common.BusinessEntities.Equipment. 
+	{
+		WitsBox /*WitsBox*/ : SanjelData.Common.BusinessEntities.Equipment.WitsBox   "1..1"  <---   "1..1"  WitsBoxInformation /*WitsBoxInformation*/ : SanjelData.Common.BusinessEntities.Equipment.WitsBoxInformation 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Equipment.WitsBoxInformation /*WitsBoxInformation*/ 
+{
+	int CallSheetNumber /*CallSheetNumber*/ ;
+	SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus EquipmentStatus /*EquipmentStatus*/ ;
+	string Location /*Location*/ ;
+	string Notes /*Notes*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		WitsBoxInformation /*WitsBoxInformation*/ : SanjelData.Common.BusinessEntities.Equipment.WitsBoxInformation   "0..*"  --->   "1..1"  WorkingServicePoint /*WorkingServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+enum SanjelData.Common.BusinessEntities.Equipment.EquipmentStatus /*EquipmentStatus*/ 
+{
+	[ Assigned ] Assigned /*Assigned*/ = 0 ;
+	[ Yard ] Yard /*Yard*/ = 1 ;
+
+}
+
+package SanjelData.Common.BusinessEntities.HumanResources /*HumanResources*/ ;
+
+class SanjelData.Common.BusinessEntities.HumanResources.BonusPosition /*BonusPosition*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.HumanResources. 
+	{
+		BonusPosition /*BonusPosition*/ : SanjelData.Common.BusinessEntities.HumanResources.BonusPosition   "0..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+	SanjelData.Common.BusinessEntities.HumanResources.EmployeeBonusPosition /*EmployeeBonusPosition*/ 
+	{
+		BonusPosition /*BonusPosition*/ : SanjelData.Common.BusinessEntities.HumanResources.BonusPosition   "1..1"  <---   "0..*"  Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.HumanResources.Employee /*Employee*/ : SanjelData.Common.Entities.General.Person /*Person*/ 
+{
+	string Cell /*Cell*/ ;
+	string EmployeeNumber /*EmployeeNumber*/ ;
+	string PositionID /*PositionID*/ ;
+	string PreferedFirstName /*PreferedFirstName*/ ;
+	string WorkEmail /*WorkEmail*/ ;
+	string WorkPhone /*WorkPhone*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.HumanResources.EmployeeNoteEmployee /*EmployeeNoteEmployee*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  EmployeeNote /*EmployeeNote*/ : SanjelData.Common.BusinessEntities.HumanResources.EmployeeNote 
+	}
+	SanjelData.Common.BusinessEntities.HumanResources.EmployeeProfileEmployee /*EmployeeProfileEmployee*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..*"  EmployeeProfile /*EmployeeProfile*/ : SanjelData.Common.BusinessEntities.HumanResources.EmployeeProfile 
+	}
+	SanjelData.Common.BusinessEntities.HumanResources.EmployeeServiceLine /*EmployeeServiceLine*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "0..*"  --->   "0..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+	SanjelData.Common.BusinessEntities.HumanResources.EmployeeServicePoint /*EmployeeServicePoint*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "0..*"  --->   "1..1"  ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+	SanjelData.Common.Security.SanjelUserEmployee /*SanjelUserEmployee*/ 
+	{
+		Employee /*Employee*/ : SanjelData.Common.BusinessEntities.HumanResources.Employee   "1..1"  <---   "1..1"  SanjelUser /*SanjelUser*/ : SanjelData.Common.Security.SanjelUser 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.HumanResources.EmployeeNote /*EmployeeNote*/ : SanjelData.Common.BusinessEntities.Note.Note /*Note*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.HumanResources.EmployeeProfile /*EmployeeProfile*/ : SanjelData.Common.BusinessEntities.Profile.Profile /*Profile*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.HumanResources.ShiftType /*ShiftType*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.Common.BusinessEntities.Inventory /*Inventory*/ ;
+
+class SanjelData.Common.BusinessEntities.Inventory.FreightCost /*FreightCost*/ 
+{
+	double Price /*Price*/ ;
+	double PriceUnit /*PriceUnit*/ ;
+	string SbsReleasedProductId /*SbsReleasedProductId*/ ;
+	string ServicePoint /*ServicePoint*/ ;
+	string UnitId /*UnitId*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Inventory.MaterialInventory /*MaterialInventory*/ 
+{
+	double AvailablePhysical /*AvailablePhysical*/ ;
+	string ItemNumber /*ItemNumber*/ ;
+	string ProductName /*ProductName*/ ;
+	string ServicePointId /*ServicePointId*/ ;
+	string Unit /*Unit*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Inventory.PurchasePrice /*PurchasePrice*/ 
+{
+	double Price /*Price*/ ;
+	double PriceUnit /*PriceUnit*/ ;
+	string SbsReleasedProductId /*SbsReleasedProductId*/ ;
+	string ServicePoint /*ServicePoint*/ ;
+	string UnitId /*UnitId*/ ;
+
+}
+association 
+{
+
+}
+
+package SanjelData.Common.BusinessEntities.Note /*Note*/ ;
+
+class SanjelData.Common.BusinessEntities.Note.Note /*Note*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.Common.BusinessEntities.Operation /*Operation*/ ;
+
+class SanjelData.Common.BusinessEntities.Operation.Crew /*Crew*/ 
+{
+	string Notes /*Notes*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Operation.JobIntervalType /*JobIntervalType*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Operation.JobTypeJobIntervalType /*JobTypeJobIntervalType*/ 
+	{
+		JobIntervalType /*JobIntervalType*/ : SanjelData.Common.BusinessEntities.Operation.JobIntervalType   "1..1"  <---   "0..*"  JobType /*JobType*/ : SanjelData.Common.BusinessEntities.Operation.JobType 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Operation.JobRole /*JobRole*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Operation.JobType /*JobType*/ 
+{
+	int JobIntervalCount /*JobIntervalCount*/ ;
+	string SbsPrimaryServiceLineId /*SbsPrimaryServiceLineId*/ ;
+	string SbsPrimaryServiceLineName /*SbsPrimaryServiceLineName*/ ;
+	string SbsSecondaryServiceLineId /*SbsSecondaryServiceLineId*/ ;
+	string SbsSecondaryServiceLineName /*SbsSecondaryServiceLineName*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Operation.JobTypeServiceLine /*JobTypeServiceLine*/ 
+	{
+		JobType /*JobType*/ : SanjelData.Common.BusinessEntities.Operation.JobType   "0..*"  --->   "1..1"  ServiceLine /*ServiceLine*/ : SanjelData.Common.BusinessEntities.Organization.ServiceLine 
+	}
+
+}
+
+enum SanjelData.Common.BusinessEntities.Operation.OperationSiteType /*OperationSiteType*/ 
+{
+	[ Rig ] Rig /*Rig*/ = 1 ;
+	[ BulkPlant ] BulkPlant /*BulkPlant*/ = 2 ;
+	[ ProjectBulkPlant ] ProjectBulkPlant /*ProjectBulkPlant*/ = 3 ;
+	[ DistrictCamp ] DistrictCamp /*DistrictCamp*/ = 4 ;
+	[ TBDRig ] TBDRig /*TBDRig*/ = 5 ;
+
+}
+
+package SanjelData.Common.BusinessEntities.Organization /*Organization*/ ;
+
+class SanjelData.Common.BusinessEntities.Organization.ClientCompany /*ClientCompany*/ : SanjelData.Common.Entities.General.Company /*Company*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.WellSite.WellOperator /*WellOperator*/ 
+	{
+		Well /*Well*/ : SanjelData.Common.BusinessEntities.WellSite.Well   "0..*"  --->   "1..1"  WellOperator /*WellOperator*/ : SanjelData.Common.BusinessEntities.Organization.ClientCompany 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Organization.SanjelCompany /*SanjelCompany*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		Company /*Company*/ : SanjelData.Common.Entities.General.Company   "0..*"  --->   "1..1"  SanjelCompany /*SanjelCompany*/ : SanjelData.Common.BusinessEntities.Organization.SanjelCompany 
+	}
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		Country /*Country*/ : SanjelData.Common.Entities.General.Country   "1..1"  <---   "0..*"  SanjelCompany /*SanjelCompany*/ : SanjelData.Common.BusinessEntities.Organization.SanjelCompany 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Organization.ServiceLine /*ServiceLine*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Organization.ServicePoint /*ServicePoint*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Organization. 
+	{
+		ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint   "1..1"  <---   "1..*"  ServicePointNote /*ServicePointNote*/ : SanjelData.Common.BusinessEntities.Organization.ServicePointNote 
+	}
+	SanjelData.Common.Security.SanjelUserServicePoint /*SanjelUserServicePoint*/ 
+	{
+		SanjelUser /*SanjelUser*/ : SanjelData.Common.Security.SanjelUser   "0..*"  --->   "1..1"  ServicePoint /*ServicePoint*/ : SanjelData.Common.BusinessEntities.Organization.ServicePoint 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Organization.ServicePointNote /*ServicePointNote*/ : SanjelData.Common.BusinessEntities.Note.Note /*Note*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.Common.BusinessEntities.Products /*Products*/ ;
+
+class SanjelData.Common.BusinessEntities.Products.AdditionMethod /*AdditionMethod*/ 
+{
+	string Description /*Description*/ ;
+	string Name /*Name*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Products. 
+	{
+		AdditionMethod /*AdditionMethod*/ : SanjelData.Common.BusinessEntities.Products.AdditionMethod   "0..1"  <---   "1..2"  BlendChemicalSectionAdditionMethod /*BlendChemicalSectionAdditionMethod*/ : SanjelData.Common.BusinessEntities.Products.BlendChemicalSection 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.AdditiveBlendMethod /*AdditiveBlendMethod*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Products. 
+	{
+		AdditiveBlendMethod /*AdditiveBlendMethod*/ : SanjelData.Common.BusinessEntities.Products.AdditiveBlendMethod   "0..1"  <---   "1..2"  BlendChemicalSectionAdditiveBlendMethod /*BlendChemicalSectionAdditiveBlendMethod*/ : SanjelData.Common.BusinessEntities.Products.BlendChemicalSection 
+	}
+	SanjelData.Common.BusinessEntities.Products.BlendChemicalAdditiveBlendMethod /*BlendChemicalAdditiveBlendMethod*/ 
+	{
+		AdditiveBlendMethod /*AdditiveBlendMethod*/ : SanjelData.Common.BusinessEntities.Products.AdditiveBlendMethod   "1..1"  <---   "0..*"  BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.AdditiveType /*AdditiveType*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Products.BlendChemicalAdditiveType /*BlendChemicalAdditiveType*/ 
+	{
+		AdditiveType /*AdditiveType*/ : SanjelData.Common.BusinessEntities.Products.AdditiveType   "0..1"  <---   "1..1"  BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit /*BlendAdditiveMeasureUnit*/ 
+{
+	string Abbreviation /*Abbreviation*/ ;
+
+}
+association 
+{
+	SanjelData.Common.Entities.General. 
+	{
+		MeasureUnitMeaureUnitType /*MeasureUnitMeaureUnitType*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit   "1..2"  --->   "1..1"  MeaureUnitType /*MeaureUnitType*/ : SanjelData.Common.Entities.General.MeasureUnitType 
+	}
+	SanjelData.Common.Entities.General. 
+	{
+		MeasureUnitMeasureUnitSystem /*MeasureUnitMeasureUnitSystem*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit   "1..2"  --->   "1..1"  MeasureUnitSystem /*MeasureUnitSystem*/ : SanjelData.Common.Entities.General.MeasureUnitSystem 
+	}
+	SanjelData.Common.BusinessEntities.Products. 
+	{
+		BlendChemicalSectionMeasureUnit /*BlendChemicalSectionMeasureUnit*/ : SanjelData.Common.BusinessEntities.Products.BlendChemicalSection   "1..2"  --->   "1..1"  Unit /*Unit*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit 
+	}
+	SanjelData.Common.BusinessEntities.Products.Associationx6J0 /*Associationx6J0*/ 
+	{
+		BlendAdditiveMeasureUnit /*BlendAdditiveMeasureUnit*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit   "1..1"  <---   "0..*"  BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical 
+	}
+	SanjelData.Common.BusinessEntities.Products.BlendRecipeBlendAdditiveMeasureUnit /*BlendRecipeBlendAdditiveMeasureUnit*/ 
+	{
+		BlendRecipe /*BlendRecipe*/ : SanjelData.Common.BusinessEntities.Products.BlendRecipe   "1..*"  --->   "1..1"  Unit /*Unit*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit 
+	}
+	SanjelData.Common.BusinessEntities.Products.InventoryMeasureUnit /*InventoryMeasureUnit*/ 
+	{
+		InventoryMeasureUnit /*InventoryMeasureUnit*/ : SanjelData.Common.BusinessEntities.Products.BlendAdditiveMeasureUnit   "1..1"  <---   "1..*"  Product /*Product*/ : SanjelData.Common.BusinessEntities.Products.Product 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.BlendCategory /*BlendCategory*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.BlendChemical /*BlendChemical*/ 
+{
+	string AERCode /*AERCode*/ ;
+	double BagSize /*BagSize*/ ;
+	double BulkDensity /*BulkDensity*/ ;
+	double Density /*Density*/ ;
+	double GelPercentage /*GelPercentage*/ ;
+	bool IsAdditiveEligible /*IsAdditiveEligible*/ ;
+	bool IsBaseEligible /*IsBaseEligible*/ ;
+	bool IsThixotropic /*IsThixotropic*/ ;
+	double MixWater /*MixWater*/ ;
+	SanjelData.Common.BusinessEntities.Products.ProductStatus ProductStatus /*ProductStatus*/ ;
+	double SackWeight /*SackWeight*/ ;
+	double SpecificGravity /*SpecificGravity*/ ;
+	double Yield /*Yield*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Products.BlendChemicalBlendFluidType /*BlendChemicalBlendFluidType*/ 
+	{
+		BaseBlendType /*BaseBlendType*/ : SanjelData.Common.BusinessEntities.Products.BlendFluidType   "0..1"  <---   "1..1"  BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical 
+	}
+	SanjelData.Common.BusinessEntities.Products.BlendChemicalBlendPrimaryCategory /*BlendChemicalBlendPrimaryCategory*/ 
+	{
+		BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical   "1..*"  --->   "0..1"  BlendPrimaryCategory /*BlendPrimaryCategory*/ : SanjelData.Common.BusinessEntities.Products.BlendPrimaryCategory 
+	}
+	SanjelData.Common.BusinessEntities.Products.BlendChemicalBlendRecipe /*BlendChemicalBlendRecipe*/ 
+	{
+		BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical   "1..1"  --->   "1..1"  BlendRecipe /*BlendRecipe*/ : SanjelData.Common.BusinessEntities.Products.BlendRecipe 
+	}
+	SanjelData.Common.BusinessEntities.Products.InventoryMeasureUnit /*BlendChemicalProduct*/ 
+	{
+		BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical   "1..1"  --->   "1..1"  Product /*Product*/ : SanjelData.Common.BusinessEntities.Products.Product 
+	}
+	SanjelData.Common.BusinessEntities.Products.BlendChemicalSectionBlendChemical /*BlendChemicalSectionBlendChemical*/ 
+	{
+		BlendChemical /*BlendChemical*/ : SanjelData.Common.BusinessEntities.Products.BlendChemical   "1..1"  <---   "1..1"  BlendChemicalSection /*BlendChemicalSection*/ : SanjelData.Common.BusinessEntities.Products.BlendChemicalSection 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.BlendChemicalSection /*BlendChemicalSection*/ 
+{
+	double Amount /*Amount*/ ;
+	bool IsBaseBlend /*IsBaseBlend*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.Products.BlendRecipeBlendChemicalSections /*BlendRecipeBlendChemicalSections*/ 
+	{
+		BlendChemicalSections /*BlendChemicalSections*/ : SanjelData.Common.BusinessEntities.Products.BlendChemicalSection   "1..2"  <--*   "1..1"  BlendRecipe /*BlendRecipe*/ : SanjelData.Common.BusinessEntities.Products.BlendRecipe 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.BlendFluidType /*BlendFluidType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.BlendPrimaryCategory /*BlendPrimaryCategory*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.BlendRecipe /*BlendRecipe*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.Products.Product /*Product*/ 
+{
+	string InventoryNumber /*InventoryNumber*/ ;
+	bool IsFreightCostIncluded /*IsFreightCostIncluded*/ ;
+	bool IsThirdPartyProvided /*IsThirdPartyProvided*/ ;
+	int PriceCode /*PriceCode*/ ;
+
+}
+association 
+{
+
+}
+
+enum SanjelData.Common.BusinessEntities.Products.ProductStatus /*ProductStatus*/ 
+{
+	[ Develop ] Develop /*Develop*/ = 2 ;
+	[ Publish ] Publish /*Publish*/ = 8 ;
+
+}
+
+package SanjelData.Common.BusinessEntities.Profile /*Profile*/ ;
+
+class SanjelData.Common.BusinessEntities.Profile.Profile /*Profile*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.Common.BusinessEntities.WellSite /*WellSite*/ ;
+
+class SanjelData.Common.BusinessEntities.WellSite.DrillingCompany /*DrillingCompany*/ : SanjelData.Common.Entities.General.Company /*Company*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.WellSite.RigDrillingCompany /*RigDrillingCompany*/ 
+	{
+		DrillingCompany /*DrillingCompany*/ : SanjelData.Common.BusinessEntities.WellSite.DrillingCompany   "1..1"  <---   "0..*"  Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.LocationLookup /*LocationLookup*/ 
+{
+	decimal Latitude /*Latitude*/ ;
+	decimal Longitude /*Longitude*/ ;
+	int LSD_LSD /*LSD_LSD*/ ;
+	int LSD_Mer /*LSD_Mer*/ ;
+	int LSD_RGE /*LSD_RGE*/ ;
+	int LSD_SEC /*LSD_SEC*/ ;
+	int LSD_TWP /*LSD_TWP*/ ;
+	int LsdFinderFlag /*LsdFinderFlag*/ ;
+	string NormalizedWellLocation /*NormalizedWellLocation*/ ;
+	string NTS_Block /*NTS_Block*/ ;
+	int NTS_Grid /*NTS_Grid*/ ;
+	int NTS_Map /*NTS_Map*/ ;
+	string NTS_MapSheet /*NTS_MapSheet*/ ;
+	int NTS_QuaterUnit /*NTS_QuaterUnit*/ ;
+	string NTS_Unit /*NTS_Unit*/ ;
+	datetime ProcessingDateTime /*ProcessingDateTime*/ ;
+	longstring ProcessingNotes /*ProcessingNotes*/ ;
+	string WellLocation /*WellLocation*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.Rig /*Rig*/ 
+{
+	bool IsDeleted /*IsDeleted*/ ;
+	bool IsProjectRig /*IsProjectRig*/ ;
+	bool IsServiceRig /*IsServiceRig*/ ;
+	bool IsTopDrive /*IsTopDrive*/ ;
+	decimal Latitude /*Latitude*/ ;
+	decimal Longitude /*Longitude*/ ;
+	SanjelData.Common.BusinessEntities.Operation.OperationSiteType OperationSiteType /*OperationSiteType*/ ;
+	string RigNumber /*RigNumber*/ ;
+	SanjelData.Common.BusinessEntities.WellSite.RigStatus Status /*Status*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.WellSite.RigRigNote /*RigRigNote*/ 
+	{
+		Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig   "1..1"  <---   "1..*"  RigNote /*RigNote*/ : SanjelData.Common.BusinessEntities.WellSite.RigNote 
+	}
+	SanjelData.Common.BusinessEntities.WellSite.RigRigSize /*RigRigSize*/ 
+	{
+		Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig   "0..*"  --->   "1..1"  Size /*Size*/ : SanjelData.Common.BusinessEntities.WellSite.RigSize 
+	}
+	SanjelData.Common.BusinessEntities.WellSite.RigRigSizeType /*RigRigSizeType*/ 
+	{
+		Rig /*Rig*/ : SanjelData.Common.BusinessEntities.WellSite.Rig   "0..*"  --->   "1..1"  RigSize /*RigSize*/ : SanjelData.Common.BusinessEntities.WellSite.RigSizeType 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.RigNote /*RigNote*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.RigSize /*RigSize*/ : SanjelData.Common.Entities.General.ValueUnitType /*ValueUnitType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.RigSizeType /*RigSizeType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.Well /*Well*/ 
+{
+	longstring DownHoleLocation /*DownHoleLocation*/ ;
+	decimal Latitude /*Latitude*/ ;
+	string Licence /*Licence*/ ;
+	decimal Longitude /*Longitude*/ ;
+	longstring SurfaceLocation /*SurfaceLocation*/ ;
+
+}
+association 
+{
+	SanjelData.Common.BusinessEntities.WellSite.WellWellLoactionType /*WellWellLoactionType*/ 
+	{
+		Well /*Well*/ : SanjelData.Common.BusinessEntities.WellSite.Well   "0..*"  --->   "1..1"  WellLocationType /*WellLocationType*/ : SanjelData.Common.BusinessEntities.WellSite.WellLocationType 
+	}
+	SanjelData.Common.BusinessEntities.WellSite.WellWellType /*WellWellType*/ 
+	{
+		Well /*Well*/ : SanjelData.Common.BusinessEntities.WellSite.Well   "0..*"  --->   "1..1"  WellType /*WellType*/ : SanjelData.Common.BusinessEntities.WellSite.WellType 
+	}
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.WellLocationType /*WellLocationType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.BusinessEntities.WellSite.WellType /*WellType*/ 
+{
+
+}
+association 
+{
+
+}
+
+enum SanjelData.Common.BusinessEntities.WellSite.RigStatus /*RigStatus*/ 
+{
+	[ None ] None /*None*/ = 0 ;
+	[ Active ] Active /*Active*/ = 1 ;
+	[ DownForMaintenance ] DownForMaintenance /*DownForMaintenance*/ = 2 ;
+	[ DownForHoldingEquipment ] DownForHoldingEquipment /*DownForHoldingEquipment*/ = 3 ;
+	[ DownForWeather ] DownForWeather /*DownForWeather*/ = 4 ;
+	[ DownForNewLeaseOrLicenses ] DownForNewLeaseOrLicenses /*DownForNewLeaseOrLicenses*/ = 5 ;
+	[ Deactivated ] Deactivated /*Deactivated*/ = 6 ;
+
+}
+
+package SanjelData.Common.Entities /*Entities*/ ;
+
+package SanjelData.Common.Entities.General /*General*/ ;
+
+class SanjelData.Common.Entities.General.Company /*Company*/ 
+{
+	string AddressCity /*AddressCity*/ ;
+	string AddressPostalCode /*AddressPostalCode*/ ;
+	string AddressStreet /*AddressStreet*/ ;
+	string AddressStreet2 /*AddressStreet2*/ ;
+	string AddressStreet3 /*AddressStreet3*/ ;
+	string AddressStreet4 /*AddressStreet4*/ ;
+	string BillingAddressCity /*BillingAddressCity*/ ;
+	string BillingAddressPostalCode /*BillingAddressPostalCode*/ ;
+	string BillingAddressStreet /*BillingAddressStreet*/ ;
+	string BillingAddressStreet2 /*BillingAddressStreet2*/ ;
+	string BillingAddressStreet3 /*BillingAddressStreet3*/ ;
+	string BillingAddressStreet4 /*BillingAddressStreet4*/ ;
+	bool IsCODCustomer /*IsCODCustomer*/ ;
+	string ShortName /*ShortName*/ ;
+
+}
+association 
+{
+	SanjelData.Common.Entities.General. 
+	{
+		BillingAddressProvinceOrState /*BillingAddressProvinceOrState*/ : SanjelData.Common.Entities.General.ProvinceOrState   "1..1"  <---   "0..*"  Company /*Company*/ : SanjelData.Common.Entities.General.Company 
+	}
+	SanjelData.Common.Entities.General. 
+	{
+		AddressProvinceOrState /*AddressProvinceOrState*/ : SanjelData.Common.Entities.General.ProvinceOrState   "1..1"  <---   "0..*"  Company /*Company*/ : SanjelData.Common.Entities.General.Company 
+	}
+
+}
+
+class SanjelData.Common.Entities.General.Country /*Country*/ 
+{
+	string ISOAlpha2 /*ISOAlpha2*/ ;
+	string ISOAlpha3 /*ISOAlpha3*/ ;
+	string ISONumber /*ISONumber*/ ;
+	double PercentFuelSurcharge /*PercentFuelSurcharge*/ ;
+
+}
+association 
+{
+	SanjelData.Common.Entities.General. 
+	{
+		Country /*Country*/ : SanjelData.Common.Entities.General.Country   "1..1"  <---   "0..*"  ProvinceOrState /*ProvinceOrState*/ : SanjelData.Common.Entities.General.ProvinceOrState 
+	}
+
+}
+
+class SanjelData.Common.Entities.General.MeasureUnitSystem /*MeasureUnitSystem*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.Entities.General.MeasureUnitType /*MeasureUnitType*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.Entities.General.Person /*Person*/ 
+{
+	string FirstName /*FirstName*/ ;
+	string LastName /*LastName*/ ;
+	string MiddleName /*MiddleName*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.Entities.General.ProvinceOrState /*ProvinceOrState*/ 
+{
+	string Capital /*Capital*/ ;
+	string Code /*Code*/ ;
+	double PercentSalesSurcharge /*PercentSalesSurcharge*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.Entities.General.ValueUnitType /*ValueUnitType*/ 
+{
+	double Value /*Value*/ ;
+
+}
+association 
+{
+	SanjelData.Common.Model.UnitOfMeasure. 
+	{
+		Unit /*Unit*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure   "1..1"  <---   "0..*"  ValueUnitType /*ValueUnitType*/ : SanjelData.Common.Entities.General.ValueUnitType 
+	}
+
+}
+
+package SanjelData.Common.Model /*Model*/ ;
+
+package SanjelData.Common.Model.Scheduling /*Scheduling*/ ;
+
+class SanjelData.Common.Model.Scheduling.Schedule /*Schedule*/ 
+{
+	datetime EndTime /*EndTime*/ ;
+	datetime StartTime /*StartTime*/ ;
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.Model.Scheduling.ScheduleType /*ScheduleType*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.Common.Model.UnitOfMeasure /*UnitOfMeasure*/ ;
+
+class SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure /*UnitOfMeasure*/ 
+{
+	int BaseMultiplier /*BaseMultiplier*/ ;
+	bool IsCompositeUnit /*IsCompositeUnit*/ ;
+	bool IsUseBaseMultiplier /*IsUseBaseMultiplier*/ ;
+
+}
+association 
+{
+	SanjelData.Common.Model.UnitOfMeasure. 
+	{
+		UnitOfMeasure /*UnitOfMeasure*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure   "0..*"  --->   "1..1"  UnitOfMeasureType /*UnitOfMeasureType*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasureType 
+	}
+	SanjelData.Common.Model.UnitOfMeasure. 
+	{
+		PrimaryUnitOfMeasure /*PrimaryUnitOfMeasure*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure   "1..1"  <---   "1..1"  UnitOfMeasure /*UnitOfMeasure*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure 
+	}
+	SanjelData.Common.Model.UnitOfMeasure. 
+	{
+		SecondaryUnitOfMeasure /*SecondaryUnitOfMeasure*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure   "1..1"  <---   "1..1"  UnitOfMeasure /*UnitOfMeasure*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure 
+	}
+	SanjelData.Common.Model.UnitOfMeasure. 
+	{
+		UnitOfMeasure /*UnitOfMeasure*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasure   "0..*"  --->   "1..1"  UnitOfMeasureSystemOfUnits /*UnitOfMeasureSystemOfUnits*/ : SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasureSystemOfUnits 
+	}
+
+}
+
+class SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasureSystemOfUnits /*UnitOfMeasureSystemOfUnits*/ 
+{
+
+}
+association 
+{
+
+}
+
+class SanjelData.Common.Model.UnitOfMeasure.UnitOfMeasureType /*UnitOfMeasureType*/ 
+{
+
+}
+association 
+{
+
+}
+
+package SanjelData.Common.Security /*Security*/ ;
+
+class SanjelData.Common.Security.SanjelUser /*SanjelUser*/ 
+{
+	string EmailAddress /*EmailAddress*/ ;
+	string HashedPassword /*HashedPassword*/ ;
+
+}
+association 
+{
+	SanjelData.Common.Security.UserGroupSanjelUser /*UserGroupSanjelUser*/ 
+	{
+		SanjelUser /*SanjelUser*/ : SanjelData.Common.Security.SanjelUser   "0..*"  <-->   "0..*"  UserGroup /*UserGroup*/ : SanjelData.Common.Security.UserGroup 
+	}
+
+}
+
+class SanjelData.Common.Security.UserGroup /*UserGroup*/ 
+{
+
+}
+association 
+{
+	SanjelData.Common.Security.UserGroupUserPermission /*UserGroupUserPermission*/ 
+	{
+		UserGroup /*UserGroup*/ : SanjelData.Common.Security.UserGroup   "0..*"  <-->   "0..*"  UserPermission /*UserPermission*/ : SanjelData.Common.Security.UserPermission 
+	}
+
+}
+
+class SanjelData.Common.Security.UserPermission /*UserPermission*/ 
+{
+
+}
+association 
+{
+
+}
+

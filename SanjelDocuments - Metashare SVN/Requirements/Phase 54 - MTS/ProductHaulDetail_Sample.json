@@ -1,0 +1,87 @@
+{
+	"id": 44822,
+	"date": "2023-07-17T15:22:27.8620278-06:00",
+	"unit": "746111",
+	"driver": "Jeremy Barton",
+	"goWithCrew": "False",
+	"station": "GP Bulk Plant",
+	"shippingLoadSheets": [
+		{
+			"id": 2927,
+			"goWithCrew": "False",
+			"estimatedLoadTime": "0001-01-01T00:00:00",
+			"expOnLocationTime": "2023-07-17T11:57:00",
+			"client": null,
+			"clientRep": null,
+			"rig": "Ensign 557",
+			"location": "Ensign 557",
+			"dispatchedBy": "jschneider",
+			"productHaulLoadId": 46547,
+			"offloadInstructions": [
+				{
+					"bin": "2034",
+					"baseTonnage": 0,
+					"baseTonnageUnit": null,
+					"product": "EXPANDOmix PRO LT + 0.6% CFL-4 + 0.5% LTR + 0.25% ASM-3 + 0.2% CDF-6P",
+					"totalTonnage": 25,
+					"totalTonnageUnit": null
+				}
+			]
+		}
+	],
+	"bulkerPodLoads": [
+		{
+			"podIndex": 0,
+			"shippingLoadSheetId": 2927,
+			"baseTonnage": 0,
+			"baseTonnageUnit": null,
+			"product": "EXPANDOmix PRO LT + 0.6% CFL-4 + 0.5% LTR + 0.25% ASM-3 + 0.2% CDF-6P",
+			"totalTonnage": 8,
+			"totalTonnageUnit": null,
+			"temp": 0
+		},
+		{
+			"podIndex": 1,
+			"shippingLoadSheetId": 2927,
+			"baseTonnage": 0,
+			"baseTonnageUnit": null,
+			"product": "EXPANDOmix PRO LT + 0.6% CFL-4 + 0.5% LTR + 0.25% ASM-3 + 0.2% CDF-6P",
+			"totalTonnage": 8,
+			"totalTonnageUnit": null,
+			"temp": 0
+		},
+		{
+			"podIndex": 2,
+			"shippingLoadSheetId": 2927,
+			"baseTonnage": 0,
+			"baseTonnageUnit": null,
+			"product": "EXPANDOmix PRO LT + 0.6% CFL-4 + 0.5% LTR + 0.25% ASM-3 + 0.2% CDF-6P",
+			"totalTonnage": 9,
+			"totalTonnageUnit": null,
+			"temp": 0
+		},
+		{
+			"podIndex": 3,
+			"shippingLoadSheetId": 0,
+			"baseTonnage": 0,
+			"baseTonnageUnit": null,
+			"product": null,
+			"totalTonnage": 0,
+			"totalTonnageUnit": null,
+			"temp": 0
+		}
+	],
+	"totalWeightsSamples": [
+		{
+			"blendRequestId": 46547,
+			"baseTonnage": 0,
+			"baseTonnageUnit": "t",
+			"product": "EXPANDOmix PRO LT + 0.6% CFL-4 + 0.5% LTR + 0.25% ASM-3 + 0.2% CDF-6P",
+			"totalTonnage": 25,
+			"totalTonnageUnit": null,
+			"sample": "False",
+			"requestedBy": "jschneider",
+			"blendedBy": ""
+		}
+	]
+}

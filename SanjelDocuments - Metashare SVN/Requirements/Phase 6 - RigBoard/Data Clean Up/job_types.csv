@@ -1,0 +1,63 @@
+ID,DESCRIPTION,SERVICE_LINE_ID,STATUS,VERSION,LAST_MODIFIED_USER_ID,LAST_MODIFIED_USER_NAME,LAST_MODIFIED_DATE_TIME,LAST_OPERATION_TYPE,EFFECTIVE_START_DATE_TIME,EFFECTIVE_END_DATE_TIME,NAME
+1533,2-Stage Intermediate,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,2-Stage Int
+1508,2-Stage Production,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,2-Stage Prod
+1538,2-Stage Surface,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,2-Stage Surf
+2304,Abrasive Jet,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Abr Jet
+4202,Abrasive Jet - Nitrified,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Abr jet - N2
+1110,Acid Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Acid Squeeze
+4252,Acid Stimulation,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Acid Stim
+4193,Acid Tubing Pickle,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Acid Pickle
+1114,Acid Wash,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Acid Wash
+4279,Acidizing through Third Party Coil,12,A,3,29747,awang,11/17/2017,1,06/01/2016,12/31/9999,Acid 3rd Party Coil
+4184,Batch Frac,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Batch Frac
+1509,Bradenhead Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Bradenhead
+4253,Bull Head Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Bull Head 
+1514,Cement Top Off,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Top Off
+4278,Cementing through Third Party Coil,12,A,3,29747,awang,11/17/2017,1,06/01/2016,12/31/9999,Cement 3rd Party Coil
+1515,Circulation Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Circ Squeeze
+4187,CO2 Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,CO2 Squeeze
+1536,Conductor Barrel,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Conductor 
+4272,Day Rate - Cementing,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Day Rate - Cement
+4194,Foamed Cement,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Foamer
+4195,Foamed Cement Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Foam Squeeze
+4196,Incomplete - Cementing,13,A,3,29747,awang,11/17/2017,3,06/01/2016,12/31/9999,Incomplete
+1524,Inflate Packer,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Inflate Packer
+2303,Injection Test,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Injection Test
+1505,Intermediate Casing,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Intermediate 
+1507,Liner Casing,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Liner 
+1502,Lost Circulation Plug,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,LCP
+1523,Misc. Pumping – Primary,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,#N/A
+4183,Nitrified Acid,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Nitrified Acid
+1528,Pancake Surface,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Pancake Surface
+4200,Plugback Production,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,PB Production
+4201,Plugback Whipstock,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,PB Whipstock
+1106,Product Sale - Cementing,13,A,3,29747,awang,11/17/2017,3,06/01/2016,12/31/9999,Product Sale 
+1506,Production Casing,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Production 
+1510,Retainer Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Retainer 
+1109,Selective Acid,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Selective Acid
+4228,Slow Rate Bradenhead Squeeze,12,A,3,29747,awang,11/17/2017,1,06/01/2016,12/31/9999,Bradenhead (SR)
+4229,Slow Rate Retainer Squeeze,12,A,3,29747,awang,11/17/2017,1,06/01/2016,12/31/9999,Retainer (SR)
+1519,Slow Rate Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Squeeze (SR)
+4197,Solvent Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Solvent Squeeze
+4273,Standby - Cementing,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Standby
+1504,Surface Casing,11,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Surface
+1525,Well Kill,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Well Kill
+4198,Well Stability Plug,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Well Stability Plug
+1503,Whipstock Plug,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Whipstock Plug
+4281,Primary Abandonment Plug,13,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Aband Plug (Primary)
+4282,Remedial Abandonment Plug,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Aband Plug (Rem.)
+4283,Abandonment Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Aband Squeeze
+4284,Acid Diverted,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Acid Diverted
+4285,Balanced Plug,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Plug
+4286,Product Sale - Acid,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Product Sale - Acid
+4287,Incomplete - Acid,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Incomplete - Acid
+4288,Day Rate - Acidizing,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Day Rate - Acidizing
+4289,Non-Cementatious Squeeze,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Gel/Resin Squeeze
+4290,Non-Cementatious Plug,12,A,3,29747,awang,11/17/2017,0,06/01/2016,12/31/9999,Gel/resin Plug
+4291,Casing-in-Casing Remedial Cement,12,A,3,29747,awang,11/17/2017,1,06/21/2017,12/31/9999,CIC Rem
+4292,Day Rate - Remedial Cementing,12,A,3,29747,awang,11/17/2017,1,10/05/2017,12/31/9999,Day Rate - Rem
+4293,Incomplete – Remedial,12,A,3,29747,awang,11/17/2017,1,10/05/2017,12/31/9999,Imcomplete - Rem
+4294,Misc. Pumping – Remedial,12,A,3,29747,awang,11/17/2017,1,10/05/2017,12/31/9999,Misc. Pumping -Rem
+4295,Product Sale – Remedial,12,A,3,29747,awang,11/17/2017,1,10/05/2017,12/31/9999,Product Sale - Rem
+4296,Standby – Remedial,12,A,3,29747,awang,11/17/2017,1,10/05/2017,12/31/9999,Standby – Rem
+4297,Standby - Stimulation,12,A,3,29747,awang,11/17/2017,1,10/05/2017,12/31/9999,Standby - Stim

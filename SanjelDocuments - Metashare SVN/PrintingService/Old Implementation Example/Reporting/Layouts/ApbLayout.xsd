@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="quotelayoutschema"
+           targetNamespace="http://sanjel.jdt.pdfgeneration.layout"
+           xmlns="http://sanjel.jdt.pdfgeneration.layout"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+  <xs:simpleType name="HorizontalAlignmentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="Right"/>
+      <xs:enumeration value="Centre"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="GridTypes" >
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Details"/>
+      <xs:enumeration value="ApbDetail"/>
+      <xs:enumeration value="ApbSummary"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Positioning">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BelowPrevious"/>
+      <xs:enumeration value="AdjacentToNamedEntity"/>
+      <xs:enumeration value="BelowNamedEntity"/>
+      <xs:enumeration value="RelativeCoordinateSupplied"/>
+      <xs:enumeration value="AbsoluteCoordinateSupplied"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ColourTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SanjelBurgundy" />
+      <xs:enumeration value="AliceBlue" />
+      <xs:enumeration value="AntiqueWhite" />
+      <xs:enumeration value="Aqua" />
+      <xs:enumeration value="Aquamarine" />
+      <xs:enumeration value="Azure" />
+      <xs:enumeration value="Beige" />
+      <xs:enumeration value="Bisque" />
+      <xs:enumeration value="Black" />
+      <xs:enumeration value="BlanchedAlmond" />
+      <xs:enumeration value="Blue" />
+      <xs:enumeration value="BlueViolet" />
+      <xs:enumeration value="Brown" />
+      <xs:enumeration value="BurlyWood" />
+      <xs:enumeration value="CadetBlue" />
+      <xs:enumeration value="Chartreuse" />
+      <xs:enumeration value="Chocolate" />
+      <xs:enumeration value="Coral" />
+      <xs:enumeration value="CornflowerBlue" />
+      <xs:enumeration value="Cornsilk" />
+      <xs:enumeration value="Crimson" />
+      <xs:enumeration value="Cyan" />
+      <xs:enumeration value="DarkBlue" />
+      <xs:enumeration value="DarkCyan" />
+      <xs:enumeration value="DarkGoldenrod" />
+      <xs:enumeration value="DarkGray" />
+      <xs:enumeration value="DarkGreen" />
+      <xs:enumeration value="DarkKhaki" />
+      <xs:enumeration value="DarkMagenta" />
+      <xs:enumeration value="DarkOliveGreen" />
+      <xs:enumeration value="DarkOrange" />
+      <xs:enumeration value="DarkOrchid" />
+      <xs:enumeration value="DarkRed" />
+      <xs:enumeration value="DarkSalmon" />
+      <xs:enumeration value="DarkSeaGreen" />
+      <xs:enumeration value="DarkSlateBlue" />
+      <xs:enumeration value="DarkSlateGray" />
+      <xs:enumeration value="DarkTurquoise" />
+      <xs:enumeration value="DarkViolet" />
+      <xs:enumeration value="DeepPink" />
+      <xs:enumeration value="DeepSkyBlue" />
+      <xs:enumeration value="DimGray" />
+      <xs:enumeration value="DodgerBlue" />
+      <xs:enumeration value="Firebrick" />
+      <xs:enumeration value="FloralWhite" />
+      <xs:enumeration value="ForestGreen" />
+      <xs:enumeration value="Fuchsia" />
+      <xs:enumeration value="Gainsboro" />
+      <xs:enumeration value="GhostWhite" />
+      <xs:enumeration value="Gold" />
+      <xs:enumeration value="Goldenrod" />
+      <xs:enumeration value="Gray" />
+      <xs:enumeration value="Green" />
+      <xs:enumeration value="GreenYellow" />
+      <xs:enumeration value="Honeydew" />
+      <xs:enumeration value="HotPink" />
+      <xs:enumeration value="IndianRed" />
+      <xs:enumeration value="Indigo" />
+      <xs:enumeration value="Ivory" />
+      <xs:enumeration value="Khaki" />
+      <xs:enumeration value="Lavender" />
+      <xs:enumeration value="LavenderBlush" />
+      <xs:enumeration value="LawnGreen" />
+      <xs:enumeration value="LemonChiffon" />
+      <xs:enumeration value="LightBlue" />
+      <xs:enumeration value="LightCoral" />
+      <xs:enumeration value="LightCyan" />
+      <xs:enumeration value="LightGoldenrodYellow" />
+      <xs:enumeration value="LightGray" />
+      <xs:enumeration value="LightGreen" />
+      <xs:enumeration value="LightPink" />
+      <xs:enumeration value="LightSalmon" />
+      <xs:enumeration value="LightSeaGreen" />
+      <xs:enumeration value="LightSkyBlue" />
+      <xs:enumeration value="LightSlateGray" />
+      <xs:enumeration value="LightSteelBlue" />
+      <xs:enumeration value="LightYellow" />
+      <xs:enumeration value="Lime" />
+      <xs:enumeration value="LimeGreen" />
+      <xs:enumeration value="Linen" />
+      <xs:enumeration value="Magenta" />
+      <xs:enumeration value="Maroon" />
+      <xs:enumeration value="MediumAquamarine" />
+      <xs:enumeration value="MediumBlue" />
+      <xs:enumeration value="MediumOrchid" />
+      <xs:enumeration value="MediumPurple" />
+      <xs:enumeration value="MediumSeaGreen" />
+      <xs:enumeration value="MediumSlateBlue" />
+      <xs:enumeration value="MediumSpringGreen" />
+      <xs:enumeration value="MediumTurquoise" />
+      <xs:enumeration value="MediumVioletRed" />
+      <xs:enumeration value="MidnightBlue" />
+      <xs:enumeration value="MintCream" />
+      <xs:enumeration value="MistyRose" />
+      <xs:enumeration value="Moccasin" />
+      <xs:enumeration value="NavajoWhite" />
+      <xs:enumeration value="Navy" />
+      <xs:enumeration value="OldLace" />
+      <xs:enumeration value="Olive" />
+      <xs:enumeration value="OliveDrab" />
+      <xs:enumeration value="Orange" />
+      <xs:enumeration value="OrangeRed" />
+      <xs:enumeration value="Orchid" />
+      <xs:enumeration value="PaleGoldenrod" />
+      <xs:enumeration value="PaleGreen" />
+      <xs:enumeration value="PaleTurquoise" />
+      <xs:enumeration value="PaleVioletRed" />
+      <xs:enumeration value="PapayaWhip" />
+      <xs:enumeration value="PeachPuff" />
+      <xs:enumeration value="Peru" />
+      <xs:enumeration value="Pink" />
+      <xs:enumeration value="Plum" />
+      <xs:enumeration value="PowderBlue" />
+      <xs:enumeration value="Purple" />
+      <xs:enumeration value="Red" />
+      <xs:enumeration value="RosyBrown" />
+      <xs:enumeration value="RoyalBlue" />
+      <xs:enumeration value="SaddleBrown" />
+      <xs:enumeration value="Salmon" />
+      <xs:enumeration value="SandyBrown" />
+      <xs:enumeration value="SeaGreen" />
+      <xs:enumeration value="SeaShell" />
+      <xs:enumeration value="Sienna" />
+      <xs:enumeration value="Silver" />
+      <xs:enumeration value="SkyBlue" />
+      <xs:enumeration value="SlateBlue" />
+      <xs:enumeration value="SlateGray" />
+      <xs:enumeration value="Snow" />
+      <xs:enumeration value="SpringGreen" />
+      <xs:enumeration value="SteelBlue" />
+      <xs:enumeration value="Tan" />
+      <xs:enumeration value="Teal" />
+      <xs:enumeration value="Thistle" />
+      <xs:enumeration value="Tomato" />
+      <xs:enumeration value="Transparent" />
+      <xs:enumeration value="Turquoise" />
+      <xs:enumeration value="Violet" />
+      <xs:enumeration value="Wheat" />
+      <xs:enumeration value="White" />
+      <xs:enumeration value="WhiteSmoke" />
+      <xs:enumeration value="Yellow" />
+      <xs:enumeration value="YellowGreen"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="VerticalAlignmentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Top"/>
+      <xs:enumeration value="Middle"/>
+      <xs:enumeration value="Bottom"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DataTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="string" />
+      <xs:enumeration value="double" />
+      <xs:enumeration value="decimal" />
+      <xs:enumeration value="integer" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TextAlignmentTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Left" />
+      <xs:enumeration value="Centre" />
+      <xs:enumeration value="Right" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="BulletTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Bullet" />
+      <xs:enumeration value="Dash" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Banner -->
+  <xs:complexType name="BannerType">
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="Text" type="xs:string" />
+    <xs:attribute name="Background" type="ColourTypes" />
+    <xs:attribute name="Foreground" type="ColourTypes" />
+    <xs:attribute name="Height" type="xs:double" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="optional" />    
+    <xs:attribute name="FontSize" type="xs:double" />
+    <xs:attribute name="IsBold" type="xs:boolean" />
+    <xs:attribute name="TextLeftOffset" type="xs:double" />   
+    <xs:attribute name="HorizontalAlignment" type="TextAlignmentTypes" />
+  </xs:complexType>
+  
+  <!-- LIST -->
+  <xs:complexType name="ListType">
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="LineSpacing" type="xs:double" use="required" />
+    <xs:attribute name="Represents" type="xs:string" use="required" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="required" />
+    <xs:attribute name="Width" type="xs:double" use="required" />
+    <xs:attribute name="TextLeftOffset" type="xs:double" />
+    <xs:attribute name="BulletType" type="BulletTypes" use="required" />
+    <xs:attribute name="HangingIndent" type="xs:double" use="optional" />
+  </xs:complexType>
+  
+  <!-- Columnar name value pair list -->
+  <xs:complexType name="ColumnarNameValueListType">
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="LineSpacing" type="xs:double" use="required" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="required" />
+    <xs:attribute name="Width" type="xs:double" use="required" />
+    <xs:attribute name="RelativeLeftOffset" type="xs:double" use="optional" />
+    <xs:attribute name="TextLeftOffset" type="xs:double" use="optional" />
+    <xs:attribute name="ColumnCount" type="xs:int" use="optional" />
+    <xs:attribute name="BetweenColumnWidth" type="xs:double" use="optional" />
+  </xs:complexType>
+
+  <!-- Line -->
+  <xs:complexType name="LineType">
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="Position" type="Positioning" use="required" />
+    <xs:attribute name="PositionRelativeToEntityName" use="optional" />
+    <xs:attribute name="Thickness" type="xs:double" />
+    <xs:attribute name="Width" type="xs:double" />
+    <xs:attribute name="WidthPct" type="xs:double" />
+    <xs:attribute name="Background" type="ColourTypes" />
+    <xs:attribute name="RelativeY" type="xs:double" use="optional" /> <!-- Required whern positioning is RelativeCoordinateSupplied -->
+    <xs:attribute name="MarginAbove" type="xs:double" use="optional" />
+    <xs:attribute name="RelativeLeftOffset" type="xs:double" use="optional" />
+  </xs:complexType>
+
+  <!-- Image -->
+  <xs:complexType name="ImageType">
+    <xs:attribute name="Name" type="xs:string"  use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="Source" type="xs:string" use="required" />
+    <xs:attribute name="HorizontalAlignment" type="HorizontalAlignmentType" />
+    <xs:attribute name="Height" type="xs:double" use="required" />
+    <xs:attribute name="AbsoluteY" type="xs:double" use="required" />
+    <xs:attribute name="AbsoluteX" type="xs:double" use="required" />
+  </xs:complexType>
+
+  <!-- Globals -->
+  <xs:complexType name="MarginsType">
+    <xs:attribute name="Top" type="xs:double" use="required"/>
+    <xs:attribute name="Bottom" type="xs:double" use="required"/>
+    <xs:attribute name="Left" type="xs:double" use="required"/>
+    <xs:attribute name="Right" type="xs:double" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="GridApbColumnDefinitionsType">
+    <xs:attribute name="ColumnName" type="xs:string" use="optional" />
+    <xs:attribute name="DataType" type="DataTypes" use="required" />
+    <xs:attribute name="SourcePropertyName" type="xs:string" use="required" />
+    <xs:attribute name="WidthPct" type="xs:double" use="required" />
+    <xs:attribute name="ColumnHeader" type="xs:string" use="required" />
+    <xs:attribute name="CellPadding" type="xs:double" use="required" />
+    <xs:attribute name="HorizontalAlignment" type="HorizontalAlignmentType" use="required" />
+    <xs:attribute name="FormatString" type="xs:string" use="optional" />
+    <xs:attribute name="ShowTotal" type="xs:boolean" use="optional" />
+    <xs:attribute name="ShowMultiples" type="xs:boolean" use="optional" />
+    <xs:attribute name="Multiple" type="xs:double" use="optional" />
+    <xs:attribute name="DefaultText" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="CementOverviewFluidsGridColumnDefinitionsType">
+    <xs:attribute name="ColumnName" type="xs:string" use="optional" />
+    <xs:attribute name="DataType" type="DataTypes" use="required" />
+    <xs:attribute name="SourcePropertyName" type="xs:string" use="required" />
+    <xs:attribute name="WidthPct" type="xs:double" use="required" />
+    <xs:attribute name="ColumnHeader" type="xs:string" use="required" />
+    <xs:attribute name="CellPadding" type="xs:double" use="required" />
+    <xs:attribute name="HorizontalAlignment" type="HorizontalAlignmentType" use="required" />
+    <xs:attribute name="FormatString" type="xs:string" use="optional" />
+    <xs:attribute name="ShowTotal" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="GlobalsType">
+    <xs:sequence>
+      <xs:element name="Margins" type="MarginsType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="GridColumnDefinitions" minOccurs="1" maxOccurs="1" >
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AgnosticBldGridColumnDefinitions">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="column" type="GridApbColumnDefinitionsType" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="AgnosticApbDGridColumnDefinitions">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="column" type="GridApbColumnDefinitionsType" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="AgnosticApbSGridColumnDefinitions">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="column" type="GridApbColumnDefinitionsType" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="GrandTotalColumnDefinitions">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="column" type="GridApbColumnDefinitionsType" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="MetricFluidsGridDefinitions" minOccurs="0">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="column" type="CementOverviewFluidsGridColumnDefinitionsType" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ImperialFluidsGridDefinitions" minOccurs="0">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="column" type="CementOverviewFluidsGridColumnDefinitionsType" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LegalBoilerplateText">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="TextLine" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="HeaderType">
+    <xs:attribute name="Name" type="xs:string"  use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="Background" type="ColourTypes" use="required" />
+    <xs:attribute name="TopAbsoluteLeftPoint" type="xs:string" use="required" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="LineSpacing" type="xs:double" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="TitleType">
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="Position" type="Positioning" use="required" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="IsBold" type="xs:boolean" use="required" />
+    <xs:attribute name="IsUnderlined" type="xs:boolean" use="required" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="required" />
+    <xs:attribute name="Text" type="xs:string" use="required" />
+    <xs:attribute name="RelativeLeftOffset" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="AgnosticGridType">
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="MinimumRowHeight" type="xs:double" use="required" />
+    <xs:attribute name="GridWidth" type="xs:double" use="required" />
+    <xs:attribute name="TotalsRowLabel" type="xs:string" use="optional" />
+    <xs:attribute name="MultiplesRowLabel" type="xs:string" use="optional" />
+    <xs:attribute name="GridType" type="GridTypes" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="FluidsGridType">
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="MinimumRowHeight" type="xs:double" use="required" />
+    <xs:attribute name="GridWidth" type="xs:double" use="required" />
+    <xs:attribute name="HeaderRowLineThickness" type="xs:double" use="required" />
+    <xs:attribute name="GridBottomRowLineThickness" type="xs:double" use="required" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="required" />
+  </xs:complexType> 
+
+  <xs:complexType name="SectionTitlesType">
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="required" />
+    <xs:attribute name="AreUnderlined" type="xs:boolean" use="optional" />
+    <xs:attribute name="AreBold" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="SectionGridType">
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="MinimumRowHeight" type="xs:double" use="required" />
+    <xs:attribute name="GridWidth" type="xs:double" use="required" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="MessageBoxType">
+    <xs:attribute name="Name" type="xs:string"  use="optional" />
+    <xs:attribute name="RelativeLeftOffset" type="xs:double" use="required" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="LineSpacing" type="xs:double" use="required" />
+    <xs:attribute name="Padding" type="xs:double" use="required" />
+    <xs:attribute name="DrawBorder" type="xs:boolean" use="required" />
+    <xs:attribute name="MarginAbove" type="xs:double" use="required" />
+    <xs:attribute name="Width" type="xs:double" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="GrandTotalType">
+    <xs:attribute name="Name" type="xs:string"  use="optional" />
+    <xs:attribute name="RelativeToName" type="xs:string" use="optional" />
+    <xs:attribute name="FontSize" type="xs:double" use="required" />
+    <xs:attribute name="Height" type="xs:double" use="required" />
+    <xs:attribute name="Text" type="xs:string" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="LayoutType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Image" type="ImageType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="Line" type="LineType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="Banner" type="BannerType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="List" type="ListType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="Header" type="HeaderType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="Title" type="TitleType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="AgnosticGrid" type="AgnosticGridType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="GrandTotal" type="GrandTotalType"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="SectionGroup" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SectionTitles" type="SectionTitlesType" />
+            <xs:element name="SectionGrids" type="SectionGridType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AdditionalItems" type="MessageBoxType" />
+      <xs:element name="LegalBoilerplate" type="MessageBoxType" />
+      <xs:element name="PageBreak" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="ColumnarNameValueList" minOccurs="0" maxOccurs="unbounded" type="ColumnarNameValueListType" />
+      <xs:element name="CementingOverviewFluidsList" type="FluidsGridType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="MetadataType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="RevisionDate" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="RevisedBy" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:element name="ApbQuoteLayout">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Metadata" type="MetadataType" minOccurs="0" maxOccurs="1" />
+        <xs:element name="Globals" type="GlobalsType" minOccurs="1" maxOccurs="1" />
+        <xs:element name="Layout" type="LayoutType" minOccurs="1" maxOccurs="1" />
+       </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+
+</xs:schema>

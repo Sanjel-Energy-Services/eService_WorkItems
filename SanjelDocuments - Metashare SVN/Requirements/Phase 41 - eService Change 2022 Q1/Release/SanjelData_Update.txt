@@ -1,0 +1,162 @@
+--ALTER TABLE ProductHaul ADD [IsBlendTest] bit NULL;
+--ALTER TABLE ProductHaul DROP COLUMN [CrewSystemId];
+--ALTER TABLE ProductHaul DROP COLUMN [CrewName];
+--ALTER TABLE ProductHaul DROP COLUMN [CrewDescription];
+--ALTER TABLE ProductHaul DROP COLUMN [Crewid];
+
+/*ALTER TABLE ProductHaulLoad ADD BulkPlantDescription nvarchar(255) NULL;
+ALTER TABLE ProductHaulLoad ADD BulkPlantid int NULL;
+ALTER TABLE ProductHaulLoad ADD BulkPlantSystemId int NULL;
+ALTER TABLE ProductHaulLoad ADD BulkPlantName nvarchar(255) NULL;
+ALTER TABLE ProductHaulLoad ADD RigDescription nvarchar(255) NULL;
+ALTER TABLE ProductHaulLoad ADD Rigid int NULL;
+ALTER TABLE ProductHaulLoad ADD RigSystemId int NULL;
+ALTER TABLE ProductHaulLoad ADD RigName nvarchar(255) NULL;
+
+ALTER TABLE ProductHaulLoad ADD [IsBlendTest] bit NULL;
+ALTER TABLE ProductHaulLoad ADD ClientRepresentative nvarchar(255) NULL;
+ALTER TABLE ProductHaulLoad ADD DispatchBy nvarchar(255) NULL;
+
+ALTER TABLE [Product] ADD [InventoryMeasureUnitid] [int] NULL;
+ALTER TABLE [Product] ADD [InventoryMeasureUnitSystemId] [int] NULL;
+ALTER TABLE [Product] ADD [InventoryMeasureUnitName] [nvarchar](255) NULL;
+ALTER TABLE [Product] ADD [InventoryMeasureUnitDescription] [nvarchar](255) NULL;
+
+
+
+
+ALTER TABLE [JobType] ALTER COLUMN [SbsPrimaryServiceLineId] [nvarchar](255) NULL;
+ALTER TABLE [JobType] ALTER COLUMN [SbsSecondaryServiceLineId] [nvarchar](255) NULL;
+*/
+
+--ALTER TABLE [BinInformation] ADD [PodIndex] [int] NULL;
+--ALTER TABLE [BinInformation] ADD [BlendTestingStatus] [int] NULL;
+--Update [BinInformation] set [BlendTestingStatus] = 0; 
+
+--//TODO:Trigger set up already, needs to remove
+
+--ALTER TABLE [ProductHaulLoad] ADD [ProgramId] [nvarchar](255) NULL;
+/*
+CREATE TABLE [dbo].[JobIntervalType](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[entity_status] [int] NULL,
+	[owner_id] [int] NULL,
+	[name] [nvarchar](100) NULL,
+	[description] [nvarchar](500) NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [JobType] ADD [JobIntervalTypeid] [int] NULL;
+ALTER TABLE [JobType] ADD [JobIntervalTypeSystemId] [int] NULL;
+ALTER TABLE [JobType] ADD [JobIntervalTypeName] [nvarchar](255) NULL;
+ALTER TABLE [JobType] ADD [JobIntervalTypeDescription] [nvarchar](255) NULL;
+
+ALTER TABLE [JobType] ADD [JobIntervalCount] [int] NULL;
+*/
+-- Above has updated Sanjel25 already when deploy bulk plant API for blend cut
+
+-- Original int type is compitable with double type entity property
+ALTER TABLE Bin ALTER COLUMN Volume float NULL;
+
+-- Job Type new property must upload with eServiceOnline release
+
+-- script
+--select * from BinInformation order by system_id desc;
+
+--Update BinInformation set PodIndex = 1;
+--//TODO:Trigger set up already, needs to remove
+
+--update BinInformation set Name = BinName;
+--//TODO:Trigger set up already, needs to remove
+
+--update bin set PodCount = 3 where BinTypeid = 16;
+
+CREATE TABLE [dbo].[WellObjective](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[entity_status] [int] NULL,
+	[owner_id] [int] NULL,
+	[name] [nvarchar](100) NULL,
+	[description] [nvarchar](500) NULL
+) ON [PRIMARY]
+GO
+CREATE TABLE [dbo].[WellType](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[entity_status] [int] NULL,
+	[owner_id] [int] NULL,
+	[name] [nvarchar](100) NULL,
+	[description] [nvarchar](500) NULL
+) ON [PRIMARY]
+GO
+
+/* Mar 10 Blend Tank Log deployment
+ALTER TABLE ProductHaulLoad ADD CallSheetId int NULL;
+
+ALTER TABLE ProductHaul ADD [BulkPlantid] [int] NULL;
+ALTER TABLE ProductHaul ADD	[BulkPlantName] [nvarchar](255) NULL;
+ALTER TABLE ProductHaul ADD [BulkPlantSystemId] [int] NULL;
+ALTER TABLE ProductHaul ADD [BulkPlantDescription] [nvarchar](255) NULL;
+
+
+ALTER TABLE ProductHaulLoad ADD [EstmatedLoadTime] [datetime2](7) NULL;
+ALTER TABLE ProductHaulLoad ADD [UseExistingHaul] [bit] NULL;
+
+ALTER TABLE ProductHaul ADD [ExpectedOnLocationTime] [datetime2](7) NULL;
+
+ALTER TABLE [BlendLog] ADD [BulkPlantId] [int] NULL;
+ALTER TABLE [BlendLog] ADD [BulkPlantName] [nvarchar](255) NULL;
+
+*/
+
+
+--ALTER TABLE [ProductHaulLoad] ADD PodIndex [int] NULL;
+--Update ProductHaulLoad set PodIndex = 1;
+--//TODO:Trigger set up already, needs to remove
+--update ProductHaulLoad set CallSheetId = CallSheetNumber + 5;
+--//TODO:Trigger set up already, needs to remove
+
+DROP TRIGGER [dbo].[Tr_Insert_PodIndex_CallSheetId]
+
+
+
+-- At end, run clean up product haul data.sql
+
+--select * from ProductHaulLoad order by system_id desc;
+
+ALTER TABLE [WorkerSchedule] ADD [SanjelCrewScheduleid] [int] NULL;
+ALTER TABLE [WorkerSchedule] ADD [SanjelCrewScheduleSystemId] [int] NULL;
+ALTER TABLE [WorkerSchedule] ADD [SanjelCrewScheduleName] [nvarchar](100) NULL;
+ALTER TABLE [WorkerSchedule] ADD [SanjelCrewScheduleDescription] [nvarchar](255) NULL;
+
+ALTER TABLE [UnitSchedule] ADD [SanjelCrewScheduleid] [int] NULL;
+ALTER TABLE [UnitSchedule] ADD [SanjelCrewScheduleSystemId] [int] NULL;
+ALTER TABLE [UnitSchedule] ADD [SanjelCrewScheduleName] [nvarchar](100) NULL;
+ALTER TABLE [UnitSchedule] ADD [SanjelCrewScheduleDescription] [nvarchar](255) NULL;
+
+-- Update employee name and description
+--select * from employee order by system_id desc;
+--Update employee set name = ISNULL(PreferedFirstName, FirstName) + ' '  + LastName , description = LastName + ',' +  FirstName + ' ' +ISNULL(MiddleName + ' ', '')+'('+EmployeeNumber+')';
+	
+-- Run http://localhost:44703/DataPrep/ProductHaulEnhancementPre 
+
+-- Product Haul, ProductHaulLoad data migration
+
+-- Update bulk plant name from service point name
+-- TODO: Find out the service point doesn't have bulk plant mapping
+
+select top(10) * from rig order by system_id desc;
+
+
+update ProductHaulLoad set BulkPlantid = 2343, BulkPlantName = 'GP Bulk Plant' where ServicePointid = 71;
+update ProductHaulLoad set BulkPlantid = 2344, BulkPlantName = 'SC Bulk Plant' where ServicePointid = 70;
+update ProductHaulLoad set BulkPlantid = 2345, BulkPlantName = 'LLD Bulk Plant' where ServicePointid = 61;
+update ProductHaulLoad set BulkPlantid = 2346, BulkPlantName = 'LLB Bulk Plant' where ServicePointid = 65;
+update ProductHaulLoad set BulkPlantid = 2347, BulkPlantName = 'EDM Bulk Plant' where ServicePointid = 67;
+update ProductHaulLoad set BulkPlantid = 2348, BulkPlantName = 'EST Bulk Plant' where ServicePointid = 72;
+update ProductHaulLoad set BulkPlantid = 2349, BulkPlantName = 'RD Bulk Plant' where ServicePointid = 85;
+update ProductHaulLoad set BulkPlantid = 2350, BulkPlantName = 'FSJ Bulk Plant' where ServicePointid = 66;	
+
+-- Update StorageName from Bin number, there was no podIndex before.
+
+-- Update SiteName, Drivername  
+
+	

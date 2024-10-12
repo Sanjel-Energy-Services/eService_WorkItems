@@ -1,0 +1,38 @@
+1. Timezone cross DST change issue - Printing
+
+Solution: This has been solved by passing UTC time, Timezone, and flag to ignore DST to printing server.
+
+Code change may apply to following spots:
+
+In eServiceExpress solution:
+
+PrintingController.CreateChartModelData()
+
+in new ChartModel, assign start/end time to Axis Model, remove conversion to local time.
+
+Version 82: Line 390 and Line 663
+
+PrintingController.GetSeriesPoints()
+
+Remove conversion of point.X value to local time.
+
+Version 82: Line 736
+
+In SanjelCommonLibrary solution:
+
+AxisControl.GetLabelText()
+
+                        else if (this.AxisModel.ChartIntervalType.Equals(ChartIntervalType.Seconds) || this.AxisModel.ChartIntervalType.Equals(ChartIntervalType.Minutes))
+                        {
+                            text = Convert.ToDateTime(text).ToString(labelFormat);
+                        }
+
+This is when the Axis label being rendered, mechanism to passing necessary timezone and DST fla is needed.
+
+
+2. Print not together, Density and Temperature chart title is not correct.
+Solution: each series should has it's own YAxisName
+If it not print multiple series together, the chart title should use series YAxisName 
+
+
+3. Projec configuration post_Build script could copy configurations, but publish cannot.

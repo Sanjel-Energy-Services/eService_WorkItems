@@ -1,0 +1,41 @@
+1.	Load tonnage per pod.  Adam hasn’t added unit pod information to database and API yet. Based on current understanding of business process, dispatch is responsible to split a load sheet to each pod upon the factors include road ban, pod capacity, capacity cap, etc. We need add pod split function in the product haul scheduling function on Rig Board.
+TO BE CLARIFY: 
+a.	In program, same blend may be used in different stage/plug/interval, they are showing on the Rig Board separately. Currently dispatch has to schedule them one by one, each blend will have its own load sheet. Bulk plant will blend them sheet by sheet, combining multiple load sheet and blend together is not allowed. Is it right? 
+b.	Once we have blend tonnage in load sheet, do we still necessary have to split one load to multiple cuts?
+c.	Do we know third party bulker pod information? How many pods in a bulker? What are the sizes?
+2.	Load information post back. Once a load sheet is started to blend, a BLENDING status status should be able to push back to backend, so other location will see the status to avoid the double blend. Once the blending is done, and the COMPLETE status must be pushed back to backend, so it won’t listed to any location todo list.
+3.	Blended load sheet can be pushed back to backend with updated details, backend may compile movement journal and post to AX.
+4.	MTS. When we look at detail information in MTS, it is as same as updated load sheet. We need the pod allocation information anyway. So it depends topic 1 anyway. There will be development dependency and cannot implement in short term. Suggested solution: 1. Keep current business process, copy load sheet information from screen to printed MTS book. 2. Neville will implement a simple function to print what shows on screen.
+5.	Offline data caching facility. To support weak WIFI coverage scenario, We need local caching for master data, inventory checking , load sheet and also message queue for post back loaded information.
+6.	Product name consistency. Assure load sheet is using AX product name which associate to an IIN number.
+
+To satisfy above requirement, here are the solutions in applications.
+
+1.	Enhance eServiceOnline Product Haul function to add pod allocation. 
+a.	Add unit pod information master data.
+b.	User interface improvement to split tonnage to pods
+c.	Enhance load sheet structure to support pods
+d.	Enhance load sheet printing to support pods
+e.	Enhance load sheet API expose data to Blend Verification App
+2.	Add Inventory Checking API to query AX by location and product name.
+a.	Fix GetLoadSheet API to assure product names is using AX product name.
+b.	Create inventory view in SanjelData database to connect to AX database.
+c.	Build Inventory Checking API
+3.	Add Load Sheet status update APIs. 
+a.	Add BLENDING, COMPLETE status to load sheet
+b.	Add BLENDING status update API
+c.	Add COMPLETE status and load sheet details post back API
+d.	Improve Rig Board to show BLENDING, COMPLETE status
+e.	Filter out COMPLETE load sheet in get load sheet API
+4.	Integration for posting movement journal to AX
+a.	Integration solution TBD
+5.	Local cache facility
+a.	Update inventory data, master data, load sheet cache from server in a frequent cycle.
+b.	Expose master data through local API
+c.	Query product inventory through local API
+d.	Query and update load sheet through local API.
+6.	MTS 
+a.	Port load sheet printing code to print MTS on local.
+b.	Loaded load sheet database implement as MTS central repository.
+
+No. 2 might be able to implement with small amount of effort. For other items we have to look into details and make estimate. The priority will be determined by management team.

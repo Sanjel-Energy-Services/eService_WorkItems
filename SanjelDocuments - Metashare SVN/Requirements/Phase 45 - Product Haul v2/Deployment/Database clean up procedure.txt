@@ -1,0 +1,40 @@
+eServiceOnline Deployment Script
+
+1.Data Cleanup
+
+1.1 Cleanup the product haul load stay as BlendCompleted but the associated call sheet is completed as on location
+
+-- select * from ProductHaulLoad where effective_end_datetime > GETDATE() and ProductHaulLoadLifeStatus = 4 order by system_id desc;
+
+
+http://localhost:44703/DataCleanUp/SetBlendCompletedProductHaulLoadOnLocationForCompletedJob
+
+1.2 Cleanup the product haul load stay as scheduled but the associated call sheet is completed as on location
+
+--select * from ProductHaulLoad where effective_end_datetime > GETDATE() and ProductHaulLoadLifeStatus = 1 order by system_id desc;
+http://localhost:44703/DataCleanUp/SetScheduledProductHaulLoadOnLocationForCompletedJob
+
+1.3 Delete the product haul load stay as scheduled but the associated call sheet is canceled
+
+http://localhost:44703/DataCleanUp/SetScheduledProductHaulLoadDeletedForCancelledJob
+
+
+1.4 Set Product Haul on location if all loads are on location
+http://localhost:44703/DataCleanUp/SetProductHaulOnLocationIfAllLoadsOnLocation
+
+
+
+2. Populate Shipping Load Sheet
+http://localhost:44703/DataCleanUp/RefactorProductHualAndProductHualLoad
+
+
+-- !!! blendsection id is not assigned, need fix --
+--update ShippingLoadSheet set BlendSectionId = (select PHL.BlendSectionId from ProductHaulLoad PHL where PHL.CallSheetid = CallSheetId and ProductHaulLoadId= PHL.Id and PHL.effective_end_datetime > GETDATE());
+
+
+New permission: BulkPlantIndex
+Description: Online Use Case: Bulk Plant Board Access
+
+3. Populate crew name in new format
+http://localhost:44703/DataPrep/TestFormatAllCrews
+

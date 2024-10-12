@@ -1,0 +1,35 @@
+select 
+bcs.id,	
+bcs.system_id,			
+bcs.version,			
+bcs.modified_user_id,		
+bcs.modified_user_name,		
+bcs.modified_datetime,		
+bcs.operation_type,
+bcs.effective_start_datetime,		
+bcs.effective_end_datetime,		
+bcs.entity_status,	
+bcs.ParentId as owner_id,
+bcs.Name,
+bcs.Description,	
+bc.Name as BlendChemicalName,
+mu.Abbreviation,	
+br.Name as BlendRecipeName,		
+br.Description as BlendRecipeDescription,	
+bc.Description as BlendChemicalDescription,
+bcs.IsBaseBlend,
+bcs.BlendRecipeId,
+bcs.AdditionMethod,	
+mu.system_id as UnitSystemId,
+bcs.AdditiveBlendMethod,
+bcs.MeasureUnitId as UnitId,
+mu.Description as UnitDescription,
+mu.Name as UnitName,	
+bc.system_id as BlendChemicalSystemId,
+br.system_id as BlendRecipeSystemId,	
+bcs.BlendChemicalId,
+bcs.Amount
+from BlendChemicalSection bcs 
+left join BlendChemical bc on bcs.BlendChemicalId=bc.id
+left join BlendRecipe br on bcs.BlendRecipeId=br.id
+left join MeasureUnit mu on bcs.MeasureUnitId=mu.id;

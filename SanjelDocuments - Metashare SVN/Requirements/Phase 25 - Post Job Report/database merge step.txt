@@ -1,0 +1,80 @@
+1. Open Config.db in DB Browser
+2. Attach LocalData.db as localdata
+3. Create legacy tables in LocalData.db
+
+CREATE TABLE localdata.DC_FLAGS (Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Name TEXT, Value TEXT, TimeStamp TEXT, VERSION INTEGER);
+CREATE TABLE localdata.ESE_FLAGS (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, NAME TEXT, VALUE TEXT, TIMESTAMP TEXT, VERSION INTEGER);
+CREATE TABLE localdata.WITS_SETTING (ID INTEGER, TimeStamp TEXT,JSON TEXT, VERSION INTEGER);
+
+
+INSERT INTO localdata.DC_FLAGS SELECT * FROM DC_FLAGS;
+INSERT INTO localdata.ESE_FLAGS SELECT * FROM ESE_FLAGS;
+INSERT INTO localdata.WITS_SETTING SELECT * FROM WITS_SETTING;
+
+4. Open SCM_PLC.db in DB Browser
+5. Attach LocalData.db as localdata
+6. Create legacy tables in LocalData.db
+
+CREATE TABLE localdata.Data (TimeStamp TEXT, UnitID TEXT, JSON TEXT);
+INSERT INTO localdata.Data SELECT * FROM Data;
+
+-- above is not needed anymore. just for reference only.
+
+-- Config.db 
+
+ 
+Alter table DC_FLAGS rename to DC_FLAGS1
+
+CREATE TABLE DC_FLAGS([id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,TimeStamp ,VERSION ,Value )
+
+INSERT INTO DC_FLAGS (ID, Name, TimeStamp,Value,VERSION)
+SELECT ID, Name, TimeStamp, cast(value as integer),VERSION FROM DC_FLAGS1
+
+
+Alter table ESE_FLAGS rename to ESE_FLAGS1
+
+CREATE TABLE ESE_FLAGS([id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,VALUE ,VERSION ,TIMESTAMP )
+
+INSERT INTO ESE_FLAGS (ID, Name, TimeStamp,Value,VERSION)
+SELECT ID, Name, TimeStamp,cast(value as integer),VERSION FROM ESE_FLAGS1
+
+
+Alter table WITS_SETTING rename to WITS_SETTING1
+CREATE TABLE WITS_SETTING([id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,JSON ,VERSION ,TimeStamp )
+
+INSERT INTO WITS_SETTING (VERSION,TimeStamp,JSON)
+SELECT VERSION,TimeStamp,JSON from WITS_SETTING1
+
+-- LocalData.db
+
+--migrate data to new structure which generated from MMC
+
+Alter table JOB_TAG rename to JOB_TAG1
+
+CREATE TABLE JOB_TAG([id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,IS_DATA_FROM_CSV ,RIG_NAME ,TIMEZONE ,IS_CURRENT_JOB ,SURFACE_LOCATION ,HAS_DATA_FROM_CSV ,APPLICATION_VERSION ,JOB_MONITOR_SETTING ,WELL_NAME ,SUPERVISOR ,JOB_DATE_TIME ,VERSION ,CLIENT_COMPANY ,JOB_PRINT_SETTING ,SERVICE_POINT ,DOWNHOLE_LOCATION ,JOB_START_TIME ,COMPUTER_NAME ,JOB_TYPE ,TIME_AREA ,UNIT_SELECTION ,JOB_NUMBER ,IS_DST_OFF ,COMMENTS ,STATUS ,JOB_END_TIME ,CLIENT_REP ,WITS_SETTING ,JOB_UNIQUE_ID )
+
+INSERT INTO JOB_TAG (ID,IS_DATA_FROM_CSV,RIG_NAME,TIMEZONE,IS_CURRENT_JOB,SURFACE_LOCATION,HAS_DATA_FROM_CSV,APPLICATION_VERSION,JOB_MONITOR_SETTING,WELL_NAME,SUPERVISOR,JOB_DATE_TIME,VERSION,CLIENT_COMPANY,JOB_PRINT_SETTING,SERVICE_POINT,DOWNHOLE_LOCATION,JOB_START_TIME,COMPUTER_NAME,JOB_TYPE,TIME_AREA,UNIT_SELECTION,JOB_NUMBER,IS_DST_OFF,COMMENTS,STATUS,JOB_END_TIME,CLIENT_REP,WITS_SETTING,JOB_UNIQUE_ID)
+Select ID,IS_DATA_FROM_CSV,RIG_NAME,TIMEZONE,IS_CURRENT_JOB,SURFACE_LOCATION,HAS_DATA_FROM_CSV,APPLICATION_VERSION,JOB_MONITOR_SETTING,WELL_NAME,SUPERVISOR,JOB_DATE_TIME,VERSION,CLIENT_COMPANY,JOB_PRINT_SETTING,SERVICE_POINT,DOWNHOLE_LOCATION,JOB_START_TIME,COMPUTER_NAME,JOB_TYPE,TIME_AREA,UNIT_SELECTION,JOB_NUMBER,IS_DST_OFF,COMMENTS,STATUS,JOB_END_TIME,CLIENT_REP,WITS_SETTING,JOB_UNIQUE_ID from JOB_TAG1
+
+Alter table UPLOAD_LOG rename to UPLOAD_LOG1
+
+CREATE TABLE UPLOAD_LOG([id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,IS_RECEIVED_ON_SERVER ,PACK_SIZE ,VERSION ,END_TIME ,JOB_NUMBER ,IS_CLEANED_UP ,PACKING_DURATION ,COMPUTER_NAME ,START_TIME ,PACKING_TIME ,TIMEZONE ,JOB_UNIQUE_ID )
+
+INSERT INTO UPLOAD_LOG (ID,PACKING_DURATION,COMPUTER_NAME,END_TIME,JOB_UNIQUE_ID,TIMEZONE,START_TIME,VERSION,JOB_NUMBER,IS_RECEIVED_ON_SERVER,PACK_SIZE,PACKING_TIME,IS_CLEANED_UP)
+SELECT ID, PACKING_DURATION,COMPUTER_NAME,END_TIME,JOB_UNIQUE_ID,TIMEZONE,START_TIME,VERSION,JOB_NUMBER,IS_RECIEVED_ON_SERVER,PACK_SIZE,PACKING_TIME,IS_CLEANED_UP From UPLOAD_LOG1
+
+
+-- Add storage info table, this is generated from LocalData model by MMC
+CREATE TABLE StorageInfo([id] [INTEGER] NOT NULL,[system_id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[version] [INTEGER] NULL,[modified_user_id] [INTEGER] NULL,[modified_user_name] [NVARCHAR] NULL,[modified_datetime] [DATETIME] NULL,[operation_type] [INTEGER] NULL,[effective_start_datetime] [DATETIME] NULL,[effective_end_datetime] [DATETIME] NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,JobUniqueId ,BlendName ,StorageType ,PumpedWoAdds ,Remains ,InitialTonnage ,PumpedWithAdds ,ScaleReading ,IsReadyForNext ,JobNumber )
+
+-- Add maintenance note, this is generated from LocalData model by MMC
+CREATE TABLE MaintenanceNote([id] [INTEGER] NOT NULL,[system_id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[version] [INTEGER] NULL,[modified_user_id] [INTEGER] NULL,[modified_user_name] [NVARCHAR] NULL,[modified_datetime] [DATETIME] NULL,[operation_type] [INTEGER] NULL,[effective_start_datetime] [DATETIME] NULL,[effective_end_datetime] [DATETIME] NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,JobUniqueId ,UnitType ,Notes ,JobNumber ,UnitNumber )
+
+-- Add Post Job Report
+CREATE TABLE PostJobReport([id] [INTEGER] NOT NULL,[system_id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[version] [INTEGER] NULL,[modified_user_id] [INTEGER] NULL,[modified_user_name] [NVARCHAR] NULL,[modified_datetime] [DATETIME] NULL,[operation_type] [INTEGER] NULL,[effective_start_datetime] [DATETIME] NULL,[effective_end_datetime] [DATETIME] NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,RigName ,SurfaceLocation ,AdditionalInformation ,ClientName ,JobDate ,CallSheetNumber ,DownHoleLocation ,JobUniqueId ,JobType ,RevisedDirection ,JobNumber ,IsDirectionRevised )
+
+-- Add Blend Report
+CREATE TABLE BlendReport([id] [INTEGER] NOT NULL,[system_id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[version] [INTEGER] NULL,[modified_user_id] [INTEGER] NULL,[modified_user_name] [NVARCHAR] NULL,[modified_datetime] [DATETIME] NULL,[operation_type] [INTEGER] NULL,[effective_start_datetime] [DATETIME] NULL,[effective_end_datetime] [DATETIME] NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,JobUniqueId ,ExpectedCementTop ,TotalPumpedVolume )
+
+-- Add Blend Consumption
+CREATE TABLE BlendConsumption([id] [INTEGER] NOT NULL,[system_id] [INTEGER] PRIMARY KEY AUTOINCREMENT NOT NULL,[version] [INTEGER] NULL,[modified_user_id] [INTEGER] NULL,[modified_user_name] [NVARCHAR] NULL,[modified_datetime] [DATETIME] NULL,[operation_type] [INTEGER] NULL,[effective_start_datetime] [DATETIME] NULL,[effective_end_datetime] [DATETIME] NULL,[entity_status] [INTEGER] NULL,owner_id INTEGER NULL,name [NVARCHAR] NULL,description [NVARCHAR] NULL,SlurryTemperature ,JobIntervalId ,JobEventNumber ,JobIntervalTypeName ,BlendCategory ,WaterTemperature ,PumpedVolume ,BlendReportid ,BlendReportSystemId int,BlendReportName nvarchar(100),BlendReportDescription nvarchar(255),BulkTemperature ,BlendDescription ,BlendName )

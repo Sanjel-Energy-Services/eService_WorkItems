@@ -1,0 +1,23 @@
+eService Express troubleshooting tips.
+
+1. Error: When running  eService Express in production. It came up erros but need Development Mode to look into the error.
+
+Steps:
+
+	a.Run Common Line as administrator
+
+	>setx ASPNETCORE_ENVIRONMENT "Development" /M
+
+	SUCCESS: Specified value was saved.
+
+	b. Restart eService Express service
+	c. Run eService Express from web page
+	
+	
+2. Erro: Two jobs are selected as Current Job.
+
+The newly selected job has duplicated bumper imported from Call Sheet
+
+Stesp:
+
+	a. Open job, remove one of the duplicated unit section

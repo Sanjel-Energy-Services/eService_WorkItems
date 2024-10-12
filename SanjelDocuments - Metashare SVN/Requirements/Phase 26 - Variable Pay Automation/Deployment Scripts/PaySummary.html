@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{LastName}, {FirstName} ({Employee ADP ID})</title>
+    <!--    <script src="~/lib/jquery/dist/jquery.js"></script> -->
+</head>
+<body>
+    <div class="printPage">
+        <div class="header">
+			<table>
+				<tr>
+					<td rowspan="3" colspan="2"><img src="http://sanjel08/eserviceonline/images/logo_head.png" width="190" height="50"/></td>
+					<td>Varaiable Pay & OVPP Earned:</td>
+					<td>{Pay Period Name}</td>
+				</tr>
+				<tr>
+					<td align="right">Payable:</td>
+					<td>{Pay Date}</td>
+				</tr>
+				<tr>
+					<td align="right">District:</td>
+					<td>{Home Service Point}</td>
+				</tr>
+				<tr>
+					<td>Employee Name: </td>
+					<td>{LastName}, {FirstName} ({Employee ADP ID})</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+        <div class="body-table">
+		
+            <table class="table_down" border="0" cellspacing="0" cellpadding="0">
+                <tr style="font-weight: bold;background-color: #ECECEA;">
+                    <th width="300">Date</th>
+                    <th width="180">Ticket #</th>
+                    <th width="50">OVPP #</th>
+                    <th width="110">Customer</th>
+                    <th width="110">Pay Position</th>
+                    <th width="110">Variable Pay</th>
+                    <th width="110">OVPP</th>
+                    <th width="110">Standby/Ext Hours</th>
+                    <th width="110">Standby/Ext Amount</th>
+                    <th width="110">Meal Allowance</th>
+                    <th width="110">Total Amount</th>
+                    <th width="110">Count of Crew Efficiency</th>
+                </tr>
+				<tr>
+                    <td width="300">{Job Date}</td>
+                    <td width="180">{Ticket #}</td>
+                    <td width="50">{OVPP #}</td>
+                    <td width="110">{Customer}</td>
+                    <td width="110">{Pay Position}</td>
+                    <td width="110">{Variable Pay}</td>
+                    <td width="110">{OVPP}</td>
+                    <td width="110">{Standby/Ext Hours}</td>
+                    <td width="110">{Standby/Ext Amount}</td>
+                    <td width="110">{Meal Allowance}</td>
+                    <td width="110">{Total Amount}</td>
+                    <td width="110">{Count of Crew Efficiency}</th>
+				</tr>
+            </table>
+		</div>
+	</div>
+</body>
+</html>

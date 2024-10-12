@@ -1,0 +1,22 @@
+Backup eService and SanjelData database before deployment.
+
+Done - 1. Create SanjelData databases.
+Done - 2. Update SanjelData
+Done - 3. Load Reference Data
+Done - 4. Run Generate Pay Period, clarify with HR when the Pay Period start from.
+Done - 5. Update Eservice 6 
+Done - 7. Publish eServiceMDM
+Done - 8. Publish eServiceMDM.WebAPI  -- The publish profile might be overwritten by MDD generated default one. Neet to change Target runtime as win-x64, Self-Contained.
+Test link:  http://sanjel04.snj.local/eServiceMDM.WebApi/6.8.1.0/BusinessEntities/WellSite/BinInformationApi/SelectByRig?rigId=283
+Done - 9. Publish eSercieR6WCFService
+Done - 10. Publish eServiceOnline
+Done - 11. Publish eServiceOnline.WebAPI
+12. Run eService Online generate default API http://sanjel04/eServiceOnline.WebAPI/PayPeriod/GenerateDefaultPayPeriodSummary/18[pay period id] (18 - 25)
+Afterwards, we need to figure out way to generate default pay period summary
+13. SSIS deployment
+
+
+
+Post - Deployment Changes
+
+1. 

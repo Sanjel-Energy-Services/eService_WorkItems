@@ -1,0 +1,187 @@
+Lab Testing Data Import Requirement
+
+Goal: 
+
+Import Excel based historical test result to a lab testing database tables.
+Total file counts is above 60, we use 60 for estimate.
+
+Sample file explanation
+
+Each file is the historical test result for one blend, the blend name is used as file name.
+Each row is a set of test result, it needs to be imported to the database as described in following.
+
+
+Database Structure Explaination
+
+You may build up the ER diagram from database constraints to find out the database structure.
+
+Here are some explanation to help you understand business logic, use Expandomix as example. This is my analysis, please carefully verify when you analyze it.
+
+Table: [SldTestIterations]
+
+Field [Tests]: It is serialized as a JSON object.It reflects to following structure, this should be the test requirements, but we cannot restore it from test results. We will re-visit it after we get the result details extracted.
+
+Data Sample:
+[{"Type":"CompressiveStrength","Parameters":[{"Key":"min","Value":"1","Type":"String"},{"Key":"max","Value":"2","Type":"String"}]},{"Type":"FluidLoss","Parameters":[{"Key":"min","Value":"2","Type":"Decimal"},{"Key":"max","Value":"3","Type":"Decimal"}]},{"Type":"FreeWater","Parameters":[{"Key":"min","Value":"3","Type":"Decimal"},{"Key":"max","Value":"4","Type":"Decimal"},{"Key":"angle","Value":"12","Type":"Decimal"}]},{"Type":"Rheology","Parameters":[{"Key":"min","Value":"4","Type":"Decimal"},{"Key":"max","Value":"5","Type":"Decimal"}]},{"Type":"SpecificGravity","Parameters":[{"Key":"min","Value":"5","Type":"Decimal"},{"Key":"max","Value":"6","Type":"Decimal"}]},{"Type":"StaticGelStrengthAnalyzers","Parameters":[{"Key":"min","Value":"6","Type":"Decimal"},{"Key":"max","Value":"7","Type":"Decimal"},{"Key":"criticalinterval","Value":"true","Type":"YesNo"},{"Key":"criticalinterval_max","Value":"34","Type":"Decimal"}]},{"Type":"ThickeningTime","Parameters":[{"Key":"100","Value":"true","Type":"YesNo"},{"Key":"100min","Value":"1","Type":"Time"},{"Key":"100max","Value":"2","Type":"Time"},{"Key":"70","Value":"false","Type":"YesNo"},{"Key":"70min","Value":"","Type":"Time"},{"Key":"70max","Value":"","Type":"Time"},{"Key":"40","Value":"false","Type":"YesNo"},{"Key":"40min","Value":"","Type":"Time"},{"Key":"40max","Value":"","Type":"Time"}]}]
+
+
+Field [Additives]: It is serialized as a JSON object.It reflects the additive section in Test Result files. In Expandomix example ,it maps to Column G - R
+Data Sample: 
+
+[{"Name":"CDM-5","Concentration":0.5,"BlendBase":false},{"Name":"CFL-4","Concentration":0.7,"BlendBase":false}]
+
+Field [Density] - Column E
+Field [SGPowder] - Not Found 
+Field [SGSlurry] - Not Found
+Field [Salt] - Colmun S Header, This is different from blend to blend. In this example, Salt is NaCl. In other blends, it may be Nacl, KCl, 
+Field [SaltConcentration] - Column S Cell Value
+
+
+Table: [SldTestResult]
+
+Field [Type]; Should link to [SldTestIterations].[Tests], not sure if TestType is an enum in application, however we can know following types from sample data and Excel files, and build out following mapping
+
+2 - CompressiveStrength - Coulumn: AL - AR
+Included in Rheology test - FluidLoss - Column: X
+4 - Rheology - Column: AS - BA
+Included in Rheology test - FreeWater - Column: Y-Z
+8 - StaticGelStrengthAnalyzers - Column: AF-AK
+1 - ThickeningTime - AA-AC
+
+From above setting, the test types defined in binary form which there must by logic to determine page navigation from the type. Doesn't matter for import anyway.
+
+Field [InstrumentId]: In excel column AA, AF, AL, they reflects intrucment id in each test type. Not sure which test types are going together now. So just consider each type section is a separate TestResult record.
+
+
+
+Table: [SldTestOutput] - This table is the detail result which we need to import from Excel.
+
+Data Sample: 
+
+Id	Label	Value	Unit	ResultId	Sort
+0ABA6580-1CF7-48AD-BE29-E44E6206F85F	RPM 3	1.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH1
+A083509C-F05D-46A7-86CA-3E72BAF2F6C4	RPM 6	2.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH2
+183761A4-1E93-4D6F-9B2B-EBE5282CFCCB	RPM 30	3.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH3
+14834C74-EE32-45F5-B516-8989B6CE89E3	RPM 60	4.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH4
+AA2021A3-7213-4272-814C-078CBE959813	RPM 100	5.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH5
+7ED8C7F9-02C1-4470-A7E8-A5D1FC336752	RPM 200	6.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH6
+5E7863AC-E710-4B78-BF7B-AB22A87CC0B7	RPM 10 Sec	8.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH8
+2F7266A9-175C-4E22-9225-D6A454EE2C18	RPM 300	7.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH8
+01570BFC-6016-45C1-B78E-C4298FA41AD7	RPM 10 Minute	9.00	Avg DR	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH9
+6E51190D-5BEC-4ED4-8512-604BFECEC971	Free Water Angle	23.00	°	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH10
+D3808857-1710-487C-9973-9A4CD6ED52C3	Free Water	5.00	%	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH11
+70E8F3EF-8DDD-4BE0-93C2-33C686B88B8F	Fluid Loss	1.00	mL/30min	FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH12
+03791111-9297-4980-AB38-DE091BDD05EF	PV	34.00		FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH13
+8205B698-C50B-47E3-A5B0-4AD4437F54A3	YP	67.00		FA6C56F0-6CEC-4A5F-BA85-A237C145C19A	RH14
+
+From data sample, the setup is pretty messy. Let's sort it out.
+
+Field [Sort]: It seems like an enum but it reflects multiple testing type in Excel.
+Field [Label]: It looks like a description of Sort, and could be mapped to Excel Header
+
+Rheology Tests: Units are all "Avg DR"
+
+RH1 - "RPM 3" - Column AY
+RH2 - "RPM 6" - Column AX
+RH3 - "RPM 30" - Column AW
+RH4 - "RPM 60" - Column AV
+RH5 - "RPM 100" - Column AU
+RH6 - "RPM 200" - Column AT
+RH7 - "RPM 300" - Column AS  -- Comments: In testing database, this must be a typo in application code which is hard coded. Need to be verified.
+RH8 - "RPM 10 Sec" - Column AZ
+RH9 - "RPM 10 Minute" - Column BA
+
+Freewater Test:
+
+RH10 - "Free Water Angle" - Column Y - Unit "degree" - Comments: Use special symple for degress is a very bad practice, but just leave it when import
+RH11 - "Free Water" - Column Z - Unit "%"
+
+FluideLoss Test:
+RH12 - "Fluid Loss" - Column X - Unit "mL/30min"
+
+RH13 - "PV" - Not found in excel file
+RH14 - "YP" - Not found in excel file
+
+ThickeningTime Test:
+
+Sample Data:
+
+Id	Label	Value	Unit	ResultId	Sort
+755AAE0E-741B-46EB-8FD8-00D215165ADA	TT100	342.00	minutes	26AD80E1-9BFE-45A2-A652-83B7D63B33F1	TT100
+A2F7FF82-A665-4FF5-A9F6-85899C3E7F87	TT40	345.00	minutes	26AD80E1-9BFE-45A2-A652-83B7D63B33F1	TT40
+CB35C52E-0449-494E-97D0-C6FDB615F860	TT70	344.00	minutes	26AD80E1-9BFE-45A2-A652-83B7D63B33F1	TT70
+
+TT100 - "TT100" - Column AC - Unit "minutes"
+TT40 - "TT40" - Column AB - Unit "minutes"
+TT70 - "TT70" - ? - Unit "minutes" - Not found in Expandomix Excel.
+
+StaticGelStrengthAnalyzers Test:
+
+Sample Data:
+
+Id	Label	Value	Unit	ResultId	Sort
+DD08DDF8-2664-4FF5-8C5F-8922F9EE1197	Time to 500lb/100 ft (min)	2.00	Feets Per Minute	EA1A72A1-35C4-43BC-BBE7-939AE7F4FDD4	SG2
+32FAEC17-BC03-4594-B97B-D6474C836F90	Time to 1200lb/100 ft (min)	34.00	Feets Per Minute	EA1A72A1-35C4-43BC-BBE7-939AE7F4FDD4	SG3
+C00404E5-E97E-4554-BA77-EAABF6716BA4	Time to 100lb/100 ft (min)	1.00	Feets Per Minute	EA1A72A1-35C4-43BC-BBE7-939AE7F4FDD4	SG1
+8280742D-9932-4D8F-B633-FBD8238393DF	Critical Interval	1.00	minutes	EA1A72A1-35C4-43BC-BBE7-939AE7F4FDD4	SG4
+
+SG1 - "Time to 100lb/100 ft (min)" - Column AH
+SG2 - "Time to 500lb/100 ft (min)" - Column AI
+SG3 - "Time to 1200lb/100 ft (min)" - Column AJ
+SG4 - "Critical Interval" - Column AK
+
+CompressiveStrength Test:
+
+Sample Data:
+
+Id	Label	Value	Unit	ResultId	Sort
+92F9B6B7-D783-43CB-911F-00597A4FD1E0	12 hr	5.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC5
+D35BE9C5-FC13-4490-8D54-2C28528963AE	Test Length (HH:MM)	36.00	minutes	39C71610-7341-48FA-9F39-5703B83FE946	UC15
+8F7A2513-C585-4049-BD70-2C6600854BFB	96 hr	77.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC10
+9E67D4F4-C710-4AB4-916A-3CAA44AC2C06	2 hr	1.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC1
+D0419439-100F-42E8-B5E5-406A91D3CD99	4 hr	2.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC2
+BCB7AC6D-3A2B-4EDF-A921-44116343B42A	24 hr	7.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC7
+0F04E1EA-6C8A-4604-BB02-4CAAB9FEAD38	Time to 3.5 MPa (HH:MM)	35.00	minutes	39C71610-7341-48FA-9F39-5703B83FE946	UC12
+367C3193-CFF8-4A19-A03F-5A808C3CC971	Transit Time @ 48hr	8.00	Microsec/in	39C71610-7341-48FA-9F39-5703B83FE946	UC13
+B526325A-5504-4228-B8E9-5CE3B5486D1C	72 hr	9.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC9
+75371BC1-9754-47A8-8521-6874E15F3E4B	6 hr	3.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC3
+0D37B42A-7EB4-420B-941C-76D0EC27E775	8 hr	4.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC4
+81BA8F58-AAD9-4DE5-9F95-7B8495FF4354	Time to 0.35 MPa (HH:MM)	23.00	minutes	39C71610-7341-48FA-9F39-5703B83FE946	UC11
+726C481B-D2E5-48DF-947D-A8A1FE067510	Final Strength	63.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC14
+E8331526-C9B8-42C5-9EE8-BC5E601F2B65	48 hr	8.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC8
+9DF53DED-D4CB-44D4-BC22-C629BC0F9C53	16 hr	6.00	mpa	39C71610-7341-48FA-9F39-5703B83FE946	UC6
+
+
+UC1 - "2 hr" - Unit "mpa" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC2 - "4 hr" - Unit "mpa" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC3 - "6 hr" - Unit "mpa" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC4 - "8 hr" - Unit "mpa" - Column AN
+UC5 - "12 hr" - Unit "mpa" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC6 - "16 hr" - Unit "mpa" - Column AO
+UC7 - "24 hr" - Unit "mpa" - Column AP
+UC8 - "48 hr" - Unit "mpa" - Column AQ
+UC9 - "72 hr" - Unit "mpa" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC10 - "96 hr" - Unit "mpa" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC11 - "Time to 0.35 MPa (HH:MM)" - Unit "minutes" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC12 - "Time to 3.5 MPa (HH:MM)" - Unit "minutes" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC13 - "Transit Time @ 48hr" - Unit "Microsec/in" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC14 - "Final Strength" - Unit "mpa" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+UC15 - "Test Length (HH:MM)" - Unit "minutes" - Column Not found in Expandomix Excel, please pay attention to other blends' excel files
+
+In this list, 60 hr is missing, I will clarify with business owner.
+
+Table: [SldTestResult]
+
+Field [BlendBase] - Excel File name
+Field [BHCT] -  Column A
+Field [[BHST] - Colmun AG
+
+以上基本上覆盖了这个样本文件的所有列。
+
+实现策略：要把问题分析成容易实现的几步，不要试图一步把数据解析出来直接插入目标数据库。根据结构的转换的目标，分析成几次简单容易实现的转换。可以利用MDD进行协助。
+
+
+
+
+
+

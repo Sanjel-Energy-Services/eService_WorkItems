@@ -1,0 +1,140 @@
+Sanjel Energy Service SESI
+eService Entity Map
+
+1. Overview
+
+As we are developing new functionalities, we utilize MetaShare MDD tool to generate backend to promote development productivities. Since there will be the overlap with existing application and integration is a must, it is an opportunity for use to review existing business entities and business process. It also an opportunity to mordenlize eService application to be more extendable. The entity structure can be optimized to reflect the business structure.
+
+2. Packaging Principles
+
+2.1 Follow the general principle of Object Driven Analysis
+2.2 Adding new entity only when necessary
+2.3 Split package if needed.
+2.4 Move entity to lower level package if needed by inheritance
+2.5 Maintain the structure aligned with correct conceptual model
+
+3. Entity Definition Priciples
+3.1 Generic property name reserved for Core Library cannot be used in application domain business entity. e.g. Id, Name, Description, Status, Version, etc.
+3.2 Property name needs to be specific.
+
+
+
+Entity Definition
+
+Domains
+
+	A. Sanjel.Common.Entities
+
+		A.1 General
+
+			Classes:
+
+				A.1.1 ContactInfo
+
+						Properties:
+						
+							- Id
+							- Name
+
+
+
+
+		A.2 Organization
+
+			Classes:
+
+				A.2.1 BusinessUnit
+
+						Properties:
+						
+							- Id
+							- Name
+				
+
+		A.3 HumanResource
+
+			Classes:
+
+				A.3.1 Person
+
+						Properties:
+							
+							- Last Name 
+							- First Name
+							- Middle Name
+							- Preferred Name
+
+		A.4	Sales
+			
+			Classes:
+			
+				A.4.1 Customer
+				
+				
+		A.5	Finance
+		
+		
+		
+		
+		
+		A.6 Accounting
+		
+		
+		
+
+
+	B. Sanjel.Common.BusinessEntities
+
+		B.1 Organization
+		
+			Classes:
+
+				B.1.1 ServicePoint
+				
+					Properties:
+
+						- Id
+						- Name
+						- Business Unit
+						
+						
+				B.1.2 Service Line
+				
+					Properties:
+					
+						- Id Name
+						- Secondary Service Line
+						
+
+		B.2 HuamnResource
+		
+			Classes:
+
+				B.2.1 Employee : Person
+				
+					Properties:
+					
+					
+					
+					
+				B.2.2 Position
+				
+				
+				
+		B.3	Equipments
+		
+		
+		
+		
+		
+C. Sanjel.BusinessEntities
+
+
+D. Sanjel.EService.Entities
+
+
+E. Sanjel.EServiceOnline.Entities
+Classes:
+A.1 CrewType
+Enitity Type: Enumeration 
+Data List: 1 - Pumper Crew, 2 - Bulker Crew, 3 - Third Party Bulker Crew, 4 - Spare Crew

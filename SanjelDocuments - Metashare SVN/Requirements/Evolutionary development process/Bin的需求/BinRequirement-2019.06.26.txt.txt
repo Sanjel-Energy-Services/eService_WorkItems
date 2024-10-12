@@ -1,0 +1,25 @@
+1 Requirement
+Dispatch想要跟踪Bin的使用记录。
+
+1 Requirement Background
+  Bin 是Sanjel分配给Rig的用来贮存干水泥的容器，目前只有P-Tank和Mego Silo两种类型。它在分配给Rig之后，就会一直跟着Rig走，直到有人把它解除分配。解除分配后就认为是In Yard状态。否则是Assigned状态，并且知道是分配给哪个Rig了。
+每个Bin有它的所属的ServicePoint，它可以在各地区间进行转借。
+  当一个Job需要使用Rig，且该Job也需要使用Blend时，则要给该Rig分配一个Bin，Bin用于装载Blend。
+  Rig的工作完成后，Bin需要被回收，以供其他Rig使用。
+  在Bin提前被Rig预定使用时，可以提前为Bin装载Blend，减少Job的运行时间。
+  Bin有自己的ServicePoint，可以在ServicePoint之间转借，在Bin使用完成后，根据它当前所在的ServicePoint就近回收即可。
+  
+2 The user
+2.1 Dispatch
+2.2 OSR
+2.3 Blend管理者
+2.4 Crew
+
+3 Business Process
+3.1 OSR根据Job的情况申请使用Bin
+3.2 Dispatch为该Job下的Rig分配Bin
+3.3 Blend管理者为Bin装载Blend
+3.4 Crew在前往现场前前往装载Bin
+3.5 Job结束，将Bin就近返还ServicePoint
+
+

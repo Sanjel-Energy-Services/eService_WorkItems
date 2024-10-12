@@ -1,0 +1,4 @@
+- Update database structure
+- Add common type data
+- Deploy MDM API 6.8.0.0
+- Deploy 

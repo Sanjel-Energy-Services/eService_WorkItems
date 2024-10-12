@@ -1,0 +1,20 @@
+-- In eservice, there were duplicate entries of Precision Drilling and Trinidad Drilling, Eagle Drilling, caused by version error. 
+-- Make them consistent to apply the rig name consistently.
+
+select WLI_RIG_COMPAN_NAME from CALLSHEET_HEADERS where WLI_RIG_COMPANY_ID = 30130;
+select WLI_RIG_COMPAN_NAME from CALLSHEET_HEADERS where WLI_RIG_COMPANY_ID = 10463;
+
+update CALLSHEET_HEADERS set WLI_RIG_COMPANY_ID = 10463 where WLI_RIG_COMPANY_ID = 30130;
+
+select WLI_RIG_COMPAN_NAME from CALLSHEET_HEADERS where WLI_RIG_COMPANY_ID = 30114;
+select WLI_RIG_COMPAN_NAME from CALLSHEET_HEADERS where WLI_RIG_COMPANY_ID = 10203;
+
+update CALLSHEET_HEADERS set WLI_RIG_COMPANY_ID = 10203 where WLI_RIG_COMPANY_ID = 30114;
+
+
+select WLI_RIG_COMPAN_NAME from CALLSHEET_HEADERS where WLI_RIG_COMPANY_ID = 30015;
+select WLI_RIG_COMPAN_NAME from CALLSHEET_HEADERS where WLI_RIG_COMPANY_ID = 30093;
+
+update CALLSHEET_HEADERS set WLI_RIG_COMPANY_ID = 30093 where WLI_RIG_COMPANY_ID = 30015;
+
+
