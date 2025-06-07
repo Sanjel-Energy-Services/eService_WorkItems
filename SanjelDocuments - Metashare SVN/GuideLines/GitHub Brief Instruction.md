@@ -317,7 +317,7 @@ The code in the **release branch** is deployed onto a suitable test environment,
 $ git checkout -b release/release-one
 ```
 
-<img src="https://user-images.githubusercontent.com/31224786/75111067-bb7bcc80-5670-11ea-88cf-319344a7480b.png" alt="Graph release" style="zoom:67%;" /> 
+<img src="./imgs/git_branches.png" alt="Graph release" style="zoom:67%;" /> 
 
 
 
@@ -336,4 +336,4 @@ $ git tag
 $ git tag <name>
 ```
 
-<img src="https://user-images.githubusercontent.com/31224786/75111253-c9cae800-5672-11ea-916e-2b0ed3671eda.png" alt="Tag" style="zoom:67%;" /> 
+<img src="./imgs/git_tag.png" alt="Tag" style="zoom:67%;" />
