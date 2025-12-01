@@ -10,5 +10,5 @@
 
 **TVD**: True Vertical Depth
 
-**SS Depth**: ?
+**SS Depth**: Sub-Sea Depth
 
