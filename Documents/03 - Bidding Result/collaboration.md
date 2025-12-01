@@ -1,4 +1,4 @@
-<!-- Identifier: P-01-03  -->
+<!-- Identifier: I-03-03 -->
 <!-- Name: Bidding Result -->
 
 ```mermaid
