@@ -1,31 +1,36 @@
 import { existsSync, readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
 import { join, extname, dirname, basename, relative, sep } from 'path';
 
-// 特殊文件名及其对应的固定ID后缀
-const SPECIAL_FILES: { [key: string]: string } = {
-	'instructions.md': '00',
-	'main.md': '01',
-	'process.md': '02',
-	'collaboration.md': '03'
+// 特殊文件名与固定顺序索引（两位编号）
+const SPECIAL_FILE_INDEX: Readonly<Record<string, number>> = {
+	'instructions.md': 1,
+	'process.md': 2,
+	'collaboration.md': 3,
 };
+
+// 需要排除生成ID的文件与目录
+const EXCLUDED_FILES: Readonly<Set<string>> = new Set<string>(['main.md']);
+const EXCLUDED_DIRS: Readonly<Set<string>> = new Set<string>(['Artifacts']);
 
 /**
  * 递归获取目录中所有markdown文件
  */
 function getAllMarkdownFiles(dir: string): string[] {
-	let results: string[] = [];
-	const files = readdirSync(dir);
+	const results: string[] = [];
+	const entries = readdirSync(dir);
 
-	files.forEach(file => {
-		const filePath = join(dir, file);
-		const stat = statSync(filePath);
+	for (const entry of entries) {
+		const entryPath = join(dir, entry);
+		const stat = statSync(entryPath);
 
 		if (stat.isDirectory()) {
-			results = results.concat(getAllMarkdownFiles(filePath));
-		} else if (extname(file).toLowerCase() === '.md') {
-			results.push(filePath);
+			if (EXCLUDED_DIRS.has(entry)) continue;
+			results.push(...getAllMarkdownFiles(entryPath));
+		} else if (extname(entry).toLowerCase() === '.md') {
+			if (EXCLUDED_FILES.has(entry)) continue;
+			results.push(entryPath);
 		}
-	});
+	}
 
 	return results;
 }
@@ -34,25 +39,29 @@ function getAllMarkdownFiles(dir: string): string[] {
  * 检查文件是否已有旧格式的ID标识（纯文本格式）
  */
 function hasOldIdentifierFormat(content: string): boolean {
-	return content.startsWith('Identifier:') || content.includes('Identifier:');
+	const reg = /^<!--\s*Identifier:\s*.*?-->\s*\n?/i;
+	return reg.test(content);
 }
 
 /**
  * 提取目录名中的编号
  */
-function getDirectoryNumber(dirName: string): string {
-	// 查找第一个"-"之前的部分
-	const match = dirName.match(/^.*s(.*?)\s*-.*/);
-	if (match) {
-		return match[1].padStart(2, '0').toUpperCase();
+function getDirectoryCode(dirName: string): string {
+	const dashIndex = dirName.indexOf('-');
+	if (dashIndex !== -1) {
+		const beforeDash = dirName.substring(0, dashIndex).replace(/\s+/g, '');
+		return beforeDash.length > 0 ? beforeDash : '00';
 	}
-
-	// 如果没有"-"，使用前两位首字母作为编号
-	if (dirName.length > 0) {
-		return dirName.replace(/\s/g, '').substring(0, 2).padStart(2, '0').toUpperCase();
+	// 无 "-"，使用首字母（去除前导空格）
+	const trimmed = dirName.trim();
+	if (trimmed.length > 0) {
+		return trimmed[0].toUpperCase();
 	}
+	return '00';
+}
 
-	return '00'; // 默认值
+function sortLex(a: string, b: string): number {
+	return a.localeCompare(b);
 }
 
 /**
@@ -60,88 +69,138 @@ function getDirectoryNumber(dirName: string): string {
  */
 function generateFileIndexMap(dir: string): Map<string, number> {
 	const fileIndexMap = new Map<string, number>();
-	const files = readdirSync(dir).filter(file => extname(file).toLowerCase() === '.md');
+	const files = readdirSync(dir)
+		.filter((file: string) => extname(file).toLowerCase() === '.md')
+		.filter((file: string) => !EXCLUDED_FILES.has(file))
+		.sort(sortLex);
 
-	// 先处理特殊文件
-	const specialFilesProcessed: string[] = [];
-
-	// 按照指定顺序处理特殊文件
-	Object.keys(SPECIAL_FILES).forEach(specialFile => {
-		if (files.includes(specialFile)) {
-			fileIndexMap.set(specialFile, parseInt(SPECIAL_FILES[specialFile]));
-			specialFilesProcessed.push(specialFile);
+	// 固定顺序：01, 02, 03
+	for (const [name, fixedIndex] of Object.entries(SPECIAL_FILE_INDEX)) {
+		if (files.includes(name)) {
+			fileIndexMap.set(name, fixedIndex);
 		}
-	});
+	}
 
-	// 处理非特殊文件，索引从04开始
-	let regularFileIndex = 4;
-	files.forEach(file => {
-		if (!SPECIAL_FILES.hasOwnProperty(file)) {
-			fileIndexMap.set(file, regularFileIndex);
-			regularFileIndex++;
+	// 其他文件从 04 开始
+	let idx = 4;
+	for (const file of files) {
+		if (!(file in SPECIAL_FILE_INDEX)) {
+			fileIndexMap.set(file, idx);
+			idx += 1;
 		}
-	});
+	}
 
 	return fileIndexMap;
+}
+
+function getBaseNameWithoutExt(fileName: string): string {
+	const base = basename(fileName, extname(fileName));
+	return base;
+}
+
+function isLetterOrDigit(ch: string): boolean {
+	return /[\p{L}\p{N}]/u.test(ch);
+}
+
+function buildUniquePrefixes(dir: string): Map<string, string> {
+	const files = readdirSync(dir)
+		.filter((file: string) => extname(file).toLowerCase() === '.md')
+		.filter((file: string) => !EXCLUDED_FILES.has(file))
+		.sort(sortLex);
+
+	const used: Set<string> = new Set<string>();
+	const result: Map<string, string> = new Map<string, string>();
+
+	for (const file of files) {
+		const base = getBaseNameWithoutExt(file).replace(/\s+/g, '');
+		let prefixLen = 1;
+		let candidate = '';
+		if (base.length === 0) {
+			candidate = 'X';
+		} else {
+			// 取首个有效字符开始递增长度
+			const normalized = base;
+			while (prefixLen <= normalized.length) {
+				const raw = normalized.substring(0, prefixLen);
+				// 规范化前缀：保留字母数字，转大写
+				const cleaned = Array.from(raw)
+					.filter(isLetterOrDigit)
+					.join('')
+					.toUpperCase();
+				candidate = cleaned.length > 0 ? cleaned : raw.toUpperCase();
+				if (!used.has(candidate.toLowerCase())) break;
+				prefixLen += 1;
+			}
+			if (prefixLen > normalized.length) {
+				// 若全部占用，追加数字序以避免冲突
+				let suffix = 1;
+				let temp = (candidate || normalized.toUpperCase()) + String(suffix);
+				while (used.has(temp.toLowerCase())) {
+					suffix += 1;
+					temp = (candidate || normalized.toUpperCase()) + String(suffix);
+				}
+				candidate = temp;
+			}
+		}
+		used.add(candidate.toLowerCase());
+		result.set(file, candidate);
+	}
+
+	return result;
 }
 
 /**
  * 生成完整的ID标识
  */
 function generateIdentifier(filePath: string): string {
-	// 获取相对于Documents目录的路径
-	const relativePath = relative('Documents', filePath);
-	const parts = relativePath.split(sep);
-	const fileName = parts.pop() || ''; // 最后一个是文件名
-	const dirParts = parts; // 剩下的是目录部分
+	const rel = relative('Documents', filePath);
+	const parts = rel.split(sep);
+	const fileName = parts.pop() as string;
+	const dirParts = parts;
 
-	// 构建ID的前缀部分
-	const idParts: string[] = [];
-
-	// 处理目录层级
-	dirParts.forEach(dir => {
-		idParts.push(getDirectoryNumber(dir));
-	});
-
-	// 处理文件部分
 	const fileDir = dirname(filePath);
-	const fileIndexMap = generateFileIndexMap(fileDir);
-	const fileIndex = fileIndexMap.get(fileName);
+	const indexMap = generateFileIndexMap(fileDir);
+	const prefixMap = buildUniquePrefixes(fileDir);
 
-	if (fileIndex === undefined) {
-		throw new Error(`无法为文件 ${fileName} 生成索引`);
+	const fileIndex = indexMap.get(fileName);
+	const filePrefix = prefixMap.get(fileName);
+	if (fileIndex === undefined || filePrefix === undefined) {
+		throw new Error(`无法为文件 ${fileName} 生成索引或前缀`);
 	}
 
+	const idParts: string[] = [];
+	idParts.push(filePrefix);
+	for (const dir of dirParts) {
+		idParts.push(getDirectoryCode(dir));
+	}
 	idParts.push(String(fileIndex).padStart(2, '0'));
 
-	return `I-${idParts.join('-')}`;
+	return idParts.join('-');
 }
 
 /**
  * 为文件添加或更新ID标识
  */
 function processIdentifierInFile(filePath: string): void {
+	const name = basename(filePath);
+	if (EXCLUDED_FILES.has(name)) {
+		return; // 跳过 main.md
+	}
 	try {
 		let content = readFileSync(filePath, 'utf-8');
 
-		// 生成ID标识
 		const identifier = generateIdentifier(filePath);
 		const identifierComment = `<!-- Identifier: ${identifier} -->\n`;
 
-		const reg = /<!--\s*Identifier:\s*.*?\s*-->\n/i;
-		// 如果已经有注释格式的ID标识，则替换
+		const reg = /^<!--\s*Identifier:\s*.*?-->\s*\n?/i;
 		if (reg.test(content)) {
-			// 替换现有的ID注释
 			content = content.replace(reg, identifierComment);
-			console.log(`成功更新文件 ${filePath} 的ID标识: ${identifier}`);
-		}
-		// 没有ID标识，添加新的
-		else {
+			console.log(`更新ID ${identifier} -> ${filePath}`);
+		} else {
 			content = identifierComment + content;
-			console.log(`为文件 ${filePath} 添加ID标识: ${identifier}`);
+			console.log(`添加ID ${identifier} -> ${filePath}`);
 		}
 
-		// 写入新内容
 		writeFileSync(filePath, content, 'utf-8');
 	} catch (error) {
 		console.error(`处理文件 ${filePath} 时出错:`, error);
@@ -153,21 +212,17 @@ function processIdentifierInFile(filePath: string): void {
  */
 function main(): void {
 	const documentsDir = './Documents';
-
 	if (!existsSync(documentsDir)) {
 		console.error('Documents目录不存在');
 		return;
 	}
 
-	// 获取所有markdown文件
 	const markdownFiles = getAllMarkdownFiles(documentsDir);
+	console.log(`找到 ${markdownFiles.length} 个 markdown 文件（已排除 main.md 与 Artifacts）`);
 
-	console.log(`找到 ${markdownFiles.length} 个markdown文件`);
-
-	// 为每个文件添加或更新ID标识
-	markdownFiles.forEach(filePath => {
+	for (const filePath of markdownFiles) {
 		processIdentifierInFile(filePath);
-	});
+	}
 
 	console.log('处理完成');
 }

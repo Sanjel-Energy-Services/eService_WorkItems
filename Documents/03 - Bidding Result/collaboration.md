@@ -1,4 +1,4 @@
-<!-- Identifier: I-03-03 -->
+<!-- Identifier: C-03-03 -->
 <!-- Name: Bidding Result -->
 
 ```mermaid
