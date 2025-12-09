@@ -1,7 +1,7 @@
 # 阶段一项目开发计划
 
 ```mermaid
-flowchart LR
+flowchart TB
 
 start(("start"))
 eend(("end"))
@@ -52,6 +52,7 @@ t33("ProgramRequest历史活动记录查看
 start --> t01
 t01 --> t02
 t02 --> eend
+t02 --> t06
 
 start --> t03
 t03 --> t06
