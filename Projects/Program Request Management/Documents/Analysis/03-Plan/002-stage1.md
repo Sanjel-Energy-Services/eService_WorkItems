@@ -85,9 +85,6 @@ t33 --> eend
 start --> t05
 t05 --> eend
 
-start --> t18
-t18 --> eend
-
 %% Highlight t05 node with a different color
 style t05 fill:#ffe6e6,stroke:#ff4d4d,stroke-width:1px
 style t14 fill:#fff7cc,stroke:#ff9900,stroke-width:1px
