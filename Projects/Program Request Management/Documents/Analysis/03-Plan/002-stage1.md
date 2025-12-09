@@ -32,7 +32,6 @@ t15("工程师打开ProgramRequest详情链接锁定ProgramRequest
 1 - 4")
 t17("工程师确认接收ProgramRequest
 1 - 2")
-t18("工程师解析Static Diagram???
 - -")
 t19("上传设计文件（目前功能权限可以做到按钮级粒度吗???）
 1 - 2")
