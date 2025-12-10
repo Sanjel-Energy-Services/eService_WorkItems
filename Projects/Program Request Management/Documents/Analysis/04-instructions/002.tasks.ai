@@ -1,0 +1,134 @@
+# 项目任务生成提示词
+
+## 任务概述
+基于 #Projects/Program Request Management/Documents/Analysis/01-Requirement/002-Program request Management tool Phase 1.md 需求文档和 #Projects/Program Request Management/Documents/Analysis/03-Plan/001-项目计划.md，生成结构化的项目任务列表。
+
+## 生成规则
+
+### 1. Input Information
+- Project Requirements Document: Contains all functional requirements and technical specifications
+- Project Plan: Contains task modules, categories, and estimated work hours
+
+### 2. 输出格式
+生成 JSON 格式的任务列表，文件名为 XXX.tasks.json（按顺序编号），放置在 Projects/Program Request Management/Artifacts/ 目录下。
+
+JSON 结构：
+```json
+[
+  {
+    "title": "English task name",
+    "body": "Detailed task description in English including functional requirements and acceptance criteria",
+    "pid": 0,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 24,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  }
+]
+```
+
+### 3. 任务转换规则
+
+#### Title（任务名称）规则：
+- **必须使用英文**
+- 将中文任务名转换为简洁的英文
+- 使用驼峰命名法（如：programRequestList）
+- 保持任务名称唯一性和描述性
+
+#### Body（任务描述）规则：
+- **必须使用英文描述**
+- 从需求文档中提取具体功能要求，并翻译为英文
+- 包含技术规范和验收标准（英文）
+- 明确输入输出和依赖关系（英文）
+- 描述用户交互和系统行为（英文）
+- 包含前置条件和后置条件（英文）
+
+#### PID规则：
+- 从0开始递增，每个任务唯一
+
+#### Estimate Hours规则：
+- 根据项目计划中的预计工时填写
+- 转换为小时制（1天=8小时）
+- 例如：3人/天 = 24小时，0.5人/天 = 4小时
+
+### 4. 任务分类映射
+
+根据项目计划中的模块分类：
+
+#### 请求处理模块
+- ProgramRequest 创建、编辑、删除
+- 列表查询和筛选
+- 优先级设置
+- 文件上传下载
+- Static Diagram 解析
+
+#### 设计审批模块  
+- Review 和 Approval 流程
+- 多级审批支持
+- 状态管理
+- 历史记录
+
+#### Workflow模块
+- 自动分配规则
+- 邮件通知
+- 状态转换
+
+#### 数据建模模块
+- 实体模型设计
+- 数据库结构
+
+#### SharePoint集成模块
+- 文档管理
+- 集成接口
+
+### 5. 示例转换
+
+**原始任务：**
+- 任务号：04
+- 模块：请求处理
+- 分类：Web页面开发
+- 功能：ProgramRequest列表查询/筛选
+- 预计工时：3人/天
+
+**生成结果：**
+```json
+{
+  "title": "programRequestListQuery",
+  "body": "Develop ProgramRequest list query and filtering functionality. Support filtering by client, status, priority, due date and other conditions. Include pagination, sorting features, and real-time display of query results. Must support export functionality and advanced search capabilities.",
+  "pid": 3,
+  "project": {
+    "Iteration": "172eb6ff",
+    "Release Target": "6065bc6d", 
+    "Estimate Hours": 24,
+    "Remain Hours": 0,
+    "Actual Hours": 0,
+    "Priority": "5f6f0883",
+    "Category": "d137fe14",
+    "Application": "2c62179d",
+    "Budget": ""
+  }
+}
+```
+
+### 6. 执行步骤
+
+1. 遍历项目计划中的37个任务
+2. 按任务依赖关系排序
+3. 逐个转换为JSON格式
+4. 确保任务描述覆盖所有功能需求
+5. 生成完整的任务列表文件
+
+### 7. 验证要求
+
+- 确保所有37个任务都被包含
+- 验证任务依赖关系的正确性
+- 检查预估工时的准确性
+- 确保任务描述的完整性
+- 验证JSON格式的有效性

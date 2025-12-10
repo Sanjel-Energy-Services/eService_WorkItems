@@ -1,0 +1,594 @@
+[
+  {
+    "title": "entityModelAnalysis",
+    "body": "Analyze and design the entity model for the Program Request Management system. Identify all entities, relationships, attributes, and constraints based on functional requirements. Define database schema structure, entity relationships, and data flow patterns. Include ProgramRequest, User, Company, Assignment, Review, Approval, and supporting entities.",
+    "pid": 0,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "entityModelCreation",
+    "body": "Create and implement the entity model based on analysis results. Generate database tables, relationships, indexes, and constraints. Implement ProgramRequest, User, Company, Assignment, Review, Approval entities with proper data types, foreign keys, and business rules validation.",
+    "pid": 1,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "dataListMainPage",
+    "body": "Develop the main data list page for Program Requests. Create a responsive web interface displaying ProgramRequest summaries with key fields: Program ID, Client, Subject, Requester, Priority, Due Date, Status. Include sorting, basic filtering, and navigation to detailed views. Implement pagination and real-time data refresh capabilities.",
+    "pid": 2,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "programRequestListQuery",
+    "body": "Develop ProgramRequest list query and filtering functionality. Support filtering by client, status, priority, due date, request type, and assigned engineer. Include advanced search capabilities, sorting options, and real-time display of query results. Implement export functionality and saved filter preferences.",
+    "pid": 3,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 24,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "uploadDownloadIntegration",
+    "body": "Implement SharePoint integration for document upload and download. Create API endpoints to handle file operations with SharePoint storage. Support multiple file formats, size validation, and security checks. Include document versioning and metadata management integration with ProgramRequest records.",
+    "pid": 4,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "createEditProgramRequest",
+    "body": "Develop web forms for creating and editing ProgramRequest records. Implement all standard fields: Unique Program ID, Client, Subject, Requester, Priority, Due Date, Request Type, Status. Include validation rules, auto-save functionality, and support for document attachments. Ensure responsive design and accessibility compliance.",
+    "pid": 5,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 24,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "deleteProgramRequest",
+    "body": "Implement ProgramRequest deletion functionality with proper security and validation. Include soft delete option, confirmation dialogs, and dependency checking. Ensure audit trail logging for all delete operations and recovery capabilities if needed.",
+    "pid": 6,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 4,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "manualPrioritySetting",
+    "body": "Develop functionality for manual ProgramRequest priority setting. Create user interface for priority modification with validation rules. Support priority levels: Urgent, High, Medium, Low, Normal. Include audit trail for priority changes and color-coded visual indicators based on due date proximity.",
+    "pid": 7,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "manualEngineerAssignment",
+    "body": "Implement manual engineer assignment functionality for ProgramRequests. Create interface for selecting and assigning engineers to requests. Support override of automatic assignment rules with proper authorization. Include engineer availability checking and workload balancing suggestions.",
+    "pid": 8,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "submitProgramRequest",
+    "body": "Develop ProgramRequest submission workflow with validation and notifications. Implement status changes, approval routing initiation, and automated notifications to assigned engineers. Include submission confirmation, document attachment verification, and audit trail generation.",
+    "pid": 9,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "emailParsingAutomation",
+    "body": "Implement automated email content parsing to create ProgramRequests. Develop email parsing engine for extracting program details from forwarded emails and portal submissions. Support batch processing, attachment handling, and automatic field population with validation and error handling.",
+    "pid": 10,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 24,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "notifyEngineersNewRequests",
+    "body": "Develop notification system for engineers about new ProgramRequests. Implement in-app notifications and email notifications with clickable links. Support notification templates, delivery tracking, and escalation for unacknowledged requests. Include notification preferences and batch notification handling.",
+    "pid": 11,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 40,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "autoAssignEngineer",
+    "body": "Implement automatic engineer assignment based on Company-Engineer mapping. Create mapping table management interface and assignment logic engine. Support after-hours routing to on-call engineers and fallback to engineering manager when no mapping exists. Include daily on-call engineer update functionality.",
+    "pid": 12,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "autoDeterminePriority",
+    "body": "Develop automatic priority determination based on due date. Implement priority scoring algorithm: Urgent (<4 hours), High (same day), Medium (within 2 days), Low (>2 days), Normal (no due date). Include color-coded visual indicators and real-time priority updates.",
+    "pid": 13,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "openProgramRequestDetailsLink",
+    "body": "Develop functionality to open and lock ProgramRequest details via notification links. Create secure link generation, access validation, and record locking mechanism to prevent concurrent editing. Include session management and automatic timeout for locked records.",
+    "pid": 14,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "notifyRequestAccepted",
+    "body": "Implement notification system when ProgramRequest is accepted by engineer. Send email notifications to relevant stakeholders about request acceptance. Update in-app notifications and maintain audit trail of acceptance events. Support customizable notification templates.",
+    "pid": 15,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "confirmReceiveProgramRequest",
+    "body": "Develop interface for engineers to confirm ProgramRequest receipt. Create acceptance/rejection workflow with comment functionality. Update program status and notify relevant stakeholders upon confirmation. Include batch acceptance capability and automatic deadline reminders.",
+    "pid": 16,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 4,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "uploadDesignFiles",
+    "body": "Implement design file upload functionality for ProgramRequests. Support multiple file formats, drag-and-drop interface, and SharePoint integration. Include file validation, version control, and metadata tagging. Provide preview capabilities and bulk upload options.",
+    "pid": 17,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 4,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "assignDifferentDesignApprovers",
+    "body": "Develop functionality to assign different approvers for various designs within a ProgramRequest. Create interface for mapping specific job types to approvers. Support multiple approvers per design and approval hierarchy management. Include approver availability checking and workload balancing.",
+    "pid": 18,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "staticDiagramParsing",
+    "body": "Develop Static Diagram parsing engine for extracting program data. Create OCR and pattern recognition capabilities to read stick diagrams, licenses, and job procedures. Support multiple file formats and automatic data extraction with validation and manual correction interface.",
+    "pid": 19,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 80,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "assignCommonApproversMVP",
+    "body": "Implement MVP functionality for assigning common approvers to ProgramRequests. Create interface for selecting approvers based on job type complexity matrix. Support color-coded approval routing: Green (Peer Review), Yellow (Manager Review), Red (Manager Approval), Black (Manager + Director/VP Approval).",
+    "pid": 20,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "displayMatrixColor",
+    "body": "Develop interface to display design job matrix colors. Implement color-coded visual indicators for job complexity levels. Support interactive matrix display with drill-down capabilities and real-time updates. Include color legend and filtering by complexity level.",
+    "pid": 21,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "assignJobApprovers",
+    "body": "Implement job-specific approver assignment workflow. Create interface for mapping ProgramRequest jobs to appropriate approvers based on complexity and requirements. Support approval delegation and override capabilities. Include approver workload monitoring and automatic escalation.",
+    "pid": 22,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "notifyApprovers",
+    "body": "Develop notification system for ProgramRequest approvals. Send email notifications with clickable links to SharePoint documents and application interface. Create in-app notifications with acceptance/rejection capabilities. Include deadline tracking and escalation reminders.",
+    "pid": 23,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "openApprovalLink",
+    "body": "Implement approval link access with ProgramRequest locking. Create secure approval interface with document preview and comment functionality. Support simultaneous multi-job approvals and batch approval actions. Include approval history display and audit trail maintenance.",
+    "pid": 24,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "notifyApprovalAccepted",
+    "body": "Implement notification system when approval is accepted. Send email notifications to engineers and relevant stakeholders about approval acceptance. Update in-app status and maintain audit trail. Support approval chain notifications and deadline management.",
+    "pid": 25,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "autoGenerateActivityHistory",
+    "body": "Develop automatic activity history generation system. Track all ProgramRequest state changes, user actions, and system events. Create comprehensive audit trail with timestamps, user details, and action descriptions. Support history filtering, reporting, and data retention policies.",
+    "pid": 26,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "viewProgramRequestHistory",
+    "body": "Create interface for viewing ProgramRequest activity history. Develop chronological timeline display with filtering and search capabilities. Support export of history data and visualization of status transitions. Include user action details and document change tracking.",
+    "pid": 27,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "submitForApproval",
+    "body": "Develop approval submission workflow with validation. Implement multi-job approval support with individual job routing. Create approval package preparation with document compilation and approver notification. Support approval withdrawal and resubmission with change tracking.",
+    "pid": 28,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "confirmApprovalPass",
+    "body": "Develop approval confirmation workflow for accepted ProgramRequests. Create interface for approvers to confirm approval with comments and conditions. Update program status and notify sales team for pricing. Include approval timestamp recording and audit trail maintenance.",
+    "pid": 29,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "notifyApprovalPass",
+    "body": "Implement notification system for approval completion. Send email notifications to engineers and sales team about approved programs. Update in-app status and trigger sales pricing workflow. Support batch approval notifications and automated follow-up actions.",
+    "pid": 30,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "notifyApprovalReject",
+    "body": "Develop rejection notification system for ProgramRequests. Send detailed rejection notifications to engineers with reviewer comments and required changes. Update program status and create revision tasks. Support rejection reason categorization and resubmission guidance.",
+    "pid": 31,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "updateProgramRequestStatus",
+    "body": "Implement automatic ProgramRequest status updates based on job design states. Create state machine for tracking program lifecycle stages. Support real-time status synchronization across all related jobs and automatic status transitions. Include status validation and conflict resolution.",
+    "pid": 32,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "approvalStatusNotification",
+    "body": "Develop approval status notification system. Send real-time notifications about ProgramRequest approval status changes. Create comprehensive status update dashboard with filtering and search capabilities. Support status change subscriptions and automated escalation alerts.",
+    "pid": 33,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "returnToDesignWorkflow",
+    "body": "Implement workflow for returning rejected programs to design phase. Create automatic reassignment to original or new engineers. Support revision request tracking and resubmission management. Include design revision history and approval retry counting.",
+    "pid": 34,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "autoParseDiagramSingleRequest",
+    "body": "Develop automated Static Diagram parsing for single ProgramRequest creation. Create parsing engine to extract program data from stick diagrams and automatically generate requests. Support validation, error handling, and manual correction interface. Include parsing confidence scoring and review workflow.",
+    "pid": 35,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 16,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  },
+  {
+    "title": "autoParseDiagramBatchRequests",
+    "body": "Implement batch processing for Static Diagram parsing to create multiple ProgramRequests. Develop batch upload interface with progress tracking and error reporting. Support simultaneous parsing of multiple diagrams with queue management and priority handling. Include batch validation and rollback capabilities.",
+    "pid": 36,
+    "project": {
+      "Iteration": "172eb6ff",
+      "Release Target": "6065bc6d",
+      "Estimate Hours": 8,
+      "Remain Hours": 0,
+      "Actual Hours": 0,
+      "Priority": "5f6f0883",
+      "Category": "d137fe14",
+      "Application": "2c62179d",
+      "Budget": ""
+    }
+  }
+]
