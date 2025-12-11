@@ -1,19 +1,19 @@
-import { appendFile, readFile } from 'fs/promises';
-import { join } from 'path';
+// @ts-ignore
+import { appendFile, readFile } from 'node:fs/promises';
+// @ts-ignore
+import { join } from 'node:path';
 import get_config from './002.config';
 
 interface Attributes {
-	status: string;
-	预估时间: number;
-	"剩余时间  ": number;
-	实际时间: number;
-	迭代周期: number;
-	实施阶段: string;
-	优先级: string;
-	任务类型: string;
-	每日任务: string | null;
-	月度任务: string;
-	任务级别: string;
+	Iteration: '172eb6ff';
+	'Release Target': '6065bc6d';	// PRM 1.0
+	'Estimate Hours': 0;
+	'Remain Hours': 0;
+	'Actual Hours': 0;
+	Priority: '5f6f0883';	// Low
+	Category: 'd137fe14' | 'a8334868' | '531f4986'; // Summary, Task, Misc
+	Application: '2c62179d';	// eServiceCloud
+	Budget: '';
 }
 
 interface GitHubIssue {
@@ -21,6 +21,7 @@ interface GitHubIssue {
 	body: string;
 	pid?: number; // Parent issue ID
 	attributes: Attributes;
+	project: Attributes;
 }
 
 async function validateRepository(token: string, owner: string, repo: string): Promise<{ exists: boolean, hasIssues: boolean }> {
@@ -504,18 +505,15 @@ async function main() {
 		if (!repoStatus.exists) {
 			console.log(`WARNING: Repository ${config.owner}/${config.repo} not found or inaccessible.`);
 			console.log('Will proceed with project item creation only.');
+			return;
 		} else if (!repoStatus.hasIssues) {
 			console.log(`WARNING: Issues are disabled for repository ${config.owner}/${config.repo}.`);
 			console.log('Will proceed with project item creation only.');
+			return;
 		}
 
 		for (const issue of issues) {
-			let createdIssue = null;
-
-			// Create the GitHub issue only if repository is accessible and has issues enabled
-			if (repoStatus.exists && repoStatus.hasIssues) {
-				createdIssue = await createGitHubIssue(issue, config.token, config.owner, config.repo);
-			}
+			const createdIssue = await createGitHubIssue(issue, config.token, config.owner, config.repo);
 
 			// Add the issue to the project and set field values only if we have a valid project
 			if (createdIssue) {
@@ -528,7 +526,6 @@ async function main() {
 		console.log('All issues processed!');
 	} catch (error) {
 		console.error('Error:', error);
-		process.exit(1); // Exit with error code
 	}
 }
 

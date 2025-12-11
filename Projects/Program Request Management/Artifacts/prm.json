@@ -1,0 +1,1091 @@
+{
+	"ProgramRequest": {
+		"name": "ProgramRequest",
+		"description": "Program Request",
+		"properties": {
+			"Name": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Name"
+			},
+			"AFENumber": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "A F E Number"
+			},
+			"Well": {
+				"type": {
+					"rawType": "Well",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Well"
+			},
+			"OSRContacts": {
+				"type": {
+					"rawType": "List~Contact~",
+					"container": "List",
+					"elementType": "Contact",
+					"isGeneric": true
+				},
+				"visibility": "public",
+				"description": "O S R Contacts"
+			},
+			"ClientContacts": {
+				"type": {
+					"rawType": "List~Contact~",
+					"container": "List",
+					"elementType": "Contact",
+					"isGeneric": true
+				},
+				"visibility": "public",
+				"description": "Client Contacts"
+			},
+			"ServiceProviderContacts": {
+				"type": {
+					"rawType": "List~Contact~",
+					"container": "List",
+					"elementType": "Contact",
+					"isGeneric": true
+				},
+				"visibility": "public",
+				"description": "Service Provider Contacts"
+			},
+			"StickDiagramLink": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Stick Diagram Link"
+			},
+			"CasingString": {
+				"type": {
+					"rawType": "CasingString",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Casing String"
+			},
+			"CementDetail": {
+				"type": {
+					"rawType": "CementDetail",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Cement Detail"
+			},
+			"OffsetPadInfoAndHoleProblems": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Offset Pad Info And Hole Problems"
+			}
+		},
+		"relationships": [
+			{
+				"target": "Well",
+				"type": "association"
+			},
+			{
+				"target": "RigSetting",
+				"type": "association"
+			},
+			{
+				"target": "Contact",
+				"type": "composition"
+			},
+			{
+				"target": "Contact",
+				"type": "composition"
+			},
+			{
+				"target": "Contact",
+				"type": "composition"
+			},
+			{
+				"target": "CementDetail",
+				"type": "composition"
+			}
+		]
+	},
+	"Well": {
+		"name": "Well",
+		"description": "Well",
+		"properties": {
+			"SurfaceLocation": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Surface Location"
+			},
+			"Formations": {
+				"type": {
+					"rawType": "List~Formation~",
+					"container": "List",
+					"elementType": "Formation",
+					"isGeneric": true
+				},
+				"visibility": "public",
+				"description": "Formations"
+			},
+			"DepthInfo": {
+				"type": {
+					"rawType": "List~DepthInfo~",
+					"container": "List",
+					"elementType": "DepthInfo",
+					"isGeneric": true
+				},
+				"visibility": "public",
+				"description": "Depth Info"
+			},
+			"OpenHole": {
+				"type": {
+					"rawType": "List~OpenHole~",
+					"container": "List",
+					"elementType": "OpenHole",
+					"isGeneric": true
+				},
+				"visibility": "public",
+				"description": "Open Hole"
+			}
+		},
+		"relationships": [
+			{
+				"target": "OpenHole",
+				"type": "composition"
+			},
+			{
+				"target": "CasingPipe",
+				"type": "composition"
+			},
+			{
+				"target": "WellLog",
+				"type": "association"
+			},
+			{
+				"target": "Formation",
+				"type": "composition"
+			},
+			{
+				"target": "DepthInfo",
+				"type": "composition"
+			}
+		]
+	},
+	"WellLog": {
+		"name": "WellLog",
+		"description": "Well Log",
+		"properties": {
+			"LogType": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Log Type"
+			},
+			"LoggingCompany": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Logging Company"
+			},
+			"Well": {
+				"type": {
+					"rawType": "Well",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Well"
+			}
+		},
+		"relationships": []
+	},
+	"BottomHoleAssembly": {
+		"name": "BottomHoleAssembly",
+		"description": "Bottom Hole Assembly",
+		"properties": {
+			"Component": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Component"
+			},
+			"Bit": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Bit"
+			},
+			"Motor": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Motor"
+			},
+			"Telemetry": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Telemetry"
+			},
+			"Subs": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Subs"
+			},
+			"NMDC": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "N M D C"
+			},
+			"Collars": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Collars"
+			},
+			"DrillingJars": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Drilling Jars"
+			},
+			"HWDP": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "H W D P"
+			},
+			"DPtoSurface": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "D Pto Surface"
+			},
+			"Well": {
+				"type": {
+					"rawType": "Well",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Well"
+			}
+		},
+		"relationships": [
+			{
+				"target": "Well",
+				"type": "association"
+			}
+		]
+	},
+	"RigSetting": {
+		"name": "RigSetting",
+		"description": "Rig Setting",
+		"properties": {
+			"GroundLevel": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Ground Level"
+			},
+			"KBElevation": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "K B Elevation"
+			},
+			"GLtoKB": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "G Lto K B"
+			},
+			"Rig": {
+				"type": {
+					"rawType": "Rig",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Rig"
+			}
+		},
+		"relationships": [
+			{
+				"target": "Rig",
+				"type": "association"
+			}
+		]
+	},
+	"Rig": {
+		"name": "Rig",
+		"description": "Rig",
+		"properties": {},
+		"relationships": []
+	},
+	"Contact": {
+		"name": "Contact",
+		"description": "Contact",
+		"properties": {
+			"Title": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Title"
+			},
+			"Name": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Name"
+			},
+			"PhoneNumber": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Phone Number"
+			},
+			"Email": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Email"
+			},
+			"Comments": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Comments"
+			}
+		},
+		"relationships": []
+	},
+	"Formation": {
+		"name": "Formation",
+		"description": "Formation",
+		"properties": {
+			"FormationType": {
+				"type": {
+					"rawType": "FormationType",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Formation Type"
+			},
+			"MeasuredDepth": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Measured Depth"
+			},
+			"TrueVertialDepth": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "True Vertial Depth"
+			},
+			"MaxiMumPressure": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Maxi Mum Pressure"
+			},
+			"MaximumPressureGradient": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Maximum Pressure Gradient"
+			},
+			"MaximumEstimatedMudDensity": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Maximum Estimated Mud Density"
+			},
+			"ExpectedMudDensity": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Expected Mud Density"
+			},
+			"H2SConcentration": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "H2 S Concentration"
+			},
+			"IsLossCirculationZone": {
+				"type": {
+					"rawType": "bool",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Is Loss Circulation Zone"
+			},
+			"IsOverPressureZone": {
+				"type": {
+					"rawType": "bool",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Is Over Pressure Zone"
+			}
+		},
+		"relationships": [
+			{
+				"target": "FormationType",
+				"type": "association"
+			}
+		]
+	},
+	"FormationType": {
+		"name": "FormationType",
+		"description": "Formation Type",
+		"properties": {},
+		"relationships": []
+	},
+	"DepthInfo": {
+		"name": "DepthInfo",
+		"description": "Depth Info",
+		"properties": {
+			"Label": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Label"
+			},
+			"MeasuredDepth": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Measured Depth"
+			},
+			"TrueVertialDepth": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "True Vertial Depth"
+			}
+		},
+		"relationships": []
+	},
+	"Pipe": {
+		"name": "Pipe",
+		"description": "Pipe",
+		"properties": {
+			"InsideDiameter": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Inside Diameter"
+			},
+			"Grade": {
+				"type": {
+					"rawType": "GradeType",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Grade"
+			},
+			"Weight": {
+				"type": {
+					"rawType": "Decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Weight"
+			},
+			"ThreadType": {
+				"type": {
+					"rawType": "ThreadType",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Thread Type"
+			}
+		},
+		"relationships": []
+	},
+	"OpenHole": {
+		"name": "OpenHole",
+		"description": "Open Hole",
+		"properties": {},
+		"relationships": []
+	},
+	"CasingPipe": {
+		"name": "CasingPipe",
+		"description": "Casing Pipe",
+		"properties": {},
+		"relationships": [
+			{
+				"target": "Pipe",
+				"type": "inheritance"
+			}
+		]
+	},
+	"CasingString": {
+		"name": "CasingString",
+		"description": "Casing String",
+		"properties": {
+			"CasingPipe": {
+				"type": {
+					"rawType": "CasingPipe",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Casing Pipe"
+			},
+			"WiperPlugType": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Wiper Plug Type"
+			},
+			"WiperPlugSupplier": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Wiper Plug Supplier"
+			},
+			"CentralizerDetail": {
+				"type": {
+					"rawType": "CentralizerDetail",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Centralizer Detail"
+			},
+			"CompletionSystemUsed": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Completion System Used"
+			}
+		},
+		"relationships": [
+			{
+				"target": "CasingPipe",
+				"type": "aggregation"
+			},
+			{
+				"target": "CentralizerDetail",
+				"type": "composition"
+			}
+		]
+	},
+	"CentralizerDetail": {
+		"name": "CentralizerDetail",
+		"description": "Centralizer Detail",
+		"properties": {
+			"Supplier": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Supplier"
+			},
+			"Type": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Type"
+			},
+			"Spacing": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Spacing"
+			}
+		},
+		"relationships": []
+	},
+	"CementDetail": {
+		"name": "CementDetail",
+		"description": "Cement Detail",
+		"properties": {
+			"CasingType": {
+				"type": {
+					"rawType": "CasingType",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Casing Type"
+			},
+			"PlacementInterval": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Placement Interval"
+			},
+			"DepthFrom": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Depth From"
+			},
+			"DepthTo": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Depth To"
+			},
+			"ExpectedTemperature": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Expected Temperature"
+			},
+			"BlendSections": {
+				"type": {
+					"rawType": "List<BlendSection>",
+					"container": "List",
+					"elementType": "BlendSection",
+					"isGeneric": true
+				},
+				"visibility": "public",
+				"description": "Blend Sections"
+			}
+		},
+		"relationships": [
+			{
+				"target": "BlendSection",
+				"type": "composition"
+			}
+		]
+	},
+	"BlendSection": {
+		"name": "BlendSection",
+		"description": "Blend Section",
+		"properties": {
+			"BlendCategory": {
+				"type": {
+					"rawType": "BlendCategory",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Blend Category"
+			},
+			"BlendFludeType": {
+				"type": {
+					"rawType": "BlendFluidType",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Blend Flude Type"
+			},
+			"Quantity": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Quantity"
+			},
+			"UOM": {
+				"type": {
+					"rawType": "BlendAmountUnit",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "U O M"
+			},
+			"Density": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Density"
+			},
+			"Excess": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Excess"
+			},
+			"DepthFrom": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Depth From"
+			}
+		},
+		"relationships": []
+	},
+	"Mud": {
+		"name": "Mud",
+		"description": "Mud",
+		"properties": {
+			"CasingType": {
+				"type": {
+					"rawType": "CasingType",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Casing Type"
+			},
+			"MudSystem": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Mud System"
+			},
+			"Density": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Density"
+			},
+			"PH": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "P H"
+			},
+			"Viscosity": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Viscosity"
+			},
+			"FluidLoss": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Fluid Loss"
+			},
+			"Oil2WaterRatio": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Oil2 Water Ratio"
+			},
+			"SaltConcentration": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Salt Concentration"
+			},
+			"Contingency": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Contingency"
+			}
+		},
+		"relationships": []
+	},
+	"WellConfiguration": {
+		"name": "WellConfiguration",
+		"description": "Well Configuration",
+		"properties": {
+			"Label": {
+				"type": {
+					"rawType": "string",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Label"
+			},
+			"MeasureDepth": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "Measure Depth"
+			},
+			"SSDepth": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "S S Depth"
+			},
+			"TrueVerticalDepth": {
+				"type": {
+					"rawType": "decimal",
+					"container": "",
+					"elementType": "",
+					"isGeneric": false
+				},
+				"visibility": "public",
+				"description": "True Vertical Depth"
+			}
+		},
+		"relationships": []
+	}
+}
