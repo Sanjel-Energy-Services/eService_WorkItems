@@ -1,5 +1,8 @@
-import { existsSync, readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
+import { existsSync, readdirSync, statSync } from 'fs';
 import { join, extname, dirname, basename, relative, sep } from 'path';
+import {
+	readText,
+	writeFileAtomic } from './000-util';
 
 // 特殊文件名与固定顺序索引（两位编号）
 const SPECIAL_FILE_INDEX: Readonly<Record<string, number>> = {
@@ -33,14 +36,6 @@ function getAllMarkdownFiles(dir: string): string[] {
 	}
 
 	return results;
-}
-
-/**
- * 检查文件是否已有旧格式的ID标识（纯文本格式）
- */
-function hasOldIdentifierFormat(content: string): boolean {
-	const reg = /^<!--\s*Identifier:\s*.*?-->\s*\n?/i;
-	return reg.test(content);
 }
 
 /**
@@ -187,7 +182,7 @@ function processIdentifierInFile(filePath: string): void {
 		return; // 跳过 main.md
 	}
 	try {
-		let content = readFileSync(filePath, 'utf-8');
+		let content = readText(filePath);
 
 		const identifier = generateIdentifier(filePath);
 		const identifierComment = `<!-- Identifier: ${identifier} -->\n`;
@@ -201,7 +196,7 @@ function processIdentifierInFile(filePath: string): void {
 			console.log(`添加ID ${identifier} -> ${filePath}`);
 		}
 
-		writeFileSync(filePath, content, 'utf-8');
+		writeFileAtomic(filePath, content);
 	} catch (error) {
 		console.error(`处理文件 ${filePath} 时出错:`, error);
 	}

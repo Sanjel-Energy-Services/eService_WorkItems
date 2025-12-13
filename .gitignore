@@ -1,1 +1,3 @@
 git.config.json
+*.tasks.json
+git.issues.log
