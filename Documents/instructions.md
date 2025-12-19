@@ -38,6 +38,9 @@ This workspace organizes documents for eService WorkItems using a hierarchical f
   collaboration.md
   01 - Credit Checking/
     main.md
+    process.md
+    collaboration.md
+    Artifacts/
   03 - Request Job Design/
     main.md
     Artifacts/
