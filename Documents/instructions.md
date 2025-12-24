@@ -1,4 +1,3 @@
-<!-- Identifier: I-01 -->
 # Document Tree Building Guidelines
 
 This workspace organizes documents for eService WorkItems using a hierarchical folder structure. Follow these guidelines to maintain consistency and clarity:

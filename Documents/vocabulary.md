@@ -1,4 +1,4 @@
-<!-- Identifier: V-05 -->
+<!-- Identifier: V -->
 **UWI**: Unique Well Identifier, it defines bottom-hole location
 
 **GL**: Ground Level

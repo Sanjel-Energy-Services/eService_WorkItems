@@ -1,30 +1,26 @@
-<!-- Identifier: C-04-0b-03 -->
+<!-- Identifier: C-04-0b -->
 <!-- Name:  Material Preparation Process -->
 ```mermaid
 sequenceDiagram
     participant LogisticsDispatch
-    participant BlendRequest
+    participant Workflow
     participant BulkPlantOperator
     participant Lab
 
-    LogisticsDispatch->>BlendRequest: 1 Create Batch Request
-    alt Blend test required?
-    BlendRequest->>Lab: 2.1 Create Test Request
-    end
-    BlendRequest->>BulkPlantOperator: 3 Notify Batch Request
-    BulkPlantOperator->>LogisticsDispatch: 4 Confirm Batch Request
-    BulkPlantOperator->>BulkPlantOperator: 5 Blending Process
+    LogisticsDispatch->>Workflow: 1 Create Batch Request
+    Workflow->>BulkPlantOperator: 2 Notify Bulk Plant Operator
+    BulkPlantOperator->>BulkPlantOperator: 3 Blending Process
 
-    alt Blend test required?
-        Lab->>Lab: 6 Lab Testing Process
-        Lab->>Lab: 7 Blend Approval Process
-        alt Approved
-            Lab->>LogisticsDispatch: Return to main process
+    alt Field blend test required?
+        Workflow->>Lab: 4 Lab Testing Process
+        Lab->>Lab: 5 Blend Approval process
+        alt Approved?
+            Lab->>LogisticsDispatch: Return to Parent Process
         else Not Approved
-            Lab->>LogisticsDispatch: 8 Fail Blend Process
+            Lab->>LogisticsDispatch: 6 Fail Blend Process
         end
     else No Blend Test
-        BulkPlantOperator->>LogisticsDispatch:Complete
+        BulkPlantOperator->>LogisticsDispatch: Return to Parent Process
     end
   
 ```
