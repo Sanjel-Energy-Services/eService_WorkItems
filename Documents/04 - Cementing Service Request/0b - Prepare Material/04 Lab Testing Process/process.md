@@ -3,8 +3,14 @@
 
 ```mermaid
 flowchart TD
-    A[Start: Lab Testing Process]-->O[Lab Technician Receives samples]
-    O --> O1[Lab Technician Perform Tests]
-    O1 --> P[Lab uploads test results]
-    P --> P1[Lab Technician Send test results for approval]
-    P1-->Z[End]
+    A[Start: Lab Testing Process]-->B[[Lab Create Test Request]]
+    C[[Lab Technician Log In samples]] --> D[Lab Technician Prepare Test Iteration]
+    B-->D
+    D --> E[Lab Technician Execute Tests]
+    E --> F[Lab Technician Finalizes test results]
+    F --> G{Meet Requirements?}
+    G-->|Yes|P[Lab Technician Send test results for approval]
+    G-->|No| D
+    P-->Z[Return to Parent Process]
+
+```
