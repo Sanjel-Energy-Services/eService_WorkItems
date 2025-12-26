@@ -24,8 +24,8 @@ class ProgramRequest {
 class ProgramRequestStatus{
 	<<enumeration>>
 	Open
-	Received
 	Pending
+	Received
 	InProgress
 	Completed
 	AcceptEngineeringDesign
