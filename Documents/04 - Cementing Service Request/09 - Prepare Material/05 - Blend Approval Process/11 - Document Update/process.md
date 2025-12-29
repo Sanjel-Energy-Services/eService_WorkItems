@@ -19,7 +19,7 @@ flowchart TD
     L-->N[eService pops confirmation window 'Do you want to update call sheet with new Program Revision?']
     N-->O[Dispatch click 'Yes']
     N-->P[Dispatch click 'No']
-    O-->Q[eService save the update call sheet]
+    O-->Q[[eService save the updated call sheet]]
     Q-->R[Workflow acknowledge stakeholers 'Call Sheet Updated']
     R-->S[Job Status Board shows 'Call Sheet Updated']
     M-->Z[Return to parent process]
