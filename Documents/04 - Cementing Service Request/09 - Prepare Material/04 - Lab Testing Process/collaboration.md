@@ -1,4 +1,4 @@
-<!-- Identifier: C-04-0b-04 -->
+<!-- Identifier: C-04-09-04 -->
 <!-- Name:  Lab Testing Process -->
 ```mermaid
 sequenceDiagram
