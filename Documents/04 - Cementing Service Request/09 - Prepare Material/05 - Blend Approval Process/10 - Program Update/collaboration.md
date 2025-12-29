@@ -4,11 +4,12 @@
 ```mermaid
 sequenceDiagram
     participant Workflow
-    participant Engineering
+    actor Engineering
     participant eProgram
     participant eService
     participant RigBoard
-    participant Dispatch
+    actor Dispatch
+    participant JobStatus
 
     Workflow->>Engineering: 1 Request Program Update (Test Results Received)
     Engineering->>Engineering: 2 Clone original program template
@@ -23,21 +24,19 @@ sequenceDiagram
             Engineering->>Engineering: 4 Update program per lab test result
             Note over Engineering,eProgram: Do NOT revise Master/Multi-Well template
             Engineering-->>eProgram: 5 Import revised program (Job specific)
-            eService-->>Dispatch: 6 Show 'Program Updated' on the affected call sheet in eService
-            eService-->>RigBoard: 7 Show 'Program Updated' on the affected call sheet on Rig Board
         else Change applies to multiple jobs
             Engineering->>Engineering: 3 Increase program revision by one
             Engineering->>Engineering: 4 Update program according to test result
             Engineering-->>eProgram: 5 Import revised program
-            eService-->>Dispatch: 6 Show 'Program Updated' on affected call sheet(s) in eService
-            eService-->>RigBoard: 7 Show 'Program Updated' on affected call sheet(s) on Rig Board
         end
     else Not Multi-Well
         Engineering->>Engineering: 3 Increase program revision by one
         Engineering->>Engineering: 4 Update program according to test result
         Engineering-->>eProgram: 5 Import revised program
-        eService-->>Dispatch: 6 Show 'Program Updated' on affected call sheet in eService
-        eService-->>RigBoard: 7 Show 'Program Updated' on affected call sheet on Rig Board
     end
+        eService-->>Dispatch: 6 Show 'Program Updated' on affected call sheet in eService
+        RigBoard-->>Dispatch: 7 Show 'Program Updated' on affected call sheet on Rig Board
+        JobStatus-->>Dispatch: 8 Show 'Program Updated' on affected call sheet on Rig Board
+        Workflow->>Dispatch: 9 Acknowledge and proceed with updated program
 
 ```

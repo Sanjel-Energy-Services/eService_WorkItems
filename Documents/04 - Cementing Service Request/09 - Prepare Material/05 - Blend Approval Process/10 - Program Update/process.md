@@ -17,6 +17,8 @@ flowchart TD
     C --> D[Engineer update program according test result]
     D --> E[Dispactch can see the 'Program Updated' alert sign on the affected call sheet in eService ]
     E --> F[Dispactch can see the 'Program Updated' alert sign on the affected call sheet On Rig Board ]
-    F --> G[Return to parent process]
+    F --> G[Dispactch can see the 'Program Updated' alert sign on the affected call sheet On Job Status Board ]
+    G --> H[Workflow acknowledge Dispatch and proceed with updated program]
+    H --> J[End: Return to Parent Process]
 
 ```
