@@ -4,19 +4,40 @@
 ```mermaid
 sequenceDiagram
     participant Workflow
+    participant Engineering
     participant eProgram
     participant eService
     participant RigBoard
-    participant Engineering
     participant Dispatch
 
-
-    Workflow->>Engineering: 1 Request Program Update
+    Workflow->>Engineering: 1 Request Program Update (Test Results Received)
     Engineering->>Engineering: 2 Clone original program template
-    Engineering->>Engineering: 3 Increase program revision by one
-    Engineering->>Engineering: 4 Update program per test result
-    Engineering-->>eProgram: 5 Import updated program
-    eService->>Dispatch: 6 Show "Program Updated" per call sheet
-    RigBoard->>Dispatch: 7 Show "Program Updated" per call sheet
+    alt Is original program Multi-Well?
+        alt Change applies to one job only?
+            alt Is original program for this job?
+                Engineering->>Engineering: 3A Increase Build Number by 1
+            else Not original program for this job
+                Engineering->>Engineering: 3B Enter Call Sheet Number
+                Engineering->>Engineering: 3C Enter Build Number as 1
+            end
+            Engineering->>Engineering: 4 Update program per lab test result
+            Note over Engineering,eProgram: Do NOT revise Master/Multi-Well template
+            Engineering-->>eProgram: 5 Import revised program (Job specific)
+            eService-->>Dispatch: 6 Show 'Program Updated' on the affected call sheet in eService
+            eService-->>RigBoard: 7 Show 'Program Updated' on the affected call sheet on Rig Board
+        else Change applies to multiple jobs
+            Engineering->>Engineering: 3 Increase program revision by one
+            Engineering->>Engineering: 4 Update program according to test result
+            Engineering-->>eProgram: 5 Import revised program
+            eService-->>Dispatch: 6 Show 'Program Updated' on affected call sheet(s) in eService
+            eService-->>RigBoard: 7 Show 'Program Updated' on affected call sheet(s) on Rig Board
+        end
+    else Not Multi-Well
+        Engineering->>Engineering: 3 Increase program revision by one
+        Engineering->>Engineering: 4 Update program according to test result
+        Engineering-->>eProgram: 5 Import revised program
+        eService-->>Dispatch: 6 Show 'Program Updated' on affected call sheet in eService
+        eService-->>RigBoard: 7 Show 'Program Updated' on affected call sheet on Rig Board
+    end
 
 ```
