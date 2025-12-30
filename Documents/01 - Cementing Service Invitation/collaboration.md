@@ -1,4 +1,4 @@
-<!-- Identifier: C-01-03 -->
+<!-- Identifier: C-01 -->
 <!-- Name: Cementing Service Invitation -->
 
 
@@ -13,12 +13,13 @@ box Sanjel
     actor Logistics
     actor accounting
 end
-    Client->>+Sales: Cementing Service Invitation
-    Sales->>+accounting: Credit Checking
-    accounting-->>-Sales: Credit Result
-    Sales->>+Engineering: Request Job Design
-    Engineering -->>-Sales: Job Design
-    Sales->>Sales: Prepare Job Proposal & Bid
-    Sales->>Sales: Sales Forecast
-    Sales-->>-Client: Service Proposal & Bid
+    Client->>+Sales: 1. Cementing Service Invitation
+    Sales->>+accounting: 2. Credit Checking
+    accounting-->>-Sales: 3. Credit Result
+    Sales->>+Engineering: 4. Request Job Design
+    Engineering->>+ Engineering: 5. Prepare Job Design
+    Engineering -->>-Sales: 6. Job Design
+    Sales->>Sales: 7. Prepare Job Proposal & Bid
+    Sales->>Sales: 8. Sales Forecast
+    Sales-->>-Client: 9. Service Proposal & Bid
 ```
