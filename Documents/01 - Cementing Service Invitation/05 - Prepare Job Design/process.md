@@ -4,7 +4,7 @@
 ```mermaid
 flowchart TD
     S([Start]) -->A1[Engineer Create Program JDT file]
-    A1-->A[Engineering Upload JDT]
+    A1-->A[Engineering Upload JDT file]
     A--> B{Program Exists?}
     B -- Yes --> C[Duplicate detected]
     C --> D[Please re-import]

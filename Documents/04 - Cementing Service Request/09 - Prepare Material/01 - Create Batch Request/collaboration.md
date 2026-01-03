@@ -17,8 +17,13 @@ Logi->>BatchRequest: Create Batch Request
         BatchRequest->>TestRequirement: Find TestRequirement
            alt TestRequirement is found
                 BatchRequest->>TestRequest: Create Test Request
-                TestRequest->>TestRequest:Set Status as Pending
-                BatchRequest->>BatchRequest:Set Status as Pending
+                alt At least one sample is scanned
+                 TestRequest->>TestRequest: Set Status as Ready
+    
+                 else All samples not scanned
+                 TestRequest->>TestRequest: Set Status as Pending
+    %%BatchRequest->>BatchRequest:Set TestingStatus as Pending
+                end
                 %%alt At least one sample is scanned
     %%TestRequest->>TestRequest: Set Status as Ready
  %% else All samples not scanned
@@ -28,7 +33,6 @@ Logi->>BatchRequest: Create Batch Request
     			BatchRequest-->>Engineer: WF Notification "Submit Test Request"
           end
      else do not Need Field Blend Test 
-        BatchRequest->>BatchRequest:Set Status as None
     end
  BatchRequest-->>Logi: WF Notification "Batch Request is Created"
  
