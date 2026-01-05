@@ -1,4 +1,4 @@
-<!-- Identifier: C-04 -->
+﻿<!-- Identifier: C-04-10-01 -->
 <!-- Name: Schedule Product Haul -->
 
 ```mermaid
@@ -50,7 +50,7 @@ sequenceDiagram
         HaulBlend->>ShippingLoadSheet: Create Load Sheet (ShipStatus: Scheduled)
         Bulker Crew->>CrewSchedule: Populate Schedule (crew & rig)
         CrewSchedule->>UnitScheule: Populate Unit Schedule
-        Note over HaulBlend,ShippingLoadSheet: no Offload Amount per Bin,no Expected On Location Time，Travel Time
+        Note over HaulBlend,ShippingLoadSheet: no Offload Amount per Bin,no Expected On Location Timeï¼ŒTravel Time
         HaulBlend-->>Logi: Scheduled (Go With Crew)
 
     else Go With Crew = No
