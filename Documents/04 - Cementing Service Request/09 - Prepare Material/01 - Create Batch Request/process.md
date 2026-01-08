@@ -12,7 +12,7 @@ flowchart TD
 	D --> E{TestRequirement found?}
 
 	E -->|Yes| F[Create Test Request]
-	F --> G[Set TestRequest Status: Pending]
+	F --> G[Set TestRequest Status]
 	G --> H[Set BatchRequest Status: Scheduled]
 	H --> J[Notify Logistic Dispatch 'Batch Request is Created']
 

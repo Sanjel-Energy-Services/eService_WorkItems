@@ -6,6 +6,7 @@ sequenceDiagram
 box Oil & Gas Industry
     actor Client 
     actor Sanjel
+    
 end
     Client->>Sanjel: 01 - Cementing Service Invitation
     Sanjel->>Client: 02 - Service Proposal & Bidding
