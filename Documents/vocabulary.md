@@ -108,3 +108,16 @@
 
 
 # Business Actors
+- Client
+- Sanjel
+- Sales
+- Engineering
+- Engineer
+- Operation
+- Logistics Dispatch
+- Bulk Plant Operator
+- Lab Technician
+- Lab Staff
+- Lab
+- Bulker Crew
+- Third Party Bulker Crew
