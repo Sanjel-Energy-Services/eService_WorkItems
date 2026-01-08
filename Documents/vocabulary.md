@@ -10,7 +10,7 @@
 - **TVD**: True Vertical Depth
 - **SS Depth**: Sub-Sea Depth
 
-# Entities
+# BusinessEntities
 
 - SalesProject
 - DrillOrder
@@ -94,3 +94,17 @@
 - PositionFamily
 - Certificate
 
+
+# Sterotypes
+- <<businessEntities>>: Represents a core business object or concept within the domain.
+- <<actor>>: Represents a user or external system that interacts with the domain.
+- <<systemActor>>: Represents an external system that interacts with the domain.
+- <<lifeCycleState>>: Represents the various states an entity can be in throughout its lifecycle.
+- <<businessActor>>: Represents a business entity that plays a role in the domain.
+- <<Testcase>>: Represents a specific test case or scenario within the domain.
+- <<UserStory>>: Represents a user story that describes a feature or requirement from the user's perspective.
+- <<UseCase>>: Represents a use case that describes a specific interaction or functionality within the domain.
+- <<BusinessProcess>>: Represents a business process that outlines a series of activities or tasks within the domain.
+
+
+# Business Actors
