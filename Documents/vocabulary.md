@@ -107,17 +107,28 @@
 - <<BusinessProcess>>: Represents a business process that outlines a series of activities or tasks within the domain.
 
 
+# System Actors
+- Workflow
+- LabDB
+- eProgram
+- eService
+- RigBoard
+
+# Terminology Notes
+- Workflow: Formal name for the system actor. In some documents it may appear as "Workflow System"; treat them as the same actor.
+- LabDB: Formal name for the lab system actor. In some documents it may appear as "LabDatabase"; treat them as the same actor.
+- Engineer: Formal name for the engineering business actor. In some documents it may appear as "Engineering"; treat them as the same actor.
+- Lab Technician: Formal name for the lab technician business actor. In some documents it may appear as "LabTech" or "Lab Staff"; treat them as the same actor.
+
 # Business Actors
 - Client
 - Sanjel
 - Sales
-- Engineering
 - Engineer
 - Operation
 - Logistics Dispatch
 - Bulk Plant Operator
 - Lab Technician
-- Lab Staff
-- Lab
 - Bulker Crew
 - Third Party Bulker Crew
+- Dispatch
