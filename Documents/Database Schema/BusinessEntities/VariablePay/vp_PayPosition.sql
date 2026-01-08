@@ -1,0 +1,1 @@
+CREATE TABLE [vp_PayPosition] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[ServiceLineid] int,[ServiceLineName] [nvarchar](100) NULL,[ServiceLineDescription] [nvarchar](500) NULL,[ServiceLineSystemId] [int] Not NULL);

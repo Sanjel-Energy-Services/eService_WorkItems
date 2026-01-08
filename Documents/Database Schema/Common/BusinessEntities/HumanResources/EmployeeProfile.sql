@@ -1,0 +1,1 @@
+CREATE TABLE [EmployeeProfile] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[Employeeid] int,[EmployeeName] [nvarchar](100) NULL,[EmployeeDescription] [nvarchar](500) NULL,[EmployeeSystemId] [int] Not NULL);

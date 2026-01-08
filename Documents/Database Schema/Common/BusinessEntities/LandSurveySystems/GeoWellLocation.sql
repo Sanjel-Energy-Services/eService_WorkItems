@@ -1,0 +1,1 @@
+CREATE TABLE [GeoWellLocation] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[DegreesLat] int,[WellLocationType] int,[MinutesLat] int,[SecondsLat] float,[DirectionLat] nvarchar(255),[DegreesLong] int,[MinutesLong] int,[SecondsLong] float,[DirectionLong] nvarchar(255));

@@ -1,0 +1,1 @@
+CREATE TABLE [wfr_AssignedPlanTimeLine] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[TimeLineDateTime] datetime,[AssignedPlanid] int,[AssignedPlanName] [nvarchar](100) NULL,[AssignedPlanDescription] [nvarchar](500) NULL);

@@ -1,0 +1,1 @@
+CREATE TABLE [vp_StandbyPaySchedule] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[HoulyRate] float,[HourThreshold] float,[PayPositionid] int,[PayPositionName] [nvarchar](100) NULL,[PayPositionDescription] [nvarchar](500) NULL);

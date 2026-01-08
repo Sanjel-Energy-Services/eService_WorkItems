@@ -1,0 +1,1 @@
+CREATE TABLE [FreightCost] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[Price] float,[PriceUnit] float,[SbsReleasedProductId] nvarchar(255),[ServicePoint] nvarchar(255),[UnitId] nvarchar(255));

@@ -1,0 +1,1 @@
+CREATE TABLE [JobTimeReport] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[JobTypeid] int,[JobTypeName] [nvarchar](100) NULL,[JobTypeDescription] [nvarchar](500) NULL,[JobTypeSystemId] [int] Not NULL,[PostJobDuration] int,[PrepDuration] int,[PumperCount] int,[PumpingDuration] int);

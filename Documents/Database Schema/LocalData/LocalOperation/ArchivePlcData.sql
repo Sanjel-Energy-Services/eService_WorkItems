@@ -1,0 +1,1 @@
+CREATE TABLE [ArchivePlcData] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[JSON] nvarchar(255),[TimeStamp] datetime,[UnitID] nvarchar(255),[ArchiveDateTime] datetime);

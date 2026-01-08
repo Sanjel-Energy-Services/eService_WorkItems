@@ -1,0 +1,1 @@
+CREATE TABLE [sld_TestData] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[TestResultid] int,[TestResultName] [nvarchar](100) NULL,[TestResultDescription] [nvarchar](500) NULL,[TestResultSystemId] [int] Not NULL,[Type] int,[StoragePath] nvarchar(255),[StorageProtocol] nvarchar(255));

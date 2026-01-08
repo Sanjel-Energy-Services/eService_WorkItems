@@ -1,0 +1,1 @@
+CREATE TABLE [RigSize] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[Value] float,[Unitid] int,[UnitName] [nvarchar](100) NULL,[UnitDescription] [nvarchar](500) NULL);

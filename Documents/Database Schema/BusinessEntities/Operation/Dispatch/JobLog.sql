@@ -1,0 +1,1 @@
+CREATE TABLE [JobLog] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[EntityId] int,[CallSheetNumber] int,[Subject] nvarchar(255),[Status] nvarchar(255),[StatusCode] int,[StatusName] nvarchar(255),[Comments] nvarchar(255),[ModifiedUserName] nvarchar(255),[ModifiedDateTime] datetime);

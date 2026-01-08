@@ -1,0 +1,1 @@
+CREATE TABLE [PlcParameter] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[Comments] nvarchar(255),[DataIndex] int,[DataType] nvarchar(255),[Uom] nvarchar(255),[PlcCalculationid] int,[PlcCalculationName] [nvarchar](100) NULL,[PlcCalculationDescription] [nvarchar](500) NULL);

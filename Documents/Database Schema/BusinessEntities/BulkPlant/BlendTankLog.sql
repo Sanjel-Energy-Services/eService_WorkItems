@@ -1,0 +1,1 @@
+CREATE TABLE [BlendTankLog] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[BlendName] nvarchar(255),[BlendTankWeight] float,[CutIndex] int,[EventName] nvarchar(255),[EventTimestamp] datetime,[ProductHaulLoadId] int,[Rate] float);

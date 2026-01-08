@@ -1,0 +1,1 @@
+CREATE TABLE [RotationTemplate] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[ColorScheme] nvarchar(255),[OffDays] int,[RotationOrder] int,[StartDay] int,[WorkDays] int,[IsCombinedSchedule] bit,[RotationIndex] int,[CombinedScheduleOrder] int);

@@ -1,0 +1,1 @@
+CREATE TABLE [wld_WellChallenge] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[Comments] nvarchar(255),[MeridianFrom] int,[MeridianTo] int,[RangeFrom] int,[RangeTo] int,[TownshipFrom] int,[TownshipTo] int,[Tvd] int);

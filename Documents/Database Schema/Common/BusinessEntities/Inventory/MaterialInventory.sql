@@ -1,0 +1,1 @@
+CREATE TABLE [MaterialInventory] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[AvailablePhysical] float,[ItemNumber] nvarchar(255),[ProductName] nvarchar(255),[ServicePointId] nvarchar(255),[Unit] nvarchar(255));

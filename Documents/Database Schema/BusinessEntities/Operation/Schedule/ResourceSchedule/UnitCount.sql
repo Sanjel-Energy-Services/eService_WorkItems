@@ -1,0 +1,1 @@
+CREATE TABLE [UnitCount] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[ScmsCount] int,[ScmtCount] int,[UnitStatus] int,[WorkDate] datetime,[ServicePointid] int,[ServicePointName] [nvarchar](100) NULL,[ServicePointDescription] [nvarchar](500) NULL,[ServicePointSystemId] [int] Not NULL);

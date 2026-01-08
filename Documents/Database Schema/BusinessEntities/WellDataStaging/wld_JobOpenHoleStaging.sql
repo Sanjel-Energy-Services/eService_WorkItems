@@ -1,0 +1,1 @@
+CREATE TABLE [wld_JobOpenHoleStaging] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[JobUniqueId] nvarchar(255),[MeasuredDepthFrom] float,[MeasuredDepthTo] float,[Size] float,[TrueVerticalDepthFrom] float,[TrueVerticalDepthTo] float);

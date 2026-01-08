@@ -1,0 +1,1 @@
+CREATE TABLE [BlendCostItem] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[CostTag] float,[PriceCode] int,[ProductId] nvarchar(255),[ProductName] nvarchar(255),[WareHouseName] nvarchar(255));

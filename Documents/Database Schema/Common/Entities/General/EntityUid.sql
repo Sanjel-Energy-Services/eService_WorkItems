@@ -1,0 +1,1 @@
+CREATE TABLE [EntityUid] ([id] [int] IDENTITY(1,1) NOT NULL,[entity_status] [int] NULL,owner_id int NULL,name [nvarchar](100) NULL,description [nvarchar](500) NULL,[EntityPrefix] nvarchar(255),[EntityType] nvarchar(255),[Sequence] int,[Year] int);
