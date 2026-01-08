@@ -1,15 +1,96 @@
 <!-- Identifier: V -->
-**UWI**: Unique Well Identifier, it defines bottom-hole location
 
-**GL**: Ground Level
+# Abbreviations
 
-**KB**: Kelly Bushing(a component on the drilling rig floor used as a reference point for depth measurements).
+- **UWI**: Unique Well Identifier, it defines bottom-hole location
+- **GL**: Ground Level
+- **KB**: Kelly Bushing(a component on the drilling rig floor used as a reference point for depth measurements).
+- **GL to KB**: It indicates the **vertical distance between the ground level and the kelly bushing**. This offset is important because most well depth measurements (e.g., Measured Depth (MD) or True Vertical Depth (TVD)) are referenced to the KB rather than the ground level.
+- **MD**: Measure Depth
+- **TVD**: True Vertical Depth
+- **SS Depth**: Sub-Sea Depth
 
-**GL to KB**: It indicates the **vertical distance between the ground level and the kelly bushing**. This offset is important because most well depth measurements (e.g., Measured Depth (MD) or True Vertical Depth (TVD)) are referenced to the KB rather than the ground level.
+# Entities
 
-**MD**: Measure Depth
-
-**TVD**: True Vertical Depth
-
-**SS Depth**: Sub-Sea Depth
+- SalesProject
+- DrillOrder
+- JobOrder
+- JobDesign
+- JobDesignBlendSection
+- JobDesignPumpingJobSection
+- CallSheet
+- CallSheetBlendSection
+- CallSheetBlendAdditiveSection
+- ProductHaul
+- ProductHaulLoad
+- ShippingLoadSheet
+- ProductLoadSection
+- BlendUnloadSheet
+- BlendShippingFacade
+- PodLoad
+- BinInformation
+- BinLoadHistory
+- Bin
+- BlendChemical
+- Rig
+- WorkingServicePoint
+- RigJob
+- RigJobSanjelCrewSection
+- RigJobThirdPartyBulkerCrewSection
+- BulkerCrewLog
+- SanjelCrew
+- SanjelCrewWorkerSection
+- SanjelCrewTruckUnitSection
+- SanjelCrewSchedule
+- UnitSchedule
+- UnitLocation
+- WorkerSchedule
+- VesselCount
+- UnitCount
+- ContractorCompany
+- ClientConsultant
+- JobTimeReport
+- RigWorkReport
+- PayPeriod
+- PayPeriodSummary
+- PaySummary
+- PayEntry
+- PayArea
+- PayPosition
+- PayPositionMapping
+- PayrollExportMapping
+- PayType
+- PaySummaryType
+- LabSample
+- TestRequest
+- TestIteration
+- TestResult
+- TestData
+- QualityControl
+- WaterAnalysis
+- TestOutput
+- TestIterationLabTest
+- TestIterationBlendSection
+- TestIterationBlendAdditiveSection
+- BlendSample
+- BlendLog
+- BlendCut
+- BlendTankLog
+- CutSize
+- CutDetail
+- ProgramRequest
+- StickDiagramTemplate
+- Plan
+- PlanItem
+- AssignedPlan
+- AssignedPlanItem
+- AssignedPlanNotification
+- AssignedPlanMentor
+- AssignedPlanComment
+- AssignedPlanStatus
+- AssignedPlanItemStatus
+- AssignedPlanTimeLine
+- PlanType
+- PositionFamily
+- Certificate
 
