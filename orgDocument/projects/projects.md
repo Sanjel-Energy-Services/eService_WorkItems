@@ -15,7 +15,7 @@ PRJ-NN, Project Description, Folder Path, Related OrgModel Process
 
 | Project ID | Description | Folder Path | Related OrgModel Process |
 |------------|-------------|-------------|-------------------------|
-| (No projects currently defined) | | | |
+| PRJ-01 | Migrate Existing Process|01 - Migrate Existing Process |orgModel |
 
 ## Instructions for Adding Projects
 

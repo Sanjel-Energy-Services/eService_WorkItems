@@ -1,0 +1,59 @@
+{
+  "projectId": "PRJ-01",
+  "source": "artifacts/reverse-engineered-business-requirements.md",
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "title": "Service Invitation Handling",
+      "description": "Ability to receive and track client invitations for cementing services.",
+      "classification": ["Business Process", "Client Interaction", "Tracking"]
+    },
+    {
+      "id": "REQ-02",
+      "title": "Proposal & Bidding",
+      "description": "System to prepare, submit, and manage service proposals and bids.",
+      "classification": ["Business Process", "Proposal Management", "Bidding"]
+    },
+    {
+      "id": "REQ-03",
+      "title": "Bid Result Processing",
+      "description": "Mechanism to record and act on client bidding decisions.",
+      "classification": ["Business Process", "Decision Handling"]
+    },
+    {
+      "id": "REQ-04",
+      "title": "Service Request Management",
+      "description": "Workflow to initiate and track cementing service requests post-bid.",
+      "classification": ["Business Process", "Workflow", "Request Management"]
+    },
+    {
+      "id": "REQ-05",
+      "title": "Service Execution",
+      "description": "Tools and processes for planning, mobilizing, and performing cementing services at well sites.",
+      "classification": ["Business Process", "Execution", "Resource Management"]
+    },
+    {
+      "id": "REQ-06",
+      "title": "Reporting & Invoicing",
+      "description": "Automated generation and delivery of service reports and invoices to clients.",
+      "classification": ["Business Process", "Reporting", "Invoicing", "Automation"]
+    },
+    {
+      "id": "REQ-07",
+      "title": "Payment Tracking",
+      "description": "Monitor client payments and outstanding invoices.",
+      "classification": ["Business Process", "Finance", "Tracking"]
+    },
+    {
+      "id": "REQ-08",
+      "title": "Post Job Analysis",
+      "description": "Framework for post-job review, feedback collection, and continuous improvement.",
+      "classification": ["Business Process", "Analysis", "Continuous Improvement"]
+    }
+  ],
+  "notes": [
+    "Process is highly client-driven, with clear handoffs between client and Sanjel at each stage.",
+    "Internal coordination is critical during service execution and post-job analysis.",
+    "Timely reporting and invoicing are essential for cash flow and client satisfaction."
+  ]
+}
