@@ -15,29 +15,7 @@ PRJ-NN, Project Description, Folder Path, Related OrgModel Process
 
 | Project ID | Description | Folder Path | Related OrgModel Process |
 |------------|-------------|-------------|-------------------------|
-| PRJ-01 | eService Work Items Management System | projects/01 - eService Work Items | I-01 |
-| PRJ-02 | Multi-well Service Optimization | projects/02 - Multi-well Service Optimization | I-02 |
-| PRJ-03 | Field Operations Digital Transformation | projects/03 - Field Operations Digital Transformation | I-03 |
-
-## Project Details
-
-### PRJ-01: eService Work Items Management System
-- **Objective**: Digitalize and streamline work item management for energy services
-- **Status**: In Development
-- **Related Process**: Service delivery and work order management
-- **Key Artifacts**: Requirements analysis, system design, user interface mockups
-
-### PRJ-02: Multi-well Service Optimization
-- **Objective**: Optimize service delivery for multi-well operations
-- **Status**: Planning Phase
-- **Related Process**: Field operations coordination and resource optimization
-- **Key Artifacts**: Process analysis, optimization algorithms, performance metrics
-
-### PRJ-03: Field Operations Digital Transformation
-- **Objective**: Transform field operations through digital tools and processes
-- **Status**: Requirements Gathering
-- **Related Process**: Field management and digital workflow integration
-- **Key Artifacts**: Current state analysis, digital transformation roadmap, technology assessment
+| (No projects currently defined) | | | |
 
 ## Instructions for Adding Projects
 

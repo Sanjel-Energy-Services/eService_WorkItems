@@ -8,20 +8,20 @@ This document contains the high-level Mermaid Activity Diagram that describes th
 
 ```mermaid
 flowchart TD
-    A[Organization Input] --> B{Process Type}
-    B -->|Service Request| C[Service Delivery Process]
-    B -->|Internal Operation| D[Internal Operations Process]
-    B -->|Strategic Planning| E[Strategic Process]
+    A[Start] --> B{Process Type}
+    B -->|Type 1| C[Process Category 1]
+    B -->|Type 2| D[Process Category 2]
+    B -->|Type 3| E[Process Category 3]
     
-    C --> F[Process Service Request]
-    D --> G[Execute Internal Operations]
-    E --> H[Execute Strategic Planning]
+    C --> F[Execute Process 1]
+    D --> G[Execute Process 2]
+    E --> H[Execute Process 3]
     
-    F --> I[Service Completion]
-    G --> J[Internal Process Completion]
-    H --> K[Strategic Process Completion]
+    F --> I[Process 1 Output]
+    G --> J[Process 2 Output]
+    H --> K[Process 3 Output]
     
-    I --> L[Organization Output]
+    I --> L[End State]
     J --> L
     K --> L
     
@@ -32,45 +32,36 @@ flowchart TD
 
 ### Main Process Categories
 
-1. **Service Delivery Process**
-   - External customer-facing processes
-   - Service request handling and fulfillment
-   - Customer satisfaction and delivery
+1. **Process Category 1**
+   - [Description to be defined based on organizational analysis]
+   - [Key activities and responsibilities]
+   - [Expected outcomes and deliverables]
 
-2. **Internal Operations Process**
-   - Internal organizational processes
-   - Resource management and optimization
-   - Quality control and compliance
+2. **Process Category 2**
+   - [Description to be defined based on organizational analysis]
+   - [Key activities and responsibilities]
+   - [Expected outcomes and deliverables]
 
-3. **Strategic Process**
-   - Long-term planning and strategy execution
-   - Organizational development and growth
-   - Performance analysis and improvement
+3. **Process Category 3**
+   - [Description to be defined based on organizational analysis]
+   - [Key activities and responsibilities]
+   - [Expected outcomes and deliverables]
 
 ## Sub-Process Breakdown
 
-This root process drives the identification of the following main process categories:
-- Service delivery and customer-facing processes
-- Internal operational processes
-- Strategic and planning processes
-
-Each category will be further decomposed into specific numbered sub-processes based on the collaboration analysis.
+This root process will drive the identification of main process categories based on actual organizational analysis. Each category will be further decomposed into specific numbered sub-processes based on the collaboration analysis.
 
 ## Process Inputs and Outputs
 
 ### Inputs
-- External service requests
-- Internal operational requirements
-- Strategic directives and goals
-- Resource availability
-- Regulatory requirements
+- [To be defined based on organizational analysis]
+- [Input types and sources]
+- [Requirements and constraints]
 
 ### Outputs
-- Delivered services
-- Completed internal operations
-- Executed strategic initiatives
-- Performance metrics
-- Compliance reports
+- [To be defined based on organizational analysis]
+- [Output types and destinations]
+- [Success criteria and metrics]
 
 ## Related Documents
 

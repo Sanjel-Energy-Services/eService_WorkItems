@@ -8,79 +8,79 @@ This document contains the enterprise-level Mermaid sequence diagram that descri
 
 ```mermaid
 sequenceDiagram
-    participant Customer as External Customer
-    participant CS as Customer Service
-    participant OM as Operations Management
-    participant FM as Field Management
-    participant SM as Strategic Management
-    participant Support as Support Systems
+    participant Entity1 as External Entity
+    participant Entity2 as Internal Entity 1
+    participant Entity3 as Internal Entity 2
+    participant Entity4 as Internal Entity 3
+    participant Entity5 as Internal Entity 4
+    participant Entity6 as Support Entity
     
-    Note over Customer, Support: Enterprise-Level Collaboration Flow
+    Note over Entity1, Entity6: Enterprise-Level Collaboration Flow
     
-    Customer->>CS: Service Request
-    CS->>OM: Process Request
+    Entity1->>Entity2: Initial Request
+    Entity2->>Entity3: Process Request
     
-    OM->>FM: Coordinate Field Operations
-    OM->>Support: Access Support Systems
+    Entity3->>Entity4: Coordinate Activities
+    Entity3->>Entity6: Access Support
     
-    FM->>OM: Field Status Updates
-    FM->>Support: Resource Requirements
+    Entity4->>Entity3: Status Updates
+    Entity4->>Entity6: Resource Requirements
     
-    Support->>OM: System Data/Reports
-    Support->>SM: Performance Analytics
+    Entity6->>Entity3: Data/Reports
+    Entity6->>Entity5: Analytics
     
-    OM->>CS: Service Status
-    CS->>Customer: Status Updates
+    Entity3->>Entity2: Status Information
+    Entity2->>Entity1: Updates
     
-    SM->>OM: Strategic Directives
-    SM->>Support: Strategic Data Requirements
+    Entity5->>Entity3: Strategic Input
+    Entity5->>Entity6: Requirements
     
-    Note over Customer, Support: This drives the identification of main processes:
-    Note over CS: 01 - Customer Service Process
-    Note over OM: 02 - Operations Management Process  
-    Note over FM: 03 - Field Management Process
-    Note over SM: 04 - Strategic Management Process
-    Note over Support: 05 - Support Systems Process
+    Note over Entity1, Entity6: This drives the identification of main processes:
+    Note over Entity2: 01 - [Process Name 1]
+    Note over Entity3: 02 - [Process Name 2]
+    Note over Entity4: 03 - [Process Name 3]
+    Note over Entity5: 04 - [Process Name 4]
+    Note over Entity6: 05 - [Process Name 5]
 ```
 
 ## Identified Entities
 
 ### Primary Actors
-- **External Customer**: Service requestors and recipients
-- **Customer Service**: Customer-facing interface and coordination
-- **Operations Management**: Core operational coordination and management
-- **Field Management**: On-site service delivery and field operations
-- **Strategic Management**: Strategic planning and organizational direction
-- **Support Systems**: Technology and data systems supporting operations
+- **External Entity**: [To be defined based on organizational analysis]
+- **Internal Entity 1**: [To be defined based on organizational analysis]
+- **Internal Entity 2**: [To be defined based on organizational analysis]
+- **Internal Entity 3**: [To be defined based on organizational analysis]
+- **Internal Entity 4**: [To be defined based on organizational analysis]
+- **Support Entity**: [To be defined based on organizational analysis]
 
 ## Main Process Identification
 
-Based on this collaboration analysis, the following main processes are identified for detailed breakdown:
+Based on collaboration analysis, the following main processes will be identified for detailed breakdown:
 
-1. **01 - Customer Service Process**
-   - Customer interaction management
-   - Service request processing
-   - Customer communication and updates
+1. **01 - [Process Name 1]**
+   - [Key activities to be defined]
+   - [Responsibilities and scope]
+   - [Expected outcomes]
 
-2. **02 - Operations Management Process**
-   - Operational coordination and control
-   - Resource allocation and management
-   - Service delivery oversight
+2. **02 - [Process Name 2]**
+   - [Key activities to be defined]
+   - [Responsibilities and scope]
+   - [Expected outcomes]
 
-3. **03 - Field Management Process**
-   - Field service execution
-   - On-site operations management
-   - Resource and equipment coordination
+3. **03 - [Process Name 3]**
+   - [Key activities to be defined]
+   - [Responsibilities and scope]
+   - [Expected outcomes]
 
-4. **04 - Strategic Management Process**
-   - Strategic planning and direction
-   - Performance management
-   - Organizational development
+4. **04 - [Process Name 4]**
+   - [Key activities to be defined]
+   - [Responsibilities and scope]
+   - [Expected outcomes]
 
-5. **05 - Support Systems Process**
-   - System data management
-   - Technical support and infrastructure
-   - Analytics and reporting
+5. **05 - [Process Name 5]**
+   - [Key activities to be defined]
+   - [Responsibilities and scope]
+   - [Expected outcomes]
 
 ## Collaboration Patterns
 
